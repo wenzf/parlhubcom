@@ -11,6 +11,7 @@
 // Finishes with a CHECKPOINT so no WAL is left behind.
 
 import path from "node:path";
+import { existsSync, mkdirSync } from "node:fs";
 import { DuckDBInstance } from "@duckdb/node-api";
 import { deriveSpeechSearch, speechSearchDeriveNeeded } from "./derive";
 
@@ -20,14 +21,22 @@ async function main(): Promise<void> {
     const t0 = Date.now();
     console.log(`\nDerive-only run on ${DB_PATH}`);
 
+    // Derive-only NEVER builds from scratch: a missing file means the download
+    // step failed — fail fast instead of letting DuckDB create an empty DB.
+    if (!existsSync(DB_PATH)) {
+        throw new Error(`derive-only: ${DB_PATH} does not exist — nothing to derive on`);
+    }
+
     const instance = await DuckDBInstance.create(DB_PATH);
     const db = await instance.connect();
 
-    // Same import-time tuning as run-remote.ts, with the temp spill next to the
-    // DB file (the only disk guaranteed to have room for it).
+    // Like run-remote.ts's tuning, but with more memory (this is a dedicated
+    // process — on the 8 GB UpdateDb task nothing else is running) and the temp
+    // spill next to the DB file (the only disk guaranteed to have room for it).
     const tmpDir = path.join(path.dirname(DB_PATH), ".duckdb_tmp");
+    mkdirSync(tmpDir, { recursive: true });
     await db.run(`
-    SET memory_limit = '3GB';
+    SET memory_limit = '6GB';
     SET temp_directory = '${tmpDir.replace(/'/g, "''")}';
     SET max_temp_directory_size = '15GB';
     SET preserve_insertion_order = false;

@@ -70,9 +70,14 @@ async function main(): Promise<void> {
 
     // Same import-time tuning as run.ts: cap memory, allow generous on-disk spill
     // for the big sorts, skip insertion-order bookkeeping (we cluster via sortBy).
+    // The spill lives NEXT TO THE DB FILE (like run-derive.ts): on the UpdateDb
+    // task that is the WORK_DIR volume — the only disk guaranteed to have room —
+    // not the container's writable layer a repo-relative path would land on.
+    const tmpDir = path.join(path.dirname(DB_PATH), ".duckdb_tmp");
+    await fs_p.mkdir(tmpDir, { recursive: true });
     await db.run(`
     SET memory_limit = '3GB';
-    SET temp_directory = 'ingest/openparldata/.duckdb_tmp';
+    SET temp_directory = '${tmpDir.replace(/'/g, "''")}';
     SET max_temp_directory_size = '15GB';
     SET preserve_insertion_order = false;
   `);
@@ -137,9 +142,13 @@ async function main(): Promise<void> {
 
         // Derived columns (speeches search) — a re-import DROPs its table, so
         // this must run after the entity loop whenever a source entity changed
-        // (or the columns are missing entirely, e.g. a pre-derive DB).
+        // (or the columns are missing entirely, e.g. a pre-derive DB). The
+        // rebuild gets the same 6 GB the standalone derive uses (run-derive.ts):
+        // the import's 3 GB cap is tuned for streaming appends, and this is the
+        // last step of the run, so nothing else needs the headroom anymore.
         if (await speechSearchDeriveNeeded(db)) {
             console.log("\nDeriving speeches search columns...");
+            await db.run(`SET memory_limit = '6GB';`);
             await deriveSpeechSearch(db);
         } else {
             console.log("\nSpeeches search columns up to date — derive skipped.");

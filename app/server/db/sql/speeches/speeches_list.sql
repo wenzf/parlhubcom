@@ -17,9 +17,11 @@
 --   $6  INTEGER  - page size  (LIMIT)
 --   $7  INTEGER  - page start (OFFSET; 0-based)
 --   -- filters (mirror speechesCatalogDescriptor.toSqlParams order EXACTLY):
---   $8  VARCHAR  - search REGEX PATTERN over the TAG-STRIPPED transcript + speaker
---                  name + parent affair title. Built from the keyword + case/word
---                  options (escaped term, optional \b…\b, optional (?i)).      NULL = none
+--   $8  VARCHAR  - search REGEX PATTERN over the PRECOMPUTED search columns
+--                  (search_text_* = tag-stripped transcript, search_meta =
+--                  speaker name + parent affair titles — see ingest/derive.ts).
+--                  Built from the keyword + case/word options (escaped term,
+--                  optional \b…\b, optional (?i)).                             NULL = none
 --   $9  INTEGER  - body_id   (the speech's body PK)                            NULL = any
 --   $10 VARCHAR  - type_external_id code                                       NULL = any
 --   $11 BOOLEAN  - has video (video_url IS NOT NULL)                           NULL = any
@@ -48,11 +50,17 @@ WITH
 -- 2.5M of them away — ~9s of CPU (1.7s wall) for a 20-row page. The page's wide
 -- columns are fetched in `sp_lim` below, for the 20 ids that survive.
 --
--- The text filters ($8 / $12) still live here and still reference the transcript
--- columns — that is fine: when their params are NULL the `$n IS NULL OR …`
--- short-circuit keeps the scan off those columns (measured: no cost vs. omitting
--- the clause entirely). When a search IS active the transcript scan is the work
--- being asked for, and this shape does not make it worse.
+-- SEARCH runs on the PRECOMPUTED columns from ingest/derive.ts (search_text_* =
+-- tag-stripped transcripts, NULL exactly where text_content_* is NULL so loc()
+-- picks the same variant; search_meta = fullname + affair titles denormalized).
+-- That removes the per-request regexp_replace over every transcript (~3x the
+-- cost of the match itself) and the persons/affairs joins. The one semantic
+-- delta vs. matching the joined fields separately: a multi-word phrase can in
+-- principle match ACROSS the concatenated name/title fields of search_meta.
+--
+-- The lang facet ($12) runs loc_lang over the has_text_* flags (1 byte/row) —
+-- the CASE mirrors the text columns' nullness, which is all loc_lang reads, so
+-- it returns the exact `speech_lang` without touching the transcripts.
 --
 -- Only `date_start` / `date_end` are sortable (speechesCatalogDescriptor.sorts),
 -- so the sort keys are narrow. Adding a sort over a wide column would defeat
@@ -60,25 +68,18 @@ WITH
 sp_ids AS (
     SELECT s.id, s.date_start, s.date_end
     FROM speeches s
-    LEFT JOIN persons p ON p.id = s.person_id
-    LEFT JOIN affairs a ON a.id = s.affair_id
     WHERE
-        -- $8 = a REGEX PATTERN; matched over the tag-stripped localized transcript,
-        -- the speaker fullname, and the parent affair title.
+        -- $8 = a REGEX PATTERN; matched over the precomputed tag-stripped
+        -- localized transcript and the speaker/affair metadata blob.
         ($8 IS NULL
-            OR regexp_matches(
-                 regexp_replace(coalesce(loc(s.text_content_de, s.text_content_fr, s.text_content_it, NULL, NULL, $1, $2, $3, $4, $5), ''), '<[^>]*>', ' ', 'g'),
-                 $8)
-            OR regexp_matches(coalesce(p.fullname, ''), $8)
-            OR regexp_matches(coalesce(a.title_de, ''), $8)
-            OR regexp_matches(coalesce(a.title_fr, ''), $8)
-            OR regexp_matches(coalesce(a.title_it, ''), $8))
+            OR regexp_matches(coalesce(loc(s.search_text_de, s.search_text_fr, s.search_text_it, NULL, NULL, $1, $2, $3, $4, $5), ''), $8)
+            OR regexp_matches(coalesce(s.search_meta, ''), $8))
       AND ($9  IS NULL OR s.body_id = $9)
       AND ($10 IS NULL OR s.type_external_id = $10)
       AND ($11 IS NULL OR (s.video_url IS NOT NULL) = $11)
       -- Language filter on the DISPLAYED transcript language (same value loc_lang
-      -- returns as `speech_lang`). NULL = any.
-      AND ($12 IS NULL OR loc_lang(s.text_content_de, s.text_content_fr, s.text_content_it, NULL, NULL, $1, $2, $3, $4, $5) = $12)
+      -- returns as `speech_lang`, via the presence flags). NULL = any.
+      AND ($12 IS NULL OR loc_lang(CASE WHEN s.has_text_de THEN '' END, CASE WHEN s.has_text_fr THEN '' END, CASE WHEN s.has_text_it THEN '' END, NULL, NULL, $1, $2, $3, $4, $5) = $12)
       AND ($13 IS NULL OR s.date_start >= $13)
       AND ($14 IS NULL OR s.date_start <= $14)
 ),
