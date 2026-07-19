@@ -1180,6 +1180,12 @@
             "de": "Erklärung",
             "fr": "Déclaration"
         },
+        "pages.person.labels.interest_website": {
+            "context": "aria-label of the external-link icon next to an organization name in the interests list (PersonInterests.tsx); the link opens the organization's website in a new tab.",
+            "en": "Organization website",
+            "de": "Website der Organisation",
+            "fr": "Site web de l'organisation"
+        },
         "pages.person.labels.interest_since": {
             "context": "Lowercase prefix composed by formatPeriod (opd_micros.tsx) for an ongoing interest: 'since <date>'; mid-sentence, keep lowercase.",
             "en": "since",
@@ -2067,6 +2073,12 @@
             "en": "No matches for your search.",
             "de": "Keine Treffer für deine Suche.",
             "fr": "Aucun résultat pour votre recherche."
+        },
+        "pages.person.labels.controls_filter_search": {
+            "context": "Placeholder of the type-to-filter search field inside a facet combobox dropdown (DimensionControls.tsx). Keep short, ends with ellipsis like the other search placeholders.",
+            "en": "Search…",
+            "de": "Suchen…",
+            "fr": "Rechercher…"
         },
         "pages.person.labels.controls_loading": {
             "context": "Text of the pending overlay shown over a feed list while filtered results reload (PendingOverlay via FeedShell). Progressive sentence with ellipsis.",
@@ -3346,6 +3358,12 @@
             "de": "Linear",
             "fr": "Linéaire"
         },
+        "pages.person.labels.loyalty_filters": {
+            "context": "Label above the grouped filter controls (date range, scale toggle) in the body loyalty view (BodyLoyalty.tsx). Plural noun; keep short.",
+            "en": "Filters",
+            "de": "Filter",
+            "fr": "Filtres"
+        },
         "pages.person.labels.cohesion_title": {
             "context": "Heading of the per-group cohesion cards inside the loyalty view (BodyLoyalty.tsx); 'group' = parliamentary group (Fraktion). Keep short.",
             "en": "Group cohesion",
@@ -4093,6 +4111,24 @@
             "en": "Select a member or organization to see its ties.",
             "de": "Mitglied oder Organisation auswählen, um die Verbindungen zu sehen.",
             "fr": "Sélectionnez un membre ou une organisation pour voir ses liens."
+        },
+        "pages.person.labels.lobby_filters": {
+            "context": "Label above the grouped filter controls (chamber, date range) in the body lobby view (BodyLobby.tsx). Plural noun; keep short.",
+            "en": "Filters",
+            "de": "Filter",
+            "fr": "Filtres"
+        },
+        "pages.person.labels.lobby_error": {
+            "context": "Error message on the body lobby page when the deferred network computation fails (bodies_id_lobby.tsx).",
+            "en": "The lobby network could not be computed.",
+            "de": "Das Lobby-Netzwerk konnte nicht berechnet werden.",
+            "fr": "Le réseau de lobbying n'a pas pu être calculé."
+        },
+        "pages.person.labels.lobby_clear_selection": {
+            "context": "Toolbar button in the body lobby fullscreen view that clears the currently selected member/organization (BodyLobby.tsx).",
+            "en": "Clear selection",
+            "de": "Auswahl aufheben",
+            "fr": "Effacer la sélection"
         },
         "pages.person.labels.close": {
             "context": "aria-label of the X (close) icon button on the lobby detail side panel (BodyLobby.tsx). Generic imperative 'Close'; keep very short.",
