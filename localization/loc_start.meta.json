@@ -1,0 +1,162 @@
+{
+    "_meta": {
+        "namespace": "loc_start",
+        "source_files": [
+            "public/locales/<lang>/loc_start.json for lang in de, en, fr"
+        ],
+        "loaded_by": "app/routes/pages/start/start.tsx",
+        "description": "'Start' guided entry page with quick links to chambers, cantons, municipalities.",
+        "format": "Each entry: context (where the string appears in the UI, its role, placeholders and length/grammar constraints) + the current de/en/fr texts as translation reference. Use the context when translating into a new language; a null text means the key is missing in that language file.",
+        "generated": "2026-07-13, code-verified against app/ sources; regenerate when public/locales texts or consuming components change."
+    },
+    "keys": {
+        "start.title": {
+            "context": "/start page (app/routes/pages/start/start.tsx): the h1 page title of the guided quick-links entry page. Short, inviting.",
+            "en": "Start here",
+            "de": "Einstieg",
+            "fr": "Pour commencer"
+        },
+        "start.lede": {
+            "context": "/start page: lede paragraph under the h1 explaining what the page offers — links to federal chambers, the cantonal parliaments, and a search into communes. Avoid 'every'/'any' since commune data coverage is partial. One sentence of prose.",
+            "en": "Direct routes into the pages people look for most: the federal chambers, the cantonal parliaments, and a way into many communes.",
+            "de": "Direkte Wege zu den meistgesuchten Seiten: die eidgenössischen Kammern, die Kantonsparlamente und der Zugang zu vielen Gemeinden.",
+            "fr": "Des accès directs vers les pages les plus recherchées : les chambres fédérales, les parlements cantonaux et l’entrée vers de nombreuses communes."
+        },
+        "start.search_label": {
+            "context": "/start page: visually hidden (sr-only) <label> for the page-filter search input; screen readers only. Clarifies the search filters this page (client-side), not the whole site.",
+            "en": "Search the page",
+            "de": "Seite durchsuchen",
+            "fr": "Rechercher dans la page"
+        },
+        "start.search_placeholder": {
+            "context": "/start page: placeholder in the page-filter input, hinting what can be typed (a chamber, canton or commune name). Ends with an ellipsis.",
+            "en": "Search a chamber, a canton or a commune…",
+            "de": "Eine Kammer, einen Kanton oder eine Gemeinde suchen…",
+            "fr": "Rechercher une chambre, un canton ou une commune…"
+        },
+        "start.no_matches": {
+            "context": "/start page: empty-state message when the page filter matches no federal body, canton or commune. {{q}} is replaced with the user's query; the surrounding quotation marks are part of the string and should follow the target language's conventions.",
+            "en": "Nothing matches “{{q}}”.",
+            "de": "Keine Treffer für „{{q}}“.",
+            "fr": "Aucun résultat pour « {{q}} »."
+        },
+        "start.federal_heading": {
+            "context": "/start page: h2 heading of the first section, the federal parliaments (Swiss Bundesversammlung, Liechtenstein Landtag). Short noun/adjective.",
+            "en": "Federal",
+            "de": "Bund",
+            "fr": "Confédération"
+        },
+        "start.federal_sub": {
+            "context": "/start page: small muted annotation right-aligned next to the 'Federal' heading. Lowercase, very short.",
+            "en": "national parliaments",
+            "de": "nationale Parlamente",
+            "fr": "parlements nationaux"
+        },
+        "start.chambers_label": {
+            "context": "/start page, federal card: small label above the chamber links (Nationalrat / Ständerat) that deep-link into chamber-filtered votings. 'Chambers' = the two chambers of the Swiss federal parliament. Short plural noun.",
+            "en": "Chambers",
+            "de": "Kammern",
+            "fr": "Chambres"
+        },
+        "start.cantonal_heading": {
+            "context": "/start page: h2 heading of the section listing all 26 Swiss cantonal parliaments. Short.",
+            "en": "Cantonal parliaments",
+            "de": "Kantonsparlamente",
+            "fr": "Parlements cantonaux"
+        },
+        "start.cantonal_sub": {
+            "context": "/start page: small muted annotation next to the cantonal heading, stating the list is complete (all 26 cantons). Very short.",
+            "en": "all 26",
+            "de": "alle 26",
+            "fr": "les 26"
+        },
+        "start.communal_heading": {
+            "context": "/start page: h2 heading of the communal (municipal) parliaments section. 'Communal' = Swiss communes/municipalities. Short.",
+            "en": "Communal parliaments",
+            "de": "Gemeindeparlamente",
+            "fr": "Parlements communaux"
+        },
+        "start.communal_sub": {
+            "context": "/start page: small muted annotation next to the communal heading hinting this section is search-driven (communes only appear after typing a query). Single short word, lowercase noun.",
+            "en": "search",
+            "de": "Suche",
+            "fr": "recherche"
+        },
+        "start.communal_intro": {
+            "context": "/start page, communal section: prose note shown before any search, explaining only communes with an elected parliament are listed (~460 of ~2,100) and prompting use of the search box above. The numbers are approximate facts, keep them.",
+            "en": "Only communes with an elected parliament appear here (about 460 of some 2,100). Search above to jump in.",
+            "de": "Hier erscheinen nur Gemeinden mit einem gewählten Parlament (rund 460 von etwa 2100). Oben suchen, um einzusteigen.",
+            "fr": "Seules les communes dotées d’un parlement élu figurent ici (environ 460 sur quelque 2100). Cherchez ci-dessus pour y accéder."
+        },
+        "start.results_count": {
+            "context": "/start page, communal section: match-count line while searching. {{n}} is the number of matching communes. Keep short.",
+            "en": "{{n}} matches",
+            "de": "{{n}} Treffer",
+            "fr": "{{n}} résultats"
+        },
+        "start.results_capped": {
+            "context": "/start page, communal section: shown instead of the plain count when results are capped at 60 rendered items. {{n}} = number shown, {{total}} = total matches; ends with a prompt to narrow the query. Keep short.",
+            "en": "Showing {{n}} of {{total}}. Refine your search.",
+            "de": "{{n}} von {{total}}. Suche verfeinern",
+            "fr": "{{n}} sur {{total}} affichés. Affinez la recherche."
+        },
+        "start.link_overview": {
+            "context": "/start page, federal card: chip link to the parliament's overview page. Short noun, must fit a small chip.",
+            "en": "Overview",
+            "de": "Übersicht",
+            "fr": "Aperçu"
+        },
+        "start.link_members": {
+            "context": "/start page, federal card: chip link to the parliament's members (MPs) list. Short plural noun.",
+            "en": "Members",
+            "de": "Mitglieder",
+            "fr": "Membres"
+        },
+        "start.link_votings": {
+            "context": "/start page, federal card: chip link to the parliament's votings (roll-call votes) page. Short plural noun.",
+            "en": "Votings",
+            "de": "Abstimmungen",
+            "fr": "Votes"
+        },
+        "start.link_lobby": {
+            "context": "/start page, federal card: chip link to the parliament's lobby page (MPs' declared interest/lobbying ties). Short.",
+            "en": "Lobby",
+            "de": "Lobby",
+            "fr": "Lobby"
+        },
+        "start.link_alignment": {
+            "context": "/start page, federal card: chip link to the voting-alignment analytics page (who votes like whom; agreement between members/parties). Short noun; de uses 'Übereinstimmung' (agreement).",
+            "en": "Alignment",
+            "de": "Übereinstimmung",
+            "fr": "Convergence"
+        },
+        "start.link_loyalty": {
+            "context": "/start page, federal card: chip link to the party-loyalty analytics page — how often members vote with their parliamentary group (de 'Fraktionstreue'). Short noun.",
+            "en": "Loyalty",
+            "de": "Fraktionstreue",
+            "fr": "Loyauté"
+        },
+        "start.link_affairs": {
+            "context": "/start page, federal card: chip link to the parliament's affairs page. 'Affairs' = legislative business items (de 'Geschäfte'). Short plural noun.",
+            "en": "Affairs",
+            "de": "Geschäfte",
+            "fr": "Affaires"
+        },
+        "metas.start.title": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_start' namespace 'metas' block; the interface language selects which file. start page SEO <title>.",
+            "en": "Start here",
+            "de": "Einstieg",
+            "fr": "Pour commencer",
+            "it": "Per iniziare",
+            "es": "Empieza aquí"
+        },
+        "metas.start.desc": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_start' namespace 'metas' block; the interface language selects which file. start page meta-description.",
+            "en": "Quick links into the parliaments of Switzerland and Liechtenstein: the federal chambers and their pages, every cantonal parliament, and a search for communal parliaments.",
+            "de": "Direkte Links in die Parlamente der Schweiz und Liechtensteins: die eidgenössischen Kammern und ihre Seiten, alle Kantonsparlamente und eine Suche für Gemeindeparlamente.",
+            "fr": "Liens directs vers les parlements de Suisse et du Liechtenstein : les chambres fédérales et leurs pages, tous les parlements cantonaux et une recherche pour les parlements communaux.",
+            "it": "Collegamenti diretti ai parlamenti di Svizzera e Liechtenstein: le camere federali e le loro pagine, tutti i parlamenti cantonali e una ricerca per i parlamenti comunali.",
+            "es": "Enlaces rápidos a los parlamentos de Suiza y Liechtenstein: las cámaras federales y sus páginas, todos los parlamentos cantonales y un buscador de parlamentos comunales."
+        }
+    }
+}

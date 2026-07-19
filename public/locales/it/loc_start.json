@@ -1,0 +1,30 @@
+{
+  "start": {
+    "title": "Inizia qui",
+    "lede": "Percorsi diretti alle pagine più cercate: le camere federali, i parlamenti cantonali e un accesso a molti comuni.",
+    "search_label": "Cerca nella pagina",
+    "search_placeholder": "Cerca una camera, un cantone o un comune…",
+    "no_matches": "Nessun risultato per «{{q}}».",
+    "federal_heading": "Federale",
+    "federal_sub": "parlamenti nazionali",
+    "chambers_label": "Camere",
+    "cantonal_heading": "Parlamenti cantonali",
+    "cantonal_sub": "tutti e 26",
+    "communal_heading": "Parlamenti comunali",
+    "communal_sub": "ricerca",
+    "communal_intro": "Qui compaiono solo i comuni con un parlamento eletto (circa 460 su circa 2100). Usa la ricerca qui sopra per accedervi.",
+    "results_count": "{{n}} risultati",
+    "results_capped": "Vengono mostrati {{n}} di {{total}}. Affina la ricerca.",
+    "link_overview": "Panoramica",
+    "link_members": "Membri",
+    "link_votings": "Votazioni",
+    "link_lobby": "Lobby",
+    "link_alignment": "Concordanza",
+    "link_loyalty": "Fedeltà",
+    "link_affairs": "Oggetti"
+  },
+  "metas": {
+    "start.title": "Per iniziare",
+    "start.desc": "Collegamenti diretti ai parlamenti di Svizzera e Liechtenstein: le camere federali e le loro pagine, tutti i parlamenti cantonali e una ricerca per i parlamenti comunali."
+  }
+}

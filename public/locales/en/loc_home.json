@@ -1,0 +1,28 @@
+{
+  "home": {
+    "tagline": "A portal for the parliaments of Switzerland and Liechtenstein.",
+    "search_label": "Search",
+    "search_placeholder": "Search…",
+    "search_button": "Search",
+    "search_scope_label": "Search in",
+    "sections": {
+      "people": "People",
+      "votings": "Votings",
+      "affairs": "Affairs",
+      "speeches": "Speeches",
+      "bodies": "Parliaments",
+      "groups": "Committees & groups",
+      "meetings": "Meetings",
+      "texts": "Texts",
+      "documents": "Documents",
+      "interests": "Interests",
+      "organizations": "Organizations"
+    },
+    "stats_updated": "Data updated",
+    "start_link": "Quick links to the federal chambers, cantons and communal parliaments"
+  },
+  "metas": {
+    "home.title": "Swiss & Liechtenstein parliamentary data",
+    "home.desc": "Browse the parliaments of Switzerland and Liechtenstein: members, votes, speeches, lobbying ties and more. Non-profit, open source."
+  }
+}

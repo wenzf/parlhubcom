@@ -1,0 +1,20 @@
+.react-router
+build
+node_modules
+README.md
+
+# never ship the 32GB+ database or import data into a build context
+*.duckdb
+*.duckdb.wal
+ingest/build
+ingest/openparldata
+stopwords-iso
+
+# secrets & tooling state
+.env
+.git
+.sst
+.dev
+.agents
+.claude
+sst-secrets.ts

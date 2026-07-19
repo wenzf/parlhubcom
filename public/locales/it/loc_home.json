@@ -1,0 +1,28 @@
+{
+  "home": {
+    "tagline": "Un portale per i parlamenti di Svizzera e Liechtenstein.",
+    "search_label": "Cerca",
+    "search_placeholder": "Cerca…",
+    "search_button": "Cerca",
+    "search_scope_label": "Cerca in",
+    "sections": {
+      "people": "Persone",
+      "votings": "Votazioni",
+      "affairs": "Oggetti",
+      "speeches": "Interventi",
+      "bodies": "Parlamenti",
+      "groups": "Commissioni e gruppi",
+      "meetings": "Sedute",
+      "texts": "Testi",
+      "documents": "Documenti",
+      "interests": "Interessi",
+      "organizations": "Organizzazioni"
+    },
+    "stats_updated": "Dati aggiornati",
+    "start_link": "Link rapidi alle camere federali, ai cantoni e ai parlamenti comunali"
+  },
+  "metas": {
+    "home.title": "Dati parlamentari di Svizzera e Liechtenstein",
+    "home.desc": "Esplora i parlamenti di Svizzera e Liechtenstein: parlamentari, votazioni, interventi, legami di lobbying e altro. No profit, open source."
+  }
+}

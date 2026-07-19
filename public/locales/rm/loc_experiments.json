@@ -1,0 +1,51 @@
+{
+  "experiments": {
+    "title": "Wordfish: parlaments tenor lur pleds",
+    "lede": "Quai è in experiment: el plazza ils commembers d'in parlament sin in sulet ass, mo cun ils pleds ch'els duvran en lur discurs. Naginas vuschs, naginas etichettas da partida, nagina codificaziun a maun, mo frequenzas da pleds. Sutvart sto co quai funcziuna, co al leger, ed ils parlaments per ils quals i dat avunda text da discurs per empruvar.",
+    "sections": [
+      {
+        "heading": "Tge ch'el fa",
+        "paragraphs": [
+          "Per in parlament tschernì prendain nus mintga commember activ e tut lur discurs entaifer ina fanestra da temp communabla e recenta. Quai è il medem laps per tuts, uschia ch'il resultat reflectescha la tscherna dals pleds e betg tgi ch'è il pli ditg en uffizi. Mintga commember daventa in «document»: ina collecziun dals pleds ch'el ha duvrà e quant savens.",
+          "In model statistic numnà Wordfish chatta lura il sulet ass da l'utilisaziun dals pleds che separa il meglier ils commembers. El scuvra tge pleds che separan las persunas e plazza mintga commember correspundentamain. L'ass n'è betg definì ordavant. El resulta dals discurs sezs."
+        ]
+      },
+      {
+        "heading": "Co ch'el vegn calculà",
+        "paragraphs": [
+          "Mintga discurs vegn partì en pleds e scrit cun letras minusclas, mantegnend ils accents. Pleds da funcziun fitg frequents («the», «and», «der», «le» …) vegnan allontanads cun ina glista da stopwords adattada a la lingua da mintga discurs, uschia ch'in discurs franzos vegn filtrà cunter stopwords franzosas ed in tudestg cunter tudestgas. Pleds rars che mo paucs commembers duvran mai vegnan er scartads, perquai ch'els agiuntan canera, betg signal.",
+          "Wordfish modellescha mintga dumber da pleds sco ina extracziun da Poisson che dependa da la posiziun dal commember, da la frequenza tipica dal pled e da quant ferm che quel pled discriminescha. El adatta quels en rundas alternantas fin ch'ils dumbers na sa moventan betg pli, e standardisescha lura las posiziuns uschia che la spargida è cumparegliabla. Il quen curra sin dumonda durant che la pagina chargia. Per ina gronda chombra sur in onn dura quai intgins secundas, perquai ch'il diagram vegn chargià davos in indicatur da chargiament."
+        ]
+      },
+      {
+        "heading": "Co leger il diagram",
+        "paragraphs": [
+          "Mintga punct è in commember, plazzà tenor ses pleds: commembers che discurran il medem sesan datiers, commembers che discurran fitg different sesan lunsch in da l'auter. La direcziun da l'ass è arbitrara. Wordfish chatta la partiziun, betg tge vart ch'è «sanestra» u «dretga». Per vesair tge che mintga fin munta, legiai ils pleds ch'èn inditgads als dus pols.",
+          "La spargida è standardisada, uschia che las distanzas èn ina convenziun e betg ina mesira reala. Mintga commember porta er ina malsegirezza (la bara da sbagl): commembers ch'han discurrì pauc vegnan plazzads cun pitschna segirezza e represchentads sco anials vids, na als surinterpretai perquai betg. Ed il stil da discurrer reflectescha la rolla tuttina fitg sco la persvasiun: presidents da cumissiun, ministers ed uraturs frequents pon arrivar sin in pol pervia da quai ch'els fan, betg mo pervia da quai ch'els pensan."
+        ]
+      },
+      {
+        "heading": "Pertge che ils pli blers parlaments èn vids",
+        "paragraphs": [
+          "La skalaziun dovra il text da transcript effectiv dals discurs, e las datas avertas cuntegnan quai mo per pauc parlaments. Ils pli blers gremis n'han nagins discurs dal tut; intgins han records da discurs senza transcript; e pauc han transcripts che finischan avant onns. Mo ils parlaments numnads sutvart han actualmain avunda text da discurs recent per plazzar almain diesch commembers."
+        ]
+      }
+    ],
+    "cases_heading": "Parlaments che vus pudais explorar",
+    "cases_lede": "Mintgin da quels ha avunda text da transcript en la fanestra recenta per dissegnar in diagram. «Commembers plazzads» munta quants commembers che la skalaziun po posiziunar; «Datas da discurs» è il laps cumplet dal text da discurs disponibel per quel parlament.",
+    "col_parliament": "Parlament",
+    "col_members": "Commembers plazzads",
+    "col_period": "Datas da discurs",
+    "cases_empty": "Actualmain n'ha nagin parlament avunda text da discurs recent per renderisar la skalaziun.",
+    "references_heading": "Referenzas & lectura supplementara",
+    "references": [
+      { "text": "Slapin & Proksch (2008): “A Scaling Model for Estimating Time-Series Party Positions from Texts”, American Journal of Political Science. L'artitgel che ha introducì Wordfish.", "url": "https://doi.org/10.1111/j.1540-5907.2008.00338.x" },
+      { "text": "Tutorial da Wordfish (quanteda): ina descripziun pratica ed ina implementaziun da referenza dal model.", "url": "https://tutorials.quanteda.io/machine-learning/wordfish/" },
+      { "text": "Grimmer & Stewart (2013): “Text as Data”, Political Analysis. Ina survista che classifitgescha Wordfish tranter las metodas da skalaziun da text.", "url": "https://doi.org/10.1093/pan/mps028" }
+    ]
+  },
+  "metas": {
+    "wordfish.title": "Wordfish: parlaments tenor lur pleds",
+    "wordfish.desc": "Co che parlhub plazza ils commembers d'in parlament sin in ass mo tenor lur tscherna da pleds: la metoda, co al leger, ed ils parlaments cun avunda text da discurs."
+  }
+}

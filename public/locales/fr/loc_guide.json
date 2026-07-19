@@ -1,0 +1,109 @@
+{
+  "guide": {
+    "title": "Guide des données",
+    "lead": "Onze types de données des parlements de Suisse et du Liechtenstein. Chacun a sa page de recherche et quelques exemples.",
+    "map_link": "Comment les données s'articulent",
+    "groups": {
+      "actors": { "heading": "Acteurs", "sub": "Les personnes et organisations du parlement" },
+      "proceedings": { "heading": "Travaux", "sub": "Le travail législatif" },
+      "records": { "heading": "Archives", "sub": "Ce qui a été dit, écrit et déposé" },
+      "lobbying": { "heading": "Lobbying", "sub": "Qui est lié à qui" }
+    },
+    "types": {
+      "people": {
+        "eyebrow": "Personnes",
+        "title": "Qui vote comme qui, et qui parle de quoi ?",
+        "links": {
+          "vocabulary": "Les mots de {{name}}, en carte",
+          "alignment": "Qui vote comme {{name}} ?",
+          "search": "Chercher parmi 26 000 élus"
+        }
+      },
+      "bodies": {
+        "eyebrow": "Parlements",
+        "title": "Quel parti vote comme un seul bloc, et qui fait défection ?",
+        "links": {
+          "loyalty": "La loyauté de groupe à l'Assemblée fédérale",
+          "lobby": "Le réseau de lobbying fédéral",
+          "people": "Tous les membres de l'Assemblée fédérale",
+          "search": "Des chambres fédérales à ~460 communes"
+        }
+      },
+      "groups": {
+        "eyebrow": "Commissions & groupes",
+        "title": "Qui pousse quelles affaires ?",
+        "links": {
+          "search": "Chercher groupes, partis et commissions"
+        }
+      },
+      "affairs": {
+        "eyebrow": "Affaires",
+        "title": "Qu'est devenue cette motion ?",
+        "links": {
+          "example": "Un long combat, vote après vote : {{name}}",
+          "search": "Filtrer 320 000 objets"
+        }
+      },
+      "votings": {
+        "eyebrow": "Votes",
+        "title": "Qui a dit oui, qui a dit non ?",
+        "links": {
+          "example": "Le dernier vote final, nom par nom",
+          "search": "Chercher parmi 75 000 votes"
+        }
+      },
+      "meetings": {
+        "eyebrow": "Séances",
+        "title": "Qu'a décidé une séance donnée ?",
+        "links": {
+          "search": "Chaque session, jour par jour"
+        }
+      },
+      "speeches": {
+        "eyebrow": "Discours",
+        "title": "Qui a parlé du loup ?",
+        "links": {
+          "wolf": "Chaque intervention qui mentionne le loup",
+          "search": "Chercher dans 2,5 millions d'interventions, mot pour mot"
+        },
+        "queries": { "wolf": "loup" }
+      },
+      "texts": {
+        "eyebrow": "Textes",
+        "title": "De quoi parle un projet, en trois phrases ?",
+        "links": {
+          "bitcoin": "Chaque texte qui mentionne Bitcoin",
+          "search": "Chercher dans les résumés officiels"
+        },
+        "queries": { "bitcoin": "Bitcoin" }
+      },
+      "docs": {
+        "eyebrow": "Documents",
+        "title": "Que cachent les procès-verbaux ?",
+        "links": {
+          "search": "Recherche plein texte dans 880 000 documents"
+        }
+      },
+      "interests": {
+        "eyebrow": "Intérêts",
+        "title": "Qui siège dans quels conseils d'administration ?",
+        "links": {
+          "example": "Tous les mandats de {{name}}",
+          "search": "Chercher parmi 29 000 entrées du registre"
+        }
+      },
+      "organizations": {
+        "eyebrow": "Organisations",
+        "title": "Quelle organisation va le plus loin ?",
+        "links": {
+          "example": "Un club, plusieurs parlements : {{name}}",
+          "search": "Chercher les organisations par nom"
+        }
+      }
+    }
+  },
+  "metas": {
+    "data_guide.title": "Guide des données",
+    "data_guide.desc": "Onze types de données des parlements de Suisse et du Liechtenstein : personnes, parlements, affaires, votes, discours, documents et liens de lobbying. Chacun a sa page de recherche et des exemples concrets."
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "faq": {
+    "title": "FAQ",
+    "lead": "Dumondas frequentas davart parlhub, las datas e lur utilisaziun.",
+    "items": [
+      {
+        "id": "data-source",
+        "q": "Danunder derivan las datas?",
+        "body": [
+          "Da OpenParlData.ch. El rimna las datas da las websites parlamentaras uffizialas, las munda e las metta a disposiziun sco open data. parlhub legia lur exports. Senza OpenParlData n'existiss betg parlhub."
+        ],
+        "links": [
+          { "label": "OpenParlData.ch", "href": "https://openparldata.ch" }
+        ]
+      },
+      {
+        "id": "coverage",
+        "q": "Tge parlaments èn cuvrids?",
+        "body": [
+          "Ils parlaments da la Svizra e dal Liechtenstein, uschè lunsch che OpenParlData als cuvra. La cuvertura crescha cuntinuadamain."
+        ]
+      },
+      {
+        "id": "freshness",
+        "q": "Quant actualas èn las datas?",
+        "body": [
+          "parlhub sincronisescha regularmain cun OpenParlData. OpenParlData legia da sia vart las websites uffizialas. Uschia po ina midada sin ina pagina uffiziala durar in pèr dis fin ch'ella cumpara qua."
+        ]
+      },
+      {
+        "id": "missing-data",
+        "q": "Pertge mancan tschertas datas?",
+        "body": [
+          "Probablamain n'èn ellas anc betg importadas. OpenParlData è in giuven project, e betg mintga parlament publitgescha tut. Sche insatge sa chatta sin la website uffiziala, ma manca qua dapi lung temp: annunziai mai quai."
+        ]
+      },
+      {
+        "id": "wrong-data",
+        "q": "Jau sun commember dal parlament e mias datas èn sbagliadas. Tge poss jau far?",
+        "body": [
+          "parlhub mussa las datas uschè sco ch'ellas èn publitgadas. Ellas derivan da la website uffiziala da voss parlament, rimnadas da OpenParlData. Sch'ellas èn sbagliadas là, contactai il webmaster da voss parlament. Uschespert ch'i è curregì a la funtauna, arriva la correctura er qua.",
+          "Sche las datas èn correctas sin la pagina uffiziala, ma sbagliadas sin parlhub: scrivai mai, jau guard quai."
+        ],
+        "links": [
+          { "label": "hello@wefrick.com", "href": "mailto:hello@wefrick.com" }
+        ]
+      },
+      {
+        "id": "download",
+        "q": "Co poss jau telechargiar datas?",
+        "body": [
+          "Mintga glista ha in buttun d'export. Ils medems telechargiaments funcziunan er sco URLs simplas, uschia er via script:"
+        ],
+        "code": [
+          "/<secziun>/export/<dataset>/<format>          tut las entradas d'ina secziun",
+          "/<secziun>/<id>/export/<dataset>/<format>     entradas d'ina singula entitad"
+        ],
+        "body_after": [
+          "Per exempel: /votings/export/votings/csv. Ils formats èn json, csv ed xlsx. Ils telechargiaments èn paginads, 500 lingias per pagina: ?page=2 per la proxima pagina. ?langs=de,fr fixescha la prioritad da lingua dal cuntegn. Filters da la URL da la glista funcziunan er qua."
+        ]
+      },
+      {
+        "id": "license",
+        "q": "Co dastg jau utilisar las datas?",
+        "body": [
+          "Las datas èn suttamessas a la licenza CC BY 4.0. Utilisai las, partagiai las e sviluppai vinavant, era commerzialmain. Suletta cundiziun: numnar la funtauna. Numnai per plaschair OpenParlData.ch per las datas; per las valurs calculadas (concordanza, fidaivladad ed uschia vinavant) numnai parlhub."
+        ],
+        "links": [
+          { "label": "CC BY 4.0", "href": "https://creativecommons.org/licenses/by/4.0/" }
+        ]
+      },
+      {
+        "id": "metrics",
+        "q": "Co vegnan calculadas concordanza e fidaivladad?",
+        "body": [
+          "Sin basa da las datas da votaziun: la concordanza cumpara quant savens duas persunas votan medemmain en votaziuns cuminaivlas; la fidaivladad cumpara las vuschs d'ina persuna cun la maioritad da sia atgna fracziun. Damain votaziuns cuminaivlas, damain fidaivlas las pertschientualas – tegnai quai en memoria cur che vus fais confrunts."
+        ]
+      },
+      {
+        "id": "official",
+        "q": "È parlhub uffizial?",
+        "body": [
+          "Na. parlhub è in project independent e nunlucrativ d'ina singula persuna. El n'è collià cun nagin parlament, nagina autoritad e nagina partida. Per infurmaziuns uffizialas utilisai las websites dals parlaments."
+        ]
+      },
+      {
+        "id": "tracking",
+        "q": "Vegn jau persequità (tracking)?",
+        "body": [
+          "Na. I na dat nagina reclama, nagins analytics e nagins trackers. In cookie funcziunal memorisescha vossas configuraziuns (lingua, design). Quai è tut."
+        ]
+      },
+      {
+        "id": "contribute",
+        "q": "Poss jau sustegnair il project u collaborar?",
+        "body": [
+          "Gugent. I na dat nagina pagina da donaziun. Sche vus vulais gidar cun ils custs current, scrivai mai simplamain. Er sviluppaders e perscrutaders da scienza politica che vulan collaborar èn fitg bainvegnids. Il code è open source, sin GitHub."
+        ],
+        "links": [
+          { "label": "hello@wefrick.com", "href": "mailto:hello@wefrick.com" },
+          { "label": "Code source sin GitHub", "href": "https://github.com" }
+        ]
+      }
+    ]
+  },
+  "metas": {
+    "faq.title": "Dumondas frequentas",
+    "faq.desc": "Respostas a dumondas frequentas davart parlhub: danunder che las datas derivan, co telechargiar las, co ch'ellas dastgan vegnir utilisadas (CC BY 4.0) e co collaborar."
+  }
+}

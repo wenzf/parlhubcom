@@ -1,0 +1,56 @@
+{
+  "accessibility": {
+    "title": "Barrierefreiheit",
+    "lead": "Der Gestaltungsstandard, der auf parlhub angewendet wird, ist WCAG 2.2 auf Stufe AAA. Diese Erklärung sagt, wie weit das tatsächlich reicht, wie es geprüft wurde und wo es nicht hinreicht. Sie ist eine freiwillige Selbstdeklaration: parlhub ist ein privates, nicht-kommerzielles Projekt, also gelten weder das BehiG noch die EU-Richtlinie über den barrierefreien Zugang.",
+    "conformance": {
+      "heading": "Stand der Konformität",
+      "body": [
+        "parlhub erfüllt WCAG 2.2 Stufe AAA teilweise. «Teilweise» ist das ehrliche Wort. AAA ist der Standard, nach dem gestaltet wird: die Farbtokens, die Zielgrössen und die Fokusstile folgen ihm alle. Damit ist es aber ein angewendeter Standard, kein geprüftes Ergebnis.",
+        "Diese Erklärung wurde in Selbstbewertung erstellt, von der einen Person, die die Seite baut. Ein automatisierter Prüfer läuft jetzt über eine Auswahl von Seiten und meldet keine Fehler. Das ist eine Untergrenze, kein Ergebnis: Er entscheidet nur, was eine Maschine entscheiden kann, und überlässt den Rest einem Menschen, der noch nicht hingesehen hat. Es gab keine Prüfung durch Dritte und keine formalen Tests mit assistiver Technologie. Das W3C rät davon ab, AAA für eine ganze Website zu beanspruchen, weil manche Inhalte nicht jedes AAA-Kriterium erfüllen können. Lesen Sie die Stufe also als die Regel, an der sich der Code messen lassen muss, und die Einschränkungen unten als den Teil, der tatsächlich bekannt ist."
+      ]
+    },
+    "measures": {
+      "heading": "Was vorhanden ist",
+      "body": [
+        "Der Style Guide, nach dem jede Komponente gebaut wird, verlangt einen Textkontrast von mindestens 7:1, interaktive Ziele von mindestens 44×44 Pixeln, einen sichtbaren Fokusindikator und Bedienbarkeit per Tastatur. Die Seiten werden auf dem Server gerendert, der Inhalt ist also da, bevor irgendein JavaScript läuft.",
+        "Über die Einstellungen im Header können Sie die Schriftgrösse ändern, auf eine kontrastreichere Palette wechseln, Farbe ganz entfernen und ein helles oder dunkles Thema wählen. Die Sprache der Oberfläche und die Sprache der Daten werden getrennt gewählt, Sie können also die Oberfläche in einer Sprache und die Datensätze in einer anderen lesen.",
+        "Ein automatisierter Prüfer (pa11y-ci) läuft über zwölf Seiten, eine für jede Art von Seite, die es hier gibt, und meldet zurzeit keine Fehler auf Stufe AA. Lesen Sie das eng. Er sieht zwölf Seiten, nicht die ganze Website. Seine Regeln enden bei WCAG 2.1, was 2.2 hinzugefügt hat, wird also gar nicht geprüft. Bei etlichen Elementen konnte er die Hintergrundfarbe nicht auflösen; der Kontrast von 7:1 oben ist deshalb eine Regel, der die Gestaltung folgt, und nichts, was das Werkzeug bestätigt hätte. Und er markiert pro Durchlauf mehrere hundert Punkte zur Beurteilung durch einen Menschen, die niemand durchgearbeitet hat. Er ist ein Netz gegen Rückschritte, kein Urteil."
+      ]
+    },
+    "limitations": {
+      "heading": "Bekannte Einschränkungen",
+      "body": [
+        "Keine Prüfung durch Dritte und keine Tests mit assistiver Technologie. Eine automatisierte Prüfung deckt jetzt den maschinell prüfbaren Teil ab, aber das ist die kleinere Hälfte des Problems: Veröffentlichte Vergleiche trauen selbst den stärksten dieser Prüfer nur etwa die Hälfte der WCAG-Probleme zu, und der hier eingesetzte ist nicht der stärkste. Niemand hat diese Seite mit einem Screenreader oder allein mit der Tastatur bedient, so wie es jemand tut, der darauf angewiesen ist. Das ist weiterhin die grösste Lücke und der Grund, warum hier nichts volle Konformität behauptet.",
+        "Sprache von Textteilen. Datensätze erscheinen oft in einer anderen Sprache als die Oberfläche. Das ist Absicht, denn ein Schweizer Datensatz existiert vielleicht nur auf Deutsch. Die langen Quelltexte (Reden, Texte und Fraktionsbeschreibungen) zeichnen jetzt die Sprache aus, aus der sie aufgelöst wurden; ein Screenreader liest eine deutsche Rede auf einer englischen Seite also mit deutscher Stimme. Kürzere lokalisierte Felder wie Titel und Typenbezeichnungen tragen diese Auszeichnung noch nicht. WCAG 3.1.2 ist damit für die Fliesstexte erfüllt, aber nicht überall.",
+        "Inhalte aus den Quelldaten. Texte, Reden und Dokumente kommen von OpenParlData.ch als HTML, das parlhub nicht kontrolliert und teils reparieren muss, bevor es gerendert wird. Überschriftenreihenfolge und Semantik innerhalb dieser Blöcke lassen sich nicht garantieren. Die automatisierte Prüfung zeigt genau das: Der eine Fehler, den sie über alle geprüften Seiten meldet, ist eine Überschrift, die innerhalb eines Redetranskripts eine Ebene überspringt, in Markup, das von dort stammt. Verlinkte PDFs und Fotografien stammen ebenfalls von dort, mit der Barrierefreiheit, mit der sie veröffentlicht wurden.",
+        "Diagramme. Jedes Diagramm trägt eine kurze Textalternative, und mehrere lassen sich stattdessen als Text lesen: die Parteien-Übereinstimmungsmatrix ist selber eine Tabelle, und die Treemap der häufigsten Wörter lässt sich als Tabelle anzeigen. Aber nicht jede Visualisierung macht jeden Datenpunkt als Text zugänglich, und gerade die Streudiagramme sind ohne Sehen schwer zu vermitteln. Die zugrunde liegenden Zahlen lassen sich immer als CSV oder JSON herunterladen."
+      ]
+    },
+    "feedback": {
+      "heading": "Auf eine Barriere gestossen?",
+      "body": [
+        "Melden Sie sich. Das ist der schnellste Weg, dass sie behoben wird, und Meldungen sind das, woran diese Erklärung überarbeitet wird. Bitte nennen Sie die Seite, auf der Sie waren, und was im Weg stand."
+      ],
+      "links": [
+        {
+          "label": "hello@wefrick.com",
+          "href": "mailto:hello@wefrick.com"
+        },
+        {
+          "label": "Auf GitHub melden",
+          "href": "https://github.com/wenzf/parlhubcom/issues"
+        }
+      ]
+    },
+    "statement": {
+      "heading": "Zu dieser Erklärung",
+      "prepared_label": "Erstellt",
+      "reviewed_label": "Zuletzt überprüft",
+      "method": "In Selbstbewertung erstellt, gestützt auf automatisierte Tests, nach der Struktur der Anleitung des W3C für Erklärungen zur Barrierefreiheit. Dritte waren nicht beteiligt. Sie wird überarbeitet, wenn sich die Seite ändert oder wenn jemand etwas meldet, das sie widerlegt."
+    }
+  },
+  "metas": {
+    "accessibility.title": "Barrierefreiheit",
+    "accessibility.desc": "parlhub wird nach WCAG 2.2 Stufe AAA als Gestaltungsstandard gebaut, in Selbstbewertung geprüft und teilweise konform. Was vorhanden ist, was nicht, und wie Sie eine Barriere melden."
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "guide": {
+    "title": "Guia dos dados",
+    "lead": "Onze tipos de dados dos parlamentos da Suíça e do Liechtenstein. Cada um tem a sua própria página de pesquisa e alguns exemplos.",
+    "map_link": "Veja como os dados se relacionam",
+    "groups": {
+      "actors": { "heading": "Atores", "sub": "As pessoas e organizações do parlamento" },
+      "proceedings": { "heading": "Trabalhos", "sub": "O trabalho legislativo" },
+      "records": { "heading": "Arquivos", "sub": "O que foi dito, escrito e arquivado" },
+      "lobbying": { "heading": "Lobbying", "sub": "Quem está ligado a quem" }
+    },
+    "types": {
+      "people": {
+        "eyebrow": "Pessoas",
+        "title": "Quem vota como quem, e quem fala de quê?",
+        "links": {
+          "vocabulary": "As palavras de {{name}}, num mapa",
+          "alignment": "Quem vota como {{name}}?",
+          "search": "Pesquisar entre 26.000 deputados"
+        }
+      },
+      "bodies": {
+        "eyebrow": "Parlamentos",
+        "title": "Que partido vota como um só bloco, e quem se demarca?",
+        "links": {
+          "loyalty": "Lealdade de grupo na Assembleia Federal",
+          "lobby": "A rede de lobby federal",
+          "people": "Todos os membros da Assembleia Federal",
+          "search": "Das câmaras federais a cerca de 460 comunas"
+        }
+      },
+      "groups": {
+        "eyebrow": "Comissões e grupos",
+        "title": "Quem impulsiona que assuntos?",
+        "links": {
+          "search": "Pesquisar grupos parlamentares, partidos e comissões"
+        }
+      },
+      "affairs": {
+        "eyebrow": "Assuntos",
+        "title": "O que aconteceu àquela moção?",
+        "links": {
+          "example": "Uma longa batalha, votação após votação: {{name}}",
+          "search": "Filtrar 320.000 assuntos"
+        }
+      },
+      "votings": {
+        "eyebrow": "Votações",
+        "title": "Quem disse sim, quem disse não?",
+        "links": {
+          "example": "A última votação final, nome a nome",
+          "search": "Pesquisar entre 75.000 votações"
+        }
+      },
+      "meetings": {
+        "eyebrow": "Sessões",
+        "title": "O que decidiu uma sessão?",
+        "links": {
+          "search": "Cada período de sessões, dia a dia"
+        }
+      },
+      "speeches": {
+        "eyebrow": "Discursos",
+        "title": "Quem falou do lobo?",
+        "links": {
+          "wolf": "Todos os discursos que mencionam o lobo",
+          "search": "Pesquisar entre 2,5 milhões de intervenções, palavra por palavra"
+        },
+        "queries": { "wolf": "Wolf" }
+      },
+      "texts": {
+        "eyebrow": "Textos",
+        "title": "Sobre o que trata um projeto de lei, em três frases?",
+        "links": {
+          "bitcoin": "Todos os textos que mencionam Bitcoin",
+          "search": "Pesquisar nos resumos oficiais"
+        },
+        "queries": { "bitcoin": "Bitcoin" }
+      },
+      "docs": {
+        "eyebrow": "Documentos",
+        "title": "O que está escondido nas atas?",
+        "links": {
+          "search": "Pesquisa de texto completo em 880.000 documentos"
+        }
+      },
+      "interests": {
+        "eyebrow": "Interesses",
+        "title": "Quem faz parte de que conselhos de administração?",
+        "links": {
+          "example": "Todos os mandatos de {{name}}",
+          "search": "Pesquisar entre 29.000 entradas do registo"
+        }
+      },
+      "organizations": {
+        "eyebrow": "Organizações",
+        "title": "Que organização chega mais longe?",
+        "links": {
+          "example": "Uma associação, vários parlamentos: {{name}}",
+          "search": "Pesquisar organizações por nome"
+        }
+      }
+    }
+  },
+  "metas": {
+    "data_guide.title": "Guia dos dados",
+    "data_guide.desc": "Onze tipos de dados dos parlamentos da Suíça e do Liechtenstein: pessoas, parlamentos, assuntos, votações, discursos, documentos e ligações de lobbying. Cada um tem a sua própria página de pesquisa e exemplos concretos."
+  }
+}

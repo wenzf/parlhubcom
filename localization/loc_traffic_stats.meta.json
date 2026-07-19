@@ -1,0 +1,270 @@
+{
+  "_meta": {
+    "namespace": "loc_traffic_stats",
+    "source_files": [
+      "public/locales/<lang>/loc_traffic_stats.json for lang in de, en, fr, it, es"
+    ],
+    "loaded_by": "app/routes/pages/project/traffic_stats/traffic_stats.tsx",
+    "description": "'Traffic statistics' page at /project/traffic-stats — public request statistics for the site itself, rendered by app/components/traffic_stats/TrafficStats.tsx as an interactive stacked bar chart plus an equivalent table. Figures are aggregated once a day from the server's own request log by deploy/analytics.ts; the page counts requests, not people, and involves no cookies, tracking or IP addresses.",
+    "format": "Each entry: context (where the string appears in the UI, its role, placeholders and length/grammar constraints) + the current de/en/fr/it/es texts as translation reference. Use the context when translating into a new language; a null text means the key is missing in that language file.",
+    "generated": "2026-07-15, code-verified against app/ sources; regenerate when public/locales texts or consuming components change."
+  },
+  "keys": {
+    "traffic_stats.title": {
+      "context": "Page title (h1) of the Traffic statistics page at /project/traffic-stats. Short; also used as the sidebar section title via PAGE_CONFIG.NS_TRAFFIC_STATS.sidebar.",
+      "en": "Traffic statistics",
+      "de": "Zugriffsstatistik",
+      "fr": "Statistiques de trafic",
+      "it": "Statistiche di traffico",
+      "es": "Estadísticas de tráfico"
+    },
+    "traffic_stats.lead": {
+      "context": "Lead paragraph under the h1. States what the page shows and, importantly, what it is not: the figures come from the server's own log, involve no cookies/tracking/IP addresses, and count requests rather than unique people. Keep the 'requests, not people' distinction — it is the page's central caveat, since without per-visitor data no visitor count is possible.",
+      "en": "Which parts of parlhub get requested, in which language, and by whom. Aggregated once a day from the server's own request log — no cookies, no tracking, no IP addresses. The counts are requests, not people.",
+      "de": "Welche Teile von parlhub abgerufen werden, in welcher Sprache und von wem. Einmal täglich aus dem Anfrageprotokoll des Servers aggregiert — keine Cookies, kein Tracking, keine IP-Adressen. Gezählt werden Anfragen, nicht Personen.",
+      "fr": "Quelles parties de parlhub sont consultées, dans quelle langue et par qui. Agrégées une fois par jour à partir du journal des requêtes du serveur — pas de cookies, pas de traçage, pas d'adresses IP. Les chiffres comptent des requêtes, pas des personnes.",
+      "it": "Quali parti di parlhub vengono richieste, in quale lingua e da chi. Aggregate una volta al giorno dal registro delle richieste del server — nessun cookie, nessun tracciamento, nessun indirizzo IP. I conteggi sono richieste, non persone.",
+      "es": "Qué partes de parlhub se solicitan, en qué idioma y por quién. Agregadas una vez al día a partir del registro de peticiones del propio servidor — sin cookies, sin rastreo, sin direcciones IP. Se cuentan peticiones, no personas."
+    },
+    "traffic_stats.no_data": {
+      "context": "Shown INSTEAD of the chart and table when there is no cube to render — either the daily aggregation (deploy/analytics.ts) has not produced a summary.json yet, or S3 could not be reached. role=status. The page deliberately shows this rather than sample figures: inventing numbers on a public statistics page is not made acceptable by a disclaimer.",
+      "en": "No figures yet. The first day's statistics appear once the daily aggregation has run.",
+      "de": "Noch keine Zahlen. Die ersten Statistiken erscheinen, sobald die tägliche Auswertung gelaufen ist.",
+      "fr": "Pas encore de chiffres. Les premières statistiques apparaîtront dès que l'agrégation quotidienne aura été effectuée.",
+      "it": "Ancora nessun dato. Le prime statistiche compariranno una volta eseguita l'aggregazione giornaliera.",
+      "es": "Aún no hay cifras. Las primeras estadísticas aparecerán en cuanto se haya ejecutado la agregación diaria."
+    },
+    "traffic_stats.group_by": {
+      "context": "Legend of the fieldset holding the grouping control (a Segmented with four options). Very short — it sits above the buttons.",
+      "en": "Group by",
+      "de": "Gruppieren nach",
+      "fr": "Grouper par",
+      "it": "Raggruppa per",
+      "es": "Agrupar por"
+    },
+    "traffic_stats.group_by_aria": {
+      "context": "aria-label of the Segmented grouping control. Not visible; read by screen readers in place of the visible 'Group by' legend, so it should be a fuller phrase.",
+      "en": "Group requests by",
+      "de": "Anfragen gruppieren nach",
+      "fr": "Grouper les requêtes par",
+      "it": "Raggruppa le richieste per",
+      "es": "Agrupar las peticiones por"
+    },
+    "traffic_stats.audience": {
+      "context": "Legend of the fieldset holding the audience filter (a Segmented with three options: humans / bots / both). Sits above the buttons, next to the 'Group by' control. Very short. Filters the whole page to human visitors (the 'browser' visitor class), automated traffic (bots, tools, unknown), or both; default is humans.",
+      "en": "Audience",
+      "de": "Publikum",
+      "fr": "Public",
+      "it": "Pubblico",
+      "es": "Público"
+    },
+    "traffic_stats.audience_aria": {
+      "context": "aria-label of the audience Segmented control. Not visible; read by screen readers in place of the visible 'Audience' legend, so a fuller phrase.",
+      "en": "Filter requests by audience",
+      "de": "Anfragen nach Publikum filtern",
+      "fr": "Filtrer les requêtes par public",
+      "it": "Filtra le richieste per pubblico",
+      "es": "Filtrar las peticiones por público"
+    },
+    "traffic_stats.aud_human": {
+      "context": "Audience option: real browser visitors only (the 'browser' visitor class). The default selection. One word.",
+      "en": "Humans",
+      "de": "Menschen",
+      "fr": "Humains",
+      "it": "Umani",
+      "es": "Humanos"
+    },
+    "traffic_stats.aud_bot": {
+      "context": "Audience option: automated traffic — crawlers, HTTP tools and unidentified non-browser agents. 'Bots' is an accepted loanword; keep it short.",
+      "en": "Bots",
+      "de": "Bots",
+      "fr": "Bots",
+      "it": "Bot",
+      "es": "Bots"
+    },
+    "traffic_stats.aud_both": {
+      "context": "Audience option: humans and bots combined. One or two words.",
+      "en": "Both",
+      "de": "Beide",
+      "fr": "Les deux",
+      "it": "Entrambi",
+      "es": "Ambos"
+    },
+    "traffic_stats.view": {
+      "context": "Legend of the daily/monthly view toggle on the Traffic statistics page — a segmented control switching the time grain of the chart, stats and table. Short label above the control.",
+      "en": "View",
+      "de": "Ansicht",
+      "fr": "Vue",
+      "it": "Vista",
+      "es": "Vista"
+    },
+    "traffic_stats.view_aria": {
+      "context": "aria-label of the daily/monthly segmented control on the Traffic statistics page.",
+      "en": "Switch between daily and monthly figures",
+      "de": "Zwischen täglicher und monatlicher Ansicht wechseln",
+      "fr": "Basculer entre la vue quotidienne et la vue mensuelle",
+      "it": "Passa dalla vista giornaliera a quella mensile",
+      "es": "Cambiar entre la vista diaria y la mensual"
+    },
+    "traffic_stats.view_daily": {
+      "context": "Toggle option: one bar per day — the recent full-grain window of the archive. The default view.",
+      "en": "Daily",
+      "de": "Täglich",
+      "fr": "Quotidien",
+      "it": "Giornaliera",
+      "es": "Diaria"
+    },
+    "traffic_stats.view_monthly": {
+      "context": "Toggle option: one bar per calendar month, covering the whole archive including the running month.",
+      "en": "Monthly",
+      "de": "Monatlich",
+      "fr": "Mensuel",
+      "it": "Mensile",
+      "es": "Mensual"
+    },
+    "traffic_stats.dim_route": {
+      "context": "Grouping option + table column header: the first path segment of the URL (docs, people, affairs, …). Also interpolated into {dim} of chart_alt / table_caption, so it must read naturally mid-sentence. One or two words.",
+      "en": "Route",
+      "de": "Route",
+      "fr": "Route",
+      "it": "Percorso",
+      "es": "Ruta"
+    },
+    "traffic_stats.dim_lang": {
+      "context": "Grouping option + table column header: the site language of the request (en/de/fr/it/es). Also interpolated into {dim} of chart_alt / table_caption. One or two words.",
+      "en": "Language",
+      "de": "Sprache",
+      "fr": "Langue",
+      "it": "Lingua",
+      "es": "Idioma"
+    },
+    "traffic_stats.dim_visitor": {
+      "context": "Grouping option + table column header: who made the request, classified from the user-agent (bot:ClaudeBot, browser, bot:other, tool). Also interpolated into {dim} of chart_alt / table_caption. One or two words.",
+      "en": "Visitor type",
+      "de": "Besuchertyp",
+      "fr": "Type de visiteur",
+      "it": "Tipo di visitatore",
+      "es": "Tipo de visitante"
+    },
+    "traffic_stats.dim_device": {
+      "context": "Grouping option + table column header: device class inferred from the user-agent (desktop, mobile, tablet, or 'na' for non-browsers). Also interpolated into {dim} of chart_alt / table_caption. One or two words.",
+      "en": "Device",
+      "de": "Gerät",
+      "fr": "Appareil",
+      "it": "Dispositivo",
+      "es": "Dispositivo"
+    },
+    "traffic_stats.include_internal": {
+      "context": "Label of the switch that adds the load balancer's own health-check requests (~5,760/day) back into the figures. Off by default because they would dominate every chart. Short.",
+      "en": "Include health checks",
+      "de": "Health-Checks einbeziehen",
+      "fr": "Inclure les contrôles de santé",
+      "it": "Includi i controlli di integrità",
+      "es": "Incluir comprobaciones de estado"
+    },
+    "traffic_stats.stat_requests": {
+      "context": "Stat tile label + table column header: number of requests. Short; sits above a large number and above a right-aligned numeric column.",
+      "en": "Requests",
+      "de": "Anfragen",
+      "fr": "Requêtes",
+      "it": "Richieste",
+      "es": "Peticiones"
+    },
+    "traffic_stats.stat_average": {
+      "context": "Stat tile label + table column header: mean server response time, weighted by request count. Short.",
+      "en": "Average",
+      "de": "Durchschnitt",
+      "fr": "Moyenne",
+      "it": "Media",
+      "es": "Media"
+    },
+    "traffic_stats.stat_p95": {
+      "context": "Stat tile label + table column header: the 95th percentile response time. 'p95' is the conventional term and is normally left untranslated; the footnote explains its precision.",
+      "en": "p95",
+      "de": "p95",
+      "fr": "p95",
+      "it": "p95",
+      "es": "p95"
+    },
+    "traffic_stats.stat_slowest": {
+      "context": "Stat tile label + table column header: the single slowest response time. Short.",
+      "en": "Slowest",
+      "de": "Langsamste",
+      "fr": "La plus lente",
+      "it": "Più lenta",
+      "es": "La más lenta"
+    },
+    "traffic_stats.col_share": {
+      "context": "Table column header: this row's percentage of all requests. Short. Values render as '96.6%', '<0.1%' or '0%'.",
+      "en": "Share",
+      "de": "Anteil",
+      "fr": "Part",
+      "it": "Quota",
+      "es": "Proporción"
+    },
+    "traffic_stats.other": {
+      "context": "Label of the single band that all series beyond the sixth are folded into, in the chart legend and the table. Lowercase, matching the surrounding series labels (which are raw data values such as 'docs' or 'bot:ClaudeBot' and are never translated).",
+      "en": "other",
+      "de": "andere",
+      "fr": "autres",
+      "it": "altri",
+      "es": "otras"
+    },
+    "traffic_stats.route_other_note": {
+      "context": "Small note under the data table, shown ONLY when grouping by Route. Explains the synthetic \"(other)\" route bucket: deploy/analytics.ts folds every request whose first path segment is not a real site route (automated scanners, malicious/malformed bots, mistyped or 404 paths) into a single \"(other)\" row, so a flood of distinct junk paths cannot grow summary.json. The literal label \"(other)\" is shown untranslated (like \"(home)\"), so keep it verbatim in the sentence.",
+      "en": "“(other)” collects every request to a path that isn’t part of the site — usually automated scanners, malformed or malicious bot requests, or mistyped URLs. They are grouped into one row so a flood of random paths cannot inflate the statistics.",
+      "de": "„(other)“ bündelt alle Anfragen an Pfade, die nicht zur Website gehören — meist automatische Scanner, fehlerhafte oder bösartige Bot-Anfragen oder vertippte URLs. Sie werden zu einer Zeile zusammengefasst, damit eine Flut zufälliger Pfade die Statistik nicht aufblähen kann.",
+      "fr": "« (other) » regroupe toutes les requêtes vers des chemins qui ne font pas partie du site — généralement des scanners automatisés, des requêtes de robots malformées ou malveillantes, ou des URL mal saisies. Elles sont réunies en une seule ligne afin qu’une avalanche de chemins aléatoires ne puisse pas gonfler les statistiques.",
+      "it": "«(other)» raggruppa tutte le richieste verso percorsi che non fanno parte del sito — di solito scanner automatici, richieste di bot malformate o malevole o URL digitati in modo errato. Sono riunite in un’unica riga affinché una marea di percorsi casuali non possa gonfiare le statistiche.",
+      "es": "«(other)» reúne todas las peticiones a rutas que no forman parte del sitio — normalmente escáneres automáticos, peticiones de bots malformadas o maliciosas, o URL mal escritas. Se agrupan en una sola fila para que una avalancha de rutas aleatorias no pueda inflar las estadísticas."
+    },
+    "traffic_stats.chart_alt": {
+      "context": "aria-label of the stacked bar chart (role=\"img\"), used when health checks ARE included. Tokenized template: {dim} = the chosen grouping label (dim_route/dim_lang/dim_visitor/dim_device, inserted verbatim, capitalised as in that key), {periods} = number of days or months plotted, {count} = already-formatted request total. Sibling of chart_alt_excl — the TS picks between them; do not merge into one string with a conditional clause. Must end by pointing at the table, which is the chart's text equivalent.",
+      "en": "Stacked bar chart of requests per period by {dim}: {periods} periods, {count} requests in total. The table below contains the same data.",
+      "de": "Gestapeltes Balkendiagramm der Anfragen pro Zeitraum nach {dim}: {periods} Zeiträume, insgesamt {count} Anfragen. Die Tabelle darunter enthält dieselben Daten.",
+      "fr": "Diagramme à barres empilées des requêtes par période selon {dim} : {periods} périodes, {count} requêtes au total. Le tableau ci-dessous contient les mêmes données.",
+      "it": "Grafico a barre impilate delle richieste per periodo secondo {dim}: {periods} periodi, {count} richieste in totale. La tabella sottostante contiene gli stessi dati.",
+      "es": "Gráfico de barras apiladas de peticiones por periodo según {dim}: {periods} periodos, {count} peticiones en total. La tabla siguiente contiene los mismos datos."
+    },
+    "traffic_stats.chart_alt_excl": {
+      "context": "aria-label of the stacked bar chart (role=\"img\"), used when health checks are EXCLUDED — the default. Same tokens as chart_alt ({dim}, {periods}, {count}) plus a clause saying internal health checks are left out. Sibling key, not a JSON branch.",
+      "en": "Stacked bar chart of requests per period by {dim}: {periods} periods, {count} requests in total, excluding internal health checks. The table below contains the same data.",
+      "de": "Gestapeltes Balkendiagramm der Anfragen pro Zeitraum nach {dim}: {periods} Zeiträume, insgesamt {count} Anfragen, ohne interne Health-Checks. Die Tabelle darunter enthält dieselben Daten.",
+      "fr": "Diagramme à barres empilées des requêtes par période selon {dim} : {periods} périodes, {count} requêtes au total, hors contrôles de santé internes. Le tableau ci-dessous contient les mêmes données.",
+      "it": "Grafico a barre impilate delle richieste per periodo secondo {dim}: {periods} periodi, {count} richieste in totale, esclusi i controlli di integrità interni. La tabella sottostante contiene gli stessi dati.",
+      "es": "Gráfico de barras apiladas de peticiones por periodo según {dim}: {periods} periodos, {count} peticiones en total, sin las comprobaciones de estado internas. La tabla siguiente contiene los mismos datos."
+    },
+    "traffic_stats.table_caption": {
+      "context": "Visually hidden (sr-only) <caption> of the data table. Token {dim} = the chosen grouping label, inserted verbatim. States that the table repeats the chart's data, since the table is the chart's accessible text equivalent.",
+      "en": "Requests by {dim} — the same data as the chart above.",
+      "de": "Anfragen nach {dim} — dieselben Daten wie im Diagramm oben.",
+      "fr": "Requêtes par {dim} — les mêmes données que le diagramme ci-dessus.",
+      "it": "Richieste per {dim} — gli stessi dati del grafico qui sopra.",
+      "es": "Peticiones por {dim} — los mismos datos que el gráfico anterior."
+    },
+    "traffic_stats.footnote": {
+      "context": "Small print under the table. Explains the two measures a reader could otherwise misread: p95 comes from latency buckets so it is only accurate to a bucket edge, and averages are weighted by request count rather than a mean of means.",
+      "en": "p95 is derived from latency buckets, so it is accurate to the bucket edge. Averages are weighted by request count.",
+      "de": "p95 wird aus Laufzeit-Buckets abgeleitet und ist daher auf die Bucket-Grenze genau. Durchschnitte sind nach Anzahl der Anfragen gewichtet.",
+      "fr": "Le p95 est dérivé de tranches de latence ; il est donc précis à la limite de la tranche. Les moyennes sont pondérées par le nombre de requêtes.",
+      "it": "Il p95 è derivato da fasce di latenza, quindi è preciso al limite della fascia. Le medie sono ponderate per numero di richieste.",
+      "es": "El p95 se deriva de los tramos de latencia, por lo que es preciso hasta el límite del tramo. Las medias están ponderadas por número de peticiones."
+    },
+    "metas.traffic_stats.title": {
+      "context": "SEO <title> for /project/traffic-stats, built by app/lib/seo/metas/traffic_stats.ts. Registered in META_KEYS (app/lib/seo/metas/keys.ts) as 'traffic_stats.title'; the site name is appended by buildMeta. Short.",
+      "en": "Traffic statistics",
+      "de": "Zugriffsstatistik",
+      "fr": "Statistiques de trafic",
+      "it": "Statistiche di traffico",
+      "es": "Estadísticas de tráfico"
+    },
+    "metas.traffic_stats.desc": {
+      "context": "SEO meta description + OpenGraph description for /project/traffic-stats. Registered in META_KEYS as 'traffic_stats.desc'. One or two sentences, ~150-160 characters; mirrors the page lead but stands alone in a search result.",
+      "en": "Which parts of parlhub get requested, in which language, and by whom — aggregated once a day from the server's own request log. No cookies, no tracking, no IP addresses.",
+      "de": "Welche Teile von parlhub abgerufen werden, in welcher Sprache und von wem — einmal täglich aus dem Anfrageprotokoll des Servers aggregiert. Keine Cookies, kein Tracking, keine IP-Adressen.",
+      "fr": "Quelles parties de parlhub sont consultées, dans quelle langue et par qui — agrégées une fois par jour à partir du journal des requêtes du serveur. Pas de cookies, pas de traçage, pas d'adresses IP.",
+      "it": "Quali parti di parlhub vengono richieste, in quale lingua e da chi — aggregate una volta al giorno dal registro delle richieste del server. Nessun cookie, nessun tracciamento, nessun indirizzo IP.",
+      "es": "Qué partes de parlhub se solicitan, en qué idioma y por quién — agregadas una vez al día a partir del registro de peticiones del propio servidor. Sin cookies, sin rastreo, sin direcciones IP."
+    }
+  }
+}

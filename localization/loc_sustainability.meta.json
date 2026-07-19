@@ -1,0 +1,251 @@
+{
+    "_meta": {
+        "namespace": "loc_sustainability",
+        "source_files": [
+            "public/locales/<lang>/loc_sustainability.json for lang in de, en, fr, it, es"
+        ],
+        "loaded_by": "app/routes/pages/project/sustainability/sustainability.tsx",
+        "description": "'Sustainability' page, how parlhub is hosted and what it does not measure. Doubles as the disclosure document that /carbon.txt (app/routes/sitemap/carbon_txt.ts) points its org.disclosures entry at, per the Green Web Foundation carbon.txt spec v0.5.",
+        "format": "Each entry: context (where the string appears in the UI, its role, placeholders and length/grammar constraints) + the current de/en/fr/it/es texts as translation reference. Use the context when translating into a new language; a null text means the key is missing in that language file.",
+        "generated": "2026-07-15, code-verified against app/ sources; regenerate when public/locales texts or consuming components change."
+    },
+    "keys": {
+        "sustainability.title": {
+            "context": "Page title (h1) of the Sustainability page at /project/sustainability (app/routes/pages/project/sustainability/sustainability.tsx). Short; also used as the sidebar section title via PAGE_CONFIG.NS_SUSTAINABILITY.sidebar.",
+            "en": "Sustainability",
+            "de": "Nachhaltigkeit",
+            "fr": "Durabilité",
+            "it": "Sostenibilità",
+            "es": "Sostenibilidad"
+        },
+        "sustainability.lead": {
+            "context": "Lead paragraph under the H1. Three clauses: how parlhub is hosted, what it does to limit its footprint, and what it does NOT know about it. Also states that this page is the disclosure document referenced by parlhub's carbon.txt. Keep the deliberate admission of ignorance, it is the point of the page.",
+            "en": "How parlhub is hosted, what the project does to keep its footprint small, and what it does not know about it. This page is the disclosure document referenced by parlhub's carbon.txt.",
+            "de": "Wie parlhub gehostet wird, was das Projekt tut, um seinen Fussabdruck klein zu halten, und was es darüber nicht weiss. Diese Seite ist das Offenlegungsdokument, auf das parlhubs carbon.txt verweist.",
+            "fr": "Comment parlhub est hébergé, ce que le projet fait pour limiter son empreinte, et ce qu'il n'en sait pas. Cette page est le document de divulgation référencé par le carbon.txt de parlhub.",
+            "it": "Come è ospitato parlhub, che cosa fa il progetto per contenere la propria impronta e che cosa non ne sa. Questa pagina è il documento di divulgazione a cui rimanda il carbon.txt di parlhub.",
+            "es": "Cómo se aloja parlhub, qué hace el proyecto para contener su huella y qué no sabe al respecto. Esta página es el documento de divulgación al que remite el carbon.txt de parlhub."
+        },
+        "sustainability.hosting.heading": {
+            "context": "Section heading (h2) introducing where parlhub is hosted.",
+            "en": "Where parlhub runs",
+            "de": "Wo parlhub läuft",
+            "fr": "Où tourne parlhub",
+            "it": "Dove gira parlhub",
+            "es": "Dónde se ejecuta parlhub"
+        },
+        "sustainability.hosting.body": {
+            "context": "Array of 2 prose paragraphs. [0] factual infrastructure description: AWS, region eu-central-1 (Frankfurt), one container on Fargate behind a load balancer, S3 for static files + DB snapshots, DB rebuilt by a scheduled task. Verified facts, confirmed by the maintainer (do not soften or embellish when translating. [1] explains the electricity is AWS's to account for and that parlhub makes no independent claim, which is what the carbon.txt upstream section is for. First-person maintainer voice (\"take my word for it\")) keep it.",
+            "en": [
+                "parlhub runs on Amazon Web Services in the eu-central-1 region (Frankfurt, Germany). The site is a single container on AWS Fargate behind a load balancer. Static files and database snapshots sit in S3, and the database is rebuilt by a scheduled task rather than kept continuously in sync.",
+                "The electricity behind those data centres is AWS's to account for, not parlhub's, and this project makes no independent claim about it. That is what the upstream section of carbon.txt is for: it names AWS as the provider so anyone reading the file can follow the chain to AWS's own disclosures rather than take my word for it."
+            ],
+            "de": [
+                "parlhub läuft auf Amazon Web Services in der Region eu-central-1 (Frankfurt, Deutschland). Die Seite ist ein einzelner Container auf AWS Fargate hinter einem Load Balancer. Statische Dateien und Datenbank-Snapshots liegen in S3, und die Datenbank wird von einem geplanten Task neu aufgebaut, statt laufend synchron gehalten zu werden.",
+                "Für den Strom hinter diesen Rechenzentren ist AWS verantwortlich, nicht parlhub, und dieses Projekt macht dazu keine eigenen Angaben. Genau dafür gibt es den upstream-Abschnitt in carbon.txt: Er nennt AWS als Anbieter, damit alle, die die Datei lesen, der Kette bis zu den Offenlegungen von AWS folgen können, statt mir einfach zu glauben."
+            ],
+            "fr": [
+                "parlhub tourne sur Amazon Web Services dans la région eu-central-1 (Francfort, Allemagne). Le site est un seul conteneur sur AWS Fargate derrière un répartiteur de charge. Les fichiers statiques et les instantanés de la base de données sont dans S3, et la base est reconstruite par une tâche planifiée plutôt que maintenue en synchronisation continue.",
+                "L'électricité derrière ces centres de données relève d'AWS, pas de parlhub, et ce projet n'avance aucune affirmation propre à ce sujet. C'est précisément à cela que sert la section upstream du carbon.txt : elle nomme AWS comme fournisseur, afin que quiconque lit le fichier puisse remonter la chaîne jusqu'aux divulgations d'AWS plutôt que de me croire sur parole."
+            ],
+            "it": [
+                "parlhub gira su Amazon Web Services nella regione eu-central-1 (Francoforte, Germania). Il sito è un singolo container su AWS Fargate dietro un bilanciatore di carico. I file statici e gli snapshot del database stanno in S3, e il database viene ricostruito da un'attività pianificata anziché tenuto costantemente sincronizzato.",
+                "L'elettricità dietro quei data center è responsabilità di AWS, non di parlhub, e questo progetto non avanza alcuna affermazione propria in merito. È esattamente a questo che serve la sezione upstream del carbon.txt: indica AWS come fornitore, così chi legge il file può risalire la catena fino alle divulgazioni di AWS invece di fidarsi della mia parola."
+            ],
+            "es": [
+                "parlhub se ejecuta en Amazon Web Services en la región eu-central-1 (Fráncfort, Alemania). El sitio es un único contenedor en AWS Fargate detrás de un balanceador de carga. Los archivos estáticos y las instantáneas de la base de datos están en S3, y la base de datos se reconstruye mediante una tarea programada en lugar de mantenerse sincronizada de forma continua.",
+                "La electricidad detrás de esos centros de datos es responsabilidad de AWS, no de parlhub, y este proyecto no hace ninguna afirmación propia al respecto. Para eso sirve precisamente la sección upstream del carbon.txt: nombra a AWS como proveedor para que quien lea el archivo pueda seguir la cadena hasta las divulgaciones del propio AWS en vez de creerme sin más."
+            ]
+        },
+        "sustainability.hosting.links": {
+            "context": "Array of {label, href} link objects rendered under the hosting section (one: AWS's own sustainability page). Translate `label` only; `href` is identical in every language.",
+            "en": [
+                {
+                    "label": "AWS sustainability",
+                    "href": "https://sustainability.aboutamazon.com/products-services/aws-cloud"
+                }
+            ],
+            "de": [
+                {
+                    "label": "Nachhaltigkeit bei AWS",
+                    "href": "https://sustainability.aboutamazon.com/products-services/aws-cloud"
+                }
+            ],
+            "fr": [
+                {
+                    "label": "La durabilité chez AWS",
+                    "href": "https://sustainability.aboutamazon.com/products-services/aws-cloud"
+                }
+            ],
+            "it": [
+                {
+                    "label": "La sostenibilità in AWS",
+                    "href": "https://sustainability.aboutamazon.com/products-services/aws-cloud"
+                }
+            ],
+            "es": [
+                {
+                    "label": "La sostenibilidad en AWS",
+                    "href": "https://sustainability.aboutamazon.com/products-services/aws-cloud"
+                }
+            ]
+        },
+        "sustainability.site.heading": {
+            "context": "Section heading (h2) for what the site does to keep its footprint small.",
+            "en": "What the site does to stay small",
+            "de": "Was die Seite tut, um klein zu bleiben",
+            "fr": "Ce que le site fait pour rester léger",
+            "it": "Che cosa fa il sito per restare leggero",
+            "es": "Qué hace el sitio para seguir siendo ligero"
+        },
+        "sustainability.site.body": {
+            "context": "Array of 2 prose paragraphs. [0] server-rendered, ships little JavaScript, no ads/tracking/analytics/third-party scripts, CSP denies all by default, self-hosted fonts. [1] embedded read-only DuckDB (so no separate DB server runs around the clock), scheduled rebuild instead of continuous polling, monochrome mostly-text interface. All verified against the codebase, keep them factual and specific.",
+            "en": [
+                "Pages are rendered on the server and ship very little JavaScript. There are no ads, no tracking, no analytics and no third-party scripts: the content security policy denies everything by default, and fonts are served from parlhub's own domain.",
+                "The data lives in a DuckDB file that the server opens read-only, so no separate database server runs around the clock. Updates from OpenParlData.ch arrive as a scheduled rebuild instead of continuous polling. The interface is monochrome and mostly text, which keeps pages light without anyone having to try."
+            ],
+            "de": [
+                "Die Seiten werden auf dem Server gerendert und liefern sehr wenig JavaScript aus. Es gibt keine Werbung, kein Tracking, keine Analytics und keine Skripte von Dritten: Die Content Security Policy verbietet standardmässig alles, und die Schriften kommen von parlhubs eigener Domain.",
+                "Die Daten liegen in einer DuckDB-Datei, die der Server nur lesend öffnet, es läuft also kein separater Datenbankserver rund um die Uhr. Aktualisierungen von OpenParlData.ch kommen als geplanter Neuaufbau statt als laufendes Polling. Die Oberfläche ist monochrom und grösstenteils Text, was die Seiten leicht hält, ohne dass sich jemand anstrengen muss."
+            ],
+            "fr": [
+                "Les pages sont rendues sur le serveur et envoient très peu de JavaScript. Il n'y a ni publicité, ni traçage, ni analytique, ni scripts tiers : la politique de sécurité du contenu interdit tout par défaut, et les polices sont servies depuis le domaine de parlhub.",
+                "Les données résident dans un fichier DuckDB que le serveur ouvre en lecture seule ; aucun serveur de base de données distinct ne tourne donc en permanence. Les mises à jour d'OpenParlData.ch arrivent sous forme de reconstruction planifiée plutôt que d'interrogation continue. L'interface est monochrome et essentiellement textuelle, ce qui garde les pages légères sans effort particulier."
+            ],
+            "it": [
+                "Le pagine sono renderizzate sul server e inviano pochissimo JavaScript. Non ci sono pubblicità, tracciamento, analytics né script di terze parti: la content security policy nega tutto per impostazione predefinita e i caratteri sono serviti dal dominio di parlhub.",
+                "I dati stanno in un file DuckDB che il server apre in sola lettura, quindi nessun server di database separato gira ventiquattr'ore su ventiquattro. Gli aggiornamenti da OpenParlData.ch arrivano come ricostruzione pianificata invece che come polling continuo. L'interfaccia è monocromatica e quasi tutta testo, il che mantiene le pagine leggere senza che nessuno debba sforzarsi."
+            ],
+            "es": [
+                "Las páginas se renderizan en el servidor y envían muy poco JavaScript. No hay anuncios, ni rastreo, ni analítica, ni scripts de terceros: la política de seguridad de contenido lo deniega todo por defecto y las tipografías se sirven desde el propio dominio de parlhub.",
+                "Los datos residen en un archivo DuckDB que el servidor abre en modo de solo lectura, de modo que no hay un servidor de base de datos aparte funcionando las veinticuatro horas. Las actualizaciones de OpenParlData.ch llegan como una reconstrucción programada en lugar de un sondeo continuo. La interfaz es monocroma y casi todo texto, lo que mantiene las páginas ligeras sin que nadie tenga que esforzarse."
+            ]
+        },
+        "sustainability.limits.heading": {
+            "context": "Section heading (h2) for the honest-limitations section.",
+            "en": "What is not measured",
+            "de": "Was nicht gemessen wird",
+            "fr": "Ce qui n'est pas mesuré",
+            "it": "Che cosa non viene misurato",
+            "es": "Qué no se mide"
+        },
+        "sustainability.limits.body": {
+            "context": "Array of 2 prose paragraphs (the honesty core of the page. [0] parlhub does NOT measure emissions, does NOT run a lifecycle assessment, does NOT buy offsets; publishing an unmeasured number would be worse than publishing none; the page describes a setup, not a carbon figure. [1] invites contact from anyone who knows a credible way to measure it. Confirmed by the maintainer. Do NOT soften these negations into vague or aspirational language when translating) understating them would turn the page into the greenwash it exists to avoid.",
+            "en": [
+                "parlhub does not measure its emissions, does not run a lifecycle assessment and does not buy offsets. It is a non-profit side project, and publishing a number I have not actually measured would be worse than publishing none. What is on this page is a description of the setup, not a carbon figure.",
+                "If you know a credible way to measure this for a site of this size, please get in touch."
+            ],
+            "de": [
+                "parlhub misst seine Emissionen nicht, erstellt keine Ökobilanz und kauft keine Kompensationen. Es ist ein nicht-kommerzielles Nebenprojekt, und eine Zahl zu veröffentlichen, die ich gar nicht gemessen habe, wäre schlimmer als gar keine. Auf dieser Seite steht eine Beschreibung des Aufbaus, keine CO₂-Zahl.",
+                "Wenn Sie einen glaubwürdigen Weg kennen, das für eine Seite dieser Grösse zu messen, melden Sie sich."
+            ],
+            "fr": [
+                "parlhub ne mesure pas ses émissions, ne réalise pas d'analyse de cycle de vie et n'achète pas de compensations. C'est un projet secondaire à but non lucratif, et publier un chiffre que je n'ai pas mesuré serait pire que de n'en publier aucun. Cette page décrit une infrastructure, elle ne donne pas un bilan carbone.",
+                "Si vous connaissez une manière crédible de mesurer cela pour un site de cette taille, écrivez-moi."
+            ],
+            "it": [
+                "parlhub non misura le proprie emissioni, non fa un'analisi del ciclo di vita e non acquista compensazioni. È un progetto secondario senza scopo di lucro, e pubblicare un numero che non ho davvero misurato sarebbe peggio che non pubblicarne nessuno. Su questa pagina c'è una descrizione dell'infrastruttura, non un dato sulle emissioni.",
+                "Se conosci un modo credibile di misurarlo per un sito di queste dimensioni, scrivimi."
+            ],
+            "es": [
+                "parlhub no mide sus emisiones, no realiza un análisis de ciclo de vida y no compra compensaciones. Es un proyecto paralelo sin ánimo de lucro, y publicar una cifra que no he medido de verdad sería peor que no publicar ninguna. En esta página hay una descripción del montaje, no una cifra de carbono.",
+                "Si conoce una forma creíble de medir esto para un sitio de este tamaño, escríbame."
+            ]
+        },
+        "sustainability.carbontxt.heading": {
+            "context": "Section heading (h2) for the carbon.txt block. \"carbon.txt\" is a filename, never translate or capitalise it.",
+            "en": "carbon.txt",
+            "de": "carbon.txt",
+            "fr": "carbon.txt",
+            "it": "carbon.txt",
+            "es": "carbon.txt"
+        },
+        "sustainability.carbontxt.body": {
+            "context": "Array of 1 prose paragraph: parlhub publishes a machine-readable carbon.txt at the domain root per the Green Web Foundation specification; it points at this page as the disclosure and names AWS as upstream. \"carbon.txt\" and \"Green Web Foundation\" stay untranslated.",
+            "en": [
+                "parlhub publishes a machine-readable carbon.txt at the root of the domain, following the Green Web Foundation's specification. It points at this page as parlhub's disclosure and names AWS as the upstream provider."
+            ],
+            "de": [
+                "parlhub veröffentlicht eine maschinenlesbare carbon.txt im Wurzelverzeichnis der Domain, nach der Spezifikation der Green Web Foundation. Sie verweist auf diese Seite als Offenlegung von parlhub und nennt AWS als vorgelagerten Anbieter."
+            ],
+            "fr": [
+                "parlhub publie un carbon.txt lisible par machine à la racine du domaine, selon la spécification de la Green Web Foundation. Il désigne cette page comme divulgation de parlhub et nomme AWS comme fournisseur en amont."
+            ],
+            "it": [
+                "parlhub pubblica un carbon.txt leggibile dalle macchine nella radice del dominio, secondo la specifica della Green Web Foundation. Rimanda a questa pagina come divulgazione di parlhub e indica AWS come fornitore a monte."
+            ],
+            "es": [
+                "parlhub publica un carbon.txt legible por máquinas en la raíz del dominio, siguiendo la especificación de la Green Web Foundation. Apunta a esta página como divulgación de parlhub y nombra a AWS como proveedor previo."
+            ]
+        },
+        "sustainability.carbontxt.links": {
+            "context": "Array of {label, href} link objects: parlhub's own carbon.txt and the carbon.txt specification at carbontxt.org. Translate `label` only; `href` is identical in every language.",
+            "en": [
+                {
+                    "label": "parlhub's carbon.txt",
+                    "href": "https://parlhub.com/carbon.txt"
+                },
+                {
+                    "label": "carbon.txt specification",
+                    "href": "https://carbontxt.org/syntax"
+                }
+            ],
+            "de": [
+                {
+                    "label": "parlhubs carbon.txt",
+                    "href": "https://parlhub.com/carbon.txt"
+                },
+                {
+                    "label": "carbon.txt-Spezifikation",
+                    "href": "https://carbontxt.org/syntax"
+                }
+            ],
+            "fr": [
+                {
+                    "label": "Le carbon.txt de parlhub",
+                    "href": "https://parlhub.com/carbon.txt"
+                },
+                {
+                    "label": "Spécification carbon.txt",
+                    "href": "https://carbontxt.org/syntax"
+                }
+            ],
+            "it": [
+                {
+                    "label": "Il carbon.txt di parlhub",
+                    "href": "https://parlhub.com/carbon.txt"
+                },
+                {
+                    "label": "Specifica carbon.txt",
+                    "href": "https://carbontxt.org/syntax"
+                }
+            ],
+            "es": [
+                {
+                    "label": "El carbon.txt de parlhub",
+                    "href": "https://parlhub.com/carbon.txt"
+                },
+                {
+                    "label": "Especificación de carbon.txt",
+                    "href": "https://carbontxt.org/syntax"
+                }
+            ]
+        },
+        "metas.sustainability.title": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_sustainability' namespace 'metas' block; the interface language selects which file. sustainability page SEO <title>. Short; buildMeta appends the site name.",
+            "en": "Sustainability",
+            "de": "Nachhaltigkeit",
+            "fr": "Durabilité",
+            "it": "Sostenibilità",
+            "es": "Sostenibilidad"
+        },
+        "metas.sustainability.desc": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_sustainability' namespace 'metas' block; the interface language selects which file. sustainability page meta-description. ~150-200 chars; summarises hosting + the no-ads/no-tracking/no-third-party facts and that this is the disclosure behind parlhub's carbon.txt.",
+            "en": "How parlhub is hosted and what the project does to keep its footprint small. Server-rendered, no ads, no tracking, no third-party scripts. The disclosure behind parlhub's carbon.txt.",
+            "de": "Wie parlhub gehostet wird und was das Projekt tut, um seinen Fussabdruck klein zu halten. Serverseitig gerendert, keine Werbung, kein Tracking, keine Skripte von Dritten. Die Offenlegung hinter parlhubs carbon.txt.",
+            "fr": "Comment parlhub est hébergé et ce que le projet fait pour limiter son empreinte. Rendu côté serveur, sans publicité, sans traçage, sans scripts tiers. La divulgation derrière le carbon.txt de parlhub.",
+            "it": "Come è ospitato parlhub e che cosa fa il progetto per contenere la propria impronta. Reso lato server, senza pubblicità, senza tracciamento, senza script di terze parti. La divulgazione dietro il carbon.txt di parlhub.",
+            "es": "Cómo se aloja parlhub y qué hace el proyecto para contener su huella. Renderizado en el servidor, sin anuncios, sin rastreo, sin scripts de terceros. La divulgación detrás del carbon.txt de parlhub."
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+  "traffic_stats": {
+    "title": "Statistica dal traffic",
+    "lead": "Tge parts da parlhub vegnan dumandadas, en tge lingua e da tgi. Agregà ina giada al di dal protocol da dumondas atgen dal server — nagins cookies, nagin tracking, naginas adressas IP. Countadas vegnan dumondas, betg persunas.",
+    "no_data": "Anc naginas cifras. Las statisticas dal emprim di cumparan uschespert che l'agregaziun quotidiana è vegnida exequida.",
+    "group_by": "Gruppar tenor",
+    "group_by_aria": "Gruppar las dumondas tenor",
+    "audience": "Public",
+    "audience_aria": "Filtrar las dumondas tenor il public",
+    "aud_human": "Umans",
+    "aud_bot": "Bots",
+    "aud_both": "Tuts dus",
+    "view": "Vista",
+    "view_aria": "Midar tranter la vista per di e per mais",
+    "view_daily": "Per di",
+    "view_monthly": "Per mais",
+    "dim_route": "Via",
+    "dim_lang": "Lingua",
+    "dim_visitor": "Tip da visitader",
+    "dim_device": "Apparat",
+    "include_internal": "Includer health checks",
+    "stat_requests": "Dumondas",
+    "stat_average": "Media",
+    "stat_p95": "p95",
+    "stat_slowest": "La pli lenta",
+    "col_share": "Part",
+    "other": "auter",
+    "route_other_note": "«(other)» resumescha tut las dumondas a percurs che n’appartegnan betg al sit — per solit scanners automatics, dumondas da bots malformadas u maliziusas, u URLs sbagliadas. Ellas vegnan cumbinadas en ina sula lingia, uschè ch’ina fluida da percurs casuals na po betg engrondir las statisticas.",
+    "chart_alt": "Diagram da bars stapladas da las dumondas per perioda tenor {dim}: {periods} periodas, en total {count} dumondas. La tabella sutvart cuntegna las medemas datas.",
+    "chart_alt_excl": "Diagram da bars stapladas da las dumondas per perioda tenor {dim}: {periods} periodas, en total {count} dumondas, senza health checks intern. La tabella sutvart cuntegna las medemas datas.",
+    "table_caption": "Dumondas tenor {dim} — las medemas datas sco il diagram survart.",
+    "footnote": "p95 vegn derivà da buckets da latenza ed è pertant exact fin al cunfin dal bucket. Las medias èn ponderadas tenor il dumber da dumondas."
+  },
+  "metas": {
+    "traffic_stats.title": "Statistica dal traffic",
+    "traffic_stats.desc": "Tge parts da parlhub vegnan dumandadas, en tge lingua e da tgi — agregà ina giada al di dal protocol da dumondas atgen dal server. Nagins cookies, nagin tracking, naginas adressas IP."
+  }
+}

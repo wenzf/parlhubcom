@@ -1,0 +1,60 @@
+{
+  "methodology": {
+    "title": "Méthodologie",
+    "lead": "parlhub ne se contente pas de lister des enregistrements : il calcule la proximité de vote, la loyauté de groupe, les réseaux de lobbying, des cartes de mots et davantage à partir des données ouvertes. Cette page expose précisément comment chaque valeur est obtenue et relie chaque indicateur au code source qui le produit.",
+    "labels": {
+      "formula": "Comment c'est calculé",
+      "sources": "Code source",
+      "used_on": "Où cela apparaît"
+    },
+    "repo_link": "Parcourir tout le code source sur GitHub",
+    "groups": {
+      "parliaments": { "heading": "Parlements", "sub": "Indicateurs calculés sur une chambre entière" },
+      "people": { "heading": "Personnes", "sub": "Indicateurs pour un seul membre" },
+      "votings": { "heading": "Votes", "sub": "Comment un vote est dessiné" },
+      "site": { "heading": "Le site lui-même", "sub": "Indicateurs d'exploitation" }
+    },
+    "methods": {
+      "alignment": {
+        "title": "Proximité de vote",
+        "body": "Pour chaque paire de membres ayant voté aux mêmes scrutins, la concordance est la part des scrutins communs où ils ont voté de la même manière (oui, non, abstention ou absent), l'absence correspondant à l'absence. Un membre doit avoir au moins 20 scrutins comptabilisés et une paire au moins 20 scrutins communs pour apparaître. La carte de chaleur des partis moyenne ces concordances par paire sur chaque paire de partis non ordonnée (avec une demi-largeur de confiance à 95 % de 1,96·σ/√n). Le nuage de points ramène la matrice de concordance à deux dimensions par positionnement multidimensionnel classique : les distances d = 1 − concordance sont doublement centrées en B, décalées en B + σI (borne de Gershgorin) pour la rendre semi-définie positive, et les deux vecteurs propres les plus positifs donnent les coordonnées. La disposition est initialisée de façon déterministe et ne tremble donc jamais d'un rechargement à l'autre."
+      },
+      "loyalty": {
+        "title": "Loyauté de groupe & cohésion",
+        "body": "Pour chaque scrutin, la ligne d'un groupe parlementaire est la position (oui, non ou abstention) qu'une stricte pluralité de ses votants a adoptée ; les égalités, et les groupes comptant moins de 4 votants sur ce scrutin, ne sont pas comptabilisés. Un membre fait défection dès que son vote diffère de la ligne de son groupe ; son taux de défection est défections ÷ scrutins comptabilisés (les membres avec moins de 10 scrutins comptabilisés sont écartés). On utilise le groupe au moment du vote, avec repli sur le parti actuel du membre là où aucun instantané n'existe (p. ex. Liechtenstein). La cohésion d'un groupe est l'indice d'accord moyen (Hix–Noury–Roland) sur ses scrutins : 1 lorsqu'un groupe vote d'un seul bloc, 0 lorsqu'il se divise également en trois."
+      },
+      "lobby": {
+        "title": "Réseau de lobbying",
+        "body": "Les membres et les organisations qu'ils déclarent au registre des intérêts forment un graphe biparti ; seules les organisations liées à au moins 2 membres sont conservées, de sorte que l'image montre des connexions partagées plutôt que des mandats isolés. Chaque lien déclaré est classé rémunéré, non rémunéré ou inconnu (le code harmonisé d'abord, puis un repli textuel allemand / français / italien), et rémunéré prime sur non rémunéré qui prime sur inconnu lorsqu'un membre a plusieurs liens avec une même organisation. Le réseau est disposé par une simulation de forces Fruchterman-Reingold déterministe : longueur d'arête idéale k = √(aire/n), répulsion k²/distance, attraction distance²/k, sur 300 itérations avec refroidissement. Aucun hasard n'est utilisé, le graphe reste donc stable d'un rechargement à l'autre."
+      },
+      "discussion": {
+        "title": "Positionnement des débats (Wordfish)",
+        "body": "Les discours de chaque membre actif sur une fenêtre temporelle commune sont segmentés en mots et filtrés des mots vides par langue, puis réduits à un document de comptages de mots par membre. Wordfish (Slapin & Proksch 2008) ajuste un modèle de Poisson E[y] = exp(α + ψ + β·θ) par régressions de Poisson alternées et place chaque orateur sur une unique échelle latente θ uniquement d'après le choix des mots : α est la loquacité, ψ la fréquence d'un mot et β la netteté avec laquelle un mot discrimine. L'ajustement est durci (borné, à demi-pas, régularisé par ridge) et initialisé de façon déterministe. η² (la part de la variance de θ expliquée par le parti) est affichée à côté, et l'axe utilise une plage robuste du 2e au 98e centile pour qu'une poignée d'orateurs peu prolixes à forte variance ne fixe pas l'échelle."
+      },
+      "vocabulary": {
+        "title": "Vocabulaire (fréquence des mots)",
+        "body": "Chaque transcription de discours d'un membre est débarrassée du HTML, mise en minuscules et découpée aux caractères non alphabétiques en jetons de plus d'un caractère (accents conservés, chiffres et ponctuation écartés). Chaque jeton est filtré contre la liste de mots vides de la langue propre du discours, de sorte que les discours allemands et français d'un membre bilingue soient nettoyés avec la bonne liste. Le résultat est les mots les plus fréquents du membre (les 120 premiers avec un compte d'au moins 2, sur une fenêtre de dates optionnelle), dessinés en treemap squarifié dimensionné selon le compte."
+      },
+      "coVoting": {
+        "title": "Voisins de vote",
+        "body": "C'est la moitié par paires de la proximité de vote, vue depuis un membre : sur les scrutins où les deux ont voté, la concordance avec chaque autre membre est correspondances ÷ scrutins communs (absent correspond à absent). Les paires partageant moins de 10 scrutins sont masquées comme du bruit, et la liste peut être recadrée sur une plage de dates. Contrairement au nuage de points du parlement, aucune réduction de dimension n'est appliquée. C'est une liste de voisins classée."
+      },
+      "interests": {
+        "title": "Classification des intérêts",
+        "body": "Chaque entrée du registre des intérêts est triée en rémunérée, non rémunérée ou inconnue : le code de rémunération harmonisé prime d'abord (non rémunéré et honorifique comptent tous deux comme non rémunéré), sinon un repli par mots-clés allemand / français / italien lit la description en texte libre. Les entrées sont regroupées par nom d'organisation normalisé pour agréger les mandats d'un membre par organisation. Cette même règle alimente la répartition rémunéré / non rémunéré du réseau de lobbying."
+      },
+      "hemicycle": {
+        "title": "Hémicycle de vote",
+        "body": "L'arc des sièges est calculé dans le navigateur : des anneaux sont ajoutés jusqu'à contenir tous les votants, les sièges sont répartis sur les anneaux par la méthode du plus fort reste pondérée par le rayon de l'anneau, et chaque siège est placé sur son arc puis trié de gauche à droite. Les coordonnées sont arrondies à deux décimales pour que serveur et client rendent à l'identique et que l'hydratation ne diverge jamais. Les partis sont colorés par effectif décroissant depuis une palette fixe, et l'arc n'est dessiné que si au moins 80 % des votants ont un siège connu."
+      },
+      "traffic": {
+        "title": "Statistiques de trafic",
+        "body": "Les journaux de requêtes sont agrégés en lignes de faits quotidiennes immuables (une par période, route, langue, classe de visiteur et appareil) portant des compteurs additifs (requêtes, latence sommée et maximale) et un histogramme de latence à huit classes ; les jours de plus de 90 jours sont condensés à la granularité mensuelle. Le tableau de bord les ré-agrège côté client : compteurs et maxima se fusionnent directement, la moyenne est dérivée comme latence sommée ÷ requêtes, et le 95e centile est approché depuis l'histogramme (la borne supérieure de la classe contenant la 95e requête), car de vraies moyennes et de vrais centiles ne peuvent être refusionnés à partir de totaux stockés. Les agents utilisateurs sont classés en classe de visiteur et appareil une seule fois, au moment de l'agrégation, afin que les règles restent révisables."
+      }
+    }
+  },
+  "metas": {
+    "methodology.title": "Méthodologie",
+    "methodology.desc": "Comment parlhub calcule ses valeurs (proximité de vote, loyauté de groupe, réseaux de lobbying, cartes de vocabulaire et positionnement Wordfish), avec la formule exacte de chacune et un lien vers le code source."
+  }
+}

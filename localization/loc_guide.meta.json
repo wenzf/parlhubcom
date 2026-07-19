@@ -1,0 +1,372 @@
+{
+    "_meta": {
+        "namespace": "loc_guide",
+        "source_files": [
+            "public/locales/<lang>/loc_guide.json for lang in de, en, fr"
+        ],
+        "loaded_by": "app/routes/pages/project/data_guide/data_guide.tsx",
+        "description": "Data guide page explaining the dataset and portal, with example queries.",
+        "format": "Each entry: context (where the string appears in the UI, its role, placeholders and length/grammar constraints) + the current de/en/fr texts as translation reference. Use the context when translating into a new language; a null text means the key is missing in that language file.",
+        "generated": "2026-07-13, code-verified against app/ sources; regenerate when public/locales texts or consuming components change."
+    },
+    "keys": {
+        "guide.title": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): the page's main heading (h1). Short noun phrase; the page is a field guide to the eleven data categories of the portal.",
+            "en": "Data guide",
+            "de": "Datenguide",
+            "fr": "Guide des données"
+        },
+        "guide.lead": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): lead/intro paragraph directly under the h1. Prose sentence; 'Eleven' must match the number of data-type cards on the page; keep the aside natural in the target language.",
+            "en": "Eleven kinds of data from the parliaments of Switzerland and Liechtenstein. Each has its own search page and a few examples.",
+            "de": "Elf Datenarten aus den Parlamenten der Schweiz und Liechtensteins. Jede mit eigener Suchseite und ein paar Beispielen.",
+            "fr": "Onze types de données des parlements de Suisse et du Liechtenstein. Chacun a sa page de recherche et quelques exemples."
+        },
+        "guide.map_link": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): text of the single footer link pointing to the data-map page that diagrams how the entity types relate. Short link label, sentence case.",
+            "en": "See how the data connects",
+            "de": "Wie die Daten zusammenhängen",
+            "fr": "Comment les données s'articulent"
+        },
+        "guide.groups.actors.heading": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): section heading (h2) for the 'Actors' cluster of cards — Actors (People, Parliaments, Committees & groups). One short noun; must stay brief.",
+            "en": "Actors",
+            "de": "Akteure",
+            "fr": "Acteurs"
+        },
+        "guide.groups.actors.sub": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): small muted subtitle shown right-aligned next to the 'actors' group heading. Very short tagline describing the cluster; no terminal period.",
+            "en": "The people and organisations of parliament",
+            "de": "Die Menschen und Organisationen des Parlaments",
+            "fr": "Les personnes et organisations du parlement"
+        },
+        "guide.groups.proceedings.heading": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): section heading (h2) for the 'Proceedings' cluster of cards — Proceedings (Affairs, Votings, Meetings). One short noun; must stay brief.",
+            "en": "Proceedings",
+            "de": "Verfahren",
+            "fr": "Travaux"
+        },
+        "guide.groups.proceedings.sub": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): small muted subtitle shown right-aligned next to the 'proceedings' group heading. Very short tagline describing the cluster; no terminal period.",
+            "en": "The business of legislating",
+            "de": "Das Geschäft des Gesetzgebens",
+            "fr": "Le travail législatif"
+        },
+        "guide.groups.records.heading": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): section heading (h2) for the 'Records' cluster of cards — Records (Speeches, Texts, Documents). One short noun; must stay brief.",
+            "en": "Records",
+            "de": "Aufzeichnungen",
+            "fr": "Archives"
+        },
+        "guide.groups.records.sub": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): small muted subtitle shown right-aligned next to the 'records' group heading. Very short tagline describing the cluster; no terminal period.",
+            "en": "What was said, written and filed",
+            "de": "Was gesagt, geschrieben und abgelegt wurde",
+            "fr": "Ce qui a été dit, écrit et déposé"
+        },
+        "guide.groups.lobbying.heading": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): section heading (h2) for the 'Lobbying' cluster of cards — Lobbying (Interests, Organizations). One short noun; must stay brief.",
+            "en": "Lobbying",
+            "de": "Lobbying",
+            "fr": "Lobbying"
+        },
+        "guide.groups.lobbying.sub": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): small muted subtitle shown right-aligned next to the 'lobbying' group heading. Very short tagline describing the cluster; no terminal period.",
+            "en": "Who is connected to whom",
+            "de": "Wer mit wem verbunden ist",
+            "fr": "Qui est lié à qui"
+        },
+        "guide.types.people.eyebrow": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): uppercase eyebrow label at the top of the People (MPs) card — names the data category. Single short noun (plural), rendered in small caps-style uppercase.",
+            "en": "People",
+            "de": "Personen",
+            "fr": "Personnes"
+        },
+        "guide.types.people.title": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): headline (h3) of the People (MPs) card — a rhetorical teaser question inviting exploration.",
+            "en": "Who votes like whom, and who talks about what?",
+            "de": "Wer stimmt wie wer, und wer redet worüber?",
+            "fr": "Qui vote comme qui, et qui parle de quoi ?"
+        },
+        "guide.types.people.links.vocabulary": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the People (MPs) card. Bulleted example link to a person's vocabulary word-map page; {{name}} is replaced with the person's name (an MP resolved live from the DB).",
+            "en": "The words of {{name}}, mapped",
+            "de": "Die Wörter von {{name}}, als Karte",
+            "fr": "Les mots de {{name}}, en carte"
+        },
+        "guide.types.people.links.alignment": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the People (MPs) card. Bulleted example link to a person's voting-alignment page (who votes most similarly); {{name}} is replaced with the person's name.",
+            "en": "Who votes like {{name}}?",
+            "de": "Wer stimmt wie {{name}}?",
+            "fr": "Qui vote comme {{name}} ?"
+        },
+        "guide.types.people.links.search": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the People (MPs) card. Card-footer link to the people search page. '26,000' is the approximate member count; German uses Swiss thousands separator (26'000).",
+            "en": "Search 26,000 members",
+            "de": "26'000 Mitglieder durchsuchen",
+            "fr": "Chercher parmi 26 000 élus"
+        },
+        "guide.types.bodies.eyebrow": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): uppercase eyebrow label at the top of the Parliaments (councils/bodies) card — names the data category. Single short noun (plural), rendered in small caps-style uppercase.",
+            "en": "Parliaments",
+            "de": "Parlamente",
+            "fr": "Parlements"
+        },
+        "guide.types.bodies.title": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): headline (h3) of the Parliaments (councils/bodies) card — a rhetorical teaser question inviting exploration. 'Bloc' = voting as a unified block; 'defects' = breaking ranks with one's party.",
+            "en": "Which party votes as one bloc, and who breaks away?",
+            "de": "Welche Partei stimmt als Block, und wer schert aus?",
+            "fr": "Quel parti vote comme un seul bloc, et qui fait défection ?"
+        },
+        "guide.types.bodies.links.loyalty": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Parliaments (councils/bodies) card. Bulleted example link to the party-loyalty chart of the Swiss Federal Assembly. 'Fraktionstreue' = loyalty to one's parliamentary group (Fraktion); 'Federal Assembly' is the Swiss national parliament (Bundesversammlung/Assemblée fédérale) — use its official name.",
+            "en": "Party loyalty in the Federal Assembly",
+            "de": "Fraktionstreue in der Bundesversammlung",
+            "fr": "La loyauté de groupe à l'Assemblée fédérale"
+        },
+        "guide.types.bodies.links.lobby": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Parliaments (councils/bodies) card. Bulleted example link to the lobby-network graph of the Federal Assembly. 'Federal' here = Swiss national level (eidgenössisch).",
+            "en": "The federal lobby network",
+            "de": "Das eidgenössische Lobby-Netzwerk",
+            "fr": "Le réseau de lobbying fédéral"
+        },
+        "guide.types.bodies.links.people": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Parliaments (councils/bodies) card. Bulleted example link to the member list of the Federal Assembly.",
+            "en": "All members of the Federal Assembly",
+            "de": "Alle Mitglieder der Bundesversammlung",
+            "fr": "Tous les membres de l'Assemblée fédérale"
+        },
+        "guide.types.bodies.links.search": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Parliaments (councils/bodies) card. Card-footer link to the bodies (parliaments) search page. Conveys the range from national chambers down to ~460 municipal parliaments; 'communes' = municipalities (Gemeinden).",
+            "en": "From the federal chambers to ~460 communes",
+            "de": "Von den eidgenössischen Räten bis zu rund 460 Gemeinden",
+            "fr": "Des chambres fédérales à ~460 communes"
+        },
+        "guide.types.groups.eyebrow": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): uppercase eyebrow label at the top of the Committees & parliamentary groups card — names the data category. Single short noun (plural), rendered in small caps-style uppercase.",
+            "en": "Committees & groups",
+            "de": "Kommissionen & Fraktionen",
+            "fr": "Commissions & groupes"
+        },
+        "guide.types.groups.title": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): headline (h3) of the Committees & parliamentary groups card — a rhetorical teaser question inviting exploration. 'Business' = legislative affairs (Geschäfte), not commerce.",
+            "en": "Who pushes which business?",
+            "de": "Wer treibt welche Geschäfte voran?",
+            "fr": "Qui pousse quelles affaires ?"
+        },
+        "guide.types.groups.links.search": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Committees & parliamentary groups card. Card-footer link to the groups search page. 'Fractions' = parliamentary groups (Fraktionen); also covers parties and committees (Kommissionen).",
+            "en": "Search fractions, parties and committees",
+            "de": "Fraktionen, Parteien und Kommissionen durchsuchen",
+            "fr": "Chercher groupes, partis et commissions"
+        },
+        "guide.types.affairs.eyebrow": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): uppercase eyebrow label at the top of the Affairs (legislative business items) card — names the data category. Single short noun (plural), rendered in small caps-style uppercase.",
+            "en": "Affairs",
+            "de": "Geschäfte",
+            "fr": "Affaires"
+        },
+        "guide.types.affairs.title": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): headline (h3) of the Affairs (legislative business items) card — a rhetorical teaser question inviting exploration. 'Motion' is a Swiss parliamentary instrument type — keep the parliamentary sense.",
+            "en": "What became of that motion?",
+            "de": "Was wurde aus dieser Motion?",
+            "fr": "Qu'est devenue cette motion ?"
+        },
+        "guide.types.affairs.links.example": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Affairs (legislative business items) card. Bulleted example link to one long-running affair's overview page; {{name}} is replaced with the affair's title resolved from the DB. 'Vote by vote' refers to the successive votings the affair went through.",
+            "en": "A long fight, vote by vote: {{name}}",
+            "de": "Ein langer Kampf, Abstimmung für Abstimmung: {{name}}",
+            "fr": "Un long combat, vote après vote : {{name}}"
+        },
+        "guide.types.affairs.links.search": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Affairs (legislative business items) card. Card-footer link to the affairs search page. '320,000' is the approximate affair count (Swiss format 320'000 in German); 'affairs' = legislative business items (Geschäfte/objets).",
+            "en": "Filter 320,000 affairs",
+            "de": "320'000 Geschäfte filtern",
+            "fr": "Filtrer 320 000 objets"
+        },
+        "guide.types.votings.eyebrow": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): uppercase eyebrow label at the top of the Votings (roll-call votes) card — names the data category. Single short noun (plural), rendered in small caps-style uppercase.",
+            "en": "Votings",
+            "de": "Abstimmungen",
+            "fr": "Votes"
+        },
+        "guide.types.votings.title": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): headline (h3) of the Votings (roll-call votes) card — a rhetorical teaser question inviting exploration.",
+            "en": "Who said yes, who said no?",
+            "de": "Wer sagte Ja, wer Nein?",
+            "fr": "Qui a dit oui, qui a dit non ?"
+        },
+        "guide.types.votings.links.example": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Votings (roll-call votes) card. Bulleted example link to the most recent final vote's detail page (name-by-name roll call). 'Final vote' = Schlussabstimmung/vote final, the closing vote on a bill.",
+            "en": "The latest final vote, name by name",
+            "de": "Die jüngste Schlussabstimmung, Name für Name",
+            "fr": "Le dernier vote final, nom par nom"
+        },
+        "guide.types.votings.links.search": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Votings (roll-call votes) card. Card-footer link to the votings search page. '75,000' is the approximate vote count (75'000 in German).",
+            "en": "Search 75,000 votes",
+            "de": "75'000 Abstimmungen durchsuchen",
+            "fr": "Chercher parmi 75 000 votes"
+        },
+        "guide.types.meetings.eyebrow": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): uppercase eyebrow label at the top of the Meetings (sittings/sessions) card — names the data category. Single short noun (plural), rendered in small caps-style uppercase.",
+            "en": "Meetings",
+            "de": "Sitzungen",
+            "fr": "Séances"
+        },
+        "guide.types.meetings.title": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): headline (h3) of the Meetings (sittings/sessions) card — a rhetorical teaser question inviting exploration. 'Sitting' = a single meeting (Sitzung/séance) of a parliament.",
+            "en": "What did one sitting decide?",
+            "de": "Was hat eine einzelne Sitzung entschieden?",
+            "fr": "Qu'a décidé une séance donnée ?"
+        },
+        "guide.types.meetings.links.search": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Meetings (sittings/sessions) card. Card-footer link to the meetings search page. 'Session' = a parliamentary session block containing daily sittings.",
+            "en": "Every session, day by day",
+            "de": "Jede Session, Tag für Tag",
+            "fr": "Chaque session, jour par jour"
+        },
+        "guide.types.speeches.eyebrow": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): uppercase eyebrow label at the top of the Speeches (plenary interventions) card — names the data category. Single short noun (plural), rendered in small caps-style uppercase.",
+            "en": "Speeches",
+            "de": "Reden",
+            "fr": "Discours"
+        },
+        "guide.types.speeches.title": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): headline (h3) of the Speeches (plenary interventions) card — a rhetorical teaser question inviting exploration. The wolf is a recurring Swiss political topic (wolf protection/hunting); keep the concrete animal reference.",
+            "en": "Who talked about wolves?",
+            "de": "Wer hat über den Wolf geredet?",
+            "fr": "Qui a parlé du loup ?"
+        },
+        "guide.types.speeches.links.wolf": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Speeches (plenary interventions) card. Bulleted example link to the speeches search pre-filtered with the localized 'wolf' query (guide.types.speeches.queries.wolf). 'Votum' (de) = a plenary intervention/speech.",
+            "en": "Every speech that mentions the wolf",
+            "de": "Jedes Votum, das den Wolf erwähnt",
+            "fr": "Chaque intervention qui mentionne le loup"
+        },
+        "guide.types.speeches.links.search": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Speeches (plenary interventions) card. Card-footer link to the speeches search page. '2.5 million' interventions; 'word for word' stresses full-text verbatim search.",
+            "en": "Search 2.5 million interventions, word for word",
+            "de": "2,5 Millionen Voten durchsuchen, wortgetreu",
+            "fr": "Chercher dans 2,5 millions d'interventions, mot pour mot"
+        },
+        "guide.types.speeches.queries.wolf": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): not a visible label — the localized search term appended as ?q= to the Speeches (plenary interventions) card's 'wolf' link URL. Should be the word for the animal 'wolf' in the target language, capitalized as a natural search input; it must actually match speech texts in de/fr/it, so keep it a plain dictionary word.",
+            "en": "Wolf",
+            "de": "Wolf",
+            "fr": "loup"
+        },
+        "guide.types.texts.eyebrow": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): uppercase eyebrow label at the top of the Texts (official summaries of bills) card — names the data category. Single short noun (plural), rendered in small caps-style uppercase.",
+            "en": "Texts",
+            "de": "Texte",
+            "fr": "Textes"
+        },
+        "guide.types.texts.title": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): headline (h3) of the Texts (official summaries of bills) card — a rhetorical teaser question inviting exploration. 'Bill' = a legislative proposal (Vorlage/projet); the card is about short official summaries.",
+            "en": "What is a bill about, in three sentences?",
+            "de": "Worum geht es in einer Vorlage, in drei Sätzen?",
+            "fr": "De quoi parle un projet, en trois phrases ?"
+        },
+        "guide.types.texts.links.bitcoin": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Texts (official summaries of bills) card. Bulleted example link to the texts search pre-filtered with the 'Bitcoin' query (guide.types.texts.queries.bitcoin).",
+            "en": "Every text that mentions Bitcoin",
+            "de": "Jeder Text, der Bitcoin erwähnt",
+            "fr": "Chaque texte qui mentionne Bitcoin"
+        },
+        "guide.types.texts.links.search": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Texts (official summaries of bills) card. Card-footer link to the texts search page. 'Official summaries' = the parliament's own summaries of bills/affairs.",
+            "en": "Search the official summaries",
+            "de": "Die offiziellen Zusammenfassungen durchsuchen",
+            "fr": "Chercher dans les résumés officiels"
+        },
+        "guide.types.texts.queries.bitcoin": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): not a visible label — the localized search term appended as ?q= to the Texts (official summaries of bills) card's 'bitcoin' link URL. Should stay 'Bitcoin' (proper noun) in virtually every language; it is a search term sent as ?q=, not a display label.",
+            "en": "Bitcoin",
+            "de": "Bitcoin",
+            "fr": "Bitcoin"
+        },
+        "guide.types.docs.eyebrow": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): uppercase eyebrow label at the top of the Documents (protocols/attachments) card — names the data category. Single short noun (plural), rendered in small caps-style uppercase.",
+            "en": "Documents",
+            "de": "Dokumente",
+            "fr": "Documents"
+        },
+        "guide.types.docs.title": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): headline (h3) of the Documents (protocols/attachments) card — a rhetorical teaser question inviting exploration. 'Protocols' = official minutes/records of proceedings (Protokolle/procès-verbaux).",
+            "en": "What's buried in the protocols?",
+            "de": "Was steckt in den Protokollen?",
+            "fr": "Que cachent les procès-verbaux ?"
+        },
+        "guide.types.docs.links.search": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Documents (protocols/attachments) card. Card-footer link to the documents full-text search page. '880,000' documents (880'000 in German).",
+            "en": "Full-text search across 880,000 documents",
+            "de": "Volltextsuche über 880'000 Dokumente",
+            "fr": "Recherche plein texte dans 880 000 documents"
+        },
+        "guide.types.interests.eyebrow": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): uppercase eyebrow label at the top of the Interests (lobby register mandates) card — names the data category. Single short noun (plural), rendered in small caps-style uppercase.",
+            "en": "Interests",
+            "de": "Interessen",
+            "fr": "Intérêts"
+        },
+        "guide.types.interests.title": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): headline (h3) of the Interests (lobby register mandates) card — a rhetorical teaser question inviting exploration. 'Boards' = corporate/association boards (Verwaltungsräte/conseils d'administration) where MPs hold mandates.",
+            "en": "Who sits on which boards?",
+            "de": "Wer sitzt in welchen Verwaltungsräten?",
+            "fr": "Qui siège dans quels conseils d'administration ?"
+        },
+        "guide.types.interests.links.example": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Interests (lobby register mandates) card. Bulleted example link to one person's interests page; {{name}} is replaced with the name of an MP with many declared mandates. 'Mandate' = a declared board/advisory position in the register of interests.",
+            "en": "Every mandate of {{name}}",
+            "de": "Jedes Mandat von {{name}}",
+            "fr": "Tous les mandats de {{name}}"
+        },
+        "guide.types.interests.links.search": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Interests (lobby register mandates) card. Card-footer link to the interests search page. '29,000' register entries (29'000 in German); 'register' = the official register of interests (Interessenregister).",
+            "en": "Search 29,000 register entries",
+            "de": "29'000 Registereinträge durchsuchen",
+            "fr": "Chercher parmi 29 000 entrées du registre"
+        },
+        "guide.types.organizations.eyebrow": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): uppercase eyebrow label at the top of the Organizations (lobbying organisations) card — names the data category. Single short noun (plural), rendered in small caps-style uppercase.",
+            "en": "Organizations",
+            "de": "Organisationen",
+            "fr": "Organisations"
+        },
+        "guide.types.organizations.title": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): headline (h3) of the Organizations (lobbying organisations) card — a rhetorical teaser question inviting exploration. 'Reaches furthest' = has ties into the most parliaments.",
+            "en": "Which organisation reaches furthest?",
+            "de": "Welche Organisation reicht am weitesten?",
+            "fr": "Quelle organisation va le plus loin ?"
+        },
+        "guide.types.organizations.links.example": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Organizations (lobbying organisations) card. Bulleted example link to one organization's overview page; {{name}} is replaced with the organization's name. 'One club, several parliaments' = a single association with members/ties in multiple parliaments.",
+            "en": "One club, several parliaments: {{name}}",
+            "de": "Ein Verein, mehrere Parlamente: {{name}}",
+            "fr": "Un club, plusieurs parlements : {{name}}"
+        },
+        "guide.types.organizations.links.search": {
+            "context": "Data guide page (/project/data-guide, app/routes/pages/project/data_guide/data_guide.tsx): link label on the Organizations (lobbying organisations) card. Card-footer link to the organizations search page. Plain instruction; keep short.",
+            "en": "Search organisations by name",
+            "de": "Organisationen nach Name durchsuchen",
+            "fr": "Chercher les organisations par nom"
+        },
+        "metas.data_guide.title": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_guide' namespace 'metas' block; the interface language selects which file. data_guide page SEO <title>.",
+            "en": "Data guide",
+            "de": "Datenguide",
+            "fr": "Guide des données",
+            "it": "Guida ai dati",
+            "es": "Guía de datos"
+        },
+        "metas.data_guide.desc": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_guide' namespace 'metas' block; the interface language selects which file. data_guide page meta-description.",
+            "en": "Eleven kinds of data from the parliaments of Switzerland and Liechtenstein: people, parliaments, affairs, votings, speeches, documents and lobbying ties. Each has its own search page and concrete examples.",
+            "de": "Elf Datenarten aus den Parlamenten der Schweiz und Liechtensteins: Personen, Parlamente, Geschäfte, Abstimmungen, Reden, Dokumente und Lobby-Verbindungen. Jede mit eigener Suchseite und konkreten Beispielen.",
+            "fr": "Onze types de données des parlements de Suisse et du Liechtenstein : personnes, parlements, affaires, votes, discours, documents et liens de lobbying. Chacun a sa page de recherche et des exemples concrets.",
+            "it": "Undici tipi di dati dai parlamenti di Svizzera e Liechtenstein — persone, parlamenti, affari, votazioni, discorsi, documenti, legami di lobbying — ciascuno con la propria pagina di ricerca ed esempi concreti.",
+            "es": "Once tipos de datos de los parlamentos de Suiza y Liechtenstein — personas, parlamentos, asuntos, votaciones, discursos, documentos, vínculos de lobbying — cada uno con su propia página de búsqueda y ejemplos concretos."
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+  "accessibility": {
+    "title": "Accesibilidad",
+    "lead": "La norma de diseño que se aplica en parlhub es WCAG 2.2 en el nivel AAA. Esta declaración dice hasta dónde llega eso realmente, cómo se evaluó y dónde no alcanza. Es una autodeclaración voluntaria: parlhub es un proyecto privado sin ánimo de lucro, así que no le son aplicables ni la LDis suiza ni la directiva europea de accesibilidad web.",
+    "conformance": {
+      "heading": "Estado de conformidad",
+      "body": [
+        "parlhub cumple parcialmente con WCAG 2.2 nivel AAA. «Parcialmente» es la palabra honesta. AAA es la norma con la que se diseña: los tokens de color, los tamaños de los objetivos y los estilos de foco la siguen todos. Pero eso la convierte en una norma aplicada, no en un resultado auditado.",
+        "Esta declaración se elaboró mediante autoevaluación, por la única persona que construye el sitio. Un verificador automático recorre ahora una muestra de páginas y no informa de ningún error. Eso es un suelo, no un resultado: solo decide lo que una máquina puede decidir, y deja el resto a una persona que todavía no ha mirado. No ha habido auditoría externa ni pruebas formales con tecnología de apoyo. El W3C desaconseja reivindicar AAA para un sitio entero, porque algunos contenidos no pueden cumplir todos los criterios AAA. Lea, pues, el nivel como la regla a la que se somete el código, y las limitaciones de abajo como la parte que realmente se conoce."
+      ]
+    },
+    "measures": {
+      "heading": "Qué hay implementado",
+      "body": [
+        "La guía de estilo con la que se construye cada componente exige un contraste de texto de al menos 7:1, objetivos interactivos de al menos 44×44 píxeles, un indicador de foco visible y manejo por teclado. Las páginas se renderizan en el servidor, así que el contenido está ahí antes de que se ejecute JavaScript alguno.",
+        "Los ajustes de la cabecera permiten cambiar el tamaño del texto, pasar a una paleta de mayor contraste, quitar el color por completo y elegir un tema claro u oscuro. El idioma de la interfaz y el idioma de los datos se eligen por separado: puede leer la interfaz en un idioma y los registros en otro.",
+        "Un verificador automático (pa11y-ci) recorre doce páginas, una por cada tipo de página del sitio, y ahora mismo no informa de ningún error en el nivel AA. Léalo en sentido estricto. Ve doce páginas, no el sitio entero. Sus reglas se detienen en WCAG 2.1, así que lo que añadió la 2.2 no se comprueba en absoluto. En bastantes elementos no pudo resolver el color de fondo: el contraste de 7:1 de arriba es, por tanto, una regla que el diseño sigue, no algo que la herramienta haya confirmado. Y en cada pasada deja varios cientos de puntos para que los juzgue una persona, que nadie ha repasado. Es una red contra regresiones, no un veredicto."
+      ]
+    },
+    "limitations": {
+      "heading": "Limitaciones conocidas",
+      "body": [
+        "Sin auditoría externa y sin pruebas con tecnología de apoyo. Una comprobación automática cubre ahora la parte verificable por una máquina, pero esa es la mitad más pequeña del problema: los estudios publicados acreditan incluso a los motores más sólidos solo alrededor de la mitad de los problemas WCAG, y el que se usa aquí no es el más sólido. Nadie ha recorrido este sitio con un lector de pantalla, ni solo con el teclado, como hace quien depende de ello. Sigue siendo la mayor carencia, y la razón por la que aquí nada reivindica conformidad total.",
+        "Idioma de las partes. Los registros aparecen a menudo en un idioma distinto al de la interfaz. Es deliberado, porque un registro suizo puede existir solo en alemán. Los textos fuente largos (discursos, textos y descripciones de grupos) declaran ahora el idioma del que se resolvieron, de modo que un lector de pantalla lee un discurso alemán con voz alemana en una página inglesa. Los campos localizados más cortos, como los títulos y las etiquetas de tipo, todavía no llevan ese marcado. Así que WCAG 3.1.2 se cumple para la prosa, pero no en todas partes.",
+        "Contenido de los datos de origen. Los textos, discursos y documentos llegan de OpenParlData.ch como HTML que parlhub no controla y que a veces debe reparar antes de mostrarlo. El orden de los encabezados y la semántica dentro de esos bloques no pueden garantizarse. La comprobación automática muestra justo esto: el único error que informa en todas las páginas probadas es un encabezado que se salta un nivel dentro de la transcripción de un discurso, en marcado que llegó del origen. Los PDF enlazados y las fotografías también vienen de allí, con la accesibilidad con la que se publicaron.",
+        "Gráficos. Cada gráfico lleva una alternativa textual breve, y varios se pueden leer como texto: la matriz de afinidad entre partidos es en sí misma una tabla, y el treemap de las palabras más usadas se puede mostrar como tabla. Pero no toda visualización expone cada dato como texto, y los diagramas de dispersión en particular son difíciles de transmitir sin la vista. Las cifras subyacentes siempre se pueden descargar en CSV o JSON."
+      ]
+    },
+    "feedback": {
+      "heading": "¿Ha encontrado una barrera?",
+      "body": [
+        "Escríbame. Es la vía más rápida para que se corrija, y son los avisos los que hacen que esta declaración se revise. Indique por favor en qué página estaba y qué se lo impidió."
+      ],
+      "links": [
+        {
+          "label": "hello@wefrick.com",
+          "href": "mailto:hello@wefrick.com"
+        },
+        {
+          "label": "Informar en GitHub",
+          "href": "https://github.com/wenzf/parlhubcom/issues"
+        }
+      ]
+    },
+    "statement": {
+      "heading": "Sobre esta declaración",
+      "prepared_label": "Elaborada el",
+      "reviewed_label": "Última revisión",
+      "method": "Elaborada mediante autoevaluación, con el apoyo de pruebas automáticas, siguiendo la estructura de las orientaciones del W3C para las declaraciones de accesibilidad. No ha participado ningún tercero. Se revisa cuando el sitio cambia, o cuando alguien informa de algo que la desmiente."
+    }
+  },
+  "metas": {
+    "accessibility.title": "Accesibilidad",
+    "accessibility.desc": "parlhub se construye según WCAG 2.2 nivel AAA como norma de diseño, autoevaluado y parcialmente conforme. Qué hay implementado, qué no, y cómo informar de una barrera."
+  }
+}

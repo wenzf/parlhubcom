@@ -1,0 +1,38 @@
+{
+  "traffic_stats": {
+    "title": "Statistiche di traffico",
+    "lead": "Quali parti di parlhub vengono richieste, in quale lingua e da chi. Aggregate una volta al giorno dal registro delle richieste del server — nessun cookie, nessun tracciamento, nessun indirizzo IP. I conteggi sono richieste, non persone.",
+    "no_data": "Ancora nessun dato. Le prime statistiche compariranno una volta eseguita l'aggregazione giornaliera.",
+    "group_by": "Raggruppa per",
+    "group_by_aria": "Raggruppa le richieste per",
+    "audience": "Pubblico",
+    "audience_aria": "Filtra le richieste per pubblico",
+    "aud_human": "Umani",
+    "aud_bot": "Bot",
+    "aud_both": "Entrambi",
+    "view": "Vista",
+    "view_aria": "Passa dalla vista giornaliera a quella mensile",
+    "view_daily": "Giornaliera",
+    "view_monthly": "Mensile",
+    "dim_route": "Percorso",
+    "dim_lang": "Lingua",
+    "dim_visitor": "Tipo di visitatore",
+    "dim_device": "Dispositivo",
+    "include_internal": "Includi i controlli di integrità",
+    "stat_requests": "Richieste",
+    "stat_average": "Media",
+    "stat_p95": "p95",
+    "stat_slowest": "Più lenta",
+    "col_share": "Quota",
+    "other": "altri",
+    "route_other_note": "«(other)» raggruppa tutte le richieste verso percorsi che non fanno parte del sito — di solito scanner automatici, richieste di bot malformate o malevole o URL digitati in modo errato. Sono riunite in un’unica riga affinché una marea di percorsi casuali non possa gonfiare le statistiche.",
+    "chart_alt": "Grafico a barre impilate delle richieste per periodo secondo {dim}: {periods} periodi, {count} richieste in totale. La tabella sottostante contiene gli stessi dati.",
+    "chart_alt_excl": "Grafico a barre impilate delle richieste per periodo secondo {dim}: {periods} periodi, {count} richieste in totale, esclusi i controlli di integrità interni. La tabella sottostante contiene gli stessi dati.",
+    "table_caption": "Richieste per {dim} — gli stessi dati del grafico qui sopra.",
+    "footnote": "Il p95 è derivato da fasce di latenza, quindi è preciso al limite della fascia. Le medie sono ponderate per numero di richieste."
+  },
+  "metas": {
+    "traffic_stats.title": "Statistiche di traffico",
+    "traffic_stats.desc": "Quali parti di parlhub vengono richieste, in quale lingua e da chi — aggregate una volta al giorno dal registro delle richieste del server. Nessun cookie, nessun tracciamento, nessun indirizzo IP."
+  }
+}

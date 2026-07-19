@@ -1,0 +1,15 @@
+{
+  "imprint": {
+    "title": "Mentions légales",
+    "nature": "parlhub est un projet privé à but non lucratif. Il n'est affilié à aucun parlement, autorité ou parti.",
+    "operator_label": "Responsable du contenu",
+    "contact_label": "Contact",
+    "code_label": "Code source",
+    "data_label": "Données",
+    "disclaimer": "Fourni tel quel, sans garantie. Les données sont affichées telles que publiées par la source."
+  },
+  "metas": {
+    "imprint.title": "Mentions légales",
+    "imprint.desc": "Mentions légales de parlhub : qui gère le site, comment le contacter, et les licences du code et des données."
+  }
+}

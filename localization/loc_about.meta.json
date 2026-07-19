@@ -1,0 +1,237 @@
+{
+    "_meta": {
+        "namespace": "loc_about",
+        "source_files": [
+            "public/locales/<lang>/loc_about.json for lang in de, en, fr, it, es"
+        ],
+        "loaded_by": "app/routes/pages/project/about/about.tsx",
+        "description": "'About the project' page.",
+        "format": "Each entry: context (where the string appears in the UI, its role, placeholders and length/grammar constraints) + the current de/en/fr/it/es texts as translation reference. Use the context when translating into a new language; a null text means the key is missing in that language file.",
+        "generated": "2026-07-15, code-verified against app/ sources; regenerate when public/locales texts or consuming components change."
+    },
+    "keys": {
+        "about.title": {
+            "context": "Page title (h1) of the \"About parlhub\" page at /about (app/routes/pages/project/about/about.tsx). Short; \"parlhub\" is the site name, never translated.",
+            "en": "About parlhub",
+            "de": "Über parlhub",
+            "fr": "À propos de parlhub",
+            "it": "Informazioni su parlhub",
+            "es": "Acerca de parlhub"
+        },
+        "about.lead": {
+            "context": "About page lead paragraph (app/routes/pages/project/about/about.tsx), rendered right under the H1. Four sentences: what parlhub is (a data portal for the Swiss parliaments and the Liechtenstein Landtag — de names the Landtag explicitly, keep that), what data it opens up (actors, parliamentary processes such as votes, documents, speeches), how it is shown (tables, partly also prepared/analysed as charts), and that raw data is available via interfaces in various formats. Prose, full sentences; no length limit.",
+            "en": "parlhub is a data portal for the parliaments of Switzerland and the Liechtenstein Landtag. It opens up data on actors and parliamentary processes such as votes, along with documents and speeches. The information is presented in tables, in part also prepared and analysed as charts. The raw data is available through interfaces in various formats.",
+            "de": "parlhub ist ein Datenportal für die Parlamente der Schweiz und den Liechtensteiner Landtag. Es werden Daten zu Akteuren, parlamentarischen Prozessen wie Abstimmungen sowie Dokumente oder Reden zugänglich gemacht. Die Informationen werden in tabellarischer Form dargestellt, teilweise auch als Diagramme aufbereitet und analysiert. Die Rohdaten stehen via Schnittstellen in verschiedenen Formaten zur Verfügung.",
+            "fr": "parlhub est un portail de données pour les parlements de Suisse et le Landtag du Liechtenstein. Il rend accessibles des données sur les acteurs et les processus parlementaires comme les votes, ainsi que des documents et des interventions. Les informations sont présentées sous forme de tableaux, en partie aussi préparées et analysées sous forme de graphiques. Les données brutes sont disponibles via des interfaces dans différents formats.",
+            "it": "parlhub è un portale di dati per i parlamenti della Svizzera e il Landtag del Liechtenstein. Rende accessibili dati su attori e processi parlamentari come le votazioni, oltre a documenti e interventi. Le informazioni sono presentate in forma tabellare, in parte anche elaborate e analizzate come grafici. I dati grezzi sono disponibili tramite interfacce in diversi formati.",
+            "es": "parlhub es un portal de datos para los parlamentos de Suiza y el Landtag de Liechtenstein. Pone a disposición datos sobre actores y procesos parlamentarios como las votaciones, además de documentos y discursos. La información se presenta en forma de tablas, en parte también preparada y analizada como gráficos. Los datos brutos están disponibles a través de interfaces en distintos formatos."
+        },
+        "about.data.heading": {
+            "context": "Section heading (h2) on the /about page introducing the paragraphs about the data source.",
+            "en": "The data",
+            "de": "Die Daten",
+            "fr": "Les données",
+            "it": "I dati",
+            "es": "Los datos"
+        },
+        "about.data.body": {
+            "context": "Array of prose paragraphs under \"The data\" heading on /about, crediting OpenParlData.ch and noting that computed metrics (alignment = how similarly two members vote, loyalty = voting with one's own parliamentary group) are parlhub's own. Informal first-person maintainer voice (\"that's on me\") — keep that tone.",
+            "en": [
+                "All data comes from OpenParlData.ch. They collect the official parliamentary data, clean it up and publish it as open data. That is hard, unglamorous work. parlhub would not exist without it. If you like this site, their project deserves a big part of the credit. Go have a look.",
+                "The numbers on this site (alignment, loyalty and so on) are computed by parlhub from that data. If a computation is wrong, that's on me, not on OpenParlData.ch."
+            ],
+            "de": [
+                "Alle Daten stammen von OpenParlData.ch. Das Projekt sammelt die offiziellen Parlamentsdaten, bereinigt sie und stellt sie als Open Data bereit. Das ist viel und wenig sichtbare Arbeit. Ohne sie gäbe es parlhub nicht. Wenn Ihnen diese Seite gefällt, gehört ein grosser Teil des Verdiensts OpenParlData.ch. Schauen Sie dort vorbei.",
+                "Die Kennzahlen auf dieser Seite (Übereinstimmung, Fraktionstreue und so weiter) berechnet parlhub selber aus diesen Daten. Wenn eine Berechnung falsch ist, liegt das an mir, nicht an OpenParlData.ch."
+            ],
+            "fr": [
+                "Toutes les données proviennent de OpenParlData.ch. Le projet collecte les données parlementaires officielles, les nettoie et les publie en open data. C'est un travail considérable et peu visible. Sans lui, parlhub n'existerait pas. Si ce site vous plaît, une grande partie du mérite revient à OpenParlData.ch. Allez y jeter un œil.",
+                "Les indicateurs de ce site (concordance, loyauté, etc.) sont calculés par parlhub à partir de ces données. Si un calcul est faux, c'est de mon fait, pas de celui d'OpenParlData.ch."
+            ],
+            "it": [
+                "Tutti i dati provengono da OpenParlData.ch. Il progetto raccoglie i dati parlamentari ufficiali, li ripulisce e li pubblica come open data. È un lavoro impegnativo e poco appariscente. Senza di esso parlhub non esisterebbe. Se questo sito ti piace, gran parte del merito va al loro progetto. Vai a dare un'occhiata.",
+                "Gli indicatori di questo sito (concordanza, fedeltà e così via) sono calcolati da parlhub a partire da quei dati. Se un calcolo è sbagliato, la colpa è mia, non di OpenParlData.ch."
+            ],
+            "es": [
+                "Todos los datos provienen de OpenParlData.ch. Recopilan los datos parlamentarios oficiales, los depuran y los publican como datos abiertos. Es un trabajo arduo y poco vistoso. parlhub no existiría sin él. Si le gusta este sitio, gran parte del mérito corresponde a su proyecto. Vaya a echar un vistazo.",
+                "Las cifras de este sitio (afinidad, lealtad, etc.) las calcula parlhub a partir de esos datos. Si un cálculo es incorrecto, la responsabilidad es mía, no de OpenParlData.ch."
+            ]
+        },
+        "about.data.source_label": {
+            "context": "Visible text of the external link to OpenParlData.ch shown under the data section on /about. Proper name / domain — keep verbatim in every language.",
+            "en": "OpenParlData.ch",
+            "de": "OpenParlData.ch",
+            "fr": "OpenParlData.ch",
+            "it": "OpenParlData.ch",
+            "es": "OpenParlData.ch"
+        },
+        "about.data.source_href": {
+            "context": "URL (href) of the OpenParlData.ch link on /about; not user-visible text. Do not translate.",
+            "en": "https://openparldata.ch",
+            "de": "https://openparldata.ch",
+            "fr": "https://openparldata.ch",
+            "it": "https://openparldata.ch",
+            "es": "https://openparldata.ch"
+        },
+        "about.goal.heading": {
+            "context": "Section heading (h2) on /about introducing the project's goal (accessibility for the broadest possible public). Short, one word or two.",
+            "en": "The goal",
+            "de": "Ziel",
+            "fr": "L'objectif",
+            "it": "L'obiettivo",
+            "es": "El objetivo"
+        },
+        "about.goal.body": {
+            "context": "Array of prose paragraphs under \"The goal\" heading on /project/about. States the aim of reaching the broadest public: (a) an accessible, user-friendly site; (b) machine-readability for search engines (SSR, schema.org) and AI agents (WebMCP). IMPORTANT: this text must not mention WCAG, AAA or any conformance level. It once read '(WCAG AAA)' as a bare parenthetical, which claimed an achieved, certified level; it was then reworded to name AAA as a design standard, and the whole mention has since been dropped from this page. Do not reintroduce either framing in any translation. The conformance claim lives ONLY in loc_accessibility, which says 'partially conforms, self-assessed'.",
+            "en": [
+                "The aim is to make this data accessible to the broadest possible public. First and foremost through a user-friendly, accessible website. Secondly, by making the site easy for search engines to read and understand (server-side rendering, schema.org) and by letting AI agents interact with the site directly through an interface to query data (WebMCP)."
+            ],
+            "de": [
+                "Die Absicht ist es, diese Daten einer möglichst breiten Öffentlichkeit zugänglich zu machen. In erster Linie durch eine benutzerfreundliche und barrierefreie Webseite. In zweiter Linie, indem die Seite für Suchmaschinen einfach zu lesen und zu verstehen ist (Server-Side-Rendering, schema.org) und AI-Agenten direkt über eine Schnittstelle mit der Seite interagieren und so Daten abfragen können (WebMCP)."
+            ],
+            "fr": [
+                "L'intention est de rendre ces données accessibles à un public aussi large que possible. En premier lieu par un site web convivial et sans barrières. En second lieu, en rendant le site facile à lire et à comprendre pour les moteurs de recherche (rendu côté serveur, schema.org) et en permettant aux agents IA d'interagir directement avec le site via une interface pour interroger les données (WebMCP)."
+            ],
+            "it": [
+                "L'intento è rendere questi dati accessibili a un pubblico il più ampio possibile. In primo luogo con un sito web facile da usare e privo di barriere. In secondo luogo, rendendo il sito facile da leggere e capire per i motori di ricerca (rendering lato server, schema.org) e permettendo agli agenti AI di interagire direttamente con il sito tramite un'interfaccia per interrogare i dati (WebMCP)."
+            ],
+            "es": [
+                "La intención es hacer estos datos accesibles a un público lo más amplio posible. En primer lugar, mediante un sitio web fácil de usar y sin barreras. En segundo lugar, haciendo que el sitio sea fácil de leer y entender para los motores de búsqueda (renderizado en el servidor, schema.org) y permitiendo que agentes de IA interactúen directamente con el sitio a través de una interfaz para consultar datos (WebMCP)."
+            ]
+        },
+        "about.maintainer.heading": {
+            "context": "Section heading (h2) on /about introducing who maintains the site. Colloquial (\"Who runs this\") — keep it plain and informal.",
+            "en": "Who runs this",
+            "de": "Wer dahinter steckt",
+            "fr": "Qui est derrière",
+            "it": "Chi c'è dietro",
+            "es": "Quién está detrás"
+        },
+        "about.maintainer.body": {
+            "context": "Array of prose paragraphs under the maintainer heading on /about: solo non-profit maintainer, no ads/tracking, support (e.g. chipping in on server costs) by email but the site stays free, contributions welcome from developers and people from research or public administration, code is open source on GitHub, built/prototyped in under three weeks so conceptual flaws and edge-case bugs are to be expected. First-person singular voice; polite \"you\" form (Sie/vous/usted) in de/fr/es, informal tu in it.",
+            "en": [
+                "I build and run parlhub alone, in my spare time, as a non-profit project. There are no ads and no tracking. If you want to support the project, for example by chipping in on the server costs, don't hesitate to write me. The site stays free either way.",
+                "Contributions are very welcome too, from developers as well as people from research or public administration.",
+                "The code is open source. Found a bug? Missing something? Tell me on GitHub. The project was programmed/prototyped in just under three weeks, so expect anything from conceptual flaws to bugs in edge cases."
+            ],
+            "de": [
+                "Ich baue und betreibe parlhub allein, in meiner Freizeit, als Non-Profit-Projekt. Es gibt keine Werbung und kein Tracking. Wenn Sie das Projekt unterstützen möchten und sich beispielsweise an den Serverkosten beteiligen wollen, zögern Sie nicht, mir zu schreiben. Die Seite bleibt so oder so gratis.",
+                "Auch Mitarbeit ist sehr willkommen, von Entwicklerinnen und Entwicklern, Leuten aus der Forschung oder Verwaltung.",
+                "Der Code ist Open Source. Etwas falsch oder etwas vermisst? Melden Sie es auf GitHub. Das Projekt wurde in knapp drei Wochen programmiert/prototyped, entsprechend sind Fehler auf konzeptueller Ebene bis hin zu Bugs bei Edge Cases zu erwarten."
+            ],
+            "fr": [
+                "Je construis et exploite parlhub seul, sur mon temps libre, comme projet sans but lucratif. Il n'y a ni publicité ni pistage. Si vous souhaitez soutenir le projet, par exemple en participant aux coûts des serveurs, n'hésitez pas à m'écrire. Le site reste gratuit quoi qu'il arrive.",
+                "Les contributions sont aussi très bienvenues, de la part de développeuses et développeurs comme de personnes issues de la recherche ou de l'administration.",
+                "Le code est open source. Une erreur ? Quelque chose manque ? Signalez-le sur GitHub. Le projet a été programmé/prototypé en à peine trois semaines ; il faut donc s'attendre à des erreurs, du niveau conceptuel jusqu'aux bugs dans les cas limites."
+            ],
+            "it": [
+                "Costruisco e gestisco parlhub da solo, nel mio tempo libero, come progetto senza scopo di lucro. Non ci sono pubblicità né tracciamento. Se vuoi sostenere il progetto, per esempio partecipando ai costi dei server, non esitare a scrivermi. Il sito resta gratuito in ogni caso.",
+                "Anche la collaborazione è molto gradita: da sviluppatrici e sviluppatori come da persone della ricerca o dell'amministrazione.",
+                "Il codice è open source. Qualcosa di sbagliato o qualcosa che manca? Segnalalo su GitHub. Il progetto è stato programmato/prototipato in poco meno di tre settimane: sono quindi da mettere in conto errori, da quelli concettuali fino ai bug nei casi limite."
+            ],
+            "es": [
+                "Construyo y gestiono parlhub yo solo, en mi tiempo libre, como proyecto sin ánimo de lucro. No hay anuncios ni rastreo. Si quiere apoyar el proyecto, por ejemplo participando en los costes de los servidores, no dude en escribirme. El sitio seguirá siendo gratuito de todos modos.",
+                "La colaboración también es muy bienvenida: de desarrolladoras y desarrolladores, así como de personas de la investigación o la administración.",
+                "El código es de código abierto. ¿Algo mal o algo que falta? Comuníquemelo en GitHub. El proyecto se programó/prototipó en poco menos de tres semanas, así que cabe esperar errores, desde el nivel conceptual hasta bugs en casos límite."
+            ]
+        },
+        "about.maintainer.website_label": {
+            "context": "Visible link text for the maintainer's personal website on /about — a bare domain name, keep verbatim.",
+            "en": "wefrick.com",
+            "de": "wefrick.com",
+            "fr": "wefrick.com",
+            "it": "wefrick.com",
+            "es": "wefrick.com"
+        },
+        "about.maintainer.website_href": {
+            "context": "URL (href) of the maintainer's personal website link; not user-visible text. Do not translate.",
+            "en": "https://wefrick.com",
+            "de": "https://wefrick.com",
+            "fr": "https://wefrick.com",
+            "it": "https://wefrick.com",
+            "es": "https://wefrick.com"
+        },
+        "about.maintainer.email_label": {
+            "context": "Visible link text of the maintainer's contact email address on /about; keep the address verbatim.",
+            "en": "hello@wefrick.com",
+            "de": "hello@wefrick.com",
+            "fr": "hello@wefrick.com",
+            "it": "hello@wefrick.com",
+            "es": "hello@wefrick.com"
+        },
+        "about.maintainer.email_href": {
+            "context": "mailto: URL (href) for the contact email link; not user-visible text. Do not translate.",
+            "en": "mailto:hello@wefrick.com",
+            "de": "mailto:hello@wefrick.com",
+            "fr": "mailto:hello@wefrick.com",
+            "it": "mailto:hello@wefrick.com",
+            "es": "mailto:hello@wefrick.com"
+        },
+        "about.maintainer.code_label": {
+            "context": "Visible link text pointing to the project's source code repository on GitHub, shown in the maintainer section of /about. Keep short; \"GitHub\" is a proper name.",
+            "en": "Source on GitHub",
+            "de": "Quellcode auf GitHub",
+            "fr": "Code source sur GitHub",
+            "it": "Codice sorgente su GitHub",
+            "es": "Código fuente en GitHub"
+        },
+        "about.maintainer.code_href": {
+            "context": "URL (href) of the GitHub source link (the parlhubcom repository); not user-visible text. Do not translate.",
+            "en": "https://github.com/wenzf/parlhubcom",
+            "de": "https://github.com/wenzf/parlhubcom",
+            "fr": "https://github.com/wenzf/parlhubcom",
+            "it": "https://github.com/wenzf/parlhubcom",
+            "es": "https://github.com/wenzf/parlhubcom"
+        },
+        "about.maintainer.imprint_label": {
+            "context": "Visible link text for the internal link to the Imprint / legal-notice page (/project/imprint), shown in the maintainer section of /about next to the website, email and source-code links. Keep short; matches the imprint page's own title.",
+            "en": "Imprint",
+            "de": "Impressum",
+            "fr": "Mentions légales",
+            "it": "Note legali",
+            "es": "Aviso legal"
+        },
+        "about.not.heading": {
+            "context": "Section heading (h2) of the closing disclaimer section on /about (\"What parlhub is not\").",
+            "en": "What parlhub is not",
+            "de": "Was parlhub nicht ist",
+            "fr": "Ce que parlhub n'est pas",
+            "it": "Cosa parlhub non è",
+            "es": "Lo que parlhub no es"
+        },
+        "about.not.body": {
+            "context": "Array with a single short disclaimer paragraph under \"What parlhub is not\" on /about: the site shows data and does not rate politicians. Terse three-sentence rhythm — preserve it. De/fr use explicit gender-inclusive phrasing for \"politicians\".",
+            "en": [
+                "parlhub does not rate politicians. It shows data. What the data means is up to you."
+            ],
+            "de": [
+                "parlhub bewertet keine Politikerinnen und Politiker. Es zeigt Daten. Was sie bedeuten, entscheiden Sie."
+            ],
+            "fr": [
+                "parlhub ne note pas les politiciennes et politiciens. Il montre des données. Ce qu'elles signifient, c'est à vous d'en décider."
+            ],
+            "it": [
+                "parlhub non valuta i politici. Mostra dati. Cosa significhino i dati, sta a te deciderlo."
+            ],
+            "es": [
+                "parlhub no califica a los políticos. Muestra datos. Lo que esos datos signifiquen depende de usted."
+            ]
+        },
+        "metas.about.title": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_about' namespace 'metas' block; the interface language selects which file. about page SEO <title>.",
+            "en": "About parlhub",
+            "de": "Über parlhub",
+            "fr": "À propos de parlhub",
+            "it": "Informazioni su parlhub",
+            "es": "Acerca de parlhub"
+        },
+        "metas.about.desc": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_about' namespace 'metas' block; the interface language selects which file. about page meta-description.",
+            "en": "parlhub is a non-profit, open-source portal for the parliaments of Switzerland and Liechtenstein. All data comes from OpenParlData.ch. No ads, no tracking.",
+            "de": "parlhub ist ein quelloffenes Non-Profit-Portal für die Parlamente der Schweiz und Liechtensteins. Daten von OpenParlData.ch. Keine Werbung, kein Tracking.",
+            "fr": "parlhub est un portail libre et à but non lucratif pour les parlements de Suisse et du Liechtenstein. Données d'OpenParlData.ch. Ni publicité ni pistage.",
+            "it": "parlhub è un portale open source e no profit per i parlamenti di Svizzera e Liechtenstein. Dati da OpenParlData.ch. Nessuna pubblicità né tracciamento.",
+            "es": "parlhub es un portal de código abierto y sin ánimo de lucro para los parlamentos de Suiza y Liechtenstein. Todos los datos provienen de OpenParlData.ch. Sin anuncios, sin rastreo."
+        }
+    }
+}

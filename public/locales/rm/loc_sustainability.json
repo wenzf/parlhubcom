@@ -1,0 +1,44 @@
+{
+  "sustainability": {
+    "title": "Durabilitad",
+    "lead": "Co che parlhub vegn hospità, tge ch'il project fa per mantegnair pitschna sia fitga ecologica e tge ch'el na sa betg davart quai. Questa pagina è il document da divulgaziun al qual sa referescha la carbon.txt da parlhub.",
+    "hosting": {
+      "heading": "Nua che parlhub funcziuna",
+      "body": [
+        "parlhub funcziuna sin Amazon Web Services en la regiun eu-central-1 (Francfurt, Germania). La pagina è in singul container sin AWS Fargate davos in load balancer. Datotecas staticas e snapshots da la banca da datas sa chattan en S3, e la banca da datas vegn reconstruida d'ina incumbensa planisada empè da vegnir tegnida permanentamain sincronisada.",
+        "Per la current davos quels centers da datas è responsabel AWS, betg parlhub, e quest project na fa naginas indicaziuns independentas davart quai. Precis per quai datti la secziun upstream en la carbon.txt: ella numna AWS sco purschider, uschè che mintgin che legia la datoteca po suandar la chadaina fin a las divulgaziuns d'AWS sez empè da simplamain crair a mai."
+      ],
+      "links": [
+        { "label": "Durabilitad tar AWS", "href": "https://sustainability.aboutamazon.com/products-services/aws-cloud" }
+      ]
+    },
+    "site": {
+      "heading": "Tge che la pagina fa per restar pitschna",
+      "body": [
+        "Las paginas vegnan renderisadas sin il server e furneschan fitg pauc JavaScript. I na dat nagina reclama, nagin tracking, nagina analitica e nagins scripts da terzs: la content security policy scumonda tut per standard, e las scrittiras vegnan furnidas da la domena atgna da parlhub.",
+        "Las datas sa chattan en ina datoteca DuckDB che il server avra mo per leger, uschè che nagin server da banca da datas separà na funcziuna dì e notg. Actualisaziuns da OpenParlData.ch arrivan sco reconstrucziun planisada empè da polling permanent. L'interfatscha è monocroma e per gronda part text, quai che mantegna las paginas ligiras senza che insatgi stoppia sa stentar."
+      ]
+    },
+    "limits": {
+      "heading": "Tge che na vegn betg mesirà",
+      "body": [
+        "parlhub na mesira betg sias emissiuns, na fa nagin bilantsch ecologic e na cumpra naginas cumpensaziuns. Igl è in project accessoric na commerzial, e publitgar ina cifra ch'jau n'hai propi betg mesirà fiss pli mal che publitgar naginas. Sin questa pagina stat ina descripziun da la construcziun, betg ina cifra da CO₂.",
+        "Sche Vus enconuschais ina moda credibla da mesirar quai per ina pagina da questa grondezza, contactai mai."
+      ]
+    },
+    "carbontxt": {
+      "heading": "carbon.txt",
+      "body": [
+        "parlhub publitgescha ina carbon.txt legibla per maschinas en la ragisch da la domena, tenor la specificaziun da la Green Web Foundation. Ella renviescha a questa pagina sco divulgaziun da parlhub e numna AWS sco purschider upstream."
+      ],
+      "links": [
+        { "label": "La carbon.txt da parlhub", "href": "https://parlhub.com/carbon.txt" },
+        { "label": "Specificaziun da carbon.txt", "href": "https://carbontxt.org/syntax" }
+      ]
+    }
+  },
+  "metas": {
+    "sustainability.title": "Durabilitad",
+    "sustainability.desc": "Co che parlhub vegn hospità e tge ch'il project fa per mantegnair pitschna sia fitga ecologica. Renderisà sin il server, nagina reclama, nagin tracking, nagins scripts da terzs. La divulgaziun davos la carbon.txt da parlhub."
+  }
+}

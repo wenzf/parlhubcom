@@ -1,0 +1,258 @@
+{
+    "_meta": {
+        "namespace": "loc_data_map",
+        "source_files": [
+            "public/locales/<lang>/loc_data_map.json for lang in de, en, fr"
+        ],
+        "loaded_by": "app/routes/pages/project/data_map/data_map.tsx (UI: app/components/data_map/DataMap.tsx)",
+        "description": "Data map page: visual inventory of which data exists per parliament.",
+        "format": "Each entry: context (where the string appears in the UI, its role, placeholders and length/grammar constraints) + the current de/en/fr texts as translation reference. Use the context when translating into a new language; a null text means the key is missing in that language file.",
+        "generated": "2026-07-13, code-verified against app/ sources; regenerate when public/locales texts or consuming components change."
+    },
+    "keys": {
+        "data_map.title": {
+            "context": "Page title (h1) of the Data Map page (/project/data-map, app/routes/pages/project/data_map/data_map.tsx), a visual map of parlhub's data entities and their connections. Short noun phrase.",
+            "en": "Data map",
+            "de": "Datenkarte",
+            "fr": "Carte des données"
+        },
+        "data_map.lead": {
+            "context": "Lead/intro paragraph under the h1 on the Data Map page (/project/data-map, app/routes/pages/project/data_map/data_map.tsx), explaining that each card in the diagram is a searchable catalogue and lines show entity connections. Conversational tone, informal address in de ('Wähle').",
+            "en": "How parlhub's data fits together. Each card is a catalogue you can search and explore. The lines show how the entities connect. Pick anything to dive in.",
+            "de": "Wie die Daten von parlhub zusammenhängen. Jede Karte ist ein durchsuchbarer Katalog. Die Linien zeigen, wie die Bereiche verbunden sind. Wähle einen aus, um einzutauchen.",
+            "fr": "Comment s'articulent les données de parlhub. Chaque carte est un catalogue à explorer. Les traits montrent les liens entre les domaines. Choisissez-en un pour plonger."
+        },
+        "data_map.diagram_label": {
+            "context": "aria-label of the diagram container in the Data Map diagram (app/components/data_map/DataMap.tsx) (screen-reader only, describes the SVG diagram of entities and their connections). Not visually rendered; length not critical.",
+            "en": "Diagram of parlhub's data entities and how they connect",
+            "de": "Diagramm der Datenbereiche von parlhub und ihrer Verbindungen",
+            "fr": "Diagramme des domaines de données de parlhub et de leurs liens"
+        },
+        "data_map.clusters.parliament": {
+            "context": "Cluster zone label in the Data Map diagram (app/components/data_map/DataMap.tsx): short uppercase caption over a group of entity cards (also the section heading in the mobile list fallback); groups People, Bodies and Groups (the institutional actors). Keep short, noun.",
+            "en": "Parliament",
+            "de": "Parlament",
+            "fr": "Parlement"
+        },
+        "data_map.clusters.proceedings": {
+            "context": "Cluster zone label in the Data Map diagram (app/components/data_map/DataMap.tsx): short uppercase caption over a group of entity cards (also the section heading in the mobile list fallback); groups Affairs, Votings and Meetings (parliamentary business/activity; de 'Ratsbetrieb' = council operations). Keep short, noun.",
+            "en": "Proceedings",
+            "de": "Ratsbetrieb",
+            "fr": "Travaux"
+        },
+        "data_map.clusters.records": {
+            "context": "Cluster zone label in the Data Map diagram (app/components/data_map/DataMap.tsx): short uppercase caption over a group of entity cards (also the section heading in the mobile list fallback); groups Speeches, Texts and Documents (the written/recorded output). Keep short, noun.",
+            "en": "Records",
+            "de": "Aufzeichnungen",
+            "fr": "Archives"
+        },
+        "data_map.clusters.lobbying": {
+            "context": "Cluster zone label in the Data Map diagram (app/components/data_map/DataMap.tsx): short uppercase caption over a group of entity cards (also the section heading in the mobile list fallback); groups Interests and Organizations (declared lobby ties). Keep short, noun.",
+            "en": "Lobbying",
+            "de": "Lobbying",
+            "fr": "Lobbying"
+        },
+        "data_map.nodes.people.label": {
+            "context": "Card title in the Data Map diagram (app/components/data_map/DataMap.tsx): short name of the 'People' entity catalogue; the card is a link to that catalogue. Plural noun, must stay short (fits a 160px-wide card). Means MPs/parliamentarians and officials.",
+            "en": "People",
+            "de": "Personen",
+            "fr": "Personnes"
+        },
+        "data_map.nodes.people.desc": {
+            "context": "One-line description under the card title in the Data Map diagram (app/components/data_map/DataMap.tsx), small muted text summarizing what the entity catalogue contains. 'Mandates' = official positions/lobby mandates held by MPs.",
+            "en": "MPs and officials: profiles, votes, speeches and mandates.",
+            "de": "Abgeordnete und Amtsträger: Profile, Stimmen, Reden und Mandate.",
+            "fr": "Élus et responsables : profils, votes, discours et mandats."
+        },
+        "data_map.nodes.bodies.label": {
+            "context": "Card title in the Data Map diagram (app/components/data_map/DataMap.tsx): short name of the 'Bodies' entity catalogue; the card is a link to that catalogue. Plural noun, must stay short (fits a 160px-wide card). Means parliamentary bodies: parliaments, councils, committees (de 'Gremien').",
+            "en": "Bodies",
+            "de": "Gremien",
+            "fr": "Organes"
+        },
+        "data_map.nodes.bodies.desc": {
+            "context": "One-line description under the card title in the Data Map diagram (app/components/data_map/DataMap.tsx), small muted text summarizing what the entity catalogue contains. 'Business' here = parliamentary affairs (de 'Geschäfte').",
+            "en": "Parliaments, councils and committees, with their members and business.",
+            "de": "Parlamente, Räte und Kommissionen mit ihren Mitgliedern und Geschäften.",
+            "fr": "Parlements, conseils et commissions, avec leurs membres et travaux."
+        },
+        "data_map.nodes.groups.label": {
+            "context": "Card title in the Data Map diagram (app/components/data_map/DataMap.tsx): short name of the 'Groups' entity catalogue; the card is a link to that catalogue. Plural noun, must stay short (fits a 160px-wide card). Means parliamentary groups/fractions (de 'Fraktionen'), not generic groups.",
+            "en": "Groups",
+            "de": "Fraktionen",
+            "fr": "Groupes"
+        },
+        "data_map.nodes.groups.desc": {
+            "context": "One-line description under the card title in the Data Map diagram (app/components/data_map/DataMap.tsx), small muted text summarizing what the entity catalogue contains. 'Voting cohesion' = how unified the group votes (de 'Geschlossenheit').",
+            "en": "Parties, factions and committees: membership and voting cohesion.",
+            "de": "Parteien, Fraktionen und Kommissionen: Mitgliedschaft und Geschlossenheit.",
+            "fr": "Partis, groupes et commissions : composition et cohésion de vote."
+        },
+        "data_map.nodes.affairs.label": {
+            "context": "Card title in the Data Map diagram (app/components/data_map/DataMap.tsx): short name of the 'Affairs' entity catalogue; the card is a link to that catalogue. Plural noun, must stay short (fits a 160px-wide card). Swiss parliamentary term: legislative business items (de 'Geschäfte').",
+            "en": "Affairs",
+            "de": "Geschäfte",
+            "fr": "Affaires"
+        },
+        "data_map.nodes.affairs.desc": {
+            "context": "One-line description under the card title in the Data Map diagram (app/components/data_map/DataMap.tsx), small muted text summarizing what the entity catalogue contains. 'Motions, bills' = parliamentary procedural requests and draft legislation (de 'Vorstösse, Vorlagen').",
+            "en": "Parliamentary business: motions, bills and their outcomes.",
+            "de": "Parlamentarische Geschäfte: Vorstösse, Vorlagen und ihr Ausgang.",
+            "fr": "Travaux parlementaires : motions, projets et leur issue."
+        },
+        "data_map.nodes.votings.label": {
+            "context": "Card title in the Data Map diagram (app/components/data_map/DataMap.tsx): short name of the 'Votings' entity catalogue; the card is a link to that catalogue. Plural noun, must stay short (fits a 160px-wide card). Means parliamentary roll-call votes (de 'Abstimmungen').",
+            "en": "Votings",
+            "de": "Abstimmungen",
+            "fr": "Votes"
+        },
+        "data_map.nodes.votings.desc": {
+            "context": "One-line description under the card title in the Data Map diagram (app/components/data_map/DataMap.tsx), small muted text summarizing what the entity catalogue contains. 'Roll-call votes' = votes where each member's individual choice is recorded.",
+            "en": "Roll-call votes: who voted how, and when.",
+            "de": "Namentliche Abstimmungen: wer wie und wann gestimmt hat.",
+            "fr": "Votes nominatifs : qui a voté quoi, et quand."
+        },
+        "data_map.nodes.meetings.label": {
+            "context": "Card title in the Data Map diagram (app/components/data_map/DataMap.tsx): short name of the 'Meetings' entity catalogue; the card is a link to that catalogue. Plural noun, must stay short (fits a 160px-wide card). Means parliamentary sessions and sittings.",
+            "en": "Meetings",
+            "de": "Sitzungen",
+            "fr": "Séances"
+        },
+        "data_map.nodes.meetings.desc": {
+            "context": "One-line description under the card title in the Data Map diagram (app/components/data_map/DataMap.tsx), small muted text summarizing what the entity catalogue contains. 'Agendas' = meeting agenda items (Swiss de 'Traktanden').",
+            "en": "Sessions and sittings: agendas, votes and speeches.",
+            "de": "Sessionen und Sitzungen: Traktanden, Abstimmungen und Reden.",
+            "fr": "Sessions et séances : ordres du jour, votes et discours."
+        },
+        "data_map.nodes.speeches.label": {
+            "context": "Card title in the Data Map diagram (app/components/data_map/DataMap.tsx): short name of the 'Speeches' entity catalogue; the card is a link to that catalogue. Plural noun, must stay short (fits a 160px-wide card). Means speeches held in parliament.",
+            "en": "Speeches",
+            "de": "Reden",
+            "fr": "Discours"
+        },
+        "data_map.nodes.speeches.desc": {
+            "context": "One-line description under the card title in the Data Map diagram (app/components/data_map/DataMap.tsx), small muted text summarizing what the entity catalogue contains. 'Verbatim transcripts' = word-for-word records of parliamentary debate.",
+            "en": "Verbatim transcripts of what was said, fully searchable.",
+            "de": "Wörtliche Protokolle des Gesagten, vollständig durchsuchbar.",
+            "fr": "Comptes rendus intégraux, entièrement consultables."
+        },
+        "data_map.nodes.texts.label": {
+            "context": "Card title in the Data Map diagram (app/components/data_map/DataMap.tsx): short name of the 'Texts' entity catalogue; the card is a link to that catalogue. Plural noun, must stay short (fits a 160px-wide card).",
+            "en": "Texts",
+            "de": "Texte",
+            "fr": "Textes"
+        },
+        "data_map.nodes.texts.desc": {
+            "context": "One-line description under the card title in the Data Map diagram (app/components/data_map/DataMap.tsx), small muted text summarizing what the entity catalogue contains. 'Text blocks' = published text fragments; 'press material' = media/press-release content.",
+            "en": "Published text blocks and press material.",
+            "de": "Veröffentlichte Textblöcke und Medienmaterial.",
+            "fr": "Blocs de texte publiés et matériel de presse."
+        },
+        "data_map.nodes.documents.label": {
+            "context": "Card title in the Data Map diagram (app/components/data_map/DataMap.tsx): short name of the 'Documents' entity catalogue; the card is a link to that catalogue. Plural noun, must stay short (fits a 160px-wide card).",
+            "en": "Documents",
+            "de": "Dokumente",
+            "fr": "Documents"
+        },
+        "data_map.nodes.documents.desc": {
+            "context": "One-line description under the card title in the Data Map diagram (app/components/data_map/DataMap.tsx), small muted text summarizing what the entity catalogue contains. 'The business' = parliamentary affairs the files are attached to (de 'Geschäfte').",
+            "en": "Files and attachments linked to the business.",
+            "de": "Dateien und Beilagen zu den Geschäften.",
+            "fr": "Fichiers et annexes liés aux travaux."
+        },
+        "data_map.nodes.interests.label": {
+            "context": "Card title in the Data Map diagram (app/components/data_map/DataMap.tsx): short name of the 'Interests' entity catalogue; the card is a link to that catalogue. Plural noun, must stay short (fits a 160px-wide card). Means declared interest ties of MPs (lobbying register; de 'Interessenbindungen').",
+            "en": "Interests",
+            "de": "Interessen",
+            "fr": "Intérêts"
+        },
+        "data_map.nodes.interests.desc": {
+            "context": "One-line description under the card title in the Data Map diagram (app/components/data_map/DataMap.tsx), small muted text summarizing what the entity catalogue contains. 'Declared interests' = the register of interests MPs must disclose; 'members' = members of parliament.",
+            "en": "Declared interests and lobby ties of members.",
+            "de": "Deklarierte Interessenbindungen der Mitglieder.",
+            "fr": "Liens d'intérêts déclarés des membres."
+        },
+        "data_map.nodes.organizations.label": {
+            "context": "Card title in the Data Map diagram (app/components/data_map/DataMap.tsx): short name of the 'Organizations' entity catalogue; the card is a link to that catalogue. Plural noun, must stay short (fits a 160px-wide card). Means the companies/associations behind MPs' declared interests.",
+            "en": "Organizations",
+            "de": "Organisationen",
+            "fr": "Organisations"
+        },
+        "data_map.nodes.organizations.desc": {
+            "context": "One-line description under the card title in the Data Map diagram (app/components/data_map/DataMap.tsx), small muted text summarizing what the entity catalogue contains. Refers back to the 'Interests' card — the organizations tied to those declared interests.",
+            "en": "The organisations behind those declared interests.",
+            "de": "Die Organisationen hinter diesen Interessenbindungen.",
+            "fr": "Les organisations derrière ces liens d'intérêts."
+        },
+        "data_map.source.heading": {
+            "context": "Section heading (h2) of the provenance section at the bottom of the Data Map page (/project/data-map, app/routes/pages/project/data_map/data_map.tsx), introducing where the data comes from. Short.",
+            "en": "About the data",
+            "de": "Über die Daten",
+            "fr": "À propos des données"
+        },
+        "data_map.source.body": {
+            "context": "Prose paragraph in the 'About the data' section of the Data Map page (/project/data-map, app/routes/pages/project/data_map/data_map.tsx): states that all data comes from OpenParlData.ch and is only slightly reshaped. 'parlhub' and 'OpenParlData.ch' are proper names — keep as-is.",
+            "en": "All data comes from OpenParlData.ch. parlhub imports that raw data and reshapes it only slightly. The entities and relationships shown here mirror the source.",
+            "de": "Alle Daten stammen von OpenParlData.ch. parlhub importiert diese Rohdaten und passt sie nur geringfügig an. Die hier gezeigten Bereiche und Verbindungen entsprechen der Quelle.",
+            "fr": "Toutes les données proviennent d'OpenParlData.ch. parlhub importe ces données brutes en les remaniant très légèrement. Les domaines et liens présentés ici reflètent la source."
+        },
+        "data_map.source.links_label": {
+            "context": "Small uppercase label above the external-links row in the 'About the data' section of the Data Map page (/project/data-map, app/routes/pages/project/data_map/data_map.tsx). Very short.",
+            "en": "Further reading",
+            "de": "Weiterführende Links",
+            "fr": "Pour aller plus loin"
+        },
+        "data_map.source.openparldata_label": {
+            "context": "Link text for the external link to the OpenParlData.ch website in the 'About the data' section of the Data Map page (/project/data-map, app/routes/pages/project/data_map/data_map.tsx). Proper name/domain — keep unchanged in all languages.",
+            "en": "OpenParlData.ch",
+            "de": "OpenParlData.ch",
+            "fr": "OpenParlData.ch"
+        },
+        "data_map.source.openparldata_href": {
+            "context": "URL value (href of an external link in the 'About the data' section of the Data Map page (/project/data-map, app/routes/pages/project/data_map/data_map.tsx)); identical in all languages — copy verbatim, do NOT translate.",
+            "en": "https://openparldata.ch",
+            "de": "https://openparldata.ch",
+            "fr": "https://openparldata.ch"
+        },
+        "data_map.source.schemas_label": {
+            "context": "Link text for the external link to OpenParlData's data-schema definitions (GitLab) in the 'About the data' section of the Data Map page (/project/data-map, app/routes/pages/project/data_map/data_map.tsx). Short noun phrase.",
+            "en": "Data schemas",
+            "de": "Datenschemas",
+            "fr": "Schémas de données"
+        },
+        "data_map.source.schemas_href": {
+            "context": "URL value (href of an external link in the 'About the data' section of the Data Map page (/project/data-map, app/routes/pages/project/data_map/data_map.tsx)); identical in all languages — copy verbatim, do NOT translate.",
+            "en": "https://gitlab.com/opendata.ch/openparldatach/data-infrastructure/-/tree/develop/fastapi/app/schemas/endpoints?ref_type=heads",
+            "de": "https://gitlab.com/opendata.ch/openparldatach/data-infrastructure/-/tree/develop/fastapi/app/schemas/endpoints?ref_type=heads",
+            "fr": "https://gitlab.com/opendata.ch/openparldatach/data-infrastructure/-/tree/develop/fastapi/app/schemas/endpoints?ref_type=heads"
+        },
+        "data_map.source.raw_label": {
+            "context": "Link text for the external link to OpenParlData's raw bulk data exports in the 'About the data' section of the Data Map page (/project/data-map, app/routes/pages/project/data_map/data_map.tsx). Short noun phrase.",
+            "en": "Raw data exports",
+            "de": "Rohdaten-Exporte",
+            "fr": "Exports de données brutes"
+        },
+        "data_map.source.raw_href": {
+            "context": "URL value (href of an external link in the 'About the data' section of the Data Map page (/project/data-map, app/routes/pages/project/data_map/data_map.tsx)); identical in all languages — copy verbatim, do NOT translate.",
+            "en": "https://files.openparldata.ch/exports/",
+            "de": "https://files.openparldata.ch/exports/",
+            "fr": "https://files.openparldata.ch/exports/"
+        },
+        "metas.data_map.title": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_data_map' namespace 'metas' block; the interface language selects which file. data_map page SEO <title>.",
+            "en": "Data map",
+            "de": "Datenkarte",
+            "fr": "Carte des données",
+            "it": "Mappa dei dati",
+            "es": "Mapa de datos"
+        },
+        "metas.data_map.desc": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_data_map' namespace 'metas' block; the interface language selects which file. data_map page meta-description.",
+            "en": "An overview map of parlhub's data: people, groups, bodies, affairs, votings, meetings, speeches, documents and lobbying ties, and how they connect. Every node links to its catalogue.",
+            "de": "Eine Übersichtskarte der parlhub-Daten: Personen, Fraktionen, Gremien, Geschäfte, Abstimmungen, Sitzungen, Reden, Dokumente und Lobby-Verbindungen, und wie sie zusammenhängen. Jeder Knoten führt zum passenden Katalog.",
+            "fr": "Une carte d'ensemble des données de parlhub : personnes, groupes, organes, affaires, votes, séances, discours, documents et liens de lobbying, et comment ils s'articulent. Chaque nœud mène au catalogue correspondant.",
+            "it": "Una mappa d'insieme dei dati di parlhub: persone, gruppi, organi, affari, votazioni, sedute, discorsi, documenti e legami di lobbying — e come si collegano. Ogni nodo porta al relativo catalogo.",
+            "es": "Un mapa general de los datos de parlhub: personas, grupos, órganos, asuntos, votaciones, sesiones, discursos, documentos y vínculos de lobbying — y cómo se conectan. Cada nodo enlaza a su catálogo."
+        }
+    }
+}

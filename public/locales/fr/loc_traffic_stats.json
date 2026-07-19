@@ -1,0 +1,38 @@
+{
+  "traffic_stats": {
+    "title": "Statistiques de trafic",
+    "lead": "Quelles parties de parlhub sont consultées, dans quelle langue et par qui. Agrégées une fois par jour à partir du journal des requêtes du serveur — pas de cookies, pas de traçage, pas d'adresses IP. Les chiffres comptent des requêtes, pas des personnes.",
+    "no_data": "Pas encore de chiffres. Les premières statistiques apparaîtront dès que l'agrégation quotidienne aura été effectuée.",
+    "group_by": "Grouper par",
+    "group_by_aria": "Grouper les requêtes par",
+    "audience": "Public",
+    "audience_aria": "Filtrer les requêtes par public",
+    "aud_human": "Humains",
+    "aud_bot": "Bots",
+    "aud_both": "Les deux",
+    "view": "Vue",
+    "view_aria": "Basculer entre la vue quotidienne et la vue mensuelle",
+    "view_daily": "Quotidien",
+    "view_monthly": "Mensuel",
+    "dim_route": "Route",
+    "dim_lang": "Langue",
+    "dim_visitor": "Type de visiteur",
+    "dim_device": "Appareil",
+    "include_internal": "Inclure les contrôles de santé",
+    "stat_requests": "Requêtes",
+    "stat_average": "Moyenne",
+    "stat_p95": "p95",
+    "stat_slowest": "La plus lente",
+    "col_share": "Part",
+    "other": "autres",
+    "route_other_note": "« (other) » regroupe toutes les requêtes vers des chemins qui ne font pas partie du site — généralement des scanners automatisés, des requêtes de robots malformées ou malveillantes, ou des URL mal saisies. Elles sont réunies en une seule ligne afin qu’une avalanche de chemins aléatoires ne puisse pas gonfler les statistiques.",
+    "chart_alt": "Diagramme à barres empilées des requêtes par période selon {dim} : {periods} périodes, {count} requêtes au total. Le tableau ci-dessous contient les mêmes données.",
+    "chart_alt_excl": "Diagramme à barres empilées des requêtes par période selon {dim} : {periods} périodes, {count} requêtes au total, hors contrôles de santé internes. Le tableau ci-dessous contient les mêmes données.",
+    "table_caption": "Requêtes par {dim} — les mêmes données que le diagramme ci-dessus.",
+    "footnote": "Le p95 est dérivé de tranches de latence ; il est donc précis à la limite de la tranche. Les moyennes sont pondérées par le nombre de requêtes."
+  },
+  "metas": {
+    "traffic_stats.title": "Statistiques de trafic",
+    "traffic_stats.desc": "Quelles parties de parlhub sont consultées, dans quelle langue et par qui — agrégées une fois par jour à partir du journal des requêtes du serveur. Pas de cookies, pas de traçage, pas d'adresses IP."
+  }
+}

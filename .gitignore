@@ -1,0 +1,30 @@
+.DS_Store
+.env
+/node_modules/
+
+/.vscode/
+
+# React Router
+/.react-router/
+/build/
+
+
+*.duckdb
+*.duckdb.wal
+/ingest/openparldata
+/ingest/build
+/stopwords-iso/
+./identity
+/.dev
+
+*.duckdb
+*.duckdb.wal
+# SST
+/.sst/
+
+
+INTERNAL.md
+
+
+sst-secrets.ts
+

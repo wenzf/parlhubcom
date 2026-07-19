@@ -1,0 +1,51 @@
+{
+  "experiments": {
+    "title": "Wordfish: los parlamentos por sus palabras",
+    "lede": "Este es un experimento: sitúa a los miembros de un parlamento en un único eje utilizando solo las palabras que emplean en sus discursos. Sin votaciones, sin etiquetas de partido, sin codificación manual, solo frecuencias de palabras. A continuación se explica cómo funciona, cómo interpretarlo y los parlamentos para los que existe suficiente texto de discursos para probarlo.",
+    "sections": [
+      {
+        "heading": "Qué hace",
+        "paragraphs": [
+          "Para un parlamento elegido, tomamos a todos los miembros activos y todos sus discursos dentro de una misma ventana temporal reciente. Es el mismo período para todos, de modo que el resultado refleje la elección de palabras y no quién lleva más tiempo en el cargo. Cada miembro se convierte en un «documento»: un conjunto de las palabras que usó y con qué frecuencia.",
+          "Un modelo estadístico llamado Wordfish encuentra entonces el único eje de uso de palabras que mejor separa a los miembros. Descubre qué palabras distancian a las personas y sitúa a cada miembro en consecuencia. El eje no está definido de antemano. Surge de los propios discursos."
+        ]
+      },
+      {
+        "heading": "Cómo se calcula",
+        "paragraphs": [
+          "Cada discurso se divide en palabras y se convierte a minúsculas, conservando los acentos. Las palabras funcionales muy comunes («the», «and», «der», «le» …) se eliminan con una lista de palabras vacías adaptada al idioma de cada discurso, de modo que un discurso en francés se filtra con las palabras vacías francesas y uno en alemán con las alemanas. Las palabras raras que solo usa un puñado de miembros también se descartan, ya que añaden ruido, no señal.",
+          "Wordfish modela el recuento de cada palabra como una extracción de Poisson que depende de la posición del miembro, de la frecuencia habitual de la palabra y de cuán fuertemente discrimina esa palabra. Ajusta estos valores en rondas alternas hasta que los números dejan de moverse, y luego estandariza las posiciones para que la dispersión sea comparable. El cálculo se ejecuta bajo demanda mientras se carga la página. Para una cámara numerosa a lo largo de un año lleva varios segundos, por lo que el gráfico se muestra progresivamente tras un indicador de carga."
+        ]
+      },
+      {
+        "heading": "Cómo leer el gráfico",
+        "paragraphs": [
+          "Cada punto es un miembro, situado según sus palabras: los miembros que hablan de forma parecida se sitúan cerca, los que hablan de forma muy distinta se sitúan lejos. La dirección del eje es arbitraria. Wordfish encuentra la separación, no qué lado es «izquierda» o «derecha». Para ver qué significa cada extremo, lea las palabras que aparecen en los dos polos.",
+          "La dispersión está estandarizada, así que las distancias son una convención más que una medida real. Cada miembro lleva también una incertidumbre (la barra de error): los miembros que hablaron poco se sitúan con baja confianza y se dibujan como anillos huecos, así que no les dé demasiada importancia. Y el estilo de habla refleja tanto el cargo como las convicciones: presidentes de comisión, ministros y oradores frecuentes pueden acabar en un polo por lo que hacen, no solo por lo que piensan."
+        ]
+      },
+      {
+        "heading": "Por qué la mayoría de los parlamentos están vacíos",
+        "paragraphs": [
+          "El escalado necesita el texto real de las transcripciones de los discursos, y los datos abiertos solo lo contienen para unos pocos parlamentos. La mayoría de los órganos no tienen ningún discurso; algunos tienen registros de discursos sin transcripción; y unos pocos tienen transcripciones que se detuvieron hace años. Solo los parlamentos listados a continuación tienen actualmente suficiente texto de discursos reciente para que se puedan situar al menos diez miembros."
+        ]
+      }
+    ],
+    "cases_heading": "Parlamentos que puede explorar",
+    "cases_lede": "Cada uno de estos dispone de suficiente texto de transcripción en la ventana reciente para trazar un gráfico. «Miembros situados» indica cuántos miembros puede posicionar el escalado; «Datos de discursos» es todo el período de texto de discursos disponible para ese parlamento.",
+    "col_parliament": "Parlamento",
+    "col_members": "Miembros situados",
+    "col_period": "Datos de discursos",
+    "cases_empty": "Actualmente ningún parlamento tiene suficiente texto de discursos reciente para generar el escalado.",
+    "references_heading": "Referencias y lecturas adicionales",
+    "references": [
+      { "text": "Slapin & Proksch (2008): «A Scaling Model for Estimating Time-Series Party Positions from Texts», American Journal of Political Science. El artículo que introdujo Wordfish.", "url": "https://doi.org/10.1111/j.1540-5907.2008.00338.x" },
+      { "text": "Tutorial de Wordfish (quanteda): una descripción práctica y una implementación de referencia del modelo.", "url": "https://tutorials.quanteda.io/machine-learning/wordfish/" },
+      { "text": "Grimmer & Stewart (2013): «Text as Data», Political Analysis. Una revisión que sitúa a Wordfish entre los métodos de escalado de textos.", "url": "https://doi.org/10.1093/pan/mps028" }
+    ]
+  },
+  "metas": {
+    "wordfish.title": "Wordfish: los parlamentos por sus palabras",
+    "wordfish.desc": "Cómo parlhub sitúa a los miembros de un parlamento en un eje solo a partir de su elección de palabras: el método, cómo interpretarlo y los parlamentos con suficiente texto de discursos."
+  }
+}

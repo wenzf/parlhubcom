@@ -1,0 +1,56 @@
+{
+  "accessibility": {
+    "title": "Accessibladad",
+    "lead": "Il standard da design applitgà sin tut parlhub è WCAG 2.2 sin stgalim AAA. Questa decleraziun di quant lunsch quai va propi, co quai è vegnì examinà e nua ch'i na basta betg. Ella è ina autodecleraziun voluntara: parlhub è in project privat e senza intent da profit, uschia che ni il BehiG svizzer ni la directiva da l'UE davart l'access dal web na valan per el.",
+    "conformance": {
+      "heading": "Status da conformitad",
+      "body": [
+        "parlhub correspunda per part a WCAG 2.2 stgalim AAA. «Per part» è il pled onest. AAA è il standard tenor il qual il design è construì: ils tokens da colur, las grondezzas dals objectivs ed ils stils da focus al suondan tuts. Ma quai al fa in standard applitgà, betg in resultat examinà.",
+        "Questa decleraziun è vegnida elavurada tras autoevaluaziun, da l'unica persuna che construescha la pagina. In verifitgader automatisà passa ussa tras ina selecziun da paginas e n'annunzia nagins sbagls, quai ch'è pli tost in minimum ch'in resultat: el decida mo las dumondas ch'ina maschina po decider, e lascha il rest ad in uman che n'ha anc betg guardà. I n'ha dà nagina examinaziun tras terzas persunas e nagins tests formals cun tecnologia assistiva. Il W3C cusseglia da betg pretender AAA per ina pagina entira, perquai ch'intgin cuntegn na po betg ademplir mintga criteri AAA. Legiai perquai il stgalim sco la regla a la quala il code sto sa mesirar, e las restricziuns sutvart sco la part ch'è propi enconuschenta."
+      ]
+    },
+    "measures": {
+      "heading": "Tge ch'è avant maun",
+      "body": [
+        "Il style guide tenor il qual mintga cumponenta vegn construida pretenda in cuntrast da text da almain 7:1, objectivs interactivs da almain 44×44 pixels, in indicatur da focus visibel ed ina maniablitad cun il clavier. Las paginas vegnan renderisadas sin il server, uschia ch'il cuntegn è là avant che in JavaScript curra.",
+        "Las configuraziuns en il header vus laschan midar la grondezza dal text, midar ad ina paletta cun pli aut cuntrast, allontanar dal tut la colur e tscherner in design cler u stgir. La lingua da l'interfatscha e la lingua da las datas vegnan tschernidas separadamain, uschia ch'i pon leger l'interfatscha en ina lingua ed ils records en in'autra.",
+        "In verifitgader automatisà (pa11y-ci) passa tras dudesch paginas, ina per mintga tip da pagina che la pagina ha, ed annunzia actualmain nagins sbagls sin stgalim AA. Legiai quai stretgamain. El vesa dudesch paginas, betg la pagina entira. Sias reglas finischan cun WCAG 2.1, uschia che quai che 2.2 ha agiuntà na vegn betg controllà. El na pudeva betg resolver la colur da funs sin plirs elements, uschia ch'il cuntrast da 7:1 survart è ina regla ch'il design suonda, betg insatge ch'il utensil ha confermà. Ed el lascha per mintga passada plirs tschient puncts marcads per la valitaziun tras ina persuna, ch'anc nagin n'ha elavurà. El è ina rait per tschiffar regressiuns, betg in verdict."
+      ]
+    },
+    "limitations": {
+      "heading": "Restricziuns enconuschentas",
+      "body": [
+        "Nagina examinaziun tras terzas persunas e nagins tests cun tecnologia assistiva. Ina controlla automatisada cuvra ussa la part controllabla tras maschina, ma quai è la pli pitschna mesadad dal problem: benchmarks publitgads attribueschan schizunt als pli ferms da quests programs mo enturn la mesadad dals problems WCAG, ed il program duvrà qua n'è betg il pli ferm. Nagin n'ha manià questa pagina cun in lectur d'ecran, u mo cun il clavier, uschia sco insatgi al fiss che dependa da quai. Quai è adina anc la pli gronda largia, ed il motiv ch'i na vegn pretendì qua nagina conformitad cumpletta.",
+        "Lingua da parts. Records cumparan savens en in'autra lingua che l'interfatscha. Quai è expressiv, perquai ch'in record svizzer exista forsa mo per tudestg. Ils lungs texts da funtauna (discurs, texts e descripziuns da gruppas) decleran ussa la lingua da la quala els èn vegnids resolvids, uschia ch'in lectur d'ecran legia in discurs tudestg cun ina vusch tudestga sin ina pagina englaisa. Champs pli curts localisads, sco titels ed etichettas da tip, na portan anc betg questa marcaziun, uschia che WCAG 3.1.2 è ademplì per il text current ma betg dapertut.",
+        "Cuntegn da las datas da funtauna. Texts, discurs e documents arrivan da OpenParlData.ch sco HTML che parlhub na controllescha betg e sto tal temp reparar avant il renderisar. L'urden dals titels e la semantica entaifer quels blocs na sa laschan betg garantir. La controlla automatisada mussa exact quai: l'unic sbagl ch'ella annunzia sur tut las paginas testadas è in titel che sursigla in stgalim entaifer in transcript da discurs, en markup che deriva da la funtauna. PDFs collià e fotografias derivan er da la funtauna, cun la quala accessibladad ch'els èn vegnids publitgads.",
+        "Diagrams. Mintga diagram porta ina curta alternativa da text, e plirs sa laschan leger sco text: la matrix da concordanza da las partidas è sezza ina tabella, e la treemap dals pleds ils pli duvrads sa lascha mussar sco tabella. Ma betg mintga visualisaziun renda mintga punct da datas accessibel sco text, e surtut ils scatterplots èn greivs da communitgar senza vesair. Las cifras davos sa laschan adina telechargiar sco CSV u JSON."
+      ]
+    },
+    "feedback": {
+      "heading": "Chattà ina barriera?",
+      "body": [
+        "Annunziai a mai. Quai è la via la pli svelta ch'ella vegnia reparada, e las annunzias èn quai cun che questa decleraziun vegn revedida. Numnai per plaschair sin tge pagina che vus eritas e tge ch'era en via."
+      ],
+      "links": [
+        {
+          "label": "hello@wefrick.com",
+          "href": "mailto:hello@wefrick.com"
+        },
+        {
+          "label": "Annunziar sin GitHub",
+          "href": "https://github.com/wenzf/parlhubcom/issues"
+        }
+      ]
+    },
+    "statement": {
+      "heading": "Davart questa decleraziun",
+      "prepared_label": "Elavurà",
+      "reviewed_label": "Ultima revisiun",
+      "method": "Elavurada tras autoevaluaziun, sustegnida da tests automatisads, tenor la structura da la directiva dal W3C per decleraziuns d'accessibladad. Nagina terza persuna è vegnida involvada. Ella vegn revedida cur che la pagina sa mida, u cur ch'insatgi annunzia insatge che la cumprova sco faussa."
+    }
+  },
+  "metas": {
+    "accessibility.title": "Accessibladad",
+    "accessibility.desc": "parlhub vegn construì tenor WCAG 2.2 stgalim AAA sco standard da design, autoevaluà e per part conform. Tge ch'è avant maun, tge betg, e co annunziar ina barriera."
+  }
+}

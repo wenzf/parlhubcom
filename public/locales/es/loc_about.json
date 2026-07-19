@@ -1,0 +1,46 @@
+{
+  "about": {
+    "title": "Acerca de parlhub",
+    "lead": "parlhub es un portal de datos para los parlamentos de Suiza y el Landtag de Liechtenstein. Pone a disposición datos sobre actores y procesos parlamentarios como las votaciones, además de documentos y discursos. La información se presenta en forma de tablas, en parte también preparada y analizada como gráficos. Los datos brutos están disponibles a través de interfaces en distintos formatos.",
+    "data": {
+      "heading": "Los datos",
+      "body": [
+        "Todos los datos provienen de OpenParlData.ch. Recopilan los datos parlamentarios oficiales, los depuran y los publican como datos abiertos. Es un trabajo arduo y poco vistoso. parlhub no existiría sin él. Si le gusta este sitio, gran parte del mérito corresponde a su proyecto. Vaya a echar un vistazo.",
+        "Las cifras de este sitio (afinidad, lealtad, etc.) las calcula parlhub a partir de esos datos. Si un cálculo es incorrecto, la responsabilidad es mía, no de OpenParlData.ch."
+      ],
+      "source_label": "OpenParlData.ch",
+      "source_href": "https://openparldata.ch"
+    },
+    "goal": {
+      "heading": "El objetivo",
+      "body": [
+        "La intención es hacer estos datos accesibles a un público lo más amplio posible. En primer lugar, mediante un sitio web fácil de usar y sin barreras. En segundo lugar, haciendo que el sitio sea fácil de leer y entender para los motores de búsqueda (renderizado en el servidor, schema.org) y permitiendo que agentes de IA interactúen directamente con el sitio a través de una interfaz para consultar datos (WebMCP)."
+      ]
+    },
+    "maintainer": {
+      "heading": "Quién está detrás",
+      "body": [
+        "Construyo y gestiono parlhub yo solo, en mi tiempo libre, como proyecto sin ánimo de lucro. No hay anuncios ni rastreo. Si quiere apoyar el proyecto, por ejemplo participando en los costes de los servidores, no dude en escribirme. El sitio seguirá siendo gratuito de todos modos.",
+        "La colaboración también es muy bienvenida: de desarrolladoras y desarrolladores, así como de personas de la investigación o la administración.",
+        "El código es de código abierto. ¿Algo mal o algo que falta? Comuníquemelo en GitHub. El proyecto se programó/prototipó en poco menos de tres semanas, así que cabe esperar errores, desde el nivel conceptual hasta bugs en casos límite."
+      ],
+      "website_label": "wefrick.com",
+      "website_href": "https://wefrick.com",
+      "email_label": "hello@wefrick.com",
+      "email_href": "mailto:hello@wefrick.com",
+      "code_label": "Código fuente en GitHub",
+      "code_href": "https://github.com/wenzf/parlhubcom",
+      "imprint_label": "Aviso legal"
+    },
+    "not": {
+      "heading": "Lo que parlhub no es",
+      "body": [
+        "parlhub no califica a los políticos. Muestra datos. Lo que esos datos signifiquen depende de usted."
+      ]
+    }
+  },
+  "metas": {
+    "about.title": "Acerca de parlhub",
+    "about.desc": "parlhub es un portal de código abierto y sin ánimo de lucro para los parlamentos de Suiza y Liechtenstein. Todos los datos provienen de OpenParlData.ch. Sin anuncios, sin rastreo."
+  }
+}

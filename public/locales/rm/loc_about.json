@@ -1,0 +1,46 @@
+{
+  "about": {
+    "title": "Davart parlhub",
+    "lead": "parlhub è in portal da datas per ils parlaments da la Svizra ed il Landtag dal Liechtenstein. El renda accessiblas datas davart acturs e process parlamentars sco votaziuns, ensemen cun documents e discurs. Las infurmaziuns vegnan preschentadas en tabellas, per part er preparadas ed analisadas sco diagrams. Las datas nunelavuradas èn disponiblas via interfatschas en differents formats.",
+    "data": {
+      "heading": "Las datas",
+      "body": [
+        "Tut las datas derivan da OpenParlData.ch. El rimna las datas parlamentaras uffizialas, las mundifitgescha e las publitgescha sco open data. Quai è ina lavur greva e pauc visibla. Senza quai n'existiss parlhub betg. Sche questa pagina vus plascha, tutga ina gronda part dal merit ad OpenParlData.ch. Guardai là.",
+        "Las cifras sin questa pagina (concordanza, fidaivladad e uschia vinavant) vegnan calculadas da parlhub sezza a partir da questas datas. Sche in quen è fallà, è quai mia culpa, betg quella da OpenParlData.ch."
+      ],
+      "source_label": "OpenParlData.ch",
+      "source_href": "https://openparldata.ch"
+    },
+    "goal": {
+      "heading": "L'intent",
+      "body": [
+        "L'intent è da render questas datas accessiblas ad in public il pli vast pussaivel. Avant tut tras ina pagina d'internet fitg maniabla ed accessibla. En segund lieu, cun render la pagina simpla da leger e da chapir per motors da tschertga (server-side rendering, schema.org) e cun laschar ch'agents da IA interageschan directamain cun la pagina via ina interfatscha per dumandar datas (WebMCP)."
+      ]
+    },
+    "maintainer": {
+      "heading": "Tgi che stat davos",
+      "body": [
+        "Jau construesch e maintegn parlhub sulet, en mes temp liber, sco project senza intent da profit. I na dat nagina reclama e nagin tracking. Sche vus vulais sustegnair il project, per exempel cun contribuir als custs dal server, na dubitai betg da mi scriver. La pagina resta gratuita en mintga cas.",
+        "Er contribuziuns èn fitg bainvegnidas, da sviluppaders sco er da persunas da la perscrutaziun u da l'administraziun publica.",
+        "Il code è open source. Chattà in sbagl? Manca insatge? Annunziai a mai sin GitHub. Il project è vegnì programmà/prototipà en bunamain trais emnas, uschia ch'i èn da spetgar da mancanzas conceptualas fin bugs en cas cunfin."
+      ],
+      "website_label": "wefrick.com",
+      "website_href": "https://wefrick.com",
+      "email_label": "hello@wefrick.com",
+      "email_href": "mailto:hello@wefrick.com",
+      "code_label": "Code da funtauna sin GitHub",
+      "code_href": "https://github.com/wenzf/parlhubcom",
+      "imprint_label": "Impressum"
+    },
+    "not": {
+      "heading": "Tge che parlhub n'è betg",
+      "body": [
+        "parlhub na valitescha betg politichers. El mussa datas. Tge che las datas muntan, decidais vus."
+      ]
+    }
+  },
+  "metas": {
+    "about.title": "Davart parlhub",
+    "about.desc": "parlhub è in portal open-source e senza intent da profit per ils parlaments da la Svizra e dal Liechtenstein. Tut las datas derivan da OpenParlData.ch. Nagina reclama, nagin tracking."
+  }
+}

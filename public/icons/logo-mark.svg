@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="parlhub" fill="#171717">
+  <!-- hemicycle band, unequal blocs -->
+  <g transform="translate(24 24) scale(1.46) translate(-24 -21)">
+    <path d="M39.99 28.44 A16 16 0 0 0 34.71 17.11 L30.02 22.31 A9 9 0 0 1 32.99 28.69 Z"/>
+    <path d="M32.95 15.74 A16 16 0 0 0 24.00 13.00 L24.00 20.00 A9 9 0 0 1 29.03 21.54 Z"/>
+    <path d="M21.77 13.16 A16 16 0 0 0 16.99 14.62 L20.05 20.91 A9 9 0 0 1 22.75 20.09 Z"/>
+    <path d="M15.05 15.74 A16 16 0 0 0 8.01 28.44 L15.01 28.69 A9 9 0 0 1 18.97 21.54 Z"/>
+  </g>
+</svg>

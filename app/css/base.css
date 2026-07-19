@@ -1,0 +1,38 @@
+a,
+button,
+.border_squircle {
+  corner-shape: squircle;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #333 inset !important;
+  -webkit-text-fill-color: #fefefe !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+
+  /* View Transitions (React Router `viewTransition`, e.g. every InternalLink)
+     animate ::view-transition-* pseudo-elements, which the `*` rule above does
+     NOT match. Kill their default cross-fade so navigation stays motion-free
+     (WCAG 2.2 AAA, SC 2.3.3). */
+  ::view-transition-group(*),
+  ::view-transition-image-pair(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

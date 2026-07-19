@@ -1,0 +1,28 @@
+{
+  "home": {
+    "tagline": "Un portal para los parlamentos de Suiza y Liechtenstein.",
+    "search_label": "Buscar",
+    "search_placeholder": "Buscar…",
+    "search_button": "Buscar",
+    "search_scope_label": "Buscar en",
+    "sections": {
+      "people": "Personas",
+      "votings": "Votaciones",
+      "affairs": "Asuntos",
+      "speeches": "Discursos",
+      "bodies": "Parlamentos",
+      "groups": "Comisiones y grupos",
+      "meetings": "Sesiones",
+      "texts": "Textos",
+      "documents": "Documentos",
+      "interests": "Intereses",
+      "organizations": "Organizaciones"
+    },
+    "stats_updated": "Datos actualizados",
+    "start_link": "Enlaces rápidos a las cámaras federales, los cantones y los parlamentos comunales"
+  },
+  "metas": {
+    "home.title": "Datos parlamentarios de Suiza y Liechtenstein",
+    "home.desc": "Explore los parlamentos de Suiza y Liechtenstein: diputados, votaciones, discursos, vínculos de lobbying y más. Sin fines de lucro, código abierto."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "traffic_stats": {
+    "title": "Traffic statistics",
+    "lead": "Which parts of parlhub get requested, in which language, and by whom. Aggregated once a day from the server's own request log — no cookies, no tracking, no IP addresses. The counts are requests, not people.",
+    "no_data": "No figures yet. The first day's statistics appear once the daily aggregation has run.",
+    "group_by": "Group by",
+    "group_by_aria": "Group requests by",
+    "audience": "Audience",
+    "audience_aria": "Filter requests by audience",
+    "aud_human": "Humans",
+    "aud_bot": "Bots",
+    "aud_both": "Both",
+    "view": "View",
+    "view_aria": "Switch between daily and monthly figures",
+    "view_daily": "Daily",
+    "view_monthly": "Monthly",
+    "dim_route": "Route",
+    "dim_lang": "Language",
+    "dim_visitor": "Visitor type",
+    "dim_device": "Device",
+    "include_internal": "Include health checks",
+    "stat_requests": "Requests",
+    "stat_average": "Average",
+    "stat_p95": "p95",
+    "stat_slowest": "Slowest",
+    "col_share": "Share",
+    "other": "other",
+    "route_other_note": "“(other)” collects every request to a path that isn’t part of the site — usually automated scanners, malformed or malicious bot requests, or mistyped URLs. They are grouped into one row so a flood of random paths cannot inflate the statistics.",
+    "chart_alt": "Stacked bar chart of requests per period by {dim}: {periods} periods, {count} requests in total. The table below contains the same data.",
+    "chart_alt_excl": "Stacked bar chart of requests per period by {dim}: {periods} periods, {count} requests in total, excluding internal health checks. The table below contains the same data.",
+    "table_caption": "Requests by {dim} — the same data as the chart above.",
+    "footnote": "p95 is derived from latency buckets, so it is accurate to the bucket edge. Averages are weighted by request count."
+  },
+  "metas": {
+    "traffic_stats.title": "Traffic statistics",
+    "traffic_stats.desc": "Which parts of parlhub get requested, in which language, and by whom — aggregated once a day from the server's own request log. No cookies, no tracking, no IP addresses."
+  }
+}

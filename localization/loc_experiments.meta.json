@@ -1,0 +1,219 @@
+{
+    "_meta": {
+        "namespace": "loc_experiments",
+        "source_files": [
+            "public/locales/<lang>/loc_experiments.json for lang in de, en, fr"
+        ],
+        "loaded_by": "app/routes/pages/experiments/experiments_wordfish.tsx",
+        "description": "Experiments section: Wordfish speech-scaling experiment page.",
+        "format": "Each entry: context (where the string appears in the UI, its role, placeholders and length/grammar constraints) + the current de/en/fr texts as translation reference. Use the context when translating into a new language; a null text means the key is missing in that language file.",
+        "generated": "2026-07-13, code-verified against app/ sources; regenerate when public/locales texts or consuming components change."
+    },
+    "keys": {
+        "experiments.title": {
+            "context": "Page title (h1) of the Wordfish experiment page at /experiments/wordfish (app/routes/pages/experiments/experiments_wordfish.tsx). \"Wordfish\" is the proper name of the statistical text-scaling model — never translate it.",
+            "en": "Wordfish: parliaments by their words",
+            "de": "Wordfish: Parlamente nach ihren Reden",
+            "fr": "Wordfish : les parlements par leurs discours"
+        },
+        "experiments.lede": {
+            "context": "Lead paragraph under the h1 on the Wordfish page, summarizing the experiment: members of a parliament are placed on a single axis purely from word frequencies in their speeches.",
+            "en": "This is an experiment: it places the members of a parliament on a single axis using nothing but the words they use in their speeches. No votes, no party labels, no hand-coding, just word frequencies. Below is how it works, how to read it, and the parliaments where enough speech text exists to try it.",
+            "de": "Ein Experiment: Es platziert die Mitglieder eines Parlaments auf einer einzigen Achse, allein anhand der Wörter, die sie in ihren Reden verwenden. Keine Abstimmungen, keine Parteietiketten, keine Handkodierung, nur Worthäufigkeiten. Nachfolgend, wie das funktioniert, wie man es liest und für welche Parlamente genug Redetext vorliegt.",
+            "fr": "Une expérience : elle place les membres d'un parlement sur un axe unique, à partir des seuls mots qu'ils emploient dans leurs discours. Pas de votes, pas d'étiquettes de parti, pas de codage manuel, uniquement des fréquences de mots. Voici comment cela fonctionne, comment le lire, et les parlements pour lesquels assez de texte de discours existe."
+        },
+        "experiments.sections": {
+            "context": "Array of methodology sections on the Wordfish page, each rendered as an h2 (\"heading\") plus prose paragraphs (\"paragraphs\"). Explains the pipeline in accessible but technical language — keep terms like Wordfish, Poisson, stopword list, standardised positions, error bar accurate; example stopwords in quotes should include target-language examples where the source texts do; use the target language's quotation marks. \"Members\" = members of parliament; \"chamber\" = parliamentary chamber.",
+            "en": [
+                {
+                    "heading": "What it does",
+                    "paragraphs": [
+                        "For a chosen parliament, we take every active member and all of their speeches within a shared recent window. It is the same span for everyone, so the result reflects word choice and not who has been in office longest. Each member becomes one “document”: a bag of the words they used and how often.",
+                        "A statistical model called Wordfish then finds the single axis of word usage that best separates the members. It discovers which words pull people apart and places each member accordingly. The axis is not defined in advance. It emerges from the speeches themselves."
+                    ]
+                },
+                {
+                    "heading": "How it is computed",
+                    "paragraphs": [
+                        "Every speech is split into words and lowercased, keeping accents. Very common function words (“the”, “and”, “der”, “le” …) are removed with a stopword list matched to each speech's own language, so a French speech is filtered against French stopwords and a German one against German. Rare words that only a handful of members ever use are dropped too, since they add noise, not signal.",
+                        "Wordfish models each word count as a Poisson draw that depends on the member's position, the word's typical frequency, and how strongly that word discriminates. It fits these in alternating rounds until the numbers stop moving, then standardises the positions so the spread is comparable. The maths runs on demand while the page loads. For a large chamber over a year it takes several seconds, which is why the chart streams in behind a spinner."
+                    ]
+                },
+                {
+                    "heading": "How to read the chart",
+                    "paragraphs": [
+                        "Each dot is a member, placed by their words: members who talk alike sit close, members who talk very differently sit far apart. The direction of the axis is arbitrary. Wordfish finds the split, not which side is “left” or “right”. To see what each end means, read the words listed at the two poles.",
+                        "The spread is standardised, so distances are a convention rather than a real measure. Each member also carries an uncertainty (the error bar): members who spoke little are placed with low confidence and drawn as hollow rings, so don't over-read them. And speaking style reflects role as much as belief: committee chairs, ministers and frequent speakers can land at a pole because of what they do, not only what they think."
+                    ]
+                },
+                {
+                    "heading": "Why most parliaments are empty",
+                    "paragraphs": [
+                        "The scaling needs the actual transcript text of speeches, and the open data only holds that for a few parliaments. Most bodies have no speeches at all; some have speech records without any transcript; and a few have transcripts that stop years ago. Only the parliaments listed below currently have enough recent speech text for at least ten members to be placed."
+                    ]
+                }
+            ],
+            "de": [
+                {
+                    "heading": "Was es macht",
+                    "paragraphs": [
+                        "Für ein gewähltes Parlament nehmen wir alle aktiven Mitglieder und all ihre Reden in einem gemeinsamen jüngeren Zeitfenster. Für alle gilt derselbe Zeitraum, damit das Ergebnis die Wortwahl widerspiegelt und nicht, wer am längsten im Amt ist. Jedes Mitglied wird zu einem „Dokument“: einer Sammlung der verwendeten Wörter und ihrer Häufigkeit.",
+                        "Ein statistisches Modell namens Wordfish findet dann die eine Achse der Wortverwendung, die die Mitglieder am besten trennt. Es erkennt, welche Wörter Menschen auseinanderziehen, und platziert jedes Mitglied entsprechend. Die Achse ist nicht vorgegeben. Sie ergibt sich aus den Reden selbst."
+                    ]
+                },
+                {
+                    "heading": "Wie es berechnet wird",
+                    "paragraphs": [
+                        "Jede Rede wird in Wörter zerlegt und kleingeschrieben, Akzente bleiben erhalten. Sehr häufige Funktionswörter („der“, „und“, „le“, „the“ …) werden mit einer Stoppwortliste entfernt, die zur Sprache der jeweiligen Rede passt: Eine französische Rede wird gegen französische Stoppwörter gefiltert, eine deutsche gegen deutsche. Seltene Wörter, die nur wenige Mitglieder je verwenden, fallen ebenfalls weg, denn sie bringen Rauschen, kein Signal.",
+                        "Wordfish modelliert jede Wortzählung als Poisson-Ziehung, abhängig von der Position des Mitglieds, der typischen Häufigkeit des Worts und davon, wie stark dieses Wort trennt. Es passt diese Werte in abwechselnden Runden an, bis sie sich nicht mehr bewegen, und standardisiert dann die Positionen, damit die Streuung vergleichbar ist. Die Rechnung läuft on demand während des Ladens. Für eine grosse Kammer über ein Jahr dauert das einige Sekunden, weshalb das Diagramm hinter einem Ladeindikator nachgeladen wird."
+                    ]
+                },
+                {
+                    "heading": "Wie man das Diagramm liest",
+                    "paragraphs": [
+                        "Jeder Punkt ist ein Mitglied, platziert nach seinen Wörtern: Wer ähnlich spricht, steht nah beieinander, wer sehr anders spricht, weit auseinander. Die Richtung der Achse ist willkürlich. Wordfish findet die Trennung, nicht welche Seite „links“ oder „rechts“ ist. Um zu sehen, was die Enden bedeuten, lesen Sie die Wörter an den beiden Polen.",
+                        "Die Streuung ist standardisiert, Abstände sind also eine Konvention und kein echtes Mass. Jedes Mitglied hat zudem eine Unsicherheit (den Fehlerbalken): Wer wenig gesprochen hat, wird mit geringer Sicherheit platziert und als hohler Ring dargestellt, also nicht überinterpretieren. Und der Redestil spiegelt die Rolle ebenso wie die Überzeugung: Kommissionspräsidien, Regierungsmitglieder und Vielrednerinnen können wegen ihrer Funktion an einem Pol landen, nicht nur wegen ihrer Haltung."
+                    ]
+                },
+                {
+                    "heading": "Warum die meisten Parlamente leer sind",
+                    "paragraphs": [
+                        "Die Skalierung braucht den tatsächlichen Redetext, und die offenen Daten enthalten diesen nur für wenige Parlamente. Die meisten Körperschaften haben gar keine Reden; einige haben Redeeinträge ohne Transkript; und wenige haben Transkripte, die vor Jahren enden. Nur die unten aufgeführten Parlamente haben derzeit genug aktuellen Redetext, damit mindestens zehn Mitglieder platziert werden können."
+                    ]
+                }
+            ],
+            "fr": [
+                {
+                    "heading": "Ce que cela fait",
+                    "paragraphs": [
+                        "Pour un parlement donné, on prend tous les membres actifs et l'ensemble de leurs discours dans une même fenêtre récente. C'est la même période pour tous, afin que le résultat reflète le choix des mots et non l'ancienneté. Chaque membre devient un « document » : un ensemble des mots employés et de leur fréquence.",
+                        "Un modèle statistique appelé Wordfish trouve alors l'axe d'usage des mots qui sépare le mieux les membres. Il découvre quels mots éloignent les gens et place chacun en conséquence. L'axe n'est pas défini à l'avance. Il émerge des discours eux-mêmes."
+                    ]
+                },
+                {
+                    "heading": "Comment c'est calculé",
+                    "paragraphs": [
+                        "Chaque discours est découpé en mots et mis en minuscules, en conservant les accents. Les mots-outils très fréquents (« le », « et », « der », « the »…) sont retirés à l'aide d'une liste de mots vides adaptée à la langue de chaque discours : un discours français est filtré contre des mots vides français, un discours allemand contre des allemands. Les mots rares que seuls quelques membres emploient sont aussi écartés, car ils apportent du bruit, pas du signal.",
+                        "Wordfish modélise chaque comptage de mot comme un tirage de Poisson dépendant de la position du membre, de la fréquence habituelle du mot et de son pouvoir de discrimination. Il ajuste ces valeurs par tours successifs jusqu'à stabilisation, puis standardise les positions pour que la dispersion soit comparable. Le calcul s'exécute à la demande pendant le chargement. Pour une grande chambre sur un an, cela prend quelques secondes, d'où le chargement du graphique derrière un indicateur."
+                    ]
+                },
+                {
+                    "heading": "Comment lire le graphique",
+                    "paragraphs": [
+                        "Chaque point est un membre, placé selon ses mots : ceux qui parlent de façon semblable sont proches, ceux qui parlent très différemment sont éloignés. La direction de l'axe est arbitraire. Wordfish trouve la séparation, pas quel côté est « gauche » ou « droite ». Pour savoir ce que signifie chaque extrémité, lisez les mots affichés aux deux pôles.",
+                        "La dispersion est standardisée : les distances sont donc une convention, pas une mesure réelle. Chaque membre a aussi une incertitude (la barre d'erreur) : ceux qui ont peu parlé sont placés avec une faible confiance et affichés en anneaux creux, à ne pas surinterpréter. Et le style de discours reflète autant la fonction que les convictions : présidences de commission, membres de l'exécutif et orateurs fréquents peuvent se retrouver à un pôle en raison de leur rôle, pas seulement de leurs idées."
+                    ]
+                },
+                {
+                    "heading": "Pourquoi la plupart des parlements sont vides",
+                    "paragraphs": [
+                        "Le positionnement a besoin du texte réel des discours, et les données ouvertes ne le contiennent que pour quelques parlements. La plupart des institutions n'ont aucun discours ; certaines ont des entrées de discours sans transcription ; et quelques-unes ont des transcriptions qui s'arrêtent il y a des années. Seuls les parlements listés ci-dessous disposent actuellement d'assez de texte récent pour placer au moins dix membres."
+                    ]
+                }
+            ]
+        },
+        "experiments.cases_heading": {
+            "context": "Section heading (h2) above the table of parliaments that have enough speech text to render a Wordfish chart, shown near the top of the Wordfish page.",
+            "en": "Parliaments you can explore",
+            "de": "Parlamente, die Sie erkunden können",
+            "fr": "Parlements à explorer"
+        },
+        "experiments.cases_lede": {
+            "context": "Paragraph under the cases heading explaining the table. The quoted terms \"Members placed\" and \"Speech data\" refer to the table column headers (experiments.col_members / experiments.col_period) — the translations must match those keys exactly.",
+            "en": "Each of these has enough transcript text in the recent window to draw a chart. “Members placed” is how many members the scaling can position; “Speech data” is the full span of speech text available for that parliament.",
+            "de": "Jedes davon hat im jüngeren Zeitfenster genug Redetext für ein Diagramm. „Platzierte Mitglieder“ gibt an, wie viele Mitglieder die Skalierung positionieren kann; „Redetext“ ist die gesamte Spanne des verfügbaren Redetexts für dieses Parlament.",
+            "fr": "Chacun dispose d'assez de texte de discours dans la fenêtre récente pour tracer un graphique. « Membres placés » indique combien de membres le positionnement peut situer ; « Texte des discours » est l'étendue totale du texte de discours disponible pour ce parlement."
+        },
+        "experiments.col_parliament": {
+            "context": "Table column header for the parliament name column in the Wordfish cases table. Keep short (one word if possible); noun.",
+            "en": "Parliament",
+            "de": "Parlament",
+            "fr": "Parlement"
+        },
+        "experiments.col_members": {
+            "context": "Table column header for the numeric, right-aligned column counting how many members of parliament the Wordfish scaling can position. Keep short; must match the quoted term in experiments.cases_lede.",
+            "en": "Members placed",
+            "de": "Platzierte Mitglieder",
+            "fr": "Membres placés"
+        },
+        "experiments.col_period": {
+            "context": "Table column header for the right-aligned column showing the year span (e.g. \"2003–2026\") of speech transcript text available for that parliament. Keep short; must match the quoted term in experiments.cases_lede.",
+            "en": "Speech data",
+            "de": "Redetext",
+            "fr": "Texte des discours"
+        },
+        "experiments.cases_empty": {
+            "context": "Empty-state message shown instead of the cases table when no parliament currently has enough recent speech text for the Wordfish scaling. One sentence.",
+            "en": "No parliaments currently have enough recent speech text to render the scaling.",
+            "de": "Derzeit hat kein Parlament genug aktuellen Redetext für die Skalierung.",
+            "fr": "Aucun parlement ne dispose actuellement d'assez de texte récent pour le positionnement."
+        },
+        "experiments.references_heading": {
+            "context": "Section heading (h2) for the academic references / further-reading list at the bottom of the Wordfish page.",
+            "en": "References & further reading",
+            "de": "Quellen & weiterführende Literatur",
+            "fr": "Références et pour aller plus loin"
+        },
+        "experiments.references": {
+            "context": "Array of literature references at the bottom of the Wordfish page; \"text\" is the visible text of an external link (translate the descriptive part, but keep English paper titles, journal names, author names and \"quanteda\" verbatim, using the target language's quotation marks), \"url\" is the link target — do not translate.",
+            "en": [
+                {
+                    "text": "Slapin & Proksch (2008): “A Scaling Model for Estimating Time-Series Party Positions from Texts”, American Journal of Political Science. The paper that introduced Wordfish.",
+                    "url": "https://doi.org/10.1111/j.1540-5907.2008.00338.x"
+                },
+                {
+                    "text": "Wordfish tutorial (quanteda): a hands-on description and reference implementation of the model.",
+                    "url": "https://tutorials.quanteda.io/machine-learning/wordfish/"
+                },
+                {
+                    "text": "Grimmer & Stewart (2013): “Text as Data”, Political Analysis. A survey placing Wordfish among text-scaling methods.",
+                    "url": "https://doi.org/10.1093/pan/mps028"
+                }
+            ],
+            "de": [
+                {
+                    "text": "Slapin & Proksch (2008): „A Scaling Model for Estimating Time-Series Party Positions from Texts“, American Journal of Political Science. Die Arbeit, die Wordfish einführte.",
+                    "url": "https://doi.org/10.1111/j.1540-5907.2008.00338.x"
+                },
+                {
+                    "text": "Wordfish-Tutorial (quanteda): eine praxisnahe Beschreibung und Referenzimplementierung des Modells.",
+                    "url": "https://tutorials.quanteda.io/machine-learning/wordfish/"
+                },
+                {
+                    "text": "Grimmer & Stewart (2013): „Text as Data“, Political Analysis. Ein Überblick, der Wordfish unter den Text-Skalierungsverfahren einordnet.",
+                    "url": "https://doi.org/10.1093/pan/mps028"
+                }
+            ],
+            "fr": [
+                {
+                    "text": "Slapin & Proksch (2008) : « A Scaling Model for Estimating Time-Series Party Positions from Texts », American Journal of Political Science. L'article qui a introduit Wordfish.",
+                    "url": "https://doi.org/10.1111/j.1540-5907.2008.00338.x"
+                },
+                {
+                    "text": "Tutoriel Wordfish (quanteda) : une description pratique et une implémentation de référence du modèle.",
+                    "url": "https://tutorials.quanteda.io/machine-learning/wordfish/"
+                },
+                {
+                    "text": "Grimmer & Stewart (2013) : « Text as Data », Political Analysis. Une synthèse situant Wordfish parmi les méthodes de positionnement de textes.",
+                    "url": "https://doi.org/10.1093/pan/mps028"
+                }
+            ]
+        },
+        "metas.wordfish.title": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_experiments' namespace 'metas' block; the interface language selects which file. wordfish page SEO <title>.",
+            "en": "Wordfish: parliaments by their words",
+            "de": "Wordfish: Parlamente nach ihren Reden",
+            "fr": "Wordfish : les parlements par leurs discours",
+            "it": "Wordfish: i parlamenti dai loro discorsi",
+            "es": "Wordfish: los parlamentos por sus palabras"
+        },
+        "metas.wordfish.desc": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_experiments' namespace 'metas' block; the interface language selects which file. wordfish page meta-description.",
+            "en": "How parlhub places a parliament's members on an axis from their word choice alone: the method, how to read it, and the parliaments with enough speech text.",
+            "de": "Wie parlhub die Mitglieder eines Parlaments allein anhand ihrer Wortwahl auf einer Achse platziert: Methodik, Lesehilfe und die Parlamente, für die genug Redetext vorliegt.",
+            "fr": "Comment parlhub place les membres d'un parlement sur un axe à partir de leur seul choix de mots : méthode, mode de lecture et les parlements pour lesquels assez de discours sont disponibles.",
+            "it": "Come parlhub colloca i membri di un parlamento su un asse in base alla sola scelta delle parole — metodo, guida alla lettura e i parlamenti con abbastanza testo dei discorsi.",
+            "es": "Cómo parlhub sitúa a los miembros de un parlamento en un eje solo a partir de su elección de palabras — el método, cómo interpretarlo y los parlamentos con suficiente texto de discursos."
+        }
+    }
+}

@@ -1,0 +1,109 @@
+{
+  "guide": {
+    "title": "Guía de datos",
+    "lead": "Once tipos de datos de los parlamentos de Suiza y Liechtenstein. Cada uno tiene su propia página de búsqueda y algunos ejemplos.",
+    "map_link": "Vea cómo se conectan los datos",
+    "groups": {
+      "actors": { "heading": "Actores", "sub": "Las personas y organizaciones del parlamento" },
+      "proceedings": { "heading": "Trabajos", "sub": "El trabajo legislativo" },
+      "records": { "heading": "Archivos", "sub": "Lo que se dijo, escribió y archivó" },
+      "lobbying": { "heading": "Lobbying", "sub": "Quién está conectado con quién" }
+    },
+    "types": {
+      "people": {
+        "eyebrow": "Personas",
+        "title": "¿Quién vota como quién, y quién habla de qué?",
+        "links": {
+          "vocabulary": "Las palabras de {{name}}, en un mapa",
+          "alignment": "¿Quién vota como {{name}}?",
+          "search": "Buscar entre 26.000 diputados"
+        }
+      },
+      "bodies": {
+        "eyebrow": "Parlamentos",
+        "title": "¿Qué partido vota como un solo bloque, y quién se desmarca?",
+        "links": {
+          "loyalty": "Lealtad de grupo en la Asamblea Federal",
+          "lobby": "La red de lobby federal",
+          "people": "Todos los miembros de la Asamblea Federal",
+          "search": "De las cámaras federales a unos 460 municipios"
+        }
+      },
+      "groups": {
+        "eyebrow": "Comisiones y grupos",
+        "title": "¿Quién impulsa qué asuntos?",
+        "links": {
+          "search": "Buscar grupos parlamentarios, partidos y comisiones"
+        }
+      },
+      "affairs": {
+        "eyebrow": "Asuntos",
+        "title": "¿Qué fue de esa moción?",
+        "links": {
+          "example": "Una larga batalla, votación tras votación: {{name}}",
+          "search": "Filtrar 320.000 asuntos"
+        }
+      },
+      "votings": {
+        "eyebrow": "Votaciones",
+        "title": "¿Quién dijo sí, quién dijo no?",
+        "links": {
+          "example": "La última votación final, nombre por nombre",
+          "search": "Buscar entre 75.000 votaciones"
+        }
+      },
+      "meetings": {
+        "eyebrow": "Sesiones",
+        "title": "¿Qué decidió una sesión?",
+        "links": {
+          "search": "Cada período de sesiones, día a día"
+        }
+      },
+      "speeches": {
+        "eyebrow": "Discursos",
+        "title": "¿Quién habló del lobo?",
+        "links": {
+          "wolf": "Todos los discursos que mencionan al lobo",
+          "search": "Buscar entre 2,5 millones de intervenciones, palabra por palabra"
+        },
+        "queries": { "wolf": "Lobo" }
+      },
+      "texts": {
+        "eyebrow": "Textos",
+        "title": "¿De qué trata un proyecto de ley, en tres frases?",
+        "links": {
+          "bitcoin": "Todos los textos que mencionan Bitcoin",
+          "search": "Buscar en los resúmenes oficiales"
+        },
+        "queries": { "bitcoin": "Bitcoin" }
+      },
+      "docs": {
+        "eyebrow": "Documentos",
+        "title": "¿Qué se esconde en las actas?",
+        "links": {
+          "search": "Búsqueda de texto completo en 880.000 documentos"
+        }
+      },
+      "interests": {
+        "eyebrow": "Intereses",
+        "title": "¿Quién forma parte de qué consejos de administración?",
+        "links": {
+          "example": "Todos los mandatos de {{name}}",
+          "search": "Buscar entre 29.000 entradas del registro"
+        }
+      },
+      "organizations": {
+        "eyebrow": "Organizaciones",
+        "title": "¿Qué organización llega más lejos?",
+        "links": {
+          "example": "Una asociación, varios parlamentos: {{name}}",
+          "search": "Buscar organizaciones por nombre"
+        }
+      }
+    }
+  },
+  "metas": {
+    "data_guide.title": "Guía de datos",
+    "data_guide.desc": "Once tipos de datos de los parlamentos de Suiza y Liechtenstein: personas, parlamentos, asuntos, votaciones, discursos, documentos y vínculos de lobbying. Cada uno tiene su propia página de búsqueda y ejemplos concretos."
+  }
+}

@@ -1,0 +1,168 @@
+/* opd_richtext.css
+ *
+ * Styles for sanitized, user-supplied HTML rendered via dangerouslySetInnerHTML
+ * (text bodies in AffairTexts / BodyTexts). One parent class — `.opd-richtext` —
+ * styles every child element through low-specificity `:where()` descendant
+ * selectors, so the surrounding component can still override anything.
+ *
+ * Tokens mirror the rest of the app (text-sm / muted-foreground body, primary
+ * links, border-/muted- surfaces). Authored with Tailwind @apply, so this file
+ * MUST be processed by the Tailwind pipeline — import it once from the global
+ * stylesheet (e.g. `@import "./opd_richtext.css";` next to the @tailwind
+ * directives), not as a plain side-effect import.
+ */
+
+/* Tailwind v4: this file is compiled in its own context, so @apply can't see
+ * your theme utilities (text-muted-foreground, text-primary, border-border, …)
+ * unless we pull the theme in. @reference imports it for resolution WITHOUT
+ * duplicating any output.
+ * ADJUST the path to YOUR main Tailwind entry — the CSS that contains
+ * `@import "tailwindcss";` and your `@theme` / shadcn token definitions
+ * (commonly app/app.css, app/tailwind.css, or app/styles/globals.css).
+ * If instead you `@import "./opd_richtext.css";` from that main CSS, delete
+ * this line — the theme is already in scope. */
+@reference "../app.css";
+
+.opd-richtext {
+  @apply text-sm leading-relaxed text-muted-foreground;
+}
+
+/* collapse outer margins so the block sits flush in the row */
+.opd-richtext > :where(:first-child) {
+  @apply mt-0;
+}
+.opd-richtext > :where(:last-child) {
+  @apply mb-0;
+}
+
+/* paragraphs & generic blocks */
+.opd-richtext :where(p) {
+  @apply my-2;
+}
+
+/* headings */
+.opd-richtext :where(h1, h2, h3, h4, h5, h6) {
+  @apply mb-2 mt-4 font-semibold leading-snug text-foreground;
+}
+.opd-richtext :where(h1) {
+  @apply text-lg;
+}
+.opd-richtext :where(h2) {
+  @apply text-base;
+}
+.opd-richtext :where(h3, h4, h5, h6) {
+  @apply text-sm;
+}
+
+/* inline formatting */
+.opd-richtext :where(strong, b) {
+  @apply font-semibold text-foreground;
+}
+.opd-richtext :where(em, i) {
+  @apply italic;
+}
+.opd-richtext :where(u) {
+  @apply underline underline-offset-2;
+}
+.opd-richtext :where(s) {
+  @apply line-through;
+}
+.opd-richtext :where(small) {
+  @apply text-xs;
+}
+.opd-richtext :where(abbr) {
+  @apply cursor-help underline decoration-dotted underline-offset-2;
+}
+.opd-richtext :where(mark) {
+  @apply rounded-sm bg-primary/15 px-0.5 text-foreground;
+}
+
+/* links */
+.opd-richtext :where(a) {
+  @apply font-medium text-primary underline underline-offset-4 hover:no-underline;
+}
+
+/* lists */
+.opd-richtext :where(ul) {
+  @apply my-2 list-disc space-y-1 pl-5;
+}
+.opd-richtext :where(ol) {
+  @apply my-2 list-decimal space-y-1 pl-5;
+}
+.opd-richtext :where(li) {
+  @apply pl-1;
+}
+.opd-richtext :where(dl) {
+  @apply my-2 space-y-1;
+}
+.opd-richtext :where(dt) {
+  @apply font-medium text-foreground;
+}
+.opd-richtext :where(dd) {
+  @apply pl-4;
+}
+
+/* quotes & code */
+.opd-richtext :where(blockquote) {
+  @apply my-3 border-l-2 border-border pl-4 italic text-muted-foreground;
+}
+.opd-richtext :where(code) {
+  @apply rounded bg-muted px-1 py-0.5 font-mono text-xs text-foreground;
+}
+.opd-richtext :where(pre) {
+  @apply my-3 overflow-x-auto rounded-md bg-muted p-3 text-xs leading-relaxed;
+}
+.opd-richtext :where(pre code) {
+  @apply bg-transparent p-0;
+}
+
+/* media */
+.opd-richtext :where(img) {
+  @apply my-3 h-auto max-w-full rounded-md;
+}
+.opd-richtext :where(figure) {
+  @apply my-3;
+}
+.opd-richtext :where(figcaption) {
+  @apply mt-1 text-xs text-muted-foreground;
+}
+.opd-richtext :where(hr) {
+  @apply my-4 border-t border-border;
+}
+
+/* tables */
+.opd-richtext :where(table) {
+  @apply my-3 w-full border-collapse text-sm;
+}
+.opd-richtext :where(caption) {
+  @apply mb-1 text-xs text-muted-foreground;
+}
+.opd-richtext :where(th, td) {
+  @apply border border-border px-2 py-1 text-left align-top;
+}
+.opd-richtext :where(th) {
+  @apply bg-muted font-medium text-foreground;
+}
+/* ---------------------------------------------------------------------------
+ * Search-result highlight (<mark class="opd-hl">). Applied by TextsList to the
+ * keyword matches in a text row's heading, affair title, and rich-text body.
+ * Defined OUTSIDE :where(.opd-richtext) so it also styles the plain-text marks
+ * (heading / affair title) that live outside the rich-text container. Tokened so
+ * it adapts to light/dark themes; falls back to a yellow wash where color-mix
+ * is unavailable.
+ * ------------------------------------------------------------------------- */
+.opd-hl {
+  background-color: #fde68a; /* amber-200 — light mode */
+  color: #1f2937; /* gray-800 — force readable text on the wash */
+  border-radius: 0.2em;
+  padding: 0 0.1em;
+  /* keep highlighting from shifting the baseline of inline / wrapped text */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* shadcn dark mode is class-based (.dark on a root element). */
+.dark .opd-hl {
+  background-color: #b45309; /* amber-700 */
+  color: #fff;
+}

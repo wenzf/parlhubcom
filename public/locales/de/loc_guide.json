@@ -1,0 +1,109 @@
+{
+  "guide": {
+    "title": "Datenguide",
+    "lead": "Elf Datenarten aus den Parlamenten der Schweiz und Liechtensteins. Jede mit eigener Suchseite und ein paar Beispielen.",
+    "map_link": "Wie die Daten zusammenhängen",
+    "groups": {
+      "actors": { "heading": "Akteure", "sub": "Die Menschen und Organisationen des Parlaments" },
+      "proceedings": { "heading": "Verfahren", "sub": "Das Geschäft des Gesetzgebens" },
+      "records": { "heading": "Aufzeichnungen", "sub": "Was gesagt, geschrieben und abgelegt wurde" },
+      "lobbying": { "heading": "Lobbying", "sub": "Wer mit wem verbunden ist" }
+    },
+    "types": {
+      "people": {
+        "eyebrow": "Personen",
+        "title": "Wer stimmt wie wer, und wer redet worüber?",
+        "links": {
+          "vocabulary": "Die Wörter von {{name}}, als Karte",
+          "alignment": "Wer stimmt wie {{name}}?",
+          "search": "26'000 Mitglieder durchsuchen"
+        }
+      },
+      "bodies": {
+        "eyebrow": "Parlamente",
+        "title": "Welche Partei stimmt als Block, und wer schert aus?",
+        "links": {
+          "loyalty": "Fraktionstreue in der Bundesversammlung",
+          "lobby": "Das eidgenössische Lobby-Netzwerk",
+          "people": "Alle Mitglieder der Bundesversammlung",
+          "search": "Von den eidgenössischen Räten bis zu rund 460 Gemeinden"
+        }
+      },
+      "groups": {
+        "eyebrow": "Kommissionen & Fraktionen",
+        "title": "Wer treibt welche Geschäfte voran?",
+        "links": {
+          "search": "Fraktionen, Parteien und Kommissionen durchsuchen"
+        }
+      },
+      "affairs": {
+        "eyebrow": "Geschäfte",
+        "title": "Was wurde aus dieser Motion?",
+        "links": {
+          "example": "Ein langer Kampf, Abstimmung für Abstimmung: {{name}}",
+          "search": "320'000 Geschäfte filtern"
+        }
+      },
+      "votings": {
+        "eyebrow": "Abstimmungen",
+        "title": "Wer sagte Ja, wer Nein?",
+        "links": {
+          "example": "Die jüngste Schlussabstimmung, Name für Name",
+          "search": "75'000 Abstimmungen durchsuchen"
+        }
+      },
+      "meetings": {
+        "eyebrow": "Sitzungen",
+        "title": "Was hat eine einzelne Sitzung entschieden?",
+        "links": {
+          "search": "Jede Session, Tag für Tag"
+        }
+      },
+      "speeches": {
+        "eyebrow": "Reden",
+        "title": "Wer hat über den Wolf geredet?",
+        "links": {
+          "wolf": "Jedes Votum, das den Wolf erwähnt",
+          "search": "2,5 Millionen Voten durchsuchen, wortgetreu"
+        },
+        "queries": { "wolf": "Wolf" }
+      },
+      "texts": {
+        "eyebrow": "Texte",
+        "title": "Worum geht es in einer Vorlage, in drei Sätzen?",
+        "links": {
+          "bitcoin": "Jeder Text, der Bitcoin erwähnt",
+          "search": "Die offiziellen Zusammenfassungen durchsuchen"
+        },
+        "queries": { "bitcoin": "Bitcoin" }
+      },
+      "docs": {
+        "eyebrow": "Dokumente",
+        "title": "Was steckt in den Protokollen?",
+        "links": {
+          "search": "Volltextsuche über 880'000 Dokumente"
+        }
+      },
+      "interests": {
+        "eyebrow": "Interessen",
+        "title": "Wer sitzt in welchen Verwaltungsräten?",
+        "links": {
+          "example": "Jedes Mandat von {{name}}",
+          "search": "29'000 Registereinträge durchsuchen"
+        }
+      },
+      "organizations": {
+        "eyebrow": "Organisationen",
+        "title": "Welche Organisation reicht am weitesten?",
+        "links": {
+          "example": "Ein Verein, mehrere Parlamente: {{name}}",
+          "search": "Organisationen nach Name durchsuchen"
+        }
+      }
+    }
+  },
+  "metas": {
+    "data_guide.title": "Datenguide",
+    "data_guide.desc": "Elf Datenarten aus den Parlamenten der Schweiz und Liechtensteins: Personen, Parlamente, Geschäfte, Abstimmungen, Reden, Dokumente und Lobby-Verbindungen. Jede mit eigener Suchseite und konkreten Beispielen."
+  }
+}

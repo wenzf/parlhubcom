@@ -1,0 +1,74 @@
+{
+  "data_map": {
+    "title": "Carta da las datas",
+    "lead": "Co las datas da parlhub van ensemen. Mintga carta è in catalog che vus pudais tschertgar ed explorar. Las lingias mussan co las entitads èn colliadas. Tscherni in per s'approfundir.",
+    "diagram_label": "Diagram da las entitads da datas da parlhub e da lur colliaziuns",
+    "clusters": {
+      "parliament": "Parlament",
+      "proceedings": "Activitads",
+      "records": "Actas",
+      "lobbying": "Lobbying"
+    },
+    "nodes": {
+      "people": {
+        "label": "Persunas",
+        "desc": "Commembers dal parlament e funcziunaris: profils, vuschs, discurs e mandats."
+      },
+      "bodies": {
+        "label": "Gremis",
+        "desc": "Parlaments, cussegls e cumissiuns, cun lur commembers e fatschentas."
+      },
+      "groups": {
+        "label": "Gruppas",
+        "desc": "Partidas, fracziuns e cumissiuns: cumpartegnientscha e cohesiun en las votaziuns."
+      },
+      "affairs": {
+        "label": "Fatschentas",
+        "desc": "Fatschentas parlamentaras: moziuns, propostas e lur resultats."
+      },
+      "votings": {
+        "label": "Votaziuns",
+        "desc": "Votaziuns per num: tgi ha votà co e cura."
+      },
+      "meetings": {
+        "label": "Sesidas",
+        "desc": "Sessiuns e sesidas: tractandas, votaziuns e discurs."
+      },
+      "speeches": {
+        "label": "Discurs",
+        "desc": "Protocols pled per pled da quai ch'è vegnì ditg, cumplettamain tschertgabels."
+      },
+      "texts": {
+        "label": "Texts",
+        "desc": "Blocs da text publitgads e material da medias."
+      },
+      "documents": {
+        "label": "Documents",
+        "desc": "Datotecas ed agiuntas colliadas cun las fatschentas."
+      },
+      "interests": {
+        "label": "Interess",
+        "desc": "Interess declerads e colliaziuns da lobby dals commembers."
+      },
+      "organizations": {
+        "label": "Organisaziuns",
+        "desc": "Las organisaziuns davos quels interess declerads."
+      }
+    },
+    "source": {
+      "heading": "Davart las datas",
+      "body": "Tut las datas derivan da OpenParlData.ch. parlhub importescha quellas datas brutas e las adattescha mo pauc. Las entitads e las relaziuns mussadas qua correspundan a la funtauna.",
+      "links_label": "Ulteriura lectura",
+      "openparldata_label": "OpenParlData.ch",
+      "openparldata_href": "https://openparldata.ch",
+      "schemas_label": "Schemas da datas",
+      "schemas_href": "https://gitlab.com/opendata.ch/openparldatach/data-infrastructure/-/tree/develop/fastapi/app/schemas/endpoints?ref_type=heads",
+      "raw_label": "Exports da datas brutas",
+      "raw_href": "https://files.openparldata.ch/exports/"
+    }
+  },
+  "metas": {
+    "data_map.title": "Carta da las datas",
+    "data_map.desc": "Ina carta da survista da las datas da parlhub: persunas, gruppas, gremis, fatschentas, votaziuns, sesidas, discurs, documents e colliaziuns da lobby, e co ch'ellas èn colliadas. Mintga nuf maina a ses catalog."
+  }
+}

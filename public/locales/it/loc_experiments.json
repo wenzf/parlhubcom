@@ -1,0 +1,60 @@
+{
+  "experiments": {
+    "title": "Wordfish: i parlamenti attraverso le loro parole",
+    "lede": "Questo è un esperimento: colloca i membri di un parlamento su un unico asse usando soltanto le parole che impiegano nei loro interventi. Nessun voto, nessuna etichetta di partito, nessuna codifica manuale, solo frequenze di parole. Qui sotto trovi come funziona, come leggerlo e i parlamenti in cui esiste abbastanza testo di interventi per provarlo.",
+    "sections": [
+      {
+        "heading": "Cosa fa",
+        "paragraphs": [
+          "Per un parlamento scelto, prendiamo ogni membro in carica e tutti i suoi interventi entro una finestra temporale recente condivisa. È lo stesso intervallo per tutti, così che il risultato rifletta la scelta delle parole e non chi è in carica da più tempo. Ogni membro diventa un «documento»: un insieme delle parole usate e della loro frequenza.",
+          "Un modello statistico chiamato Wordfish individua poi l'unico asse d'uso delle parole che separa al meglio i membri. Scopre quali parole distanziano le persone e colloca ciascun membro di conseguenza. L'asse non è definito in anticipo. Emerge dagli interventi stessi."
+        ]
+      },
+      {
+        "heading": "Come viene calcolato",
+        "paragraphs": [
+          "Ogni intervento viene suddiviso in parole e reso minuscolo, mantenendo gli accenti. Le parole funzionali molto comuni («the», «and», «der», «le» …) vengono rimosse con un elenco di stopword abbinato alla lingua di ciascun intervento, così un intervento in francese è filtrato con le stopword francesi e uno in tedesco con quelle tedesche. Anche le parole rare, usate solo da una manciata di membri, vengono scartate, perché aggiungono rumore, non segnale.",
+          "Wordfish modella il conteggio di ogni parola come un'estrazione di Poisson che dipende dalla posizione del membro, dalla frequenza tipica della parola e da quanto fortemente quella parola discrimina. Adatta questi valori in cicli alternati finché i numeri smettono di muoversi, poi standardizza le posizioni in modo che la dispersione sia confrontabile. Il calcolo viene eseguito su richiesta durante il caricamento della pagina. Per una camera numerosa nell'arco di un anno richiede diversi secondi, ed è per questo che il grafico compare progressivamente dietro un indicatore di caricamento."
+        ]
+      },
+      {
+        "heading": "Come leggere il grafico",
+        "paragraphs": [
+          "Ogni punto è un membro, collocato in base alle sue parole: i membri che parlano in modo simile stanno vicini, quelli che parlano in modo molto diverso stanno lontani. La direzione dell'asse è arbitraria. Wordfish trova la separazione, non quale lato sia «sinistra» o «destra». Per capire cosa significhi ciascuna estremità, leggi le parole elencate ai due poli.",
+          "La dispersione è standardizzata, quindi le distanze sono una convenzione più che una misura reale. Ogni membro porta con sé anche un'incertezza (la barra d'errore): i membri che hanno parlato poco sono collocati con bassa affidabilità e disegnati come anelli vuoti. Non dare loro troppo peso. E lo stile oratorio riflette il ruolo tanto quanto le convinzioni: presidenti di commissione, ministri e oratori frequenti possono finire a un polo per ciò che fanno, non solo per ciò che pensano."
+        ]
+      },
+      {
+        "heading": "Perché la maggior parte dei parlamenti è vuota",
+        "paragraphs": [
+          "Il posizionamento ha bisogno del testo effettivo delle trascrizioni degli interventi, e gli open data lo contengono solo per pochi parlamenti. La maggior parte degli organi non ha alcun intervento; alcuni hanno registrazioni di interventi senza alcuna trascrizione; e alcuni hanno trascrizioni che si fermano ad anni fa. Solo i parlamenti elencati qui sotto hanno attualmente abbastanza testo di interventi recente perché almeno dieci membri possano essere collocati."
+        ]
+      }
+    ],
+    "cases_heading": "Parlamenti che puoi esplorare",
+    "cases_lede": "Ciascuno di questi ha abbastanza testo di trascrizioni nella finestra recente per tracciare un grafico. «Membri collocati» indica quanti membri il posizionamento riesce a collocare; «Dati sugli interventi» è l'intero arco di testo di interventi disponibile per quel parlamento.",
+    "col_parliament": "Parlamento",
+    "col_members": "Membri collocati",
+    "col_period": "Dati sugli interventi",
+    "cases_empty": "Attualmente nessun parlamento ha abbastanza testo di interventi recente per generare il posizionamento.",
+    "references_heading": "Riferimenti e approfondimenti",
+    "references": [
+      {
+        "text": "Slapin & Proksch (2008): «A Scaling Model for Estimating Time-Series Party Positions from Texts», American Journal of Political Science. L'articolo che ha introdotto Wordfish.",
+        "url": "https://doi.org/10.1111/j.1540-5907.2008.00338.x"
+      },
+      {
+        "text": "Tutorial su Wordfish (quanteda): una descrizione pratica e un'implementazione di riferimento del modello.",
+        "url": "https://tutorials.quanteda.io/machine-learning/wordfish/"
+      },
+      {
+        "text": "Grimmer & Stewart (2013): «Text as Data», Political Analysis. Una rassegna che colloca Wordfish tra i metodi di scaling testuale.",
+        "url": "https://doi.org/10.1093/pan/mps028"
+      }
+    ]
+  },
+  "metas": {
+    "wordfish.title": "Wordfish: i parlamenti dai loro discorsi",
+    "wordfish.desc": "Come parlhub colloca i membri di un parlamento su un asse in base alla sola scelta delle parole: metodo, guida alla lettura e i parlamenti con abbastanza testo dei discorsi."
+  }
+}

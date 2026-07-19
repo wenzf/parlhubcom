@@ -1,0 +1,74 @@
+{
+  "data_map": {
+    "title": "Datenkarte",
+    "lead": "Wie die Daten von parlhub zusammenhängen. Jede Karte ist ein durchsuchbarer Katalog. Die Linien zeigen, wie die Bereiche verbunden sind. Wähle einen aus, um einzutauchen.",
+    "diagram_label": "Diagramm der Datenbereiche von parlhub und ihrer Verbindungen",
+    "clusters": {
+      "parliament": "Parlament",
+      "proceedings": "Ratsbetrieb",
+      "records": "Aufzeichnungen",
+      "lobbying": "Lobbying"
+    },
+    "nodes": {
+      "people": {
+        "label": "Personen",
+        "desc": "Abgeordnete und Amtsträger: Profile, Stimmen, Reden und Mandate."
+      },
+      "bodies": {
+        "label": "Gremien",
+        "desc": "Parlamente, Räte und Kommissionen mit ihren Mitgliedern und Geschäften."
+      },
+      "groups": {
+        "label": "Fraktionen",
+        "desc": "Parteien, Fraktionen und Kommissionen: Mitgliedschaft und Geschlossenheit."
+      },
+      "affairs": {
+        "label": "Geschäfte",
+        "desc": "Parlamentarische Geschäfte: Vorstösse, Vorlagen und ihr Ausgang."
+      },
+      "votings": {
+        "label": "Abstimmungen",
+        "desc": "Namentliche Abstimmungen: wer wie und wann gestimmt hat."
+      },
+      "meetings": {
+        "label": "Sitzungen",
+        "desc": "Sessionen und Sitzungen: Traktanden, Abstimmungen und Reden."
+      },
+      "speeches": {
+        "label": "Reden",
+        "desc": "Wörtliche Protokolle des Gesagten, vollständig durchsuchbar."
+      },
+      "texts": {
+        "label": "Texte",
+        "desc": "Veröffentlichte Textblöcke und Medienmaterial."
+      },
+      "documents": {
+        "label": "Dokumente",
+        "desc": "Dateien und Beilagen zu den Geschäften."
+      },
+      "interests": {
+        "label": "Interessen",
+        "desc": "Deklarierte Interessenbindungen der Mitglieder."
+      },
+      "organizations": {
+        "label": "Organisationen",
+        "desc": "Die Organisationen hinter diesen Interessenbindungen."
+      }
+    },
+    "source": {
+      "heading": "Über die Daten",
+      "body": "Alle Daten stammen von OpenParlData.ch. parlhub importiert diese Rohdaten und passt sie nur geringfügig an. Die hier gezeigten Bereiche und Verbindungen entsprechen der Quelle.",
+      "links_label": "Weiterführende Links",
+      "openparldata_label": "OpenParlData.ch",
+      "openparldata_href": "https://openparldata.ch",
+      "schemas_label": "Datenschemas",
+      "schemas_href": "https://gitlab.com/opendata.ch/openparldatach/data-infrastructure/-/tree/develop/fastapi/app/schemas/endpoints?ref_type=heads",
+      "raw_label": "Rohdaten-Exporte",
+      "raw_href": "https://files.openparldata.ch/exports/"
+    }
+  },
+  "metas": {
+    "data_map.title": "Datenkarte",
+    "data_map.desc": "Eine Übersichtskarte der parlhub-Daten: Personen, Fraktionen, Gremien, Geschäfte, Abstimmungen, Sitzungen, Reden, Dokumente und Lobby-Verbindungen, und wie sie zusammenhängen. Jeder Knoten führt zum passenden Katalog."
+  }
+}

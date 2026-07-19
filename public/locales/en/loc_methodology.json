@@ -1,0 +1,60 @@
+{
+  "methodology": {
+    "title": "Methodology",
+    "lead": "parlhub does more than list records: it computes voting alignment, party loyalty, lobby networks, word maps and more on top of the open data. This page sets out exactly how each figure is derived and links every metric to the source code that produces it.",
+    "labels": {
+      "formula": "How it's computed",
+      "sources": "Source code",
+      "used_on": "Where it appears"
+    },
+    "repo_link": "Browse all source code on GitHub",
+    "groups": {
+      "parliaments": { "heading": "Parliaments", "sub": "Metrics computed across a whole chamber" },
+      "people": { "heading": "People", "sub": "Metrics for a single member" },
+      "votings": { "heading": "Votings", "sub": "How one vote is drawn" },
+      "site": { "heading": "The site itself", "sub": "Operational metrics" }
+    },
+    "methods": {
+      "alignment": {
+        "title": "Voting alignment",
+        "body": "For every pair of members who voted in the same ballots, the agreement is the share of shared ballots on which they cast the same vote (yes, no, abstain or absent), where absent matches absent. A member needs at least 20 scored ballots and a pair at least 20 shared ballots to appear. The party heatmap averages these pairwise agreements over each unordered party pair (with a 95 % confidence half-width of 1.96·σ/√n). The scatter turns the agreement matrix into two dimensions by classical multidimensional scaling: distances d = 1 − agreement are double-centred into B, shifted to B + σI (a Gershgorin bound) so it is positive-semidefinite, and the two most-positive eigenvectors give the coordinates. The layout is seeded deterministically, so it never jitters between reloads."
+      },
+      "loyalty": {
+        "title": "Party loyalty & cohesion",
+        "body": "For each ballot, a parliamentary group's line is the position (yes, no or abstain) that a strict plurality of its voters took; ties, and groups fielding fewer than 4 voters on that ballot, are not scored. A member dissents whenever their vote differs from their group's line, and their dissent rate is dissents ÷ scored ballots (members with fewer than 10 scored ballots are dropped). The vote-time group is used, falling back to the member's current party where no snapshot exists (e.g. Liechtenstein). Group cohesion is the mean Agreement Index (Hix–Noury–Roland) over the group's ballots: 1 when a group votes as one, 0 when it splits evenly three ways."
+      },
+      "lobby": {
+        "title": "Lobby network",
+        "body": "Members and the organisations they declare in the register of interests form a bipartite graph; only organisations tied to at least 2 members are kept, so the picture shows shared connections rather than isolated mandates. Each declared tie is classified paid, unpaid or unknown (the harmonised code first, then a German / French / Italian text fallback), and paid outranks unpaid outranks unknown when a member holds several ties to one organisation. The network is laid out with a deterministic Fruchterman–Reingold force simulation: ideal edge length k = √(area/n), repulsion k²/distance, attraction distance²/k, over 300 cooled iterations. No randomness is used, so the graph is stable across reloads."
+      },
+      "discussion": {
+        "title": "Discussion scaling (Wordfish)",
+        "body": "Speeches by every active member over a shared time window are tokenised and stopword-filtered per language, then reduced to one word-count document per member. Wordfish (Slapin & Proksch 2008) fits a Poisson model E[y] = exp(α + ψ + β·θ) by alternating Poisson regressions, placing each speaker on a single latent scale θ purely from word choice: α is a speaker's talkativeness, ψ a word's frequency and β how sharply a word discriminates. The fit is hardened (clamped, step-halved, ridge-regularised) and deterministically initialised. η² (the share of the θ variance explained by party) is shown alongside, and the axis uses a robust 2nd–98th percentile domain so that a few thin, high-variance speakers don't set the scale."
+      },
+      "vocabulary": {
+        "title": "Vocabulary (word frequency)",
+        "body": "Each of a member's speech transcripts is stripped of HTML, lowercased and split on non-letter characters into tokens longer than one character (accents kept, digits and punctuation dropped). Every token is filtered against the stopword list for that speech's own language, so a bilingual member's German and French speeches are cleaned with the right list. The result is the member's most frequent words (the top 120 with a count of at least 2, over an optional date window), drawn as a squarified treemap sized by count."
+      },
+      "coVoting": {
+        "title": "Co-voting neighbours",
+        "body": "This is the pairwise half of voting alignment, seen from one member: over the ballots where both cast a vote, the agreement with every other member is matches ÷ shared ballots (absent matches absent). Pairs sharing fewer than 10 ballots are hidden as noise, and the list can be re-scoped to a date range. Unlike the parliament scatter, no dimensionality reduction is applied. It is a ranked neighbour list."
+      },
+      "interests": {
+        "title": "Interest classification",
+        "body": "Each register-of-interests entry is sorted into paid, unpaid or unknown: the harmonised payment code is trusted first (unpaid and honorary both count as unpaid), otherwise a German / French / Italian keyword fallback reads the free-text description. Entries are grouped by normalised organisation name to roll a member's mandates up per organisation. This same rule feeds the paid / unpaid split on the lobby network."
+      },
+      "hemicycle": {
+        "title": "Voting hemicycle",
+        "body": "The seating arc is computed in the browser: rings are added until they hold every voter, the seats are spread across rings by largest-remainder allocation weighted by ring radius, and each seat is placed on its arc and sorted left to right. Coordinates are rounded to two decimals so the server and client render identically and hydration never mismatches. Parties are coloured by descending membership from a fixed palette, and the arch is drawn only when at least 80 % of voters have a known seat."
+      },
+      "traffic": {
+        "title": "Traffic statistics",
+        "body": "Request logs are rolled into immutable daily fact rows (one per period, route, language, visitor class and device) carrying additive counters (requests, summed and maximum latency) and an eight-bucket latency histogram; days older than 90 collapse to month grain. The dashboard re-aggregates these client-side: counts and maxima merge directly, the average is derived as summed latency ÷ requests, and the 95th percentile is approximated from the histogram (the upper edge of the bucket holding the 95th request), because true averages and percentiles cannot be re-merged from stored totals. User agents are classified into visitor class and device once, at roll-up time, so the rules stay revisable."
+      }
+    }
+  },
+  "metas": {
+    "methodology.title": "Methodology",
+    "methodology.desc": "How parlhub computes its figures (voting alignment, party loyalty, lobby networks, vocabulary maps and Wordfish scaling), with the exact formula for each and a link to the source code."
+  }
+}

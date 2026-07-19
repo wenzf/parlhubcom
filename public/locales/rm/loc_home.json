@@ -1,0 +1,28 @@
+{
+  "home": {
+    "tagline": "In portal per ils parlaments da la Svizra e dal Liechtenstein.",
+    "search_label": "Tschertga",
+    "search_placeholder": "Tschertgar…",
+    "search_button": "Tschertgar",
+    "search_scope_label": "Tschertgar en",
+    "sections": {
+      "people": "Persunas",
+      "votings": "Votaziuns",
+      "affairs": "Fatschentas",
+      "speeches": "Discurs",
+      "bodies": "Parlaments",
+      "groups": "Cumissiuns & gruppas",
+      "meetings": "Sesidas",
+      "texts": "Texts",
+      "documents": "Documents",
+      "interests": "Interess",
+      "organizations": "Organisaziuns"
+    },
+    "stats_updated": "Datas actualisadas",
+    "start_link": "Colliaziuns sveltas a las chombras federalas, ils chantuns ed ils parlaments communals"
+  },
+  "metas": {
+    "home.title": "Datas parlamentaras da la Svizra e dal Liechtenstein",
+    "home.desc": "Sfegliar ils parlaments da la Svizra e dal Liechtenstein: commembers, votaziuns, discurs, colliaziuns da lobbying e dapli. Na commerzial, open source."
+  }
+}

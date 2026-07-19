@@ -1,0 +1,265 @@
+{
+    "_meta": {
+        "namespace": "loc_accessibility",
+        "source_files": [
+            "public/locales/<lang>/loc_accessibility.json for lang in de, en, fr, it, es"
+        ],
+        "loaded_by": "app/routes/pages/project/accessibility/accessibility.tsx",
+        "description": "'Accessibility' statement page, a VOLUNTARY self-declaration (parlhub is a private non-profit, so neither BehiG/eCH-0059 nor EU Directive 2016/2102 binds it). Section order follows the EU model statement, Commission Implementing Decision (EU) 2018/1523: conformance status, measures, known limitations, feedback channel, preparation method + dates.",
+        "format": "Each entry: context (where the string appears in the UI, its role, placeholders and length/grammar constraints) + the current de/en/fr/it/es texts as translation reference. Use the context when translating into a new language; a null text means the key is missing in that language file.",
+        "generated": "2026-07-15, code-verified against app/ sources; regenerate when public/locales texts or consuming components change."
+    },
+    "keys": {
+        "accessibility.title": {
+            "context": "Page title (h1) of the accessibility statement at /project/accessibility (app/routes/pages/project/accessibility/accessibility.tsx). Short; also the sidebar section title via PAGE_CONFIG.NS_ACCESSIBILITY.",
+            "en": "Accessibility",
+            "de": "Barrierefreiheit",
+            "fr": "Accessibilité",
+            "it": "Accessibilità",
+            "es": "Accesibilidad"
+        },
+        "accessibility.lead": {
+            "context": "Lead paragraph under the H1. States that WCAG 2.2 level AAA is the applied DESIGN standard, that the statement covers how far it goes / how assessed / where it falls short, and (importantly) that this is a VOLUNTARY self-declaration because parlhub is a private non-profit not covered by the Swiss BehiG or the EU Web Accessibility Directive. Each language names its own jurisdiction's law where natural (de: BehiG, fr: LHand, it: LDis, es: LDis). Do not drop the voluntary framing: claiming to be covered by a law that does not apply would be a false legal claim.",
+            "en": "The design standard applied across parlhub is WCAG 2.2 at level AAA. This statement says how far that actually goes, how it was assessed, and where it falls short. It is a voluntary self-declaration: parlhub is a private, non-profit project, so neither the Swiss BehiG nor the EU Web Accessibility Directive applies to it.",
+            "de": "Der Gestaltungsstandard, der auf parlhub angewendet wird, ist WCAG 2.2 auf Stufe AAA. Diese Erklärung sagt, wie weit das tatsächlich reicht, wie es geprüft wurde und wo es nicht hinreicht. Sie ist eine freiwillige Selbstdeklaration: parlhub ist ein privates, nicht-kommerzielles Projekt, also gelten weder das BehiG noch die EU-Richtlinie über den barrierefreien Zugang.",
+            "fr": "La norme de conception appliquée à parlhub est WCAG 2.2 au niveau AAA. Cette déclaration dit jusqu'où cela va réellement, comment cela a été évalué et où cela ne suffit pas. C'est une auto-déclaration volontaire : parlhub est un projet privé à but non lucratif, ni la LHand suisse ni la directive européenne sur l'accessibilité du web ne s'y appliquent.",
+            "it": "Lo standard di progettazione applicato in parlhub è WCAG 2.2 al livello AAA. Questa dichiarazione dice fin dove arriva davvero, come è stata valutata e dove non basta. È un'autodichiarazione volontaria: parlhub è un progetto privato senza scopo di lucro, quindi non si applicano né la LDis svizzera né la direttiva europea sull'accessibilità del web.",
+            "es": "La norma de diseño que se aplica en parlhub es WCAG 2.2 en el nivel AAA. Esta declaración dice hasta dónde llega eso realmente, cómo se evaluó y dónde no alcanza. Es una autodeclaración voluntaria: parlhub es un proyecto privado sin ánimo de lucro, así que no le son aplicables ni la LDis suiza ni la directiva europea de accesibilidad web."
+        },
+        "accessibility.conformance.heading": {
+            "context": "Section heading (h2): conformance status. Mirrors the EU model statement's first section.",
+            "en": "Conformance status",
+            "de": "Stand der Konformität",
+            "fr": "État de conformité",
+            "it": "Stato di conformità",
+            "es": "Estado de conformidad"
+        },
+        "accessibility.conformance.body": {
+            "context": "Array of 2 paragraphs (the formal conformance claim. [0] parlhub PARTIALLY conforms to WCAG 2.2 AAA; 'partially' is deliberate; AAA is a standard applied (tokens, target sizes, focus styles), not an audited result. [1] prepared by SELF-ASSESSMENT by the sole maintainer; an automated checker (pa11y-ci, added 2026-07-15) now reports no errors but is explicitly framed as a FLOOR, not a result, because it only decides what a machine can decide; still no third-party audit, no assistive-technology testing; notes W3C advises against site-wide AAA claims. Do NOT upgrade 'partially' to 'fully', do NOT let the automated pass read as a verdict, and do NOT drop the self-assessment admission when translating) the whole statement's credibility rests on this wording.",
+            "en": [
+                "parlhub partially conforms to WCAG 2.2 level AAA. \"Partially\" is the honest word. AAA is the standard the design is built to: the colour tokens, target sizes and focus styles all follow it. But that makes it a standard applied, not an audited result.",
+                "This statement was prepared by self-assessment, by the one person who builds the site. An automated checker now runs over a sample of pages and reports no errors, which is a floor rather than a result: it decides only the questions a machine can decide, and leaves the rest to a human who has not yet looked. There has been no third-party audit and no formal testing with assistive technology. The W3C advises against claiming AAA for a whole site, because some content cannot meet every AAA criterion. So read the level as the rule the code is held to, and the limitations below as the part that is actually known."
+            ],
+            "de": [
+                "parlhub erfüllt WCAG 2.2 Stufe AAA teilweise. «Teilweise» ist das ehrliche Wort. AAA ist der Standard, nach dem gestaltet wird: die Farbtokens, die Zielgrössen und die Fokusstile folgen ihm alle. Damit ist es aber ein angewendeter Standard, kein geprüftes Ergebnis.",
+                "Diese Erklärung wurde in Selbstbewertung erstellt, von der einen Person, die die Seite baut. Ein automatisierter Prüfer läuft jetzt über eine Auswahl von Seiten und meldet keine Fehler. Das ist eine Untergrenze, kein Ergebnis: Er entscheidet nur, was eine Maschine entscheiden kann, und überlässt den Rest einem Menschen, der noch nicht hingesehen hat. Es gab keine Prüfung durch Dritte und keine formalen Tests mit assistiver Technologie. Das W3C rät davon ab, AAA für eine ganze Website zu beanspruchen, weil manche Inhalte nicht jedes AAA-Kriterium erfüllen können. Lesen Sie die Stufe also als die Regel, an der sich der Code messen lassen muss, und die Einschränkungen unten als den Teil, der tatsächlich bekannt ist."
+            ],
+            "fr": [
+                "parlhub est partiellement conforme à WCAG 2.2 niveau AAA. « Partiellement » est le mot honnête. AAA est la norme selon laquelle le site est conçu : les jetons de couleur, les tailles de cible et les styles de focus la suivent tous. Mais cela en fait une norme appliquée, pas un résultat audité.",
+                "Cette déclaration a été établie par auto-évaluation, par la seule personne qui construit le site. Un vérificateur automatique passe désormais sur un échantillon de pages et ne signale aucune erreur. C'est un plancher, pas un résultat : il ne tranche que ce qu'une machine peut trancher, et laisse le reste à un humain qui n'a pas encore regardé. Il n'y a eu ni audit externe ni test formel avec des technologies d'assistance. Le W3C déconseille de revendiquer AAA pour un site entier, car certains contenus ne peuvent pas satisfaire tous les critères AAA. Lisez donc le niveau comme la règle à laquelle le code est tenu, et les limitations ci-dessous comme la partie réellement connue."
+            ],
+            "it": [
+                "parlhub è parzialmente conforme a WCAG 2.2 livello AAA. «Parzialmente» è la parola onesta. AAA è lo standard secondo cui il sito è progettato: i token di colore, le dimensioni dei bersagli e gli stili di focus lo seguono tutti. Ma questo ne fa uno standard applicato, non un risultato verificato.",
+                "Questa dichiarazione è stata redatta per autovalutazione, dall'unica persona che costruisce il sito. Un controllo automatico ora gira su un campione di pagine e non segnala errori. È un pavimento, non un risultato: decide solo ciò che una macchina può decidere, e lascia il resto a una persona che non ha ancora guardato. Non ci sono stati audit di terze parti né test formali con tecnologie assistive. Il W3C sconsiglia di rivendicare AAA per un intero sito, perché alcuni contenuti non possono soddisfare ogni criterio AAA. Leggi quindi il livello come la regola a cui il codice è tenuto, e le limitazioni qui sotto come la parte davvero nota."
+            ],
+            "es": [
+                "parlhub cumple parcialmente con WCAG 2.2 nivel AAA. «Parcialmente» es la palabra honesta. AAA es la norma con la que se diseña: los tokens de color, los tamaños de los objetivos y los estilos de foco la siguen todos. Pero eso la convierte en una norma aplicada, no en un resultado auditado.",
+                "Esta declaración se elaboró mediante autoevaluación, por la única persona que construye el sitio. Un verificador automático recorre ahora una muestra de páginas y no informa de ningún error. Eso es un suelo, no un resultado: solo decide lo que una máquina puede decidir, y deja el resto a una persona que todavía no ha mirado. No ha habido auditoría externa ni pruebas formales con tecnología de apoyo. El W3C desaconseja reivindicar AAA para un sitio entero, porque algunos contenidos no pueden cumplir todos los criterios AAA. Lea, pues, el nivel como la regla a la que se somete el código, y las limitaciones de abajo como la parte que realmente se conoce."
+            ]
+        },
+        "accessibility.measures.heading": {
+            "context": "Section heading (h2): the accessibility measures that are in place.",
+            "en": "What is in place",
+            "de": "Was vorhanden ist",
+            "fr": "Ce qui est en place",
+            "it": "Che cosa c'è",
+            "es": "Qué hay implementado"
+        },
+        "accessibility.measures.body": {
+            "context": "Array of 3 paragraphs. [0] the style guide's requirements every component is built to: text contrast >= 7:1, targets >= 44x44px, visible focus indicator, keyboard operability; server-rendered so content exists before JavaScript. Phrased as rules the code is held to, NOT as tested outcomes, keep that hedge. [1] the header settings: text size, higher-contrast palette, remove colour, light/dark theme; UI language and data language chosen separately. [2] the automated check (pa11y-ci, `npm run test:a11y`, .pa11yci.json): 12 URLs, one per page archetype, currently 0 errors at level AA. Every hedge in [2] is load-bearing and verified: 12 pages is a sample not a crawl; the HTML_CodeSniffer engine's rules reach WCAG 2.1 but NOT the 2.2 additions (2.5.8 target size and 2.4.11 focus-not-obscured are absent from the engine); it emits ~39 unresolved-background warnings against the 7:1 enhanced-contrast rule, so [0]'s 7:1 is NOT machine-confirmed; and each run leaves several hundred notices/warnings for human review that nobody has triaged. Keep 'a net for catching regressions, not a verdict'. Update the counts only against a real run.",
+            "en": [
+                "The style guide every component is built against requires text contrast of at least 7:1, interactive targets of at least 44×44 pixels, a visible focus indicator, and keyboard operability. Pages are rendered on the server, so the content is there before any JavaScript runs.",
+                "The settings in the header let you change the text size, switch to a higher-contrast palette, remove colour entirely, and choose a light or dark theme. The interface language and the language of the data are picked separately, so you can read the chrome in one language and the records in another.",
+                "An automated checker (pa11y-ci) runs over twelve pages, one for each kind of page the site has, and currently reports no errors at level AA. Read that narrowly. It sees twelve pages, not the whole site. Its rules stop at WCAG 2.1, so what 2.2 added is not checked at all. It could not resolve the background colour on a number of elements, so the 7:1 contrast above is a rule the design follows, not something the tool confirmed. And it leaves several hundred points per run marked for a person to judge, which nobody has worked through. It is a net for catching regressions, not a verdict."
+            ],
+            "de": [
+                "Der Style Guide, nach dem jede Komponente gebaut wird, verlangt einen Textkontrast von mindestens 7:1, interaktive Ziele von mindestens 44×44 Pixeln, einen sichtbaren Fokusindikator und Bedienbarkeit per Tastatur. Die Seiten werden auf dem Server gerendert, der Inhalt ist also da, bevor irgendein JavaScript läuft.",
+                "Über die Einstellungen im Header können Sie die Schriftgrösse ändern, auf eine kontrastreichere Palette wechseln, Farbe ganz entfernen und ein helles oder dunkles Thema wählen. Die Sprache der Oberfläche und die Sprache der Daten werden getrennt gewählt, Sie können also die Oberfläche in einer Sprache und die Datensätze in einer anderen lesen.",
+                "Ein automatisierter Prüfer (pa11y-ci) läuft über zwölf Seiten, eine für jede Art von Seite, die es hier gibt, und meldet zurzeit keine Fehler auf Stufe AA. Lesen Sie das eng. Er sieht zwölf Seiten, nicht die ganze Website. Seine Regeln enden bei WCAG 2.1, was 2.2 hinzugefügt hat, wird also gar nicht geprüft. Bei etlichen Elementen konnte er die Hintergrundfarbe nicht auflösen; der Kontrast von 7:1 oben ist deshalb eine Regel, der die Gestaltung folgt, und nichts, was das Werkzeug bestätigt hätte. Und er markiert pro Durchlauf mehrere hundert Punkte zur Beurteilung durch einen Menschen, die niemand durchgearbeitet hat. Er ist ein Netz gegen Rückschritte, kein Urteil."
+            ],
+            "fr": [
+                "Le guide de style selon lequel chaque composant est construit exige un contraste du texte d'au moins 7:1, des cibles interactives d'au moins 44×44 pixels, un indicateur de focus visible et une utilisation au clavier. Les pages sont rendues sur le serveur : le contenu est là avant que le moindre JavaScript ne s'exécute.",
+                "Les réglages dans l'en-tête permettent de changer la taille du texte, de passer à une palette plus contrastée, de retirer entièrement la couleur et de choisir un thème clair ou sombre. La langue de l'interface et la langue des données se choisissent séparément : vous pouvez lire l'interface dans une langue et les enregistrements dans une autre.",
+                "Un vérificateur automatique (pa11y-ci) passe sur douze pages, une par type de page du site, et ne signale actuellement aucune erreur au niveau AA. À lire au sens strict. Il voit douze pages, pas le site entier. Ses règles s'arrêtent à WCAG 2.1 : ce que la 2.2 a ajouté n'est pas vérifié du tout. Sur bon nombre d'éléments, il n'a pas pu déterminer la couleur de fond ; le contraste de 7:1 ci-dessus est donc une règle que la conception suit, et non quelque chose que l'outil aurait confirmé. Et il laisse, à chaque passage, plusieurs centaines de points à juger par une personne, que personne n'a dépouillés. C'est un filet contre les régressions, pas un verdict."
+            ],
+            "it": [
+                "La guida di stile secondo cui è costruito ogni componente richiede un contrasto del testo di almeno 7:1, bersagli interattivi di almeno 44×44 pixel, un indicatore di focus visibile e l'operabilità da tastiera. Le pagine sono renderizzate sul server, quindi il contenuto c'è prima che venga eseguito qualsiasi JavaScript.",
+                "Le impostazioni nell'intestazione permettono di cambiare la dimensione del testo, passare a una palette a contrasto più elevato, togliere del tutto il colore e scegliere un tema chiaro o scuro. La lingua dell'interfaccia e la lingua dei dati si scelgono separatamente: puoi leggere l'interfaccia in una lingua e i record in un'altra.",
+                "Un controllo automatico (pa11y-ci) gira su dodici pagine, una per ogni tipo di pagina del sito, e al momento non segnala errori al livello AA. Va letto in senso stretto. Vede dodici pagine, non tutto il sito. Le sue regole si fermano a WCAG 2.1, quindi ciò che la 2.2 ha aggiunto non viene controllato affatto. Su parecchi elementi non è riuscito a risolvere il colore di sfondo: il contrasto di 7:1 qui sopra è dunque una regola che il progetto segue, non qualcosa che lo strumento abbia confermato. E a ogni esecuzione lascia diverse centinaia di punti da valutare a una persona, che nessuno ha esaminato. È una rete contro le regressioni, non un verdetto."
+            ],
+            "es": [
+                "La guía de estilo con la que se construye cada componente exige un contraste de texto de al menos 7:1, objetivos interactivos de al menos 44×44 píxeles, un indicador de foco visible y manejo por teclado. Las páginas se renderizan en el servidor, así que el contenido está ahí antes de que se ejecute JavaScript alguno.",
+                "Los ajustes de la cabecera permiten cambiar el tamaño del texto, pasar a una paleta de mayor contraste, quitar el color por completo y elegir un tema claro u oscuro. El idioma de la interfaz y el idioma de los datos se eligen por separado: puede leer la interfaz en un idioma y los registros en otro.",
+                "Un verificador automático (pa11y-ci) recorre doce páginas, una por cada tipo de página del sitio, y ahora mismo no informa de ningún error en el nivel AA. Léalo en sentido estricto. Ve doce páginas, no el sitio entero. Sus reglas se detienen en WCAG 2.1, así que lo que añadió la 2.2 no se comprueba en absoluto. En bastantes elementos no pudo resolver el color de fondo: el contraste de 7:1 de arriba es, por tanto, una regla que el diseño sigue, no algo que la herramienta haya confirmado. Y en cada pasada deja varios cientos de puntos para que los juzgue una persona, que nadie ha repasado. Es una red contra regresiones, no un veredicto."
+            ]
+        },
+        "accessibility.limitations.heading": {
+            "context": "Section heading (h2): known limitations. The EU model expects non-conforming content to be enumerated.",
+            "en": "Known limitations",
+            "de": "Bekannte Einschränkungen",
+            "fr": "Limitations connues",
+            "it": "Limitazioni note",
+            "es": "Limitaciones conocidas"
+        },
+        "accessibility.limitations.body": {
+            "context": "Array of 4 paragraphs, each a known gap, verified against the codebase. [0] no THIRD-PARTY audit and no assistive-tech testing, still the largest gap. Since 2026-07-15 an automated check exists, so the old flat 'no audit' is no longer exact: [0] now concedes the machine-checkable part is covered while stating it is the smaller half (published benchmarks credit the strongest engines with ~half of WCAG issues, and HTML_CodeSniffer is not the strongest; the copy deliberately says 'roughly half' rather than citing Deque's 57% axe-core figure, which measures a DIFFERENT and stronger engine than the one used here). Do not let the automated pass soften this paragraph. [1] Language of parts: content deliberately appears in a language other than the UI; the long rich-text blocks (speeches, texts, group descriptions) NOW declare their resolved language via loc_lang(), so screen readers switch voice) but shorter localized fields (titles, type labels) still do not, so WCAG 3.1.2 is met for the prose only. Keep that partial framing exact: do not upgrade it to 'fixed' or downgrade it to 'broken'. [2] upstream content from OpenParlData.ch: uncontrolled HTML sometimes needing repair, heading order/semantics not guaranteed, linked PDFs and photos as published. [2] now cites the evidence: the single error the automated check reports across all 12 tested pages is a level-skipping heading inside a speech transcript (an h3 after the h1 inside the `opd-richtext` block on /speeches/32), i.e. upstream markup, not parlhub's own. Keep that example only while it is true; re-check after any run. [3] charts: each has a short text alternative and some (party alignment matrix) also render a real data table, but not every visualisation exposes every data point as text; underlying numbers downloadable as CSV/JSON. Translate the failure admissions at full strength (softening them defeats the section's purpose. NOTE: [3] now also mentions that the most-used-words treemap can be shown as a table (PersonTopics.tsx renders one behind a Collapsible); keep that claim only as long as it is true. House style: no em-dashes in this copy) use commas, colons or full stops.",
+            "en": [
+                "No third-party audit and no assistive-technology testing. An automated check now covers the machine-checkable part, but that is the smaller half of the problem: published benchmarks credit even the strongest of these engines with finding roughly half of WCAG issues, and the engine used here is not the strongest. Nobody has driven this site with a screen reader, or by keyboard alone, the way someone who depends on one would. This is still the largest gap, and the reason nothing here claims full conformance.",
+                "Language of parts. Records often appear in a language other than the interface. That is deliberate, because a Swiss record may only exist in German. The long source texts (speeches, texts and group descriptions) now declare the language they were resolved from, so a screen reader reads a German speech in a German voice on an English page. Shorter localized fields, such as titles and type labels, do not carry that marking yet, so WCAG 3.1.2 is met for the prose but not everywhere.",
+                "Content from the source data. Texts, speeches and documents arrive from OpenParlData.ch as HTML that parlhub does not control and sometimes has to repair before rendering. Heading order and semantics inside those blocks cannot be guaranteed. The automated check shows exactly this: the one error it reports across every page tested is a heading that skips a level inside a speech transcript, in markup that came from upstream. Linked PDFs and photographs come from upstream too, with whatever accessibility they were published with.",
+                "Charts. Every chart carries a short text alternative, and several can be read as text instead: the party alignment matrix is itself a table, and the treemap of most-used words can be shown as one. But not every visualisation exposes every data point as text, and the scatter plots in particular are hard to convey without sight. The underlying numbers can always be downloaded as CSV or JSON."
+            ],
+            "de": [
+                "Keine Prüfung durch Dritte und keine Tests mit assistiver Technologie. Eine automatisierte Prüfung deckt jetzt den maschinell prüfbaren Teil ab, aber das ist die kleinere Hälfte des Problems: Veröffentlichte Vergleiche trauen selbst den stärksten dieser Prüfer nur etwa die Hälfte der WCAG-Probleme zu, und der hier eingesetzte ist nicht der stärkste. Niemand hat diese Seite mit einem Screenreader oder allein mit der Tastatur bedient, so wie es jemand tut, der darauf angewiesen ist. Das ist weiterhin die grösste Lücke und der Grund, warum hier nichts volle Konformität behauptet.",
+                "Sprache von Textteilen. Datensätze erscheinen oft in einer anderen Sprache als die Oberfläche. Das ist Absicht, denn ein Schweizer Datensatz existiert vielleicht nur auf Deutsch. Die langen Quelltexte (Reden, Texte und Fraktionsbeschreibungen) zeichnen jetzt die Sprache aus, aus der sie aufgelöst wurden; ein Screenreader liest eine deutsche Rede auf einer englischen Seite also mit deutscher Stimme. Kürzere lokalisierte Felder wie Titel und Typenbezeichnungen tragen diese Auszeichnung noch nicht. WCAG 3.1.2 ist damit für die Fliesstexte erfüllt, aber nicht überall.",
+                "Inhalte aus den Quelldaten. Texte, Reden und Dokumente kommen von OpenParlData.ch als HTML, das parlhub nicht kontrolliert und teils reparieren muss, bevor es gerendert wird. Überschriftenreihenfolge und Semantik innerhalb dieser Blöcke lassen sich nicht garantieren. Die automatisierte Prüfung zeigt genau das: Der eine Fehler, den sie über alle geprüften Seiten meldet, ist eine Überschrift, die innerhalb eines Redetranskripts eine Ebene überspringt, in Markup, das von dort stammt. Verlinkte PDFs und Fotografien stammen ebenfalls von dort, mit der Barrierefreiheit, mit der sie veröffentlicht wurden.",
+                "Diagramme. Jedes Diagramm trägt eine kurze Textalternative, und mehrere lassen sich stattdessen als Text lesen: die Parteien-Übereinstimmungsmatrix ist selber eine Tabelle, und die Treemap der häufigsten Wörter lässt sich als Tabelle anzeigen. Aber nicht jede Visualisierung macht jeden Datenpunkt als Text zugänglich, und gerade die Streudiagramme sind ohne Sehen schwer zu vermitteln. Die zugrunde liegenden Zahlen lassen sich immer als CSV oder JSON herunterladen."
+            ],
+            "fr": [
+                "Aucun audit externe et aucun test avec des technologies d'assistance. Une vérification automatique couvre désormais la part vérifiable par une machine, mais c'est la plus petite moitié du problème : les comparatifs publiés ne créditent même les plus solides de ces moteurs que d'environ la moitié des problèmes WCAG, et celui utilisé ici n'est pas le plus solide. Personne n'a parcouru ce site avec un lecteur d'écran, ni au clavier seul, comme le fait quelqu'un qui en dépend. C'est toujours la plus grande lacune, et la raison pour laquelle rien ici ne revendique une conformité totale.",
+                "Langue des parties. Les enregistrements apparaissent souvent dans une langue autre que celle de l'interface. C'est délibéré, car un enregistrement suisse peut n'exister qu'en allemand. Les longs textes sources (interventions, textes et descriptions de groupes) déclarent désormais la langue dont ils proviennent : un lecteur d'écran lit donc une intervention allemande avec une voix allemande sur une page anglaise. Les champs localisés plus courts, comme les titres et les libellés de type, ne portent pas encore ce marquage. Le critère WCAG 3.1.2 est donc satisfait pour la prose, mais pas partout.",
+                "Contenu issu des données sources. Les textes, interventions et documents arrivent d'OpenParlData.ch sous forme de HTML que parlhub ne contrôle pas et doit parfois réparer avant l'affichage. L'ordre des titres et la sémantique à l'intérieur de ces blocs ne peuvent être garantis. La vérification automatique le montre précisément : la seule erreur qu'elle signale sur l'ensemble des pages testées est un titre qui saute un niveau à l'intérieur d'une transcription d'intervention, dans du balisage venu de la source. Les PDF liés et les photographies viennent aussi de là, avec l'accessibilité qu'ils avaient à la publication.",
+                "Graphiques. Chaque graphique porte une brève alternative textuelle, et plusieurs peuvent se lire en texte : la matrice de concordance entre partis est elle-même un tableau, et la treemap des mots les plus employés peut s'afficher en tableau. Mais toutes les visualisations n'exposent pas chaque point de donnée en texte, et les nuages de points en particulier sont difficiles à transmettre sans la vue. Les chiffres sous-jacents sont toujours téléchargeables en CSV ou JSON."
+            ],
+            "it": [
+                "Nessun audit di terze parti e nessun test con tecnologie assistive. Un controllo automatico copre ora la parte verificabile da una macchina, ma è la metà più piccola del problema: i confronti pubblicati accreditano anche ai motori più solidi solo circa la metà dei problemi WCAG, e quello usato qui non è il più solido. Nessuno ha percorso questo sito con uno screen reader, né con la sola tastiera, come fa chi ne dipende. È ancora la lacuna più grande, e il motivo per cui qui nulla rivendica piena conformità.",
+                "Lingua delle parti. I record compaiono spesso in una lingua diversa da quella dell'interfaccia. È deliberato, perché un record svizzero può esistere solo in tedesco. I testi sorgente lunghi (interventi, testi e descrizioni dei gruppi) dichiarano ora la lingua da cui sono stati risolti: uno screen reader legge quindi un intervento tedesco con voce tedesca su una pagina inglese. I campi localizzati più brevi, come i titoli e le etichette di tipo, non portano ancora quel marcatore. WCAG 3.1.2 è quindi soddisfatto per la prosa, ma non ovunque.",
+                "Contenuti dai dati di origine. Testi, interventi e documenti arrivano da OpenParlData.ch come HTML che parlhub non controlla e che a volte deve riparare prima di renderizzarlo. L'ordine dei titoli e la semantica dentro quei blocchi non possono essere garantiti. Il controllo automatico mostra proprio questo: l'unico errore che segnala su tutte le pagine testate è un titolo che salta un livello dentro la trascrizione di un intervento, in markup arrivato dalla fonte. Anche i PDF collegati e le fotografie vengono da lì, con l'accessibilità con cui sono stati pubblicati.",
+                "Grafici. Ogni grafico porta una breve alternativa testuale, e diversi si possono leggere come testo: la matrice di concordanza fra partiti è essa stessa una tabella, e la treemap delle parole più usate si può mostrare come tabella. Ma non ogni visualizzazione espone ogni singolo dato come testo, e i grafici a dispersione in particolare sono difficili da trasmettere senza la vista. I numeri sottostanti si possono sempre scaricare in CSV o JSON."
+            ],
+            "es": [
+                "Sin auditoría externa y sin pruebas con tecnología de apoyo. Una comprobación automática cubre ahora la parte verificable por una máquina, pero esa es la mitad más pequeña del problema: los estudios publicados acreditan incluso a los motores más sólidos solo alrededor de la mitad de los problemas WCAG, y el que se usa aquí no es el más sólido. Nadie ha recorrido este sitio con un lector de pantalla, ni solo con el teclado, como hace quien depende de ello. Sigue siendo la mayor carencia, y la razón por la que aquí nada reivindica conformidad total.",
+                "Idioma de las partes. Los registros aparecen a menudo en un idioma distinto al de la interfaz. Es deliberado, porque un registro suizo puede existir solo en alemán. Los textos fuente largos (discursos, textos y descripciones de grupos) declaran ahora el idioma del que se resolvieron, de modo que un lector de pantalla lee un discurso alemán con voz alemana en una página inglesa. Los campos localizados más cortos, como los títulos y las etiquetas de tipo, todavía no llevan ese marcado. Así que WCAG 3.1.2 se cumple para la prosa, pero no en todas partes.",
+                "Contenido de los datos de origen. Los textos, discursos y documentos llegan de OpenParlData.ch como HTML que parlhub no controla y que a veces debe reparar antes de mostrarlo. El orden de los encabezados y la semántica dentro de esos bloques no pueden garantizarse. La comprobación automática muestra justo esto: el único error que informa en todas las páginas probadas es un encabezado que se salta un nivel dentro de la transcripción de un discurso, en marcado que llegó del origen. Los PDF enlazados y las fotografías también vienen de allí, con la accesibilidad con la que se publicaron.",
+                "Gráficos. Cada gráfico lleva una alternativa textual breve, y varios se pueden leer como texto: la matriz de afinidad entre partidos es en sí misma una tabla, y el treemap de las palabras más usadas se puede mostrar como tabla. Pero no toda visualización expone cada dato como texto, y los diagramas de dispersión en particular son difíciles de transmitir sin la vista. Las cifras subyacentes siempre se pueden descargar en CSV o JSON."
+            ]
+        },
+        "accessibility.feedback.heading": {
+            "context": "Section heading (h2) inviting barrier reports. Phrased as a question in every language.",
+            "en": "Found a barrier?",
+            "de": "Auf eine Barriere gestossen?",
+            "fr": "Rencontré un obstacle ?",
+            "it": "Hai incontrato una barriera?",
+            "es": "¿Ha encontrado una barrera?"
+        },
+        "accessibility.feedback.body": {
+            "context": "Array of 1 paragraph: asks the reader to report barriers, says reports are what the statement gets revised against, and asks them to name the page and what blocked them. The EU/eCH model requires a feedback mechanism, this is it.",
+            "en": [
+                "Tell me. It is the fastest way for it to get fixed, and reports are what this statement gets revised against. Please mention which page you were on and what got in the way."
+            ],
+            "de": [
+                "Melden Sie sich. Das ist der schnellste Weg, dass sie behoben wird, und Meldungen sind das, woran diese Erklärung überarbeitet wird. Bitte nennen Sie die Seite, auf der Sie waren, und was im Weg stand."
+            ],
+            "fr": [
+                "Écrivez-moi. C'est le moyen le plus rapide pour qu'il soit corrigé, et ce sont les signalements qui font réviser cette déclaration. Merci d'indiquer sur quelle page vous étiez et ce qui vous a bloqué."
+            ],
+            "it": [
+                "Scrivimi. È il modo più rapido perché venga corretta, e sono le segnalazioni a far rivedere questa dichiarazione. Indica per favore su quale pagina eri e che cosa ti ha bloccato."
+            ],
+            "es": [
+                "Escríbame. Es la vía más rápida para que se corrija, y son los avisos los que hacen que esta declaración se revise. Indique por favor en qué página estaba y qué se lo impidió."
+            ]
+        },
+        "accessibility.feedback.links": {
+            "context": "Array of {label, href}: the maintainer's email (mailto:) and the GitHub issues page. Translate `label` only ('Report on GitHub'); the email label is an address and stays verbatim; `href` is identical in every language.",
+            "en": [
+                {
+                    "label": "hello@wefrick.com",
+                    "href": "mailto:hello@wefrick.com"
+                },
+                {
+                    "label": "Report on GitHub",
+                    "href": "https://github.com/wenzf/parlhubcom/issues"
+                }
+            ],
+            "de": [
+                {
+                    "label": "hello@wefrick.com",
+                    "href": "mailto:hello@wefrick.com"
+                },
+                {
+                    "label": "Auf GitHub melden",
+                    "href": "https://github.com/wenzf/parlhubcom/issues"
+                }
+            ],
+            "fr": [
+                {
+                    "label": "hello@wefrick.com",
+                    "href": "mailto:hello@wefrick.com"
+                },
+                {
+                    "label": "Signaler sur GitHub",
+                    "href": "https://github.com/wenzf/parlhubcom/issues"
+                }
+            ],
+            "it": [
+                {
+                    "label": "hello@wefrick.com",
+                    "href": "mailto:hello@wefrick.com"
+                },
+                {
+                    "label": "Segnala su GitHub",
+                    "href": "https://github.com/wenzf/parlhubcom/issues"
+                }
+            ],
+            "es": [
+                {
+                    "label": "hello@wefrick.com",
+                    "href": "mailto:hello@wefrick.com"
+                },
+                {
+                    "label": "Informar en GitHub",
+                    "href": "https://github.com/wenzf/parlhubcom/issues"
+                }
+            ]
+        },
+        "accessibility.statement.heading": {
+            "context": "Section heading (h2) for the statement's own provenance block (preparation method + dates).",
+            "en": "About this statement",
+            "de": "Zu dieser Erklärung",
+            "fr": "À propos de cette déclaration",
+            "it": "Su questa dichiarazione",
+            "es": "Sobre esta declaración"
+        },
+        "accessibility.statement.prepared_label": {
+            "context": "Label in a <dl> next to the preparation date. Short noun/participle ('Prepared'); the date itself is rendered from an ISO constant in the route and formatted per locale, it is NOT a loc string.",
+            "en": "Prepared",
+            "de": "Erstellt",
+            "fr": "Établie le",
+            "it": "Redatta il",
+            "es": "Elaborada el"
+        },
+        "accessibility.statement.reviewed_label": {
+            "context": "Label in a <dl> next to the last-review date. Short ('Last reviewed'); the date is a route constant formatted per locale, not a loc string.",
+            "en": "Last reviewed",
+            "de": "Zuletzt überprüft",
+            "fr": "Dernière révision",
+            "it": "Ultima revisione",
+            "es": "Última revisión"
+        },
+        "accessibility.statement.method": {
+            "context": "Prepared by self-assessment SUPPORTED BY AUTOMATED TESTING, following the W3C's accessibility statement guidance; explicitly states no third party was involved; revised when the site changes or when a report contradicts it. The EU model requires stating the preparation method, self-assessment is an allowed method and must be named explicitly. 'Supported by automated testing' must not be translated as an audit or an external evaluation.",
+            "en": "Prepared by self-assessment, supported by automated testing, following the structure of the W3C's accessibility statement guidance. No third party was involved. It gets revised when the site changes, or when someone reports something that proves it wrong.",
+            "de": "In Selbstbewertung erstellt, gestützt auf automatisierte Tests, nach der Struktur der Anleitung des W3C für Erklärungen zur Barrierefreiheit. Dritte waren nicht beteiligt. Sie wird überarbeitet, wenn sich die Seite ändert oder wenn jemand etwas meldet, das sie widerlegt.",
+            "fr": "Établie par auto-évaluation, appuyée par des tests automatiques, en suivant la structure des recommandations du W3C pour les déclarations d'accessibilité. Aucun tiers n'y a participé. Elle est révisée quand le site change, ou quand quelqu'un signale quelque chose qui la contredit.",
+            "it": "Redatta per autovalutazione, con il supporto di test automatici, seguendo la struttura delle indicazioni del W3C per le dichiarazioni di accessibilità. Nessun terzo è stato coinvolto. Viene rivista quando il sito cambia, o quando qualcuno segnala qualcosa che la smentisce.",
+            "es": "Elaborada mediante autoevaluación, con el apoyo de pruebas automáticas, siguiendo la estructura de las orientaciones del W3C para las declaraciones de accesibilidad. No ha participado ningún tercero. Se revisa cuando el sitio cambia, o cuando alguien informa de algo que la desmiente."
+        },
+        "metas.accessibility.title": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_accessibility' namespace 'metas' block; the interface language selects which file. accessibility page SEO <title>. Short; buildMeta appends the site name.",
+            "en": "Accessibility",
+            "de": "Barrierefreiheit",
+            "fr": "Accessibilité",
+            "it": "Accessibilità",
+            "es": "Accesibilidad"
+        },
+        "metas.accessibility.desc": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_accessibility' namespace 'metas' block; the interface language selects which file. accessibility page meta-description. ~150-200 chars; must convey 'design standard AAA, self-assessed, partially conforming' rather than implying certified full conformance.",
+            "en": "parlhub is built to WCAG 2.2 level AAA as a design standard, self-assessed and partially conforming. What is in place, what is not, and how to report a barrier.",
+            "de": "parlhub wird nach WCAG 2.2 Stufe AAA als Gestaltungsstandard gebaut, in Selbstbewertung geprüft und teilweise konform. Was vorhanden ist, was nicht, und wie Sie eine Barriere melden.",
+            "fr": "parlhub est construit selon WCAG 2.2 niveau AAA comme norme de conception, auto-évalué et partiellement conforme. Ce qui est en place, ce qui ne l'est pas, et comment signaler un obstacle.",
+            "it": "parlhub è costruito secondo WCAG 2.2 livello AAA come standard di progettazione, autovalutato e parzialmente conforme. Che cosa c'è, che cosa manca e come segnalare una barriera.",
+            "es": "parlhub se construye según WCAG 2.2 nivel AAA como norma de diseño, autoevaluado y parcialmente conforme. Qué hay implementado, qué no, y cómo informar de una barrera."
+        }
+    }
+}

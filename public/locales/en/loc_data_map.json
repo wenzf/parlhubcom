@@ -1,0 +1,74 @@
+{
+  "data_map": {
+    "title": "Data map",
+    "lead": "How parlhub's data fits together. Each card is a catalogue you can search and explore. The lines show how the entities connect. Pick anything to dive in.",
+    "diagram_label": "Diagram of parlhub's data entities and how they connect",
+    "clusters": {
+      "parliament": "Parliament",
+      "proceedings": "Proceedings",
+      "records": "Records",
+      "lobbying": "Lobbying"
+    },
+    "nodes": {
+      "people": {
+        "label": "People",
+        "desc": "MPs and officials: profiles, votes, speeches and mandates."
+      },
+      "bodies": {
+        "label": "Bodies",
+        "desc": "Parliaments, councils and committees, with their members and business."
+      },
+      "groups": {
+        "label": "Groups",
+        "desc": "Parties, factions and committees: membership and voting cohesion."
+      },
+      "affairs": {
+        "label": "Affairs",
+        "desc": "Parliamentary business: motions, bills and their outcomes."
+      },
+      "votings": {
+        "label": "Votings",
+        "desc": "Roll-call votes: who voted how, and when."
+      },
+      "meetings": {
+        "label": "Meetings",
+        "desc": "Sessions and sittings: agendas, votes and speeches."
+      },
+      "speeches": {
+        "label": "Speeches",
+        "desc": "Verbatim transcripts of what was said, fully searchable."
+      },
+      "texts": {
+        "label": "Texts",
+        "desc": "Published text blocks and press material."
+      },
+      "documents": {
+        "label": "Documents",
+        "desc": "Files and attachments linked to the business."
+      },
+      "interests": {
+        "label": "Interests",
+        "desc": "Declared interests and lobby ties of members."
+      },
+      "organizations": {
+        "label": "Organizations",
+        "desc": "The organisations behind those declared interests."
+      }
+    },
+    "source": {
+      "heading": "About the data",
+      "body": "All data comes from OpenParlData.ch. parlhub imports that raw data and reshapes it only slightly. The entities and relationships shown here mirror the source.",
+      "links_label": "Further reading",
+      "openparldata_label": "OpenParlData.ch",
+      "openparldata_href": "https://openparldata.ch",
+      "schemas_label": "Data schemas",
+      "schemas_href": "https://gitlab.com/opendata.ch/openparldatach/data-infrastructure/-/tree/develop/fastapi/app/schemas/endpoints?ref_type=heads",
+      "raw_label": "Raw data exports",
+      "raw_href": "https://files.openparldata.ch/exports/"
+    }
+  },
+  "metas": {
+    "data_map.title": "Data map",
+    "data_map.desc": "An overview map of parlhub's data: people, groups, bodies, affairs, votings, meetings, speeches, documents and lobbying ties, and how they connect. Every node links to its catalogue."
+  }
+}

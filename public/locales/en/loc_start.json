@@ -1,0 +1,30 @@
+{
+    "start": {
+        "title": "Start here",
+        "lede": "Direct routes into the pages people look for most: the federal chambers, the cantonal parliaments, and a way into many communes.",
+        "search_label": "Search the page",
+        "search_placeholder": "Search a chamber, a canton or a commune…",
+        "no_matches": "Nothing matches “{{q}}”.",
+        "federal_heading": "Federal",
+        "federal_sub": "national parliaments",
+        "chambers_label": "Chambers",
+        "cantonal_heading": "Cantonal parliaments",
+        "cantonal_sub": "all 26",
+        "communal_heading": "Communal parliaments",
+        "communal_sub": "search",
+        "communal_intro": "Only communes with an elected parliament appear here (about 460 of some 2,100). Search above to jump in.",
+        "results_count": "{{n}} matches",
+        "results_capped": "Showing {{n}} of {{total}}. Refine your search.",
+        "link_overview": "Overview",
+        "link_members": "Members",
+        "link_votings": "Votings",
+        "link_lobby": "Lobby",
+        "link_alignment": "Alignment",
+        "link_loyalty": "Loyalty",
+        "link_affairs": "Affairs"
+    },
+  "metas": {
+    "start.title": "Start here",
+    "start.desc": "Quick links into the parliaments of Switzerland and Liechtenstein: the federal chambers and their pages, every cantonal parliament, and a search for communal parliaments."
+  }
+}

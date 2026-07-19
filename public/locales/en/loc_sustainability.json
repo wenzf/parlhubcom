@@ -1,0 +1,44 @@
+{
+  "sustainability": {
+    "title": "Sustainability",
+    "lead": "How parlhub is hosted, what the project does to keep its footprint small, and what it does not know about it. This page is the disclosure document referenced by parlhub's carbon.txt.",
+    "hosting": {
+      "heading": "Where parlhub runs",
+      "body": [
+        "parlhub runs on Amazon Web Services in the eu-central-1 region (Frankfurt, Germany). The site is a single container on AWS Fargate behind a load balancer. Static files and database snapshots sit in S3, and the database is rebuilt by a scheduled task rather than kept continuously in sync.",
+        "The electricity behind those data centres is AWS's to account for, not parlhub's, and this project makes no independent claim about it. That is what the upstream section of carbon.txt is for: it names AWS as the provider so anyone reading the file can follow the chain to AWS's own disclosures rather than take my word for it."
+      ],
+      "links": [
+        { "label": "AWS sustainability", "href": "https://sustainability.aboutamazon.com/products-services/aws-cloud" }
+      ]
+    },
+    "site": {
+      "heading": "What the site does to stay small",
+      "body": [
+        "Pages are rendered on the server and ship very little JavaScript. There are no ads, no tracking, no analytics and no third-party scripts: the content security policy denies everything by default, and fonts are served from parlhub's own domain.",
+        "The data lives in a DuckDB file that the server opens read-only, so no separate database server runs around the clock. Updates from OpenParlData.ch arrive as a scheduled rebuild instead of continuous polling. The interface is monochrome and mostly text, which keeps pages light without anyone having to try."
+      ]
+    },
+    "limits": {
+      "heading": "What is not measured",
+      "body": [
+        "parlhub does not measure its emissions, does not run a lifecycle assessment and does not buy offsets. It is a non-profit side project, and publishing a number I have not actually measured would be worse than publishing none. What is on this page is a description of the setup, not a carbon figure.",
+        "If you know a credible way to measure this for a site of this size, please get in touch."
+      ]
+    },
+    "carbontxt": {
+      "heading": "carbon.txt",
+      "body": [
+        "parlhub publishes a machine-readable carbon.txt at the root of the domain, following the Green Web Foundation's specification. It points at this page as parlhub's disclosure and names AWS as the upstream provider."
+      ],
+      "links": [
+        { "label": "parlhub's carbon.txt", "href": "https://parlhub.com/carbon.txt" },
+        { "label": "carbon.txt specification", "href": "https://carbontxt.org/syntax" }
+      ]
+    }
+  },
+  "metas": {
+    "sustainability.title": "Sustainability",
+    "sustainability.desc": "How parlhub is hosted and what the project does to keep its footprint small. Server-rendered, no ads, no tracking, no third-party scripts. The disclosure behind parlhub's carbon.txt."
+  }
+}

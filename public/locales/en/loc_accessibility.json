@@ -1,0 +1,56 @@
+{
+  "accessibility": {
+    "title": "Accessibility",
+    "lead": "The design standard applied across parlhub is WCAG 2.2 at level AAA. This statement says how far that actually goes, how it was assessed, and where it falls short. It is a voluntary self-declaration: parlhub is a private, non-profit project, so neither the Swiss BehiG nor the EU Web Accessibility Directive applies to it.",
+    "conformance": {
+      "heading": "Conformance status",
+      "body": [
+        "parlhub partially conforms to WCAG 2.2 level AAA. \"Partially\" is the honest word. AAA is the standard the design is built to: the colour tokens, target sizes and focus styles all follow it. But that makes it a standard applied, not an audited result.",
+        "This statement was prepared by self-assessment, by the one person who builds the site. An automated checker now runs over a sample of pages and reports no errors, which is a floor rather than a result: it decides only the questions a machine can decide, and leaves the rest to a human who has not yet looked. There has been no third-party audit and no formal testing with assistive technology. The W3C advises against claiming AAA for a whole site, because some content cannot meet every AAA criterion. So read the level as the rule the code is held to, and the limitations below as the part that is actually known."
+      ]
+    },
+    "measures": {
+      "heading": "What is in place",
+      "body": [
+        "The style guide every component is built against requires text contrast of at least 7:1, interactive targets of at least 44×44 pixels, a visible focus indicator, and keyboard operability. Pages are rendered on the server, so the content is there before any JavaScript runs.",
+        "The settings in the header let you change the text size, switch to a higher-contrast palette, remove colour entirely, and choose a light or dark theme. The interface language and the language of the data are picked separately, so you can read the chrome in one language and the records in another.",
+        "An automated checker (pa11y-ci) runs over twelve pages, one for each kind of page the site has, and currently reports no errors at level AA. Read that narrowly. It sees twelve pages, not the whole site. Its rules stop at WCAG 2.1, so what 2.2 added is not checked at all. It could not resolve the background colour on a number of elements, so the 7:1 contrast above is a rule the design follows, not something the tool confirmed. And it leaves several hundred points per run marked for a person to judge, which nobody has worked through. It is a net for catching regressions, not a verdict."
+      ]
+    },
+    "limitations": {
+      "heading": "Known limitations",
+      "body": [
+        "No third-party audit and no assistive-technology testing. An automated check now covers the machine-checkable part, but that is the smaller half of the problem: published benchmarks credit even the strongest of these engines with finding roughly half of WCAG issues, and the engine used here is not the strongest. Nobody has driven this site with a screen reader, or by keyboard alone, the way someone who depends on one would. This is still the largest gap, and the reason nothing here claims full conformance.",
+        "Language of parts. Records often appear in a language other than the interface. That is deliberate, because a Swiss record may only exist in German. The long source texts (speeches, texts and group descriptions) now declare the language they were resolved from, so a screen reader reads a German speech in a German voice on an English page. Shorter localized fields, such as titles and type labels, do not carry that marking yet, so WCAG 3.1.2 is met for the prose but not everywhere.",
+        "Content from the source data. Texts, speeches and documents arrive from OpenParlData.ch as HTML that parlhub does not control and sometimes has to repair before rendering. Heading order and semantics inside those blocks cannot be guaranteed. The automated check shows exactly this: the one error it reports across every page tested is a heading that skips a level inside a speech transcript, in markup that came from upstream. Linked PDFs and photographs come from upstream too, with whatever accessibility they were published with.",
+        "Charts. Every chart carries a short text alternative, and several can be read as text instead: the party alignment matrix is itself a table, and the treemap of most-used words can be shown as one. But not every visualisation exposes every data point as text, and the scatter plots in particular are hard to convey without sight. The underlying numbers can always be downloaded as CSV or JSON."
+      ]
+    },
+    "feedback": {
+      "heading": "Found a barrier?",
+      "body": [
+        "Tell me. It is the fastest way for it to get fixed, and reports are what this statement gets revised against. Please mention which page you were on and what got in the way."
+      ],
+      "links": [
+        {
+          "label": "hello@wefrick.com",
+          "href": "mailto:hello@wefrick.com"
+        },
+        {
+          "label": "Report on GitHub",
+          "href": "https://github.com/wenzf/parlhubcom/issues"
+        }
+      ]
+    },
+    "statement": {
+      "heading": "About this statement",
+      "prepared_label": "Prepared",
+      "reviewed_label": "Last reviewed",
+      "method": "Prepared by self-assessment, supported by automated testing, following the structure of the W3C's accessibility statement guidance. No third party was involved. It gets revised when the site changes, or when someone reports something that proves it wrong."
+    }
+  },
+  "metas": {
+    "accessibility.title": "Accessibility",
+    "accessibility.desc": "parlhub is built to WCAG 2.2 level AAA as a design standard, self-assessed and partially conforming. What is in place, what is not, and how to report a barrier."
+  }
+}

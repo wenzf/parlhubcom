@@ -1,0 +1,22 @@
+{
+  "concurrency": 1,
+  "defaults": {
+    "standard": "WCAG2AA",
+    "timeout": 60000,
+    "wait": 500
+  },
+  "urls": [
+    "http://localhost:5555/",
+    "http://localhost:5555/start",
+    "http://localhost:5555/project/about",
+    "http://localhost:5555/project/accessibility",
+    "http://localhost:5555/people/7162",
+    "http://localhost:5555/people/7162/vocabulary",
+    "http://localhost:5555/parliaments/42/people",
+    "http://localhost:5555/parliaments/42/alignment",
+    "http://localhost:5555/parliaments/42/loyalty",
+    "http://localhost:5555/affairs/248360/speeches",
+    "http://localhost:5555/votings/1",
+    "http://localhost:5555/speeches/32"
+  ]
+}

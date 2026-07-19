@@ -1,0 +1,30 @@
+{
+    "start": {
+        "title": "Pour commencer",
+        "lede": "Des accès directs vers les pages les plus recherchées : les chambres fédérales, les parlements cantonaux et l’entrée vers de nombreuses communes.",
+        "search_label": "Rechercher dans la page",
+        "search_placeholder": "Rechercher une chambre, un canton ou une commune…",
+        "no_matches": "Aucun résultat pour « {{q}} ».",
+        "federal_heading": "Confédération",
+        "federal_sub": "parlements nationaux",
+        "chambers_label": "Chambres",
+        "cantonal_heading": "Parlements cantonaux",
+        "cantonal_sub": "les 26",
+        "communal_heading": "Parlements communaux",
+        "communal_sub": "recherche",
+        "communal_intro": "Seules les communes dotées d’un parlement élu figurent ici (environ 460 sur quelque 2100). Cherchez ci-dessus pour y accéder.",
+        "results_count": "{{n}} résultats",
+        "results_capped": "{{n}} sur {{total}} affichés. Affinez la recherche.",
+        "link_overview": "Aperçu",
+        "link_members": "Membres",
+        "link_votings": "Votes",
+        "link_lobby": "Lobby",
+        "link_alignment": "Convergence",
+        "link_loyalty": "Loyauté",
+        "link_affairs": "Affaires"
+    },
+  "metas": {
+    "start.title": "Pour commencer",
+    "start.desc": "Liens directs vers les parlements de Suisse et du Liechtenstein : les chambres fédérales et leurs pages, tous les parlements cantonaux et une recherche pour les parlements communaux."
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "guide": {
+    "title": "Guida ai dati",
+    "lead": "Undici tipi di dati dai parlamenti di Svizzera e Liechtenstein. Ciascuno ha la propria pagina di ricerca e alcuni esempi.",
+    "map_link": "Come si collegano i dati",
+    "groups": {
+      "actors": {
+        "heading": "Attori",
+        "sub": "Le persone e le organizzazioni del parlamento"
+      },
+      "proceedings": {
+        "heading": "Lavori",
+        "sub": "Il lavoro legislativo"
+      },
+      "records": {
+        "heading": "Documentazione",
+        "sub": "Ciò che è stato detto, scritto e depositato"
+      },
+      "lobbying": {
+        "heading": "Lobbying",
+        "sub": "Chi è collegato a chi"
+      }
+    },
+    "types": {
+      "people": {
+        "eyebrow": "Persone",
+        "title": "Chi vota come chi, e chi parla di cosa?",
+        "links": {
+          "vocabulary": "Le parole di {{name}}, in mappa",
+          "alignment": "Chi vota come {{name}}?",
+          "search": "Cerca tra 26'000 membri"
+        }
+      },
+      "bodies": {
+        "eyebrow": "Parlamenti",
+        "title": "Quale partito vota come un blocco, e chi si dissocia?",
+        "links": {
+          "loyalty": "Fedeltà al gruppo nell'Assemblea federale",
+          "lobby": "La rete di lobby federale",
+          "people": "Tutti i membri dell'Assemblea federale",
+          "search": "Dalle Camere federali a circa 460 comuni"
+        }
+      },
+      "groups": {
+        "eyebrow": "Commissioni e gruppi",
+        "title": "Chi porta avanti quali oggetti?",
+        "links": {
+          "search": "Cerca gruppi, partiti e commissioni"
+        }
+      },
+      "affairs": {
+        "eyebrow": "Oggetti",
+        "title": "Che ne è stato di quella mozione?",
+        "links": {
+          "example": "Una lunga battaglia, votazione dopo votazione: {{name}}",
+          "search": "Filtra 320'000 oggetti"
+        }
+      },
+      "votings": {
+        "eyebrow": "Votazioni",
+        "title": "Chi ha detto sì, chi ha detto no?",
+        "links": {
+          "example": "L'ultima votazione finale, nome per nome",
+          "search": "Cerca tra 75'000 votazioni"
+        }
+      },
+      "meetings": {
+        "eyebrow": "Sedute",
+        "title": "Cosa ha deciso una singola seduta?",
+        "links": {
+          "search": "Ogni sessione, giorno per giorno"
+        }
+      },
+      "speeches": {
+        "eyebrow": "Interventi",
+        "title": "Chi ha parlato del lupo?",
+        "links": {
+          "wolf": "Ogni intervento che menziona il lupo",
+          "search": "Cerca tra 2,5 milioni di interventi, parola per parola"
+        },
+        "queries": {
+          "wolf": "Lupo"
+        }
+      },
+      "texts": {
+        "eyebrow": "Testi",
+        "title": "Di cosa tratta un progetto, in tre frasi?",
+        "links": {
+          "bitcoin": "Ogni testo che menziona Bitcoin",
+          "search": "Cerca nei riassunti ufficiali"
+        },
+        "queries": {
+          "bitcoin": "Bitcoin"
+        }
+      },
+      "docs": {
+        "eyebrow": "Documenti",
+        "title": "Cosa si nasconde nei verbali?",
+        "links": {
+          "search": "Ricerca full-text in 880'000 documenti"
+        }
+      },
+      "interests": {
+        "eyebrow": "Interessi",
+        "title": "Chi siede in quali consigli d'amministrazione?",
+        "links": {
+          "example": "Tutti i mandati di {{name}}",
+          "search": "Cerca tra 29'000 voci del registro"
+        }
+      },
+      "organizations": {
+        "eyebrow": "Organizzazioni",
+        "title": "Quale organizzazione arriva più lontano?",
+        "links": {
+          "example": "Un'associazione, più parlamenti: {{name}}",
+          "search": "Cerca le organizzazioni per nome"
+        }
+      }
+    }
+  },
+  "metas": {
+    "data_guide.title": "Guida ai dati",
+    "data_guide.desc": "Undici tipi di dati dai parlamenti di Svizzera e Liechtenstein: persone, parlamenti, affari, votazioni, discorsi, documenti e legami di lobbying. Ciascuno ha la propria pagina di ricerca ed esempi concreti."
+  }
+}

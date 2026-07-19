@@ -1,0 +1,38 @@
+{
+  "traffic_stats": {
+    "title": "Estatísticas de tráfego",
+    "lead": "Que partes do parlhub são solicitadas, em que idioma e por quem. Agregadas uma vez por dia a partir do registo de pedidos do próprio servidor — sem cookies, sem rastreio, sem endereços IP. Contam-se pedidos, não pessoas.",
+    "no_data": "Ainda não há números. As primeiras estatísticas aparecem assim que a agregação diária for executada.",
+    "group_by": "Agrupar por",
+    "group_by_aria": "Agrupar os pedidos por",
+    "audience": "Público",
+    "audience_aria": "Filtrar os pedidos por público",
+    "aud_human": "Humanos",
+    "aud_bot": "Bots",
+    "aud_both": "Ambos",
+    "view": "Vista",
+    "view_aria": "Alternar entre a vista diária e a mensal",
+    "view_daily": "Diária",
+    "view_monthly": "Mensal",
+    "dim_route": "Rota",
+    "dim_lang": "Idioma",
+    "dim_visitor": "Tipo de visitante",
+    "dim_device": "Dispositivo",
+    "include_internal": "Incluir verificações de estado",
+    "stat_requests": "Pedidos",
+    "stat_average": "Média",
+    "stat_p95": "p95",
+    "stat_slowest": "Mais lento",
+    "col_share": "Proporção",
+    "other": "outras",
+    "route_other_note": "«(other)» reúne todos os pedidos a caminhos que não fazem parte do site — normalmente scanners automáticos, pedidos de bots malformados ou maliciosos, ou URLs mal escritos. São agrupados numa única linha para que uma enxurrada de caminhos aleatórios não possa inflacionar as estatísticas.",
+    "chart_alt": "Gráfico de barras empilhadas de pedidos por período segundo {dim}: {periods} períodos, {count} pedidos no total. A tabela abaixo contém os mesmos dados.",
+    "chart_alt_excl": "Gráfico de barras empilhadas de pedidos por período segundo {dim}: {periods} períodos, {count} pedidos no total, excluindo as verificações de estado internas. A tabela abaixo contém os mesmos dados.",
+    "table_caption": "Pedidos por {dim} — os mesmos dados que o gráfico acima.",
+    "footnote": "O p95 é derivado dos intervalos de latência, pelo que é preciso até ao limite do intervalo. As médias são ponderadas pelo número de pedidos."
+  },
+  "metas": {
+    "traffic_stats.title": "Estatísticas de tráfego",
+    "traffic_stats.desc": "Que partes do parlhub são solicitadas, em que idioma e por quem — agregadas uma vez por dia a partir do registo de pedidos do próprio servidor. Sem cookies, sem rastreio, sem endereços IP."
+  }
+}

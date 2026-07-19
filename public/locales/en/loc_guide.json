@@ -1,0 +1,109 @@
+{
+  "guide": {
+    "title": "Data guide",
+    "lead": "Eleven kinds of data from the parliaments of Switzerland and Liechtenstein. Each has its own search page and a few examples.",
+    "map_link": "See how the data connects",
+    "groups": {
+      "actors": { "heading": "Actors", "sub": "The people and organisations of parliament" },
+      "proceedings": { "heading": "Proceedings", "sub": "The business of legislating" },
+      "records": { "heading": "Records", "sub": "What was said, written and filed" },
+      "lobbying": { "heading": "Lobbying", "sub": "Who is connected to whom" }
+    },
+    "types": {
+      "people": {
+        "eyebrow": "People",
+        "title": "Who votes like whom, and who talks about what?",
+        "links": {
+          "vocabulary": "The words of {{name}}, mapped",
+          "alignment": "Who votes like {{name}}?",
+          "search": "Search 26,000 members"
+        }
+      },
+      "bodies": {
+        "eyebrow": "Parliaments",
+        "title": "Which party votes as one bloc, and who breaks away?",
+        "links": {
+          "loyalty": "Party loyalty in the Federal Assembly",
+          "lobby": "The federal lobby network",
+          "people": "All members of the Federal Assembly",
+          "search": "From the federal chambers to ~460 communes"
+        }
+      },
+      "groups": {
+        "eyebrow": "Committees & groups",
+        "title": "Who pushes which business?",
+        "links": {
+          "search": "Search fractions, parties and committees"
+        }
+      },
+      "affairs": {
+        "eyebrow": "Affairs",
+        "title": "What became of that motion?",
+        "links": {
+          "example": "A long fight, vote by vote: {{name}}",
+          "search": "Filter 320,000 affairs"
+        }
+      },
+      "votings": {
+        "eyebrow": "Votings",
+        "title": "Who said yes, who said no?",
+        "links": {
+          "example": "The latest final vote, name by name",
+          "search": "Search 75,000 votes"
+        }
+      },
+      "meetings": {
+        "eyebrow": "Meetings",
+        "title": "What did one sitting decide?",
+        "links": {
+          "search": "Every session, day by day"
+        }
+      },
+      "speeches": {
+        "eyebrow": "Speeches",
+        "title": "Who talked about wolves?",
+        "links": {
+          "wolf": "Every speech that mentions the wolf",
+          "search": "Search 2.5 million interventions, word for word"
+        },
+        "queries": { "wolf": "Wolf" }
+      },
+      "texts": {
+        "eyebrow": "Texts",
+        "title": "What is a bill about, in three sentences?",
+        "links": {
+          "bitcoin": "Every text that mentions Bitcoin",
+          "search": "Search the official summaries"
+        },
+        "queries": { "bitcoin": "Bitcoin" }
+      },
+      "docs": {
+        "eyebrow": "Documents",
+        "title": "What's buried in the protocols?",
+        "links": {
+          "search": "Full-text search across 880,000 documents"
+        }
+      },
+      "interests": {
+        "eyebrow": "Interests",
+        "title": "Who sits on which boards?",
+        "links": {
+          "example": "Every mandate of {{name}}",
+          "search": "Search 29,000 register entries"
+        }
+      },
+      "organizations": {
+        "eyebrow": "Organizations",
+        "title": "Which organisation reaches furthest?",
+        "links": {
+          "example": "One club, several parliaments: {{name}}",
+          "search": "Search organisations by name"
+        }
+      }
+    }
+  },
+  "metas": {
+    "data_guide.title": "Data guide",
+    "data_guide.desc": "Eleven kinds of data from the parliaments of Switzerland and Liechtenstein: people, parliaments, affairs, votings, speeches, documents and lobbying ties. Each has its own search page and concrete examples."
+  }
+}

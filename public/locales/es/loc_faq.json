@@ -1,0 +1,110 @@
+{
+  "faq": {
+    "title": "FAQ",
+    "lead": "Preguntas frecuentes sobre parlhub, los datos y cómo utilizarlos.",
+    "items": [
+      {
+        "id": "data-source",
+        "q": "¿De dónde proceden los datos?",
+        "body": [
+          "De OpenParlData.ch. Recopilan los datos de los sitios web oficiales de los parlamentos, los depuran y los publican como datos abiertos. parlhub lee sus exportaciones. Sin OpenParlData no existiría parlhub."
+        ],
+        "links": [
+          { "label": "OpenParlData.ch", "href": "https://openparldata.ch" }
+        ]
+      },
+      {
+        "id": "coverage",
+        "q": "¿Qué parlamentos están cubiertos?",
+        "body": [
+          "Los parlamentos de Suiza y Liechtenstein, en la medida en que OpenParlData los cubre. La cobertura crece con el tiempo."
+        ]
+      },
+      {
+        "id": "freshness",
+        "q": "¿Cuán actualizados están los datos?",
+        "body": [
+          "parlhub se sincroniza periódicamente con OpenParlData. OpenParlData, a su vez, lee los sitios web oficiales. Por eso un cambio en un sitio oficial puede tardar algunos días en aparecer aquí."
+        ]
+      },
+      {
+        "id": "missing-data",
+        "q": "¿Por qué faltan algunos datos?",
+        "body": [
+          "Lo más probable es que todavía no se hayan importado. OpenParlData es un proyecto joven y no todos los parlamentos publican todo. Si algo figura en el sitio web oficial pero lleva mucho tiempo sin aparecer aquí, avíseme."
+        ]
+      },
+      {
+        "id": "wrong-data",
+        "q": "Soy diputado/a y mis datos son incorrectos. ¿Qué puedo hacer?",
+        "body": [
+          "parlhub muestra los datos tal como se publican. Proceden del sitio web oficial de su parlamento, recopilados por OpenParlData. Si son incorrectos allí, póngase en contacto con el webmaster de su parlamento; una vez corregidos en la fuente, la corrección llega también aquí.",
+          "Si son correctos en el sitio oficial pero incorrectos en parlhub, escríbame y lo revisaré."
+        ],
+        "links": [
+          { "label": "hello@wefrick.com", "href": "mailto:hello@wefrick.com" }
+        ]
+      },
+      {
+        "id": "download",
+        "q": "¿Cómo puedo descargar datos?",
+        "body": [
+          "Cada lista tiene un botón de exportación. Las mismas descargas también funcionan como URL simples, para que pueda automatizarlas:"
+        ],
+        "code": [
+          "/<section>/export/<dataset>/<format>          todos los registros de una sección",
+          "/<section>/<id>/export/<dataset>/<format>     registros de una entidad"
+        ],
+        "body_after": [
+          "Por ejemplo: /votings/export/votings/csv. Los formatos son json, csv y xlsx. Las descargas están paginadas, 500 filas cada una: ?page=2 para la página siguiente. ?langs=de,fr establece la prioridad de idioma del contenido. Los filtros de la URL de la lista también funcionan aquí."
+        ]
+      },
+      {
+        "id": "license",
+        "q": "¿Cómo puedo usar los datos?",
+        "body": [
+          "Los datos tienen licencia CC BY 4.0. Utilícelos, compártalos, reutilícelos, también con fines comerciales. Solo debe citar la fuente. Cite a OpenParlData.ch por los datos; para las cifras calculadas (afinidad de voto, lealtad y demás), cite a parlhub."
+        ],
+        "links": [
+          { "label": "CC BY 4.0", "href": "https://creativecommons.org/licenses/by/4.0/" }
+        ]
+      },
+      {
+        "id": "metrics",
+        "q": "¿Cómo se calculan la afinidad de voto y la lealtad?",
+        "body": [
+          "A partir de los registros de votación: la afinidad de voto compara con qué frecuencia dos personas votan de la misma manera en votaciones compartidas; la lealtad compara los votos de una persona con la mayoría de su propio grupo. Cuantas menos votaciones compartidas haya, menos fiables son los porcentajes; tenga esto en cuenta al comparar."
+        ]
+      },
+      {
+        "id": "official",
+        "q": "¿Es parlhub oficial?",
+        "body": [
+          "No. parlhub es un proyecto independiente y sin fines de lucro de una sola persona. No está afiliado a ningún parlamento, autoridad ni partido. Para información oficial, consulte los sitios web de los parlamentos."
+        ]
+      },
+      {
+        "id": "tracking",
+        "q": "¿Me rastrean?",
+        "body": [
+          "No. No hay publicidad, ni analítica ni rastreadores. Una única cookie funcional almacena su configuración (idioma, tema). Eso es todo."
+        ]
+      },
+      {
+        "id": "contribute",
+        "q": "¿Puedo apoyar o contribuir al proyecto?",
+        "body": [
+          "Sí, con gusto. No hay página de donaciones: si desea ayudar con los costos de funcionamiento, simplemente escríbame. También son muy bienvenidos los desarrolladores y las desarrolladoras, así como los investigadores y las investigadoras en ciencias políticas que quieran contribuir. El código es de código abierto, en GitHub."
+        ],
+        "links": [
+          { "label": "hello@wefrick.com", "href": "mailto:hello@wefrick.com" },
+          { "label": "Código fuente en GitHub", "href": "https://github.com" }
+        ]
+      }
+    ]
+  },
+  "metas": {
+    "faq.title": "Preguntas frecuentes",
+    "faq.desc": "Respuestas a preguntas frecuentes sobre parlhub: de dónde proceden los datos, cómo descargarlos, cómo se pueden utilizar (CC BY 4.0) y cómo contribuir."
+  }
+}

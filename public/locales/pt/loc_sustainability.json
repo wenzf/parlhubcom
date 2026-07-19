@@ -1,0 +1,44 @@
+{
+  "sustainability": {
+    "title": "Sustentabilidade",
+    "lead": "Como o parlhub é alojado, o que o projeto faz para manter a sua pegada reduzida e o que não sabe a esse respeito. Esta página é o documento de divulgação referenciado pelo carbon.txt do parlhub.",
+    "hosting": {
+      "heading": "Onde o parlhub é executado",
+      "body": [
+        "O parlhub é executado na Amazon Web Services na região eu-central-1 (Frankfurt, Alemanha). O site é um único contentor no AWS Fargate por trás de um balanceador de carga. Os ficheiros estáticos e as instantâneas da base de dados residem no S3, e a base de dados é reconstruída por uma tarefa agendada em vez de ser mantida continuamente sincronizada.",
+        "A eletricidade por trás desses centros de dados é da responsabilidade da AWS, não do parlhub, e este projeto não faz qualquer afirmação própria a esse respeito. É precisamente para isso que serve a secção upstream do carbon.txt: nomeia a AWS como fornecedor para que quem ler o ficheiro possa seguir a cadeia até às divulgações da própria AWS em vez de acreditar apenas na minha palavra."
+      ],
+      "links": [
+        { "label": "Sustentabilidade na AWS", "href": "https://sustainability.aboutamazon.com/products-services/aws-cloud" }
+      ]
+    },
+    "site": {
+      "heading": "O que o site faz para se manter leve",
+      "body": [
+        "As páginas são renderizadas no servidor e enviam muito pouco JavaScript. Não há anúncios, nem rastreio, nem analítica, nem scripts de terceiros: a política de segurança de conteúdo nega tudo por predefinição e os tipos de letra são servidos a partir do próprio domínio do parlhub.",
+        "Os dados residem num ficheiro DuckDB que o servidor abre em modo apenas de leitura, pelo que não há um servidor de base de dados separado a funcionar vinte e quatro horas por dia. As atualizações do OpenParlData.ch chegam como uma reconstrução agendada em vez de uma sondagem contínua. A interface é monocromática e quase toda em texto, o que mantém as páginas leves sem que ninguém tenha de se esforçar."
+      ]
+    },
+    "limits": {
+      "heading": "O que não é medido",
+      "body": [
+        "O parlhub não mede as suas emissões, não realiza uma análise de ciclo de vida e não compra compensações. É um projeto paralelo sem fins lucrativos, e publicar um número que não medi realmente seria pior do que não publicar nenhum. O que está nesta página é uma descrição da configuração, não um valor de carbono.",
+        "Se conhece uma forma credível de medir isto para um site deste tamanho, contacte-me."
+      ]
+    },
+    "carbontxt": {
+      "heading": "carbon.txt",
+      "body": [
+        "O parlhub publica um carbon.txt legível por máquinas na raiz do domínio, seguindo a especificação da Green Web Foundation. Aponta para esta página como divulgação do parlhub e nomeia a AWS como fornecedor a montante."
+      ],
+      "links": [
+        { "label": "O carbon.txt do parlhub", "href": "https://parlhub.com/carbon.txt" },
+        { "label": "Especificação do carbon.txt", "href": "https://carbontxt.org/syntax" }
+      ]
+    }
+  },
+  "metas": {
+    "sustainability.title": "Sustentabilidade",
+    "sustainability.desc": "Como o parlhub é alojado e o que o projeto faz para manter a sua pegada reduzida. Renderizado no servidor, sem anúncios, sem rastreio, sem scripts de terceiros. A divulgação por trás do carbon.txt do parlhub."
+  }
+}

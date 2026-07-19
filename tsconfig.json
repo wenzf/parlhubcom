@@ -1,0 +1,37 @@
+{
+  "include": [
+    "**/*",
+    "**/.server/**/*",
+    "**/.client/**/*",
+    ".react-router/types/**/*",
+    // `**/*` skips dot-directories, so include the dev-only loc-metas guard
+    // (moved out of scripts/) explicitly to keep it type-checked by `tsc`.
+    ".agents/**/*"
+  ],
+  // .sst platform sources + sst.config.ts don't conform to this project's
+  // strict flags (verbatimModuleSyntax etc.); SST typechecks its config on
+  // deploy. Specifying "exclude" overrides the defaults, so node_modules
+  // must be re-listed.
+  "exclude": ["node_modules", ".sst", "sst.config.ts"],
+  "compilerOptions": {
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "types": ["node", "vite/client"],
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "rootDirs": [".", "./.react-router/types"],
+    "paths": {
+      "~/*": ["./app/*"],
+      "@/*": ["./app/*"],
+      "@/types/*": ["./types/*"]
+    },
+    "esModuleInterop": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "exactOptionalPropertyTypes": true
+  }
+}

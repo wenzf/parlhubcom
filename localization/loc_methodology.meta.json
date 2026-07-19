@@ -1,0 +1,212 @@
+{
+    "_meta": {
+        "namespace": "loc_methodology",
+        "source_files": [
+            "public/locales/<lang>/loc_methodology.json for lang in de, en, fr"
+        ],
+        "loaded_by": "app/routes/pages/project/methodology/methodology.tsx",
+        "description": "Methodology page documenting how each computed metric (voting alignment, party loyalty, lobby network, vocabulary, Wordfish discussion scaling, co-voting neighbours, interest classification, hemicycle, traffic stats) is calculated, with the exact formula and a link to the source code on GitHub.",
+        "format": "Each entry: context (where the string appears in the UI, its role and constraints) + the current de/en/fr texts as translation reference (metas keys additionally carry it/es). Formulas and code paths live in the component, not here. A null text means the key is missing in that language file.",
+        "generated": "2026-07-16, generated from public/locales sources; regenerate when the methodology loc texts or the consuming component change."
+    },
+    "keys": {
+        "methodology.title": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): main heading (h1). Short noun.",
+            "en": "Methodology",
+            "de": "Methodik",
+            "fr": "Méthodologie"
+        },
+        "methodology.lead": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): lead/intro paragraph under the h1. One prose sentence.",
+            "en": "parlhub does more than list records: it computes voting alignment, party loyalty, lobby networks, word maps and more on top of the open data. This page sets out exactly how each figure is derived and links every metric to the source code that produces it.",
+            "de": "parlhub listet nicht nur Datensätze auf: es berechnet Abstimmungsübereinstimmung, Fraktionstreue, Lobby-Netzwerke, Wortkarten und mehr auf Basis der offenen Daten. Diese Seite legt genau dar, wie jede Kennzahl entsteht, und verlinkt jede von ihnen zum Quellcode, der sie erzeugt.",
+            "fr": "parlhub ne se contente pas de lister des enregistrements : il calcule la proximité de vote, la loyauté de groupe, les réseaux de lobbying, des cartes de mots et davantage à partir des données ouvertes. Cette page expose précisément comment chaque valeur est obtenue et relie chaque indicateur au code source qui le produit."
+        },
+        "methodology.labels.formula": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): small uppercase label above the formula block inside each method entry. Very short.",
+            "en": "How it's computed",
+            "de": "Wie es berechnet wird",
+            "fr": "Comment c'est calculé"
+        },
+        "methodology.labels.sources": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): small uppercase label above the sources block inside each method entry. Very short.",
+            "en": "Source code",
+            "de": "Quellcode",
+            "fr": "Code source"
+        },
+        "methodology.labels.used_on": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): small uppercase label above the used_on block inside each method entry. Very short.",
+            "en": "Where it appears",
+            "de": "Wo es erscheint",
+            "fr": "Où cela apparaît"
+        },
+        "methodology.repo_link": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): footer link pointing to the GitHub repository root. Short link label.",
+            "en": "Browse all source code on GitHub",
+            "de": "Den gesamten Quellcode auf GitHub durchsuchen",
+            "fr": "Parcourir tout le code source sur GitHub"
+        },
+        "methodology.groups.parliaments.heading": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): section heading (h2) for the 'parliaments' group of methods. One short noun phrase.",
+            "en": "Parliaments",
+            "de": "Parlamente",
+            "fr": "Parlements"
+        },
+        "methodology.groups.parliaments.sub": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): muted subtitle shown next to the 'parliaments' group heading. Short tagline, no terminal period.",
+            "en": "Metrics computed across a whole chamber",
+            "de": "Kennzahlen über eine ganze Kammer",
+            "fr": "Indicateurs calculés sur une chambre entière"
+        },
+        "methodology.groups.people.heading": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): section heading (h2) for the 'people' group of methods. One short noun phrase.",
+            "en": "People",
+            "de": "Personen",
+            "fr": "Personnes"
+        },
+        "methodology.groups.people.sub": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): muted subtitle shown next to the 'people' group heading. Short tagline, no terminal period.",
+            "en": "Metrics for a single member",
+            "de": "Kennzahlen für ein einzelnes Mitglied",
+            "fr": "Indicateurs pour un seul membre"
+        },
+        "methodology.groups.votings.heading": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): section heading (h2) for the 'votings' group of methods. One short noun phrase.",
+            "en": "Votings",
+            "de": "Abstimmungen",
+            "fr": "Votes"
+        },
+        "methodology.groups.votings.sub": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): muted subtitle shown next to the 'votings' group heading. Short tagline, no terminal period.",
+            "en": "How one vote is drawn",
+            "de": "Wie eine einzelne Abstimmung gezeichnet wird",
+            "fr": "Comment un vote est dessiné"
+        },
+        "methodology.groups.site.heading": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): section heading (h2) for the 'site' group of methods. One short noun phrase.",
+            "en": "The site itself",
+            "de": "Die Website selbst",
+            "fr": "Le site lui-même"
+        },
+        "methodology.groups.site.sub": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): muted subtitle shown next to the 'site' group heading. Short tagline, no terminal period.",
+            "en": "Operational metrics",
+            "de": "Betriebskennzahlen",
+            "fr": "Indicateurs d'exploitation"
+        },
+        "methodology.methods.alignment.title": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): title (h3, self-anchoring link) of the 'alignment' method entry. Short noun phrase naming the metric.",
+            "en": "Voting alignment",
+            "de": "Abstimmungsübereinstimmung",
+            "fr": "Proximité de vote"
+        },
+        "methodology.methods.alignment.body": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): dense prose explaining exactly how the 'alignment' metric is computed. Formulas and code identifiers are rendered in a separate code block and stay language-neutral; translate the surrounding prose faithfully, keeping symbol names (B, σ, θ, k, η²) and numeric thresholds unchanged.",
+            "en": "For every pair of members who voted in the same ballots, the agreement is the share of shared ballots on which they cast the same vote (yes, no, abstain or absent), where absent matches absent. A member needs at least 20 scored ballots and a pair at least 20 shared ballots to appear. The party heatmap averages these pairwise agreements over each unordered party pair (with a 95 % confidence half-width of 1.96·σ/√n). The scatter turns the agreement matrix into two dimensions by classical multidimensional scaling: distances d = 1 − agreement are double-centred into B, shifted to B + σI (a Gershgorin bound) so it is positive-semidefinite, and the two most-positive eigenvectors give the coordinates. The layout is seeded deterministically, so it never jitters between reloads.",
+            "de": "Für jedes Mitgliederpaar, das in denselben Abstimmungen votiert hat, ist die Übereinstimmung der Anteil der gemeinsamen Abstimmungen, in denen beide gleich stimmten (Ja, Nein, Enthaltung oder abwesend), wobei abwesend zu abwesend passt. Ein Mitglied braucht mindestens 20 gewertete Abstimmungen, ein Paar mindestens 20 gemeinsame. Die Partei-Heatmap mittelt diese paarweisen Übereinstimmungen über jedes ungeordnete Parteipaar (mit einer 95-%-Konfidenz-Halbbreite von 1,96·σ/√n). Der Streuplot bringt die Übereinstimmungsmatrix per klassischer multidimensionaler Skalierung in zwei Dimensionen: Distanzen d = 1 − Übereinstimmung werden doppelt zentriert zu B, nach B + σI verschoben (Gershgorin-Schranke), damit die Matrix positiv semidefinit ist, und die beiden positivsten Eigenvektoren liefern die Koordinaten. Das Layout ist deterministisch initialisiert und wackelt daher zwischen Neuladen nie.",
+            "fr": "Pour chaque paire de membres ayant voté aux mêmes scrutins, la concordance est la part des scrutins communs où ils ont voté de la même manière (oui, non, abstention ou absent), l'absence correspondant à l'absence. Un membre doit avoir au moins 20 scrutins comptabilisés et une paire au moins 20 scrutins communs pour apparaître. La carte de chaleur des partis moyenne ces concordances par paire sur chaque paire de partis non ordonnée (avec une demi-largeur de confiance à 95 % de 1,96·σ/√n). Le nuage de points ramène la matrice de concordance à deux dimensions par positionnement multidimensionnel classique : les distances d = 1 − concordance sont doublement centrées en B, décalées en B + σI (borne de Gershgorin) pour la rendre semi-définie positive, et les deux vecteurs propres les plus positifs donnent les coordonnées. La disposition est initialisée de façon déterministe et ne tremble donc jamais d'un rechargement à l'autre."
+        },
+        "methodology.methods.loyalty.title": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): title (h3, self-anchoring link) of the 'loyalty' method entry. Short noun phrase naming the metric.",
+            "en": "Party loyalty & cohesion",
+            "de": "Fraktionstreue & Geschlossenheit",
+            "fr": "Loyauté de groupe & cohésion"
+        },
+        "methodology.methods.loyalty.body": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): dense prose explaining exactly how the 'loyalty' metric is computed. Formulas and code identifiers are rendered in a separate code block and stay language-neutral; translate the surrounding prose faithfully, keeping symbol names (B, σ, θ, k, η²) and numeric thresholds unchanged.",
+            "en": "For each ballot, a parliamentary group's line is the position (yes, no or abstain) that a strict plurality of its voters took; ties, and groups fielding fewer than 4 voters on that ballot, are not scored. A member dissents whenever their vote differs from their group's line, and their dissent rate is dissents ÷ scored ballots (members with fewer than 10 scored ballots are dropped). The vote-time group is used, falling back to the member's current party where no snapshot exists (e.g. Liechtenstein). Group cohesion is the mean Agreement Index (Hix–Noury–Roland) over the group's ballots: 1 when a group votes as one, 0 when it splits evenly three ways.",
+            "de": "Für jede Abstimmung ist die Linie einer Fraktion die Position (Ja, Nein oder Enthaltung), die eine strikte Mehrheit ihrer Stimmenden einnahm; Gleichstände und Fraktionen mit weniger als 4 Stimmenden in dieser Abstimmung werden nicht gewertet. Ein Mitglied weicht ab, sobald sein Votum von der Fraktionslinie abweicht; seine Abweichungsrate ist Abweichungen ÷ gewertete Abstimmungen (Mitglieder mit weniger als 10 gewerteten Abstimmungen fallen weg). Verwendet wird die Fraktion zum Abstimmungszeitpunkt, ersatzweise die aktuelle Partei des Mitglieds, wo kein Schnappschuss vorliegt (z. B. Liechtenstein). Die Geschlossenheit einer Fraktion ist der mittlere Agreement-Index (Hix–Noury–Roland) über ihre Abstimmungen: 1, wenn eine Fraktion geschlossen stimmt, 0 bei gleichmässiger Dreiteilung.",
+            "fr": "Pour chaque scrutin, la ligne d'un groupe parlementaire est la position (oui, non ou abstention) qu'une stricte pluralité de ses votants a adoptée ; les égalités, et les groupes comptant moins de 4 votants sur ce scrutin, ne sont pas comptabilisés. Un membre fait défection dès que son vote diffère de la ligne de son groupe ; son taux de défection est défections ÷ scrutins comptabilisés (les membres avec moins de 10 scrutins comptabilisés sont écartés). On utilise le groupe au moment du vote, avec repli sur le parti actuel du membre là où aucun instantané n'existe (p. ex. Liechtenstein). La cohésion d'un groupe est l'indice d'accord moyen (Hix–Noury–Roland) sur ses scrutins : 1 lorsqu'un groupe vote d'un seul bloc, 0 lorsqu'il se divise également en trois."
+        },
+        "methodology.methods.lobby.title": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): title (h3, self-anchoring link) of the 'lobby' method entry. Short noun phrase naming the metric.",
+            "en": "Lobby network",
+            "de": "Lobby-Netzwerk",
+            "fr": "Réseau de lobbying"
+        },
+        "methodology.methods.lobby.body": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): dense prose explaining exactly how the 'lobby' metric is computed. Formulas and code identifiers are rendered in a separate code block and stay language-neutral; translate the surrounding prose faithfully, keeping symbol names (B, σ, θ, k, η²) and numeric thresholds unchanged.",
+            "en": "Members and the organisations they declare in the register of interests form a bipartite graph; only organisations tied to at least 2 members are kept, so the picture shows shared connections rather than isolated mandates. Each declared tie is classified paid, unpaid or unknown (the harmonised code first, then a German / French / Italian text fallback), and paid outranks unpaid outranks unknown when a member holds several ties to one organisation. The network is laid out with a deterministic Fruchterman–Reingold force simulation: ideal edge length k = √(area/n), repulsion k²/distance, attraction distance²/k, over 300 cooled iterations. No randomness is used, so the graph is stable across reloads.",
+            "de": "Mitglieder und die Organisationen, die sie im Interessenregister angeben, bilden einen bipartiten Graphen; behalten werden nur Organisationen mit mindestens 2 verbundenen Mitgliedern, sodass das Bild geteilte Verbindungen statt isolierter Mandate zeigt. Jede angegebene Verbindung wird als bezahlt, unbezahlt oder unbekannt klassifiziert (zuerst über den harmonisierten Code, dann über einen deutschen / französischen / italienischen Text-Fallback), und bezahlt geht vor unbezahlt vor unbekannt, wenn ein Mitglied mehrere Verbindungen zu einer Organisation hat. Das Netzwerk wird mit einer deterministischen Fruchterman-Reingold-Kraftsimulation angeordnet: ideale Kantenlänge k = √(Fläche/n), Abstossung k²/Distanz, Anziehung Distanz²/k, über 300 abkühlende Iterationen. Es wird kein Zufall verwendet, der Graph bleibt daher über Neuladen stabil.",
+            "fr": "Les membres et les organisations qu'ils déclarent au registre des intérêts forment un graphe biparti ; seules les organisations liées à au moins 2 membres sont conservées, de sorte que l'image montre des connexions partagées plutôt que des mandats isolés. Chaque lien déclaré est classé rémunéré, non rémunéré ou inconnu (le code harmonisé d'abord, puis un repli textuel allemand / français / italien), et rémunéré prime sur non rémunéré qui prime sur inconnu lorsqu'un membre a plusieurs liens avec une même organisation. Le réseau est disposé par une simulation de forces Fruchterman-Reingold déterministe : longueur d'arête idéale k = √(aire/n), répulsion k²/distance, attraction distance²/k, sur 300 itérations avec refroidissement. Aucun hasard n'est utilisé, le graphe reste donc stable d'un rechargement à l'autre."
+        },
+        "methodology.methods.discussion.title": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): title (h3, self-anchoring link) of the 'discussion' method entry. Short noun phrase naming the metric.",
+            "en": "Discussion scaling (Wordfish)",
+            "de": "Debatten-Skalierung (Wordfish)",
+            "fr": "Positionnement des débats (Wordfish)"
+        },
+        "methodology.methods.discussion.body": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): dense prose explaining exactly how the 'discussion' metric is computed. Formulas and code identifiers are rendered in a separate code block and stay language-neutral; translate the surrounding prose faithfully, keeping symbol names (B, σ, θ, k, η²) and numeric thresholds unchanged.",
+            "en": "Speeches by every active member over a shared time window are tokenised and stopword-filtered per language, then reduced to one word-count document per member. Wordfish (Slapin & Proksch 2008) fits a Poisson model E[y] = exp(α + ψ + β·θ) by alternating Poisson regressions, placing each speaker on a single latent scale θ purely from word choice: α is a speaker's talkativeness, ψ a word's frequency and β how sharply a word discriminates. The fit is hardened (clamped, step-halved, ridge-regularised) and deterministically initialised. η² (the share of the θ variance explained by party) is shown alongside, and the axis uses a robust 2nd–98th percentile domain so that a few thin, high-variance speakers don't set the scale.",
+            "de": "Reden aller aktiven Mitglieder über ein gemeinsames Zeitfenster werden pro Sprache tokenisiert und um Stoppwörter bereinigt, dann auf ein Wortzähl-Dokument je Mitglied reduziert. Wordfish (Slapin & Proksch 2008) passt ein Poisson-Modell E[y] = exp(α + ψ + β·θ) durch abwechselnde Poisson-Regressionen an und verortet jede Rednerin und jeden Redner allein anhand der Wortwahl auf einer einzigen latenten Skala θ: α ist die Redseligkeit, ψ die Häufigkeit eines Wortes und β, wie scharf ein Wort trennt. Die Anpassung ist gehärtet (begrenzt, mit Schritthalbierung, Ridge-regularisiert) und deterministisch initialisiert. η² (der Anteil der θ-Varianz, den die Partei erklärt) steht daneben, und die Achse nutzt eine robuste 2.–98.-Perzentil-Spanne, damit einige wenige wortarme Redner mit hoher Varianz den Massstab nicht bestimmen.",
+            "fr": "Les discours de chaque membre actif sur une fenêtre temporelle commune sont segmentés en mots et filtrés des mots vides par langue, puis réduits à un document de comptages de mots par membre. Wordfish (Slapin & Proksch 2008) ajuste un modèle de Poisson E[y] = exp(α + ψ + β·θ) par régressions de Poisson alternées et place chaque orateur sur une unique échelle latente θ uniquement d'après le choix des mots : α est la loquacité, ψ la fréquence d'un mot et β la netteté avec laquelle un mot discrimine. L'ajustement est durci (borné, à demi-pas, régularisé par ridge) et initialisé de façon déterministe. η² (la part de la variance de θ expliquée par le parti) est affichée à côté, et l'axe utilise une plage robuste du 2e au 98e centile pour qu'une poignée d'orateurs peu prolixes à forte variance ne fixe pas l'échelle."
+        },
+        "methodology.methods.vocabulary.title": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): title (h3, self-anchoring link) of the 'vocabulary' method entry. Short noun phrase naming the metric.",
+            "en": "Vocabulary (word frequency)",
+            "de": "Wortschatz (Worthäufigkeit)",
+            "fr": "Vocabulaire (fréquence des mots)"
+        },
+        "methodology.methods.vocabulary.body": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): dense prose explaining exactly how the 'vocabulary' metric is computed. Formulas and code identifiers are rendered in a separate code block and stay language-neutral; translate the surrounding prose faithfully, keeping symbol names (B, σ, θ, k, η²) and numeric thresholds unchanged.",
+            "en": "Each of a member's speech transcripts is stripped of HTML, lowercased and split on non-letter characters into tokens longer than one character (accents kept, digits and punctuation dropped). Every token is filtered against the stopword list for that speech's own language, so a bilingual member's German and French speeches are cleaned with the right list. The result is the member's most frequent words (the top 120 with a count of at least 2, over an optional date window), drawn as a squarified treemap sized by count.",
+            "de": "Jedes Redetranskript eines Mitglieds wird von HTML befreit, kleingeschrieben und an Nicht-Buchstaben in Tokens von mehr als einem Zeichen zerlegt (Akzente bleiben, Ziffern und Satzzeichen fallen weg). Jedes Token wird gegen die Stoppwortliste der jeweiligen Sprache der Rede gefiltert, sodass die deutschen und französischen Reden eines zweisprachigen Mitglieds mit der richtigen Liste bereinigt werden. Ergebnis sind die häufigsten Wörter des Mitglieds (die Top 120 mit einer Häufigkeit von mindestens 2, über ein optionales Zeitfenster), gezeichnet als squarified Treemap, dimensioniert nach Häufigkeit.",
+            "fr": "Chaque transcription de discours d'un membre est débarrassée du HTML, mise en minuscules et découpée aux caractères non alphabétiques en jetons de plus d'un caractère (accents conservés, chiffres et ponctuation écartés). Chaque jeton est filtré contre la liste de mots vides de la langue propre du discours, de sorte que les discours allemands et français d'un membre bilingue soient nettoyés avec la bonne liste. Le résultat est les mots les plus fréquents du membre (les 120 premiers avec un compte d'au moins 2, sur une fenêtre de dates optionnelle), dessinés en treemap squarifié dimensionné selon le compte."
+        },
+        "methodology.methods.coVoting.title": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): title (h3, self-anchoring link) of the 'coVoting' method entry. Short noun phrase naming the metric.",
+            "en": "Co-voting neighbours",
+            "de": "Abstimmungsnachbarn",
+            "fr": "Voisins de vote"
+        },
+        "methodology.methods.coVoting.body": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): dense prose explaining exactly how the 'coVoting' metric is computed. Formulas and code identifiers are rendered in a separate code block and stay language-neutral; translate the surrounding prose faithfully, keeping symbol names (B, σ, θ, k, η²) and numeric thresholds unchanged.",
+            "en": "This is the pairwise half of voting alignment, seen from one member: over the ballots where both cast a vote, the agreement with every other member is matches ÷ shared ballots (absent matches absent). Pairs sharing fewer than 10 ballots are hidden as noise, and the list can be re-scoped to a date range. Unlike the parliament scatter, no dimensionality reduction is applied. It is a ranked neighbour list.",
+            "de": "Dies ist die paarweise Hälfte der Abstimmungsübereinstimmung, aus Sicht eines Mitglieds: über die Abstimmungen, in denen beide votierten, ist die Übereinstimmung mit jedem anderen Mitglied Treffer ÷ gemeinsame Abstimmungen (abwesend passt zu abwesend). Paare mit weniger als 10 gemeinsamen Abstimmungen werden als Rauschen ausgeblendet, und die Liste lässt sich auf einen Zeitraum eingrenzen. Anders als beim Parlaments-Streuplot wird keine Dimensionsreduktion angewendet. Es ist eine gereihte Nachbarliste.",
+            "fr": "C'est la moitié par paires de la proximité de vote, vue depuis un membre : sur les scrutins où les deux ont voté, la concordance avec chaque autre membre est correspondances ÷ scrutins communs (absent correspond à absent). Les paires partageant moins de 10 scrutins sont masquées comme du bruit, et la liste peut être recadrée sur une plage de dates. Contrairement au nuage de points du parlement, aucune réduction de dimension n'est appliquée. C'est une liste de voisins classée."
+        },
+        "methodology.methods.interests.title": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): title (h3, self-anchoring link) of the 'interests' method entry. Short noun phrase naming the metric.",
+            "en": "Interest classification",
+            "de": "Interessen-Klassifikation",
+            "fr": "Classification des intérêts"
+        },
+        "methodology.methods.interests.body": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): dense prose explaining exactly how the 'interests' metric is computed. Formulas and code identifiers are rendered in a separate code block and stay language-neutral; translate the surrounding prose faithfully, keeping symbol names (B, σ, θ, k, η²) and numeric thresholds unchanged.",
+            "en": "Each register-of-interests entry is sorted into paid, unpaid or unknown: the harmonised payment code is trusted first (unpaid and honorary both count as unpaid), otherwise a German / French / Italian keyword fallback reads the free-text description. Entries are grouped by normalised organisation name to roll a member's mandates up per organisation. This same rule feeds the paid / unpaid split on the lobby network.",
+            "de": "Jeder Eintrag im Interessenregister wird als bezahlt, unbezahlt oder unbekannt eingeordnet: Zuerst zählt der harmonisierte Zahlungscode (unbezahlt und ehrenamtlich gelten beide als unbezahlt), sonst liest ein deutscher / französischer / italienischer Stichwort-Fallback den Freitext. Einträge werden nach normalisiertem Organisationsnamen gruppiert, um die Mandate eines Mitglieds je Organisation zusammenzufassen. Dieselbe Regel speist die Aufteilung bezahlt / unbezahlt im Lobby-Netzwerk.",
+            "fr": "Chaque entrée du registre des intérêts est triée en rémunérée, non rémunérée ou inconnue : le code de rémunération harmonisé prime d'abord (non rémunéré et honorifique comptent tous deux comme non rémunéré), sinon un repli par mots-clés allemand / français / italien lit la description en texte libre. Les entrées sont regroupées par nom d'organisation normalisé pour agréger les mandats d'un membre par organisation. Cette même règle alimente la répartition rémunéré / non rémunéré du réseau de lobbying."
+        },
+        "methodology.methods.hemicycle.title": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): title (h3, self-anchoring link) of the 'hemicycle' method entry. Short noun phrase naming the metric.",
+            "en": "Voting hemicycle",
+            "de": "Abstimmungs-Halbkreis",
+            "fr": "Hémicycle de vote"
+        },
+        "methodology.methods.hemicycle.body": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): dense prose explaining exactly how the 'hemicycle' metric is computed. Formulas and code identifiers are rendered in a separate code block and stay language-neutral; translate the surrounding prose faithfully, keeping symbol names (B, σ, θ, k, η²) and numeric thresholds unchanged.",
+            "en": "The seating arc is computed in the browser: rings are added until they hold every voter, the seats are spread across rings by largest-remainder allocation weighted by ring radius, and each seat is placed on its arc and sorted left to right. Coordinates are rounded to two decimals so the server and client render identically and hydration never mismatches. Parties are coloured by descending membership from a fixed palette, and the arch is drawn only when at least 80 % of voters have a known seat.",
+            "de": "Der Sitzbogen wird im Browser berechnet: Ringe werden hinzugefügt, bis sie alle Stimmenden fassen, die Sitze werden per Restausgleich (largest remainder), gewichtet nach Ringradius, auf die Ringe verteilt, und jeder Sitz wird auf seinem Bogen platziert und von links nach rechts sortiert. Koordinaten werden auf zwei Nachkommastellen gerundet, damit Server und Client identisch rendern und die Hydration nie abweicht. Parteien werden nach absteigender Mitgliederzahl aus einer festen Palette eingefärbt, und der Bogen wird nur gezeichnet, wenn mindestens 80 % der Stimmenden einen bekannten Sitz haben.",
+            "fr": "L'arc des sièges est calculé dans le navigateur : des anneaux sont ajoutés jusqu'à contenir tous les votants, les sièges sont répartis sur les anneaux par la méthode du plus fort reste pondérée par le rayon de l'anneau, et chaque siège est placé sur son arc puis trié de gauche à droite. Les coordonnées sont arrondies à deux décimales pour que serveur et client rendent à l'identique et que l'hydratation ne diverge jamais. Les partis sont colorés par effectif décroissant depuis une palette fixe, et l'arc n'est dessiné que si au moins 80 % des votants ont un siège connu."
+        },
+        "methodology.methods.traffic.title": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): title (h3, self-anchoring link) of the 'traffic' method entry. Short noun phrase naming the metric.",
+            "en": "Traffic statistics",
+            "de": "Zugriffsstatistik",
+            "fr": "Statistiques de trafic"
+        },
+        "methodology.methods.traffic.body": {
+            "context": "Methodology page (/project/methodology, app/routes/pages/project/methodology/methodology.tsx): dense prose explaining exactly how the 'traffic' metric is computed. Formulas and code identifiers are rendered in a separate code block and stay language-neutral; translate the surrounding prose faithfully, keeping symbol names (B, σ, θ, k, η²) and numeric thresholds unchanged.",
+            "en": "Request logs are rolled into immutable daily fact rows (one per period, route, language, visitor class and device) carrying additive counters (requests, summed and maximum latency) and an eight-bucket latency histogram; days older than 90 collapse to month grain. The dashboard re-aggregates these client-side: counts and maxima merge directly, the average is derived as summed latency ÷ requests, and the 95th percentile is approximated from the histogram (the upper edge of the bucket holding the 95th request), because true averages and percentiles cannot be re-merged from stored totals. User agents are classified into visitor class and device once, at roll-up time, so the rules stay revisable.",
+            "de": "Zugriffsprotokolle werden zu unveränderlichen Tages-Faktenzeilen zusammengefasst (eine je Periode, Route, Sprache, Besucherklasse und Gerät) mit additiven Zählern (Anfragen, summierte und maximale Latenz) und einem Latenz-Histogramm mit acht Klassen; Tage älter als 90 werden auf Monatskörnung verdichtet. Das Dashboard aggregiert diese clientseitig neu: Zähler und Maxima lassen sich direkt zusammenführen, der Mittelwert wird als summierte Latenz ÷ Anfragen abgeleitet und das 95. Perzentil aus dem Histogramm genähert (die Obergrenze der Klasse, die die 95. Anfrage enthält), weil sich echte Mittelwerte und Perzentile nicht aus gespeicherten Summen neu zusammenführen lassen. User-Agents werden einmalig beim Verdichten in Besucherklasse und Gerät eingeordnet, damit die Regeln revidierbar bleiben.",
+            "fr": "Les journaux de requêtes sont agrégés en lignes de faits quotidiennes immuables (une par période, route, langue, classe de visiteur et appareil) portant des compteurs additifs (requêtes, latence sommée et maximale) et un histogramme de latence à huit classes ; les jours de plus de 90 jours sont condensés à la granularité mensuelle. Le tableau de bord les ré-agrège côté client : compteurs et maxima se fusionnent directement, la moyenne est dérivée comme latence sommée ÷ requêtes, et le 95e centile est approché depuis l'histogramme (la borne supérieure de la classe contenant la 95e requête), car de vraies moyennes et de vrais centiles ne peuvent être refusionnés à partir de totaux stockés. Les agents utilisateurs sont classés en classe de visiteur et appareil une seule fois, au moment de l'agrégation, afin que les règles restent révisables."
+        },
+        "metas.methodology.title": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_methodology' namespace 'metas' block; the interface language selects which file. Methodology page SEO <title>."
+        },
+        "metas.methodology.desc": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_methodology' namespace 'metas' block; the interface language selects which file. Methodology page SEO meta-description."
+        }
+    }
+}

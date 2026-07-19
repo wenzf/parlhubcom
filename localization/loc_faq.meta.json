@@ -1,0 +1,390 @@
+{
+    "_meta": {
+        "namespace": "loc_faq",
+        "source_files": [
+            "public/locales/<lang>/loc_faq.json for lang in de, en, fr"
+        ],
+        "loaded_by": "app/routes/pages/project/faq/faq.tsx",
+        "description": "FAQ page; items also feed FAQPage JSON-LD structured data.",
+        "format": "Each entry: context (where the string appears in the UI, its role, placeholders and length/grammar constraints) + the current de/en/fr texts as translation reference. Use the context when translating into a new language; a null text means the key is missing in that language file.",
+        "generated": "2026-07-13, code-verified against app/ sources; regenerate when public/locales texts or consuming components change."
+    },
+    "keys": {
+        "faq.title": {
+            "context": "Page title (h1) of the FAQ page at /faq (app/routes/pages/project/faq/faq.tsx). The acronym \"FAQ\" is kept as-is in de/fr; use the target language's conventional equivalent.",
+            "en": "FAQ",
+            "de": "FAQ",
+            "fr": "FAQ"
+        },
+        "faq.lead": {
+            "context": "Lead paragraph under the h1 on /faq, one muted sentence describing what the FAQ covers.",
+            "en": "Common questions about parlhub, the data and how to use it.",
+            "de": "Häufige Fragen zu parlhub, den Daten und ihrer Nutzung.",
+            "fr": "Questions fréquentes sur parlhub, les données et leur utilisation."
+        },
+        "faq.items": {
+            "context": "Array of FAQ entries rendered as sections on /faq; also emitted as FAQPage JSON-LD structured data by faqMeta (app/lib/utils/metas). Per item: \"id\" is a language-independent URL anchor (/faq#<id>) — never translate it; \"q\" is the question, rendered as a self-linking h2 heading; \"body\" (and optional \"body_after\") are answer paragraphs; optional \"code\" lines render in a monospace <pre> block showing export URL patterns — keep literal path segments (/export, ?page=2, ?langs=, format names json/csv/xlsx) untranslated, only the <angle-bracket> placeholders and trailing explanations are localized (fr also localizes ?langs example order); \"links\" are optional trailing links where \"label\" is visible text (translate, except email addresses and proper names) and \"href\" is the URL (do not translate, except the CC BY 4.0 deed URL which may take a language suffix like /deed.fr). Domain terms: \"alignment\"/\"Übereinstimmung\"/\"concordance\" = how often two members vote the same; \"loyalty\"/\"Fraktionstreue\"/\"loyauté\" = voting with one's own parliamentary group (Fraktion). First-person maintainer voice (\"write me\"), polite \"you\" in de/fr.",
+            "en": [
+                {
+                    "id": "data-source",
+                    "q": "Where does the data come from?",
+                    "body": [
+                        "From OpenParlData.ch. They collect the data from the official parliament websites, clean it up and publish it as open data. parlhub reads their exports. Without OpenParlData there would be no parlhub."
+                    ],
+                    "links": [
+                        {
+                            "label": "OpenParlData.ch",
+                            "href": "https://openparldata.ch"
+                        }
+                    ]
+                },
+                {
+                    "id": "coverage",
+                    "q": "Which parliaments are covered?",
+                    "body": [
+                        "The parliaments of Switzerland and Liechtenstein, as far as OpenParlData covers them. Coverage grows over time."
+                    ]
+                },
+                {
+                    "id": "freshness",
+                    "q": "How current is the data?",
+                    "body": [
+                        "parlhub syncs from OpenParlData regularly. OpenParlData in turn reads the official websites. So a change on an official site can take some days to show up here."
+                    ]
+                },
+                {
+                    "id": "missing-data",
+                    "q": "Why is some data missing?",
+                    "body": [
+                        "Most likely it is not imported yet. OpenParlData is a young project, and not every parliament publishes everything. If something is on the official website but missing here for a long time, tell me."
+                    ]
+                },
+                {
+                    "id": "wrong-data",
+                    "q": "I'm a member of parliament and my data is wrong. What can I do?",
+                    "body": [
+                        "parlhub shows the data as published. It comes from your parliament's official website, collected by OpenParlData. If it is wrong there, contact your parliament's webmaster. Once it is fixed at the source, the fix flows here.",
+                        "If it is right on the official site but wrong on parlhub, write me and I'll look into it."
+                    ],
+                    "links": [
+                        {
+                            "label": "hello@wefrick.com",
+                            "href": "mailto:hello@wefrick.com"
+                        }
+                    ]
+                },
+                {
+                    "id": "download",
+                    "q": "How can I download data?",
+                    "body": [
+                        "Every list has an export button. The same downloads also work as plain URLs, so you can script them:"
+                    ],
+                    "code": [
+                        "/<section>/export/<dataset>/<format>          all records of a section",
+                        "/<section>/<id>/export/<dataset>/<format>     records of one entity"
+                    ],
+                    "body_after": [
+                        "For example: /votings/export/votings/csv. Formats are json, csv and xlsx. Downloads are paged, 500 rows each: ?page=2 for the next page. ?langs=de,fr sets the language priority of the content. Filters from the list URL work here too."
+                    ]
+                },
+                {
+                    "id": "license",
+                    "q": "How may I use the data?",
+                    "body": [
+                        "The data is licensed CC BY 4.0. Use it, share it and build on it, including commercially. Just name the source. Please credit OpenParlData.ch for the data; for the computed numbers (alignment, loyalty and so on), credit parlhub."
+                    ],
+                    "links": [
+                        {
+                            "label": "CC BY 4.0",
+                            "href": "https://creativecommons.org/licenses/by/4.0/"
+                        }
+                    ]
+                },
+                {
+                    "id": "metrics",
+                    "q": "How are alignment and loyalty computed?",
+                    "body": [
+                        "From the voting records: alignment compares how often two people vote the same way in shared votes; loyalty compares a person's votes with the majority of their own group. Fewer shared votes means less reliable percentages, so keep that in mind when comparing."
+                    ]
+                },
+                {
+                    "id": "official",
+                    "q": "Is parlhub official?",
+                    "body": [
+                        "No. parlhub is an independent, non-profit project by one person. It is not affiliated with any parliament, authority or party. For official information, use the parliament websites."
+                    ]
+                },
+                {
+                    "id": "tracking",
+                    "q": "Do you track me?",
+                    "body": [
+                        "No. There are no ads, no analytics and no trackers. One functional cookie stores your settings (language, theme). That's it."
+                    ]
+                },
+                {
+                    "id": "contribute",
+                    "q": "Can I support or contribute to the project?",
+                    "body": [
+                        "Yes, gladly. There is no donate page. If you want to help with the running costs, just write me. Developers and political-science researchers who want to contribute are very welcome too. The code is open source, on GitHub."
+                    ],
+                    "links": [
+                        {
+                            "label": "hello@wefrick.com",
+                            "href": "mailto:hello@wefrick.com"
+                        },
+                        {
+                            "label": "Source on GitHub",
+                            "href": "https://github.com"
+                        }
+                    ]
+                }
+            ],
+            "de": [
+                {
+                    "id": "data-source",
+                    "q": "Woher stammen die Daten?",
+                    "body": [
+                        "Von OpenParlData.ch. Das Projekt sammelt die Daten von den offiziellen Parlaments-Websites, bereinigt sie und stellt sie als Open Data bereit. parlhub liest deren Exporte. Ohne OpenParlData gäbe es parlhub nicht."
+                    ],
+                    "links": [
+                        {
+                            "label": "OpenParlData.ch",
+                            "href": "https://openparldata.ch"
+                        }
+                    ]
+                },
+                {
+                    "id": "coverage",
+                    "q": "Welche Parlamente sind abgedeckt?",
+                    "body": [
+                        "Die Parlamente der Schweiz und Liechtensteins, soweit OpenParlData sie abdeckt. Die Abdeckung wächst laufend."
+                    ]
+                },
+                {
+                    "id": "freshness",
+                    "q": "Wie aktuell sind die Daten?",
+                    "body": [
+                        "parlhub synchronisiert regelmässig mit OpenParlData. OpenParlData liest wiederum die offiziellen Websites. Eine Änderung auf einer offiziellen Seite kann darum ein paar Tage brauchen, bis sie hier erscheint."
+                    ]
+                },
+                {
+                    "id": "missing-data",
+                    "q": "Warum fehlen manche Daten?",
+                    "body": [
+                        "Wahrscheinlich sind sie noch nicht importiert. OpenParlData ist ein junges Projekt, und nicht jedes Parlament publiziert alles. Wenn etwas auf der offiziellen Website steht, hier aber lange fehlt: Melden Sie es mir."
+                    ]
+                },
+                {
+                    "id": "wrong-data",
+                    "q": "Ich bin Ratsmitglied und meine Daten sind falsch. Was kann ich tun?",
+                    "body": [
+                        "parlhub zeigt die Daten so, wie sie publiziert sind. Sie stammen von der offiziellen Website Ihres Parlaments, gesammelt von OpenParlData. Wenn sie dort falsch sind, wenden Sie sich an den Webmaster Ihres Parlaments. Sobald es an der Quelle korrigiert ist, kommt die Korrektur auch hier an.",
+                        "Wenn die Daten auf der offiziellen Seite stimmen, aber auf parlhub falsch sind: Schreiben Sie mir, ich schaue es an."
+                    ],
+                    "links": [
+                        {
+                            "label": "hello@wefrick.com",
+                            "href": "mailto:hello@wefrick.com"
+                        }
+                    ]
+                },
+                {
+                    "id": "download",
+                    "q": "Wie kann ich Daten herunterladen?",
+                    "body": [
+                        "Jede Liste hat einen Export-Knopf. Dieselben Downloads funktionieren auch als einfache URLs, also auch per Skript:"
+                    ],
+                    "code": [
+                        "/<sektion>/export/<datensatz>/<format>          alle Einträge einer Sektion",
+                        "/<sektion>/<id>/export/<datensatz>/<format>     Einträge zu einem Eintrag"
+                    ],
+                    "body_after": [
+                        "Zum Beispiel: /votings/export/votings/csv. Formate sind json, csv und xlsx. Downloads sind paginiert, 500 Zeilen pro Seite: ?page=2 für die nächste Seite. ?langs=de,fr setzt die Sprachpriorität der Inhalte. Filter aus der Listen-URL funktionieren auch hier."
+                    ]
+                },
+                {
+                    "id": "license",
+                    "q": "Wie darf ich die Daten verwenden?",
+                    "body": [
+                        "Die Daten stehen unter CC BY 4.0. Verwenden, teilen, weiterverarbeiten, auch kommerziell. Einzige Bedingung: Quelle nennen. Nennen Sie bitte OpenParlData.ch für die Daten; für die berechneten Kennzahlen (Übereinstimmung, Fraktionstreue und so weiter) parlhub."
+                    ],
+                    "links": [
+                        {
+                            "label": "CC BY 4.0",
+                            "href": "https://creativecommons.org/licenses/by/4.0/deed.de"
+                        }
+                    ]
+                },
+                {
+                    "id": "metrics",
+                    "q": "Wie werden Übereinstimmung und Fraktionstreue berechnet?",
+                    "body": [
+                        "Aus den Abstimmungsdaten: Die Übereinstimmung vergleicht, wie oft zwei Personen in gemeinsamen Abstimmungen gleich stimmen; die Fraktionstreue vergleicht die Stimmen einer Person mit der Mehrheit der eigenen Fraktion. Je weniger gemeinsame Abstimmungen, desto weniger verlässlich die Prozentzahlen, behalten Sie das beim Vergleichen im Kopf."
+                    ]
+                },
+                {
+                    "id": "official",
+                    "q": "Ist parlhub offiziell?",
+                    "body": [
+                        "Nein. parlhub ist ein unabhängiges, nicht kommerzielles Projekt einer einzelnen Person. Es ist mit keinem Parlament, keiner Behörde und keiner Partei verbunden. Für offizielle Informationen nutzen Sie die Parlaments-Websites."
+                    ]
+                },
+                {
+                    "id": "tracking",
+                    "q": "Werde ich getrackt?",
+                    "body": [
+                        "Nein. Es gibt keine Werbung, keine Analytics und keine Tracker. Ein funktionales Cookie speichert Ihre Einstellungen (Sprache, Darstellung). Das ist alles."
+                    ]
+                },
+                {
+                    "id": "contribute",
+                    "q": "Kann ich das Projekt unterstützen oder mitarbeiten?",
+                    "body": [
+                        "Ja, gerne. Eine Spendenseite gibt es nicht. Wenn Sie bei den laufenden Kosten helfen möchten, schreiben Sie mir einfach. Auch Mitarbeit ist sehr willkommen, von Entwicklerinnen und Entwicklern genauso wie aus der Politikwissenschaft. Der Code ist Open Source, auf GitHub."
+                    ],
+                    "links": [
+                        {
+                            "label": "hello@wefrick.com",
+                            "href": "mailto:hello@wefrick.com"
+                        },
+                        {
+                            "label": "Quellcode auf GitHub",
+                            "href": "https://github.com"
+                        }
+                    ]
+                }
+            ],
+            "fr": [
+                {
+                    "id": "data-source",
+                    "q": "D'où viennent les données ?",
+                    "body": [
+                        "De OpenParlData.ch. Le projet collecte les données sur les sites officiels des parlements, les nettoie et les publie en open data. parlhub lit leurs exports. Sans OpenParlData, parlhub n'existerait pas."
+                    ],
+                    "links": [
+                        {
+                            "label": "OpenParlData.ch",
+                            "href": "https://openparldata.ch"
+                        }
+                    ]
+                },
+                {
+                    "id": "coverage",
+                    "q": "Quels parlements sont couverts ?",
+                    "body": [
+                        "Les parlements de Suisse et du Liechtenstein, dans la mesure où OpenParlData les couvre. La couverture s'étend au fil du temps."
+                    ]
+                },
+                {
+                    "id": "freshness",
+                    "q": "Les données sont-elles à jour ?",
+                    "body": [
+                        "parlhub se synchronise régulièrement avec OpenParlData. OpenParlData lit à son tour les sites officiels. Un changement sur un site officiel peut donc mettre quelques jours à apparaître ici."
+                    ]
+                },
+                {
+                    "id": "missing-data",
+                    "q": "Pourquoi certaines données manquent-elles ?",
+                    "body": [
+                        "Elles ne sont probablement pas encore importées. OpenParlData est un jeune projet, et tous les parlements ne publient pas tout. Si quelque chose figure sur le site officiel mais manque ici depuis longtemps, signalez-le-moi."
+                    ]
+                },
+                {
+                    "id": "wrong-data",
+                    "q": "Je suis parlementaire et mes données sont fausses. Que faire ?",
+                    "body": [
+                        "parlhub montre les données telles qu'elles sont publiées. Elles proviennent du site officiel de votre parlement, collectées par OpenParlData. Si elles y sont fausses, adressez-vous au webmaster de votre parlement. Une fois la correction faite à la source, elle arrive aussi ici.",
+                        "Si les données sont justes sur le site officiel mais fausses sur parlhub, écrivez-moi et je regarderai."
+                    ],
+                    "links": [
+                        {
+                            "label": "hello@wefrick.com",
+                            "href": "mailto:hello@wefrick.com"
+                        }
+                    ]
+                },
+                {
+                    "id": "download",
+                    "q": "Comment télécharger des données ?",
+                    "body": [
+                        "Chaque liste a un bouton d'export. Les mêmes téléchargements fonctionnent aussi comme simples URL, donc par script :"
+                    ],
+                    "code": [
+                        "/<section>/export/<jeu>/<format>          tous les enregistrements d'une section",
+                        "/<section>/<id>/export/<jeu>/<format>     les enregistrements d'une entité"
+                    ],
+                    "body_after": [
+                        "Par exemple : /votings/export/votings/csv. Les formats sont json, csv et xlsx. Les téléchargements sont paginés, 500 lignes par page : ?page=2 pour la page suivante. ?langs=fr,de définit la priorité de langue du contenu. Les filtres de l'URL de liste fonctionnent aussi ici."
+                    ]
+                },
+                {
+                    "id": "license",
+                    "q": "Comment puis-je utiliser les données ?",
+                    "body": [
+                        "Les données sont sous licence CC BY 4.0. Utilisez-les, partagez-les et réutilisez-les, y compris à des fins commerciales. Il suffit de citer la source. Citez OpenParlData.ch pour les données ; pour les indicateurs calculés (concordance, loyauté, etc.), citez parlhub."
+                    ],
+                    "links": [
+                        {
+                            "label": "CC BY 4.0",
+                            "href": "https://creativecommons.org/licenses/by/4.0/deed.fr"
+                        }
+                    ]
+                },
+                {
+                    "id": "metrics",
+                    "q": "Comment la concordance et la loyauté sont-elles calculées ?",
+                    "body": [
+                        "À partir des votes : la concordance compare la fréquence à laquelle deux personnes votent de la même façon lors de votes communs ; la loyauté compare les votes d'une personne avec la majorité de son propre groupe. Moins il y a de votes communs, moins les pourcentages sont fiables, gardez-le en tête en comparant."
+                    ]
+                },
+                {
+                    "id": "official",
+                    "q": "parlhub est-il officiel ?",
+                    "body": [
+                        "Non. parlhub est un projet indépendant et à but non lucratif, porté par une seule personne. Il n'est lié à aucun parlement, aucune autorité ni aucun parti. Pour les informations officielles, utilisez les sites des parlements."
+                    ]
+                },
+                {
+                    "id": "tracking",
+                    "q": "Suis-je pisté ?",
+                    "body": [
+                        "Non. Il n'y a ni publicité, ni analytics, ni traceurs. Un cookie fonctionnel enregistre vos réglages (langue, affichage). C'est tout."
+                    ]
+                },
+                {
+                    "id": "contribute",
+                    "q": "Puis-je soutenir le projet ou y contribuer ?",
+                    "body": [
+                        "Oui, volontiers. Il n'y a pas de page de dons. Si vous voulez aider à couvrir les frais, écrivez-moi simplement. Les développeuses et développeurs comme les personnes en science politique qui veulent contribuer sont aussi les bienvenus. Le code est open source, sur GitHub."
+                    ],
+                    "links": [
+                        {
+                            "label": "hello@wefrick.com",
+                            "href": "mailto:hello@wefrick.com"
+                        },
+                        {
+                            "label": "Code source sur GitHub",
+                            "href": "https://github.com"
+                        }
+                    ]
+                }
+            ]
+        },
+        "metas.faq.title": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_faq' namespace 'metas' block; the interface language selects which file. faq page SEO <title>.",
+            "en": "Frequently asked questions",
+            "de": "Häufige Fragen",
+            "fr": "Questions fréquentes",
+            "it": "Domande frequenti",
+            "es": "Preguntas frecuentes"
+        },
+        "metas.faq.desc": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_faq' namespace 'metas' block; the interface language selects which file. faq page meta-description.",
+            "en": "Answers to common questions about parlhub: where the data comes from, how to download it, how you may use it (CC BY 4.0) and how to contribute.",
+            "de": "Antworten auf häufige Fragen zu parlhub: woher die Daten stammen, wie man sie herunterlädt, wie man sie nutzen darf (CC BY 4.0) und wie man mithelfen kann.",
+            "fr": "Réponses aux questions fréquentes sur parlhub : d'où viennent les données, comment les télécharger, comment les utiliser (CC BY 4.0) et comment contribuer.",
+            "it": "Risposte alle domande frequenti su parlhub: da dove provengono i dati, come scaricarli, come utilizzarli (CC BY 4.0) e come contribuire.",
+            "es": "Respuestas a preguntas frecuentes sobre parlhub: de dónde proceden los datos, cómo descargarlos, cómo se pueden utilizar (CC BY 4.0) y cómo contribuir."
+        }
+    }
+}

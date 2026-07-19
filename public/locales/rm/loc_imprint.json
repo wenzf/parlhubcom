@@ -1,0 +1,15 @@
+{
+  "imprint": {
+    "title": "Impressum",
+    "nature": "parlhub è in project privat e senza intent da profit. El n'è collià cun nagin parlament, nagina autoritad u nagin partì.",
+    "operator_label": "Responsabel per il cuntegn",
+    "contact_label": "Contact",
+    "code_label": "Code da funtauna",
+    "data_label": "Datas",
+    "disclaimer": "Mess a disposiziun sco quai ch'el è, senza garanzia. Las datas vegnan mussadas uschè sco ch'ellas èn vegnidas publitgadas da la funtauna."
+  },
+  "metas": {
+    "imprint.title": "Impressum",
+    "imprint.desc": "Impressum da parlhub: tgi che gestiunescha la pagina, co contactar ed las licenzas dal code e da las datas."
+  }
+}

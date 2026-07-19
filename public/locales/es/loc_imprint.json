@@ -1,0 +1,15 @@
+{
+  "imprint": {
+    "title": "Aviso legal",
+    "nature": "parlhub es un proyecto privado y sin ánimo de lucro. No está afiliado a ningún parlamento, autoridad ni partido.",
+    "operator_label": "Responsable del contenido",
+    "contact_label": "Contacto",
+    "code_label": "Código fuente",
+    "data_label": "Datos",
+    "disclaimer": "Se ofrece tal cual, sin garantía. Los datos se muestran tal como los publica la fuente."
+  },
+  "metas": {
+    "imprint.title": "Aviso legal",
+    "imprint.desc": "Aviso legal de parlhub: quién gestiona el sitio, cómo ponerse en contacto y las licencias del código y los datos."
+  }
+}

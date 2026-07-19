@@ -1,0 +1,38 @@
+{
+  "traffic_stats": {
+    "title": "Zugriffsstatistik",
+    "lead": "Welche Teile von parlhub abgerufen werden, in welcher Sprache und von wem. Einmal täglich aus dem Anfrageprotokoll des Servers aggregiert — keine Cookies, kein Tracking, keine IP-Adressen. Gezählt werden Anfragen, nicht Personen.",
+    "no_data": "Noch keine Zahlen. Die ersten Statistiken erscheinen, sobald die tägliche Auswertung gelaufen ist.",
+    "group_by": "Gruppieren nach",
+    "group_by_aria": "Anfragen gruppieren nach",
+    "audience": "Publikum",
+    "audience_aria": "Anfragen nach Publikum filtern",
+    "aud_human": "Menschen",
+    "aud_bot": "Bots",
+    "aud_both": "Beide",
+    "view": "Ansicht",
+    "view_aria": "Zwischen täglicher und monatlicher Ansicht wechseln",
+    "view_daily": "Täglich",
+    "view_monthly": "Monatlich",
+    "dim_route": "Route",
+    "dim_lang": "Sprache",
+    "dim_visitor": "Besuchertyp",
+    "dim_device": "Gerät",
+    "include_internal": "Health-Checks einbeziehen",
+    "stat_requests": "Anfragen",
+    "stat_average": "Durchschnitt",
+    "stat_p95": "p95",
+    "stat_slowest": "Langsamste",
+    "col_share": "Anteil",
+    "other": "andere",
+    "route_other_note": "„(other)“ bündelt alle Anfragen an Pfade, die nicht zur Website gehören — meist automatische Scanner, fehlerhafte oder bösartige Bot-Anfragen oder vertippte URLs. Sie werden zu einer Zeile zusammengefasst, damit eine Flut zufälliger Pfade die Statistik nicht aufblähen kann.",
+    "chart_alt": "Gestapeltes Balkendiagramm der Anfragen pro Zeitraum nach {dim}: {periods} Zeiträume, insgesamt {count} Anfragen. Die Tabelle darunter enthält dieselben Daten.",
+    "chart_alt_excl": "Gestapeltes Balkendiagramm der Anfragen pro Zeitraum nach {dim}: {periods} Zeiträume, insgesamt {count} Anfragen, ohne interne Health-Checks. Die Tabelle darunter enthält dieselben Daten.",
+    "table_caption": "Anfragen nach {dim} — dieselben Daten wie im Diagramm oben.",
+    "footnote": "p95 wird aus Laufzeit-Buckets abgeleitet und ist daher auf die Bucket-Grenze genau. Durchschnitte sind nach Anzahl der Anfragen gewichtet."
+  },
+  "metas": {
+    "traffic_stats.title": "Zugriffsstatistik",
+    "traffic_stats.desc": "Welche Teile von parlhub abgerufen werden, in welcher Sprache und von wem — einmal täglich aus dem Anfrageprotokoll des Servers aggregiert. Keine Cookies, kein Tracking, keine IP-Adressen."
+  }
+}

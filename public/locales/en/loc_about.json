@@ -1,0 +1,46 @@
+{
+  "about": {
+    "title": "About parlhub",
+    "lead": "parlhub is a data portal for the parliaments of Switzerland and the Liechtenstein Landtag. It opens up data on actors and parliamentary processes such as votes, along with documents and speeches. The information is presented in tables, in part also prepared and analysed as charts. The raw data is available through interfaces in various formats.",
+    "data": {
+      "heading": "The data",
+      "body": [
+        "All data comes from OpenParlData.ch. They collect the official parliamentary data, clean it up and publish it as open data. That is hard, unglamorous work. parlhub would not exist without it. If you like this site, their project deserves a big part of the credit. Go have a look.",
+        "The numbers on this site (alignment, loyalty and so on) are computed by parlhub from that data. If a computation is wrong, that's on me, not on OpenParlData.ch."
+      ],
+      "source_label": "OpenParlData.ch",
+      "source_href": "https://openparldata.ch"
+    },
+    "goal": {
+      "heading": "The goal",
+      "body": [
+        "The aim is to make this data accessible to the broadest possible public. First and foremost through a user-friendly, accessible website. Secondly, by making the site easy for search engines to read and understand (server-side rendering, schema.org) and by letting AI agents interact with the site directly through an interface to query data (WebMCP)."
+      ]
+    },
+    "maintainer": {
+      "heading": "Who runs this",
+      "body": [
+        "I build and run parlhub alone, in my spare time, as a non-profit project. There are no ads and no tracking. If you want to support the project, for example by chipping in on the server costs, don't hesitate to write me. The site stays free either way.",
+        "Contributions are very welcome too, from developers as well as people from research or public administration.",
+        "The code is open source. Found a bug? Missing something? Tell me on GitHub. The project was programmed/prototyped in just under three weeks, so expect anything from conceptual flaws to bugs in edge cases."
+      ],
+      "website_label": "wefrick.com",
+      "website_href": "https://wefrick.com",
+      "email_label": "hello@wefrick.com",
+      "email_href": "mailto:hello@wefrick.com",
+      "code_label": "Source on GitHub",
+      "code_href": "https://github.com/wenzf/parlhubcom",
+      "imprint_label": "Imprint"
+    },
+    "not": {
+      "heading": "What parlhub is not",
+      "body": [
+        "parlhub does not rate politicians. It shows data. What the data means is up to you."
+      ]
+    }
+  },
+  "metas": {
+    "about.title": "About parlhub",
+    "about.desc": "parlhub is a non-profit, open-source portal for the parliaments of Switzerland and Liechtenstein. All data comes from OpenParlData.ch. No ads, no tracking."
+  }
+}

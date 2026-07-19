@@ -1,0 +1,138 @@
+{
+    "_meta": {
+        "namespace": "loc_home",
+        "source_files": [
+            "public/locales/<lang>/loc_home.json for lang in de, en, fr"
+        ],
+        "loaded_by": "app/routes/home.tsx",
+        "description": "Landing page: hero, section teasers, dataset stats strip.",
+        "format": "Each entry: context (where the string appears in the UI, its role, placeholders and length/grammar constraints) + the current de/en/fr texts as translation reference. Use the context when translating into a new language; a null text means the key is missing in that language file.",
+        "generated": "2026-07-13, code-verified against app/ sources; regenerate when public/locales texts or consuming components change."
+    },
+    "keys": {
+        "home.tagline": {
+            "context": "Homepage (app/routes/home.tsx) hero: the tagline paragraph shown directly under the parlhub logo wordmark. One calm descriptive sentence.",
+            "en": "A portal for the parliaments of Switzerland and Liechtenstein.",
+            "de": "Ein Portal für die Parlamente der Schweiz und Liechtensteins.",
+            "fr": "Un portail pour les parlements de Suisse et du Liechtenstein."
+        },
+        "home.search_label": {
+            "context": "Homepage search: visually hidden (sr-only) <label> for the search input — read by screen readers only. Noun.",
+            "en": "Search",
+            "de": "Suche",
+            "fr": "Recherche"
+        },
+        "home.search_placeholder": {
+            "context": "Homepage search: placeholder text inside the search input; keep short, ends with an ellipsis.",
+            "en": "Search…",
+            "de": "Suchen…",
+            "fr": "Rechercher…"
+        },
+        "home.search_button": {
+            "context": "Homepage search: label of the submit button next to the search field (with a magnifier icon). Imperative verb, must stay short.",
+            "en": "Search",
+            "de": "Suchen",
+            "fr": "Rechercher"
+        },
+        "home.search_scope_label": {
+            "context": "Homepage: aria-label of the group of scope chips under the search field that pick which data section the search submits to (e.g. 'Search in: People, Votings, …'). Screen-reader only; a preposition phrase that is followed by section names.",
+            "en": "Search in",
+            "de": "Suchen in",
+            "fr": "Rechercher dans"
+        },
+        "home.sections.people": {
+            "context": "Homepage: label of a search-scope chip and of the linked count in the live dataset strip ('12'345 People'). Short plural noun for members of parliament (MPs).",
+            "en": "People",
+            "de": "Personen",
+            "fr": "Personnes"
+        },
+        "home.sections.votings": {
+            "context": "Homepage: search-scope chip / dataset-strip count label. Short plural noun for parliamentary (roll-call) votes.",
+            "en": "Votings",
+            "de": "Abstimmungen",
+            "fr": "Votes"
+        },
+        "home.sections.affairs": {
+            "context": "Homepage: search-scope chip / dataset-strip count label. 'Affairs' = legislative business items (de 'Geschäfte', fr 'objets') — motions, postulates, bills etc., not private affairs.",
+            "en": "Affairs",
+            "de": "Geschäfte",
+            "fr": "Objets"
+        },
+        "home.sections.speeches": {
+            "context": "Homepage: search-scope chip / dataset-strip count label. Plural noun for speeches/interventions given in parliament.",
+            "en": "Speeches",
+            "de": "Reden",
+            "fr": "Interventions"
+        },
+        "home.sections.bodies": {
+            "context": "Homepage: search-scope chip / dataset-strip count label for the 'bodies' section. The section key is 'bodies' but the display term chosen is 'Parliaments' (federal, cantonal, communal parliaments). Short plural noun.",
+            "en": "Parliaments",
+            "de": "Parlamente",
+            "fr": "Parlements"
+        },
+        "home.sections.groups": {
+            "context": "Homepage: search-scope chip / dataset-strip count label for the 'groups' section — committees, commissions and parliamentary groups within a parliament (de 'Gremien'). Keep short.",
+            "en": "Committees & groups",
+            "de": "Gremien",
+            "fr": "Organes"
+        },
+        "home.sections.meetings": {
+            "context": "Homepage: search-scope chip / dataset-strip count label. Plural noun for parliamentary sittings/sessions (de 'Sitzungen').",
+            "en": "Meetings",
+            "de": "Sitzungen",
+            "fr": "Séances"
+        },
+        "home.sections.texts": {
+            "context": "Homepage: search-scope chip / dataset-strip count label. Plural noun for full text contents of parliamentary documents.",
+            "en": "Texts",
+            "de": "Texte",
+            "fr": "Textes"
+        },
+        "home.sections.documents": {
+            "context": "Homepage: search-scope chip / dataset-strip count label. Plural noun for parliamentary documents (files/PDFs attached to affairs).",
+            "en": "Documents",
+            "de": "Dokumente",
+            "fr": "Documents"
+        },
+        "home.sections.interests": {
+            "context": "Homepage: search-scope chip / dataset-strip count label. 'Interests' = declared lobbying/interest ties of MPs (register of interests), not hobbies.",
+            "en": "Interests",
+            "de": "Interessen",
+            "fr": "Intérêts"
+        },
+        "home.sections.organizations": {
+            "context": "Homepage: search-scope chip / dataset-strip count label. Plural noun for organizations (companies, associations) linked to MPs via interest ties.",
+            "en": "Organizations",
+            "de": "Organisationen",
+            "fr": "Organisations"
+        },
+        "home.stats_updated": {
+            "context": "Homepage dataset strip (bottom of hero): prefix before the last data-sync date, rendered as 'Data updated: 12 Jul 2026'. Keep short; a colon and the localized date are appended in code.",
+            "en": "Data updated",
+            "de": "Daten aktualisiert",
+            "fr": "Données mises à jour"
+        },
+        "home.start_link": {
+            "context": "Homepage: text of the link under the search box leading to the /start guided quick-links page. Frames it as quick links to what's found where (federal chambers, cantons, communal parliaments) — not a mandatory starting point.",
+            "en": "Quick links to the federal chambers, cantons and communal parliaments",
+            "de": "Quicklinks zu Bund, Kantonen und Gemeindeparlamenten",
+            "fr": "Liens rapides vers les chambres fédérales, les cantons et les parlements communaux"
+        },
+        "metas.home.title": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_home' namespace 'metas' block; the interface language selects which file. home page SEO <title>.",
+            "en": "Swiss & Liechtenstein parliamentary data",
+            "de": "Schweizer und Liechtensteiner Parlamentsdaten",
+            "fr": "Suisse et Liechtenstein : données parlementaires",
+            "it": "Chi vota come chi?",
+            "es": "¿Quién vota como quién?"
+        },
+        "metas.home.desc": {
+            "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_home' namespace 'metas' block; the interface language selects which file. home page meta-description.",
+            "en": "Browse the parliaments of Switzerland and Liechtenstein: members, votes, speeches, lobbying ties and more. Non-profit, open source.",
+            "de": "Die Parlamente der Schweiz und Liechtensteins durchsuchen: Ratsmitglieder, Abstimmungen, Reden, Lobby-Verbindungen und mehr. Nicht kommerziell, Open Source.",
+            "fr": "Explorer les parlements de Suisse et du Liechtenstein : parlementaires, votes, interventions, liens de lobbying et plus. Non lucratif, open source.",
+            "it": "Esplora i parlamenti di Svizzera e Liechtenstein: parlamentari, votazioni, interventi, legami di lobbying e altro. No profit, open source.",
+            "es": "Explore los parlamentos de Suiza y Liechtenstein: diputados, votaciones, discursos, vínculos de lobbying y más. Sin fines de lucro, código abierto."
+        }
+    }
+}

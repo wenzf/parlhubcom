@@ -1,0 +1,15 @@
+{
+  "imprint": {
+    "title": "Imprint",
+    "nature": "parlhub is a private, non-profit project. It is not affiliated with any parliament, authority or party.",
+    "operator_label": "Responsible for content",
+    "contact_label": "Contact",
+    "code_label": "Source code",
+    "data_label": "Data",
+    "disclaimer": "Provided as is, without warranty. Data is shown as published by the source."
+  },
+  "metas": {
+    "imprint.title": "Imprint",
+    "imprint.desc": "Legal notice for parlhub: who runs the site, how to get in touch, and the code and data licenses."
+  }
+}

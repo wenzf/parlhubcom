@@ -1,0 +1,30 @@
+{
+    "start": {
+        "title": "Einstieg",
+        "lede": "Direkte Wege zu den meistgesuchten Seiten: die eidgenössischen Kammern, die Kantonsparlamente und der Zugang zu vielen Gemeinden.",
+        "search_label": "Seite durchsuchen",
+        "search_placeholder": "Eine Kammer, einen Kanton oder eine Gemeinde suchen…",
+        "no_matches": "Keine Treffer für „{{q}}“.",
+        "federal_heading": "Bund",
+        "federal_sub": "nationale Parlamente",
+        "chambers_label": "Kammern",
+        "cantonal_heading": "Kantonsparlamente",
+        "cantonal_sub": "alle 26",
+        "communal_heading": "Gemeindeparlamente",
+        "communal_sub": "Suche",
+        "communal_intro": "Hier erscheinen nur Gemeinden mit einem gewählten Parlament (rund 460 von etwa 2100). Oben suchen, um einzusteigen.",
+        "results_count": "{{n}} Treffer",
+        "results_capped": "{{n}} von {{total}}. Suche verfeinern",
+        "link_overview": "Übersicht",
+        "link_members": "Mitglieder",
+        "link_votings": "Abstimmungen",
+        "link_lobby": "Lobby",
+        "link_alignment": "Übereinstimmung",
+        "link_loyalty": "Fraktionstreue",
+        "link_affairs": "Geschäfte"
+    },
+  "metas": {
+    "start.title": "Einstieg",
+    "start.desc": "Direkte Links in die Parlamente der Schweiz und Liechtensteins: die eidgenössischen Kammern und ihre Seiten, alle Kantonsparlamente und eine Suche für Gemeindeparlamente."
+  }
+}

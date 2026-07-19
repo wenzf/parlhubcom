@@ -1,0 +1,491 @@
+{
+  "_meta": {
+    "namespace": "loc_main",
+    "source_files": [
+      "public/locales/<lang>/loc_main.json for lang in de, en, fr, it, es, rm (rm carries only the intro block)"
+    ],
+    "loaded_by": "app/routes/layouts/lang_layout.tsx (every page). The `intro` block is additionally loaded for EVERY content language at once and handed to app/components/blocks/site-intro/index.tsx, because the alternative-language offer is rendered in the OFFERED language.",
+    "description": "Top-level lang-layout chrome: Settings menu, main navigation, the site-intro toast (`intro` block: cookie notice, content-language explainer, alternative-language switch offer — the intro is loaded in every content language, incl. rm which has no other UI locale), plus project/experiments SEO copy (`metas`).",
+    "format": "Each entry: context (where the string appears in the UI, its role, placeholders and length/grammar constraints) + the current de/en/fr texts as translation reference. Use the context when translating into a new language; a null text means the key is missing in that language file.",
+    "generated": "2026-07-15, code-verified against app/; loc_intro merged into loc_main."
+  },
+  "keys": {
+    "settings.menu_label": {
+      "context": "Trigger button of the header Settings dropdown menu (app/components/blocks/header/index.tsx); short noun.",
+      "en": "Settings",
+      "de": "Einstellungen",
+      "fr": "Paramètres"
+    },
+    "settings.appearance": {
+      "context": "Quiet section label above the first grouped card in the header Settings menu (app/components/blocks/header/index.tsx), grouping theme, font size, contrast and grayscale rows; short noun.",
+      "en": "Appearance",
+      "de": "Darstellung",
+      "fr": "Apparence"
+    },
+    "settings.theme": {
+      "context": "Row label in the Settings menu next to the theme select (System/Light/Dark) (app/components/blocks/header/index.tsx); keep short.",
+      "en": "Theme",
+      "de": "Erscheinungsbild",
+      "fr": "Thème"
+    },
+    "settings.theme_system": {
+      "context": "Option in the theme select of the Settings menu (app/components/blocks/header/index.tsx): follow the operating-system color scheme.",
+      "en": "System",
+      "de": "System",
+      "fr": "Système"
+    },
+    "settings.theme_light": {
+      "context": "Option in the theme select of the Settings menu (app/components/blocks/header/index.tsx): light color scheme.",
+      "en": "Light",
+      "de": "Hell",
+      "fr": "Clair"
+    },
+    "settings.theme_dark": {
+      "context": "Option in the theme select of the Settings menu (app/components/blocks/header/index.tsx): dark color scheme.",
+      "en": "Dark",
+      "de": "Dunkel",
+      "fr": "Sombre"
+    },
+    "settings.font_size": {
+      "context": "Row label in the Settings menu next to a -/+ font-size stepper (app/components/blocks/header/index.tsx); keep short.",
+      "en": "Font size",
+      "de": "Schriftgrösse",
+      "fr": "Taille du texte"
+    },
+    "settings.font_size_decrease": {
+      "context": "aria-label of the minus button of the font-size stepper in the Settings menu (app/components/blocks/header/index.tsx); imperative verb phrase for screen readers.",
+      "en": "Decrease font size",
+      "de": "Schrift verkleinern",
+      "fr": "Réduire la taille du texte"
+    },
+    "settings.font_size_increase": {
+      "context": "aria-label of the plus button of the font-size stepper in the Settings menu (app/components/blocks/header/index.tsx); imperative verb phrase for screen readers.",
+      "en": "Increase font size",
+      "de": "Schrift vergrössern",
+      "fr": "Augmenter la taille du texte"
+    },
+    "settings.high_contrast": {
+      "context": "Row label for the on/off switch enabling a higher-contrast display mode, Settings menu (app/components/blocks/header/index.tsx); keep short.",
+      "en": "High contrast",
+      "de": "Hoher Kontrast",
+      "fr": "Contraste élevé"
+    },
+    "settings.grayscale": {
+      "context": "Row label for the on/off switch that desaturates the UI to grayscale, Settings menu (app/components/blocks/header/index.tsx); keep short.",
+      "en": "Grayscale",
+      "de": "Graustufen",
+      "fr": "Niveaux de gris"
+    },
+    "settings.language": {
+      "context": "Quiet section label above the language card in the Settings menu (app/components/blocks/header/index.tsx), grouping interface-language and content-language rows; short noun.",
+      "en": "Language",
+      "de": "Sprache",
+      "fr": "Langue"
+    },
+    "settings.interface_language": {
+      "context": "Row label for the UI-language select in the Settings menu (app/components/blocks/header/index.tsx); means the interface/chrome language as opposed to the data (content) language; keep short.",
+      "en": "Interface",
+      "de": "Oberfläche",
+      "fr": "Interface"
+    },
+    "settings.content_language": {
+      "context": "Row label for the content-language select in the Settings menu (app/components/blocks/header/index.tsx); 'content language' = the language the parliamentary data (names, titles, texts) is displayed in, independent of the interface language.",
+      "en": "Content language",
+      "de": "Inhaltssprache",
+      "fr": "Langue du contenu"
+    },
+    "settings.content_language_auto": {
+      "context": "Default option in the content-language select (app/components/blocks/header/index.tsx): content language follows the interface language automatically.",
+      "en": "Auto (follow interface)",
+      "de": "Automatisch (folgt Oberfläche)",
+      "fr": "Auto (suit l'interface)"
+    },
+    "settings.content_language_note": {
+      "context": "Explanatory note paragraph below the content-language select in the Settings menu (app/components/blocks/header/index.tsx); explains the fallback chain when a data record lacks the chosen language.",
+      "en": "Language of the displayed data (names, titles, texts). Independent of the interface; when a record isn't available, the next language is used.",
+      "de": "Sprache der angezeigten Daten (Namen, Titel, Texte). Unabhängig von der Oberfläche; fehlt ein Eintrag, wird die nächste Sprache verwendet.",
+      "fr": "Langue des données affichées (noms, titres, textes). Indépendante de l'interface ; si une donnée manque, la langue suivante est utilisée."
+    },
+    "settings.content_language_priority": {
+      "context": "Label prefix rendered as 'Priority: de > fr > ...' before the content-language fallback order in the Settings menu (app/components/blocks/header/index.tsx); short noun.",
+      "en": "Priority",
+      "de": "Priorität",
+      "fr": "Priorité"
+    },
+    "nav.home": {
+      "context": "aria-label of the parlhub logo link back to the home page in app/routes/layouts/project_layout.tsx and experiments_layout.tsx headers; screen-reader only, format 'parlhub — <home>'.",
+      "en": "parlhub home",
+      "de": "parlhub Startseite",
+      "fr": "Accueil de parlhub"
+    },
+    "nav.skip_to_content": {
+      "context": "Skip link (WCAG 2.4.1 Bypass Blocks): the first focusable element in the body, rendered by app/components/blocks/skip-link/index.tsx from app/routes/layouts/lang_layout.tsx. Off-screen until it receives keyboard focus, then visible above the header; activating it jumps focus past the header chrome to the page's <main>. Imperative, short enough to fit one line in a 44px button.",
+      "en": "Skip to main content",
+      "de": "Zum Hauptinhalt springen",
+      "fr": "Aller au contenu principal",
+      "it": "Vai al contenuto principale",
+      "es": "Saltar al contenido principal"
+    },
+    "nav.explore": {
+      "context": "Trigger button of the header's Explore dropdown (app/components/blocks/header/index.tsx) that opens the grid of all data sections; short noun meaning the data catalogue.",
+      "en": "Data",
+      "de": "Daten",
+      "fr": "Données"
+    },
+    "nav.start": {
+      "context": "Label of the 'Start here' entry link at the top of the header Explore dropdown (app/components/blocks/header/index.tsx), leading to the guided entry page; short, inviting.",
+      "en": "Start here",
+      "de": "Einstieg",
+      "fr": "Pour commencer"
+    },
+    "nav.start_desc": {
+      "context": "One-line description under the 'Start here' link in the header Explore dropdown (app/components/blocks/header/index.tsx); 'chambers' = parliamentary chambers, 'cantons'/'communes' = Swiss administrative levels.",
+      "en": "Quicklinks to chambers, cantons and communes",
+      "de": "Quicklinks zu Kammern, Kantonen und Gemeinden",
+      "fr": "Liens rapides vers les chambres, cantons et communes"
+    },
+    "nav.group_parliament": {
+      "context": "Group heading in the header Explore dropdown (app/components/blocks/header/index.tsx) over People/Parliaments/Committees & groups (groups defined in app/configs/sidebars.config.ts NAV_SECTION_GROUPS); short noun for parliamentary actors.",
+      "en": "Actors",
+      "de": "Akteure",
+      "fr": "Acteurs"
+    },
+    "nav.group_proceedings": {
+      "context": "Group heading in the header Explore dropdown (app/components/blocks/header/index.tsx) over Affairs/Votings/Meetings; short noun for parliamentary proceedings/operations.",
+      "en": "Proceedings",
+      "de": "Betrieb",
+      "fr": "Travaux"
+    },
+    "nav.group_records": {
+      "context": "Group heading in the header Explore dropdown (app/components/blocks/header/index.tsx) over Speeches/Texts/Documents; short noun for written/spoken records.",
+      "en": "Records",
+      "de": "Unterlagen",
+      "fr": "Archives"
+    },
+    "nav.group_lobbying": {
+      "context": "Group heading in the header Explore dropdown (app/components/blocks/header/index.tsx) over Interests/Organizations; means lobbying ties of MPs.",
+      "en": "Lobbying",
+      "de": "Lobbying",
+      "fr": "Lobbying"
+    },
+    "nav.people": {
+      "context": "Menu item in the header Explore dropdown (app/components/blocks/header/index.tsx) linking to the People (members of parliament) section index; short noun.",
+      "en": "People",
+      "de": "Personen",
+      "fr": "Personnes"
+    },
+    "nav.bodies": {
+      "context": "Menu item in the header Explore dropdown (app/components/blocks/header/index.tsx) linking to the Bodies section (parliaments/councils of Switzerland and Liechtenstein); short noun.",
+      "en": "Parliaments",
+      "de": "Parlamente",
+      "fr": "Parlements"
+    },
+    "nav.groups": {
+      "context": "Menu item in the header Explore dropdown (app/components/blocks/header/index.tsx) linking to the Groups section (committees and parliamentary groups/fractions); de 'Gremien' and fr 'Organes' are deliberately broader than en to avoid heading collisions.",
+      "en": "Committees & groups",
+      "de": "Gremien",
+      "fr": "Organes"
+    },
+    "nav.affairs": {
+      "context": "Menu item in the header Explore dropdown (app/components/blocks/header/index.tsx) linking to the Affairs section; 'affair' (de 'Geschäft', fr 'objet') = a legislative business item (motion, bill, interpellation).",
+      "en": "Affairs",
+      "de": "Geschäfte",
+      "fr": "Objets"
+    },
+    "nav.votings": {
+      "context": "Menu item in the header Explore dropdown (app/components/blocks/header/index.tsx) linking to the Votings section (parliamentary roll-call votes, not popular referendums); short noun.",
+      "en": "Votings",
+      "de": "Abstimmungen",
+      "fr": "Votes"
+    },
+    "nav.meetings": {
+      "context": "Menu item in the header Explore dropdown (app/components/blocks/header/index.tsx) linking to the Meetings section (parliamentary sittings/sessions); short noun.",
+      "en": "Meetings",
+      "de": "Sitzungen",
+      "fr": "Séances"
+    },
+    "nav.speeches": {
+      "context": "Menu item in the header Explore dropdown (app/components/blocks/header/index.tsx) linking to the Speeches section (spoken interventions in parliament debates); short noun.",
+      "en": "Speeches",
+      "de": "Reden",
+      "fr": "Interventions"
+    },
+    "nav.texts": {
+      "context": "Menu item in the header Explore dropdown (app/components/blocks/header/index.tsx) linking to the Texts section (full texts of parliamentary records); short noun.",
+      "en": "Texts",
+      "de": "Texte",
+      "fr": "Textes"
+    },
+    "nav.documents": {
+      "context": "Menu item in the header Explore dropdown (app/components/blocks/header/index.tsx) linking to the Documents section (attached files/PDFs of affairs); short noun.",
+      "en": "Documents",
+      "de": "Dokumente",
+      "fr": "Documents"
+    },
+    "nav.interests": {
+      "context": "Menu item in the header Explore dropdown (app/components/blocks/header/index.tsx) linking to the Interests section (MPs' declared lobbying/interest ties); short noun.",
+      "en": "Interests",
+      "de": "Interessen",
+      "fr": "Intérêts"
+    },
+    "nav.organizations": {
+      "context": "Menu item in the header Explore dropdown (app/components/blocks/header/index.tsx) linking to the Organizations section (organizations tied to MPs' interests); short noun.",
+      "en": "Organizations",
+      "de": "Organisationen",
+      "fr": "Organisations"
+    },
+    "nav.project": {
+      "context": "Trigger button of the header Project dropdown (app/components/blocks/header/index.tsx), page title of the project index (app/routes/pages/project/project_index.tsx) and root breadcrumb of the /project section (app/configs/site.config.ts); short noun for the parlhub project itself.",
+      "en": "Project",
+      "de": "Projekt",
+      "fr": "Projet"
+    },
+    "nav.project_desc": {
+      "context": "One-line description under the Project overview item in the header Project dropdown (app/components/blocks/header/index.tsx); keep short.",
+      "en": "The project at a glance",
+      "de": "Das Projekt auf einen Blick",
+      "fr": "Le projet en un coup d'œil"
+    },
+    "nav.about": {
+      "context": "Label of the About page: header Project dropdown item (app/components/blocks/header/index.tsx), card on the project index page, and breadcrumb (app/configs/site.config.ts); short.",
+      "en": "About",
+      "de": "Über",
+      "fr": "À propos"
+    },
+    "nav.about_desc": {
+      "context": "One-line description under the About link in the header Project dropdown (app/components/blocks/header/index.tsx) and on the project index card; 'parlhub' is the site name, keep it untranslated.",
+      "en": "What parlhub is and who is behind it",
+      "de": "Was parlhub ist und wer dahintersteht",
+      "fr": "Ce qu'est parlhub et qui se cache derrière"
+    },
+    "nav.faq": {
+      "context": "Label of the FAQ page: header Project dropdown item (app/components/blocks/header/index.tsx), project index card, and breadcrumb (app/configs/site.config.ts); commonly kept as 'FAQ'.",
+      "en": "FAQ",
+      "de": "FAQ",
+      "fr": "FAQ"
+    },
+    "nav.faq_desc": {
+      "context": "One-line description under the FAQ link in the header Project dropdown (app/components/blocks/header/index.tsx) and on the project index card.",
+      "en": "Answers to common questions",
+      "de": "Antworten auf häufige Fragen",
+      "fr": "Réponses aux questions fréquentes"
+    },
+    "nav.sustainability": {
+      "context": "Label of the Sustainability page (/project/sustainability): header Project dropdown item (app/components/blocks/header/index.tsx), project index card, and breadcrumb (app/configs/site.config.ts, NS_SUSTAINABILITY handle).",
+      "en": "Sustainability",
+      "de": "Nachhaltigkeit",
+      "fr": "Durabilité",
+      "it": "Sostenibilità",
+      "es": "Sostenibilidad"
+    },
+    "nav.sustainability_desc": {
+      "context": "One-line description under the Sustainability link in the header Project dropdown (app/components/blocks/header/index.tsx) and on the project index card.",
+      "en": "How parlhub is hosted and what it costs the planet",
+      "de": "Wie parlhub gehostet wird und was das die Umwelt kostet",
+      "fr": "Comment parlhub est hébergé et ce que cela coûte à l'environnement",
+      "it": "Come è ospitato parlhub e quanto costa all'ambiente",
+      "es": "Cómo se aloja parlhub y qué le cuesta al medioambiente"
+    },
+    "nav.accessibility": {
+      "context": "Label of the Accessibility statement page (/project/accessibility): header Project dropdown item (app/components/blocks/header/index.tsx), project index card, and breadcrumb (app/configs/site.config.ts, NS_ACCESSIBILITY handle).",
+      "en": "Accessibility",
+      "de": "Barrierefreiheit",
+      "fr": "Accessibilité",
+      "it": "Accessibilità",
+      "es": "Accesibilidad"
+    },
+    "nav.accessibility_desc": {
+      "context": "One-line description under the Accessibility link in the header Project dropdown (app/components/blocks/header/index.tsx) and on the project index card.",
+      "en": "What works, what doesn't, and how to report a barrier",
+      "de": "Was funktioniert, was nicht, und wie Sie Hindernisse melden",
+      "fr": "Ce qui marche, ce qui ne marche pas, et comment signaler un obstacle",
+      "it": "Che cosa funziona, che cosa no e come segnalare una barriera",
+      "es": "Qué funciona, qué no, y cómo informar de una barrera"
+    },
+    "nav.traffic_stats": {
+      "context": "Label of the Traffic statistics page (/project/traffic-stats): header Project dropdown item (app/components/blocks/header/index.tsx), project index card, and breadcrumb (app/configs/site.config.ts, NS_TRAFFIC_STATS handle).",
+      "en": "Traffic statistics",
+      "de": "Zugriffsstatistik",
+      "fr": "Statistiques de trafic",
+      "it": "Statistiche di traffico",
+      "es": "Estadísticas de tráfico"
+    },
+    "nav.traffic_stats_desc": {
+      "context": "One-line description under the Traffic statistics link in the header Project dropdown (app/components/blocks/header/index.tsx) and on the project index card.",
+      "en": "Which parts of the site get requested, and by whom",
+      "de": "Welche Teile der Website abgerufen werden, und von wem",
+      "fr": "Quelles parties du site sont consultées, et par qui",
+      "it": "Quali parti del sito vengono richieste, e da chi",
+      "es": "Qué partes del sitio se solicitan, y por quién"
+    },
+    "nav.imprint": {
+      "context": "Visible link text of the Imprint / legal-notice link in the header Project dropdown (app/components/blocks/header/index.tsx) and on the project index card; also the breadcrumb label for /project/imprint. Short; matches the imprint page's own title.",
+      "en": "Imprint",
+      "de": "Impressum",
+      "fr": "Mentions légales",
+      "it": "Note legali",
+      "es": "Aviso legal"
+    },
+    "nav.imprint_desc": {
+      "context": "One-line description under the Imprint link in the header Project dropdown and on the project index card.",
+      "en": "Who runs parlhub, contact, and the licenses",
+      "de": "Wer parlhub betreibt, Kontakt und Lizenzen",
+      "fr": "Qui gère parlhub, contact et licences",
+      "it": "Chi gestisce parlhub, contatto e licenze",
+      "es": "Quién gestiona parlhub, contacto y licencias"
+    },
+    "nav.github": {
+      "context": "Visible link text of the external link to the project's source repository, shown as the last row of the header Project dropdown (app/components/blocks/header/index.tsx); the URL itself is the REPO_URL constant in app/configs/site.config.ts, not a loc string. 'GitHub' is a proper name — keep verbatim.",
+      "en": "GitHub",
+      "de": "GitHub",
+      "fr": "GitHub",
+      "it": "GitHub",
+      "es": "GitHub"
+    },
+    "nav.github_desc": {
+      "context": "One-line description under the GitHub link in the header Project dropdown (app/components/blocks/header/index.tsx). Says the link leads off-site to the project's source code.",
+      "en": "The project's source code on GitHub",
+      "de": "Quellcode des Projekts auf GitHub",
+      "fr": "Le code source du projet sur GitHub",
+      "it": "Il codice sorgente del progetto su GitHub",
+      "es": "El código fuente del proyecto en GitHub"
+    },
+    "nav.data_guide": {
+      "context": "Label of the Data guide page: header Project dropdown item (app/components/blocks/header/index.tsx), project index card, and breadcrumb (app/configs/site.config.ts); a plain-language guide explaining each data type; keep short.",
+      "en": "Data guide",
+      "de": "Datenguide",
+      "fr": "Guide des données"
+    },
+    "nav.data_guide_desc": {
+      "context": "One-line description under the Data guide link in the header Project dropdown (app/components/blocks/header/index.tsx) and on the project index card.",
+      "en": "Every kind of data, in plain terms, with examples",
+      "de": "Jede Datenart in einfachen Worten, mit Beispielen",
+      "fr": "Chaque type de données en clair, avec des exemples"
+    },
+    "nav.data_map": {
+      "context": "Label of the Data map page: header Project dropdown item (app/components/blocks/header/index.tsx), project index card, and breadcrumb (app/configs/site.config.ts); an interactive diagram of how the data entities relate; keep short.",
+      "en": "Data map",
+      "de": "Datenkarte",
+      "fr": "Carte des données"
+    },
+    "nav.data_map_desc": {
+      "context": "One-line description under the Data map link in the header Project dropdown (app/components/blocks/header/index.tsx) and on the project index card.",
+      "en": "How the data fits together, at a glance",
+      "de": "Wie die Daten zusammenhängen, auf einen Blick",
+      "fr": "Comment les données s'articulent, en un coup d'œil"
+    },
+    "nav.methodology": {
+      "context": "Label of the Methodology page: header Project dropdown item (app/components/blocks/header/index.tsx), project index card, and breadcrumb (app/configs/site.config.ts); the page documents how each computed metric is calculated, with links to the source code; keep short.",
+      "en": "Methodology",
+      "de": "Methodik",
+      "fr": "Méthodologie"
+    },
+    "nav.methodology_desc": {
+      "context": "One-line description under the Methodology link in the header Project dropdown (app/components/blocks/header/index.tsx) and on the project index card.",
+      "en": "How each figure is calculated, with links to the code",
+      "de": "Wie jede Kennzahl berechnet wird, mit Links zum Code",
+      "fr": "Comment chaque valeur est calculée, avec des liens vers le code"
+    },
+    "nav.experiments": {
+      "context": "Group heading of the Experiments group in the header Explore dropdown (app/components/blocks/header/index.tsx), page title of the experiments index (app/routes/pages/experiments/experiments_index.tsx) and breadcrumb of the /experiments section (app/configs/site.config.ts); short noun for experimental analyses.",
+      "en": "Experiments",
+      "de": "Experimente",
+      "fr": "Expériences"
+    },
+    "nav.experiments_desc": {
+      "context": "Intro line under the Experiments page title on the experiments index (app/routes/pages/experiments/experiments_index.tsx); describes experimental analyses and methodology articles.",
+      "en": "Experimental analyses and methodology write-ups",
+      "de": "Experimentelle Auswertungen und Methodik-Texte",
+      "fr": "Analyses expérimentales et notes méthodologiques"
+    },
+    "nav.wordfish": {
+      "context": "Label of the Wordfish experiment: item in the Experiments group of the header Explore dropdown (app/components/blocks/header/index.tsx), card on the experiments index, and breadcrumb (app/configs/site.config.ts); 'Wordfish' is the proper name of a text-scaling method — keep it untranslated.",
+      "en": "Wordfish scaling",
+      "de": "Wordfish-Skalierung",
+      "fr": "Positionnement Wordfish"
+    },
+    "nav.wordfish_desc": {
+      "context": "One-line description under the Wordfish link on the experiments index card and in the header Explore dropdown; describes placing MPs on a political axis from the word frequencies of their speeches.",
+      "en": "Placing members on an axis by the words in their speeches",
+      "de": "Mitglieder anhand der Wörter ihrer Reden auf einer Achse platzieren",
+      "fr": "Placer les membres sur un axe selon les mots de leurs discours"
+    },
+    "intro.cookie": {
+      "context": "Site-intro toast (app/components/blocks/site-intro): cookie-notice line — only essential, functional cookies; no analytics, no tracking. Shown in the interface language.",
+      "en": "We use only essential, functional cookies. No analytics, no tracking.",
+      "de": "Wir verwenden nur essenzielle, funktionale Cookies. Keine Analyse, kein Tracking.",
+      "fr": "Nous utilisons uniquement des cookies essentiels et fonctionnels. Aucune analyse, aucun suivi.",
+      "it": "Utilizziamo solo cookie essenziali e funzionali — nessuna analisi, nessun tracciamento.",
+      "es": "Solo utilizamos cookies esenciales y funcionales — sin análisis, sin seguimiento.",
+      "rm": "Nus dovrain mo cookies essenzials e funcziunals — nagina analisa, nagin fastizar."
+    },
+    "intro.dataLang": {
+      "context": "Site-intro toast: content-language explainer — data is shown by a language priority that is independent of the interface and adjustable under Settings › Content language. Shown in the interface language.",
+      "en": "Switzerland has four national languages, and this data comes in several of them. Some records are in multiple languages, some in only one. You can choose which language the content is shown in; when your choice isn't available for a record, the remaining languages are used in a set priority order. This is independent of the interface language. Set it under Settings › Content language (top right).",
+      "de": "Die Schweiz hat vier Landessprachen, und diese Daten liegen in mehreren davon vor. Manche Einträge sind mehrsprachig, andere nur in einer Sprache. Sie können wählen, in welcher Sprache die Inhalte angezeigt werden; ist Ihre Wahl für einen Eintrag nicht verfügbar, werden die übrigen Sprachen in einer festen Prioritätsreihenfolge verwendet. Dies ist unabhängig von der Oberflächensprache. Einstellbar unter Einstellungen › Inhaltssprache (oben rechts).",
+      "fr": "La Suisse a quatre langues nationales, et ces données existent dans plusieurs d'entre elles. Certaines entrées sont en plusieurs langues, d'autres dans une seule. Vous pouvez choisir la langue d'affichage du contenu ; si votre choix n'est pas disponible pour une entrée, les autres langues sont utilisées selon un ordre de priorité défini. Ceci est indépendant de la langue de l'interface. Réglable dans Paramètres › Langue du contenu (en haut à droite).",
+      "it": "La Svizzera ha quattro lingue nazionali e questi dati esistono in diverse di esse — alcune voci in più lingue, altre in una sola. Puoi scegliere in quale lingua mostrare i contenuti; se la tua scelta non è disponibile per una voce, vengono usate le altre lingue secondo un ordine di priorità prestabilito. Questo è indipendente dalla lingua dell'interfaccia. Impostabile in Impostazioni › Lingua del contenuto (in alto a destra).",
+      "es": "Suiza tiene cuatro lenguas nacionales, y estos datos existen en varias de ellas — algunos registros en varias lenguas, otros en una sola. Puede elegir en qué idioma se muestra el contenido; cuando su elección no está disponible para un registro, se utilizan las demás lenguas en un orden de prioridad fijo. Esto es independiente del idioma de la interfaz. Configúrelo en Ajustes › Idioma del contenido (arriba a la derecha).",
+      "rm": "La Svizra ha quatter linguas naziunalas, e questas datas existan en pliras da quellas — intgins tips en pliras linguas, auters mo en ina. Ti pos tscherner en tge lingua ch'ils cuntegns vegnan mussads; sche tia tscherna n'è betg disponibla per in tip, vegnan duvradas las autras linguas tenor in urden da prioritad fix. Quai è independent da la lingua da la surfatscha. Reglabel sut Configuraziuns › Lingua dal cuntegn (sisum dretg)."
+    },
+    "intro.alt": {
+      "context": "Site-intro toast: alternative-language offer line, shown in the OFFERED language (names that language in-language, e.g. fr → '…en français'). Rendered when the page isn't in one of the visitor's browser languages but a supported one is.",
+      "en": "This page is also available in English.",
+      "de": "Diese Seite ist auch auf Deutsch verfügbar.",
+      "fr": "Cette page est aussi disponible en français.",
+      "it": "Questa pagina è disponibile anche in italiano.",
+      "es": "Esta página también está disponible en español.",
+      "rm": "Questa pagina è er disponibla en rumantsch."
+    },
+    "intro.switch": {
+      "context": "Site-intro toast: switch-button label, in the OFFERED language, naming that language.",
+      "en": "View in English",
+      "de": "Auf Deutsch anzeigen",
+      "fr": "Voir en français",
+      "it": "Vedi in italiano",
+      "es": "Ver en español",
+      "rm": "Mussar per rumantsch"
+    },
+    "intro.dismiss": {
+      "context": "Site-intro toast: 'Don't show again' button label — persists the opt-out to the settings cookie. Shown in the interface language.",
+      "en": "Don't show again",
+      "de": "Nicht mehr anzeigen",
+      "fr": "Ne plus afficher",
+      "it": "Non mostrare più",
+      "es": "No volver a mostrar",
+      "rm": "Betg pli mussar"
+    },
+    "metas.project.title": {
+      "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_main' namespace 'metas' block; the interface language selects which file. project page SEO <title>.",
+      "en": "Project",
+      "de": "Projekt",
+      "fr": "Projet",
+      "it": "Progetto",
+      "es": "Proyecto"
+    },
+    "metas.project.desc": {
+      "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_main' namespace 'metas' block; the interface language selects which file. project page meta-description.",
+      "en": "About parlhub: what the portal is, answers to common questions, and how the data fits together.",
+      "de": "Über parlhub: was das Portal ist, Antworten auf häufige Fragen und wie die Daten zusammenhängen.",
+      "fr": "À propos de parlhub : ce qu'est le portail, les questions fréquentes et comment les données s'articulent.",
+      "it": "Informazioni su parlhub: cos'è il portale, le domande frequenti e come sono collegati i dati.",
+      "es": "Acerca de parlhub: qué es el portal, respuestas a preguntas frecuentes y cómo se relacionan los datos."
+    },
+    "metas.experiments.title": {
+      "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_main' namespace 'metas' block; the interface language selects which file. experiments page SEO <title>.",
+      "en": "Experiments",
+      "de": "Experimente",
+      "fr": "Expériences",
+      "it": "Esperimenti",
+      "es": "Experimentos"
+    },
+    "metas.experiments.desc": {
+      "context": "SEO copy (NOT UI chrome): read in route meta() via metas/loc.ts from the 'loc_main' namespace 'metas' block; the interface language selects which file. experiments page meta-description.",
+      "en": "Experimental analyses and methodology showcases on parlhub, including the Wordfish scaling of parliaments from their speeches.",
+      "de": "Experimentelle Auswertungen und methodische Showcases auf parlhub, darunter die Wordfish-Skalierung von Parlamenten anhand ihrer Reden.",
+      "fr": "Analyses expérimentales et démonstrations méthodologiques sur parlhub, dont le positionnement Wordfish des parlements à partir de leurs discours.",
+      "it": "Analisi sperimentali e dimostrazioni metodologiche su parlhub — incluso il posizionamento Wordfish dei parlamenti a partire dai loro discorsi.",
+      "es": "Análisis experimentales y demostraciones metodológicas en parlhub — incluido el escalamiento Wordfish de los parlamentos a partir de sus discursos."
+    }
+  }
+}

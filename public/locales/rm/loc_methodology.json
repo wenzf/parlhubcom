@@ -1,0 +1,60 @@
+{
+  "methodology": {
+    "title": "Metodologia",
+    "lead": "parlhub na fa betg mo listar datotecas: el calculescha l'affinitad da votaziun, la lealtad da gruppa, las raits da lobbying, chartas da pleds e dapli sin basa da las datas avertas. Questa pagina declera exactamain co che mintga valur vegn obtegnì e collia mintga indicatur cun il code funtauna che al producescha.",
+    "labels": {
+      "formula": "Co ch'i vegn calculà",
+      "sources": "Code funtauna",
+      "used_on": "Nua ch'i cumpara"
+    },
+    "repo_link": "Dar in'egliada a tut il code funtauna sin GitHub",
+    "groups": {
+      "parliaments": { "heading": "Parlaments", "sub": "Indicaturs calculads sur ina chombra entira" },
+      "people": { "heading": "Persunas", "sub": "Indicaturs per in sulet commember" },
+      "votings": { "heading": "Votaziuns", "sub": "Co ch'ina votaziun vegn dissegnada" },
+      "site": { "heading": "La pagina sezza", "sub": "Indicaturs operativs" }
+    },
+    "methods": {
+      "alignment": {
+        "title": "Affinitad da votaziun",
+        "body": "Per mintga pèr da commembers che han votà en las medemas votaziuns è la concordanza la part da las votaziuns cuminaivlas nua ch'els han votà il medem (schi, na, abstensiun u absent), nua ch'absent correspunda ad absent. In commember dovra almain 20 votaziuns contadas ed in pèr almain 20 votaziuns cuminaivlas per cumparair. La charta da chalur dals partits fa la media da questas concordanzas per pèr sur mintga pèr da partits betg ordinà (cun ina mesa largezza da confidenza da 95 % da 1,96·σ/√n). Il diagram da dispersiun reducescha la matrica da concordanza a duas dimensiuns cun ina scalaziun multidimensionala classica: las distanzas d = 1 − concordanza vegnan centradas dubel en B, spustadas en B + σI (limita da Gershgorin) per la render semidefinida positiva, ed ils dus vectors atgens ils pli positivs dattan las coordinatas. La disposiziun vegn inizialisada en moda deterministica e n'oscillescha perquai mai tranter dus chargiaments."
+      },
+      "loyalty": {
+        "title": "Lealtad da gruppa & coesiun",
+        "body": "Per mintga votaziun è la lingia d'ina gruppa parlamentara la posiziun (schi, na u abstensiun) ch'ina pluralitad stretga da ses votants ha prendì; ils cas da paritad, e las gruppas cun main che 4 votants en quella votaziun, na vegnan betg contads. In commember deviescha mintgamai che ses vôt sa differenziescha da la lingia da sia gruppa; sia taxa da deviaziun è deviaziuns ÷ votaziuns contadas (ils commembers cun main che 10 votaziuns contadas vegnan stritgads). I vegn duvrà la gruppa al mument dal vôt, cun sa retrair al partit actual dal commember là nua ch'i n'exista nagina fotografia (p. ex. Liechtenstein). La coesiun d'ina gruppa è l'index d'accordanza mediana (Hix–Noury–Roland) sur sias votaziuns: 1 cura ch'ina gruppa vota sco in bloc, 0 cura ch'ella sa divida egualmain en trais."
+      },
+      "lobby": {
+        "title": "Rait da lobbying",
+        "body": "Ils commembers e las organisaziuns ch'els decleran en il register dals interess furman in graf bipartì; i vegnan mantegnidas mo las organisaziuns colliadas cun almain 2 commembers, uschia ch'il maletg mussa colliaziuns cuminaivlas empè da mandats isolads. Mintga colliaziun declerada vegn classifitgada sco pajada, betg pajada u nunenconuschenta (l'emprim il code harmonisà, lura in fallback textual tudestg / franzos / talian), e pajada va avant betg pajada che va avant nunenconuschenta cura ch'in commember ha pliras colliaziuns cun ina medema organisaziun. La rait vegn disponida cun ina simulaziun da forzas Fruchterman-Reingold deterministica: lunghezza ideala da la spira k = √(surfatscha/n), repulsiun k²/distanza, attracziun distanza²/k, sur 300 iteraziuns cun rafredentament. I na vegn duvrà nagin cas, il graf resta perquai stabel tranter dus chargiaments."
+      },
+      "discussion": {
+        "title": "Posiziunament da debattas (Wordfish)",
+        "body": "Ils pledis da mintga commember activ sur ina fanestra temporala cuminaivla vegnan tokenisads e filtrads dals pleds vids per lingua, e lura reducids ad in document da dumbers da pleds per commember. Wordfish (Slapin & Proksch 2008) adattescha in model da Poisson E[y] = exp(α + ψ + β·θ) cun regressiuns da Poisson alternantas e plazza mintga oratur sin ina suletta scala latenta θ mo sin basa da la tscherna dals pleds: α è la loquacitad, ψ la frequenza d'in pled e β cun quala nettadad ch'in pled discriminescha. L'adattaziun è renfortgida (limitada, cun mez pass, regularisada cun ridge) ed inizialisada en moda deterministica. η² (la part da la varianza da θ declerada dal partit) vegn mussada sper, e l'axa dovra in domen robust dal 2avel al 98avel percentil, uschia ch'ina paglia d'oraturs paucs prolix cun auta varianza na fixescha betg la scala."
+      },
+      "vocabulary": {
+        "title": "Vocabulari (frequenza dals pleds)",
+        "body": "Mintga transcripziun d'in pledi d'in commember vegn nettegiada da l'HTML, missa en minusclas e partida tar ils caracters betg alfabetics en tokens pli lungs ch'in caracter (ils accents restan, las cifras e la punctuaziun vegnan stritgadas). Mintga token vegn filtrà cunter la glista dals pleds vids da la lingua atgna dal pledi, uschia ch'ils pledis tudestgs e franzos d'in commember bilingual vegnan nettegiads cun la glista gista. Il resultat èn ils pleds ils pli frequents dal commember (ils emprims 120 cun in dumber d'almain 2, sur ina fanestra da datas opziunala), dissegnads sco in treemap squarified dimensiunà tenor il dumber."
+      },
+      "coVoting": {
+        "title": "Vischins da votaziun",
+        "body": "Quai è la mesadad per pèr da l'affinitad da votaziun, vista dad in commember: sur las votaziuns nua che tuts dus han votà è la concordanza cun mintga auter commember correspundenzas ÷ votaziuns cuminaivlas (absent correspunda ad absent). Ils pèrs che parts main che 10 votaziuns vegnan zuppentads sco canera, e la glista po vegnir reinquadrada sin in interval da datas. Cunter il diagram da dispersiun dal parlament na vegn applitgada nagina reducziun da dimensiunalitad. Quai è ina glista ordinada da vischins."
+      },
+      "interests": {
+        "title": "Classifikaziun dals interess",
+        "body": "Mintga endataziun dal register dals interess vegn ordinada en pajada, betg pajada u nunenconuschenta: vala l'emprim il code da pajament harmonisà (betg pajà ed onorific quintan omadus sco betg pajà), uschiglio in fallback cun pleds-clav tudestg / franzos / talian legia la descripziun en text liber. Las endataziuns vegnan gruppadas tenor num d'organisaziun normalisà per agregar ils mandats d'in commember per organisaziun. Questa medema regla nudrescha la partiziun pajada / betg pajada da la rait da lobbying."
+      },
+      "hemicycle": {
+        "title": "Emiciclus da votaziun",
+        "body": "L'artg dals plazs vegn calculà en il navigatur: i vegnan agiuntads anials fin ch'els cuntegnan tuts ils votants, ils plazs vegnan repartids sin ils anials cun la metoda dal pli grond rest ponderada tenor il radius da l'anial, e mintga plaz vegn plazzà sin ses artg ed ordinà da sanester a dretg. Las coordinatas vegnan arrundadas a duas posiziuns decimalas, uschia ch'il server ed il client renden identic e ch'la idrataziun na divergescha mai. Ils partits vegnan colorads tenor dumber da commembers decreschent dad ina paletta fixa, e l'artg vegn dissegnà mo cura ch'almain 80 % dals votants han in plaz enconuschent."
+      },
+      "traffic": {
+        "title": "Statisticas da traffic",
+        "body": "Ils protocols da dumondas vegnan agregads en lingias da facts mintgadis immutablas (ina per perioda, rout, lingua, classa da visitader ed apparat) cun contaders additivs (dumondas, latenza summada e maximala) ed in histogram da latenza cun otg classas; ils dis pli vegls che 90 dis vegnan cundensads a la granularitad mensila. Il bord da controlla als reagregescha sin la vart dal client: ils contaders ed ils maximums sa fusiuneschan directamain, la media vegn deducida sco latenza summada ÷ dumondas, e l'95avel percentil vegn approximà dal histogram (la limita superiura da la classa che cuntegna la 95avla dumonda), perquai che medias e percentils reals na pon betg vegnir refusiunads da summas memorisadas. Ils agents d'utilisader vegnan classifitgads en classa da visitader ed apparat mo ina giada, al mument da l'agregaziun, uschia che las reglas restan revisablas."
+      }
+    }
+  },
+  "metas": {
+    "methodology.title": "Metodologia",
+    "methodology.desc": "Co che parlhub calculescha ses valurs (affinitad da votaziun, lealtad da gruppa, raits da lobbying, chartas da vocabulari e posiziunament Wordfish), cun la formla exacta per mintgin ed ina colliaziun tar il code funtauna."
+  }
+}

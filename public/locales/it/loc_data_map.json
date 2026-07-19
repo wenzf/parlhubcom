@@ -1,0 +1,74 @@
+{
+  "data_map": {
+    "title": "Mappa dei dati",
+    "lead": "Come si incastrano i dati di parlhub. Ogni scheda è un catalogo che puoi cercare ed esplorare. Le linee mostrano come sono collegate le entità. Scegli un elemento qualsiasi per approfondire.",
+    "diagram_label": "Diagramma delle entità di dati di parlhub e di come sono collegate",
+    "clusters": {
+      "parliament": "Parlamento",
+      "proceedings": "Lavori",
+      "records": "Atti",
+      "lobbying": "Lobbying"
+    },
+    "nodes": {
+      "people": {
+        "label": "Persone",
+        "desc": "Parlamentari e funzionari: profili, voti, interventi e mandati."
+      },
+      "bodies": {
+        "label": "Organi",
+        "desc": "Parlamenti, consigli e commissioni, con i loro membri e i loro oggetti."
+      },
+      "groups": {
+        "label": "Gruppi",
+        "desc": "Partiti, gruppi parlamentari e commissioni: appartenenza e coesione di voto."
+      },
+      "affairs": {
+        "label": "Oggetti",
+        "desc": "Lavori parlamentari: mozioni, progetti di legge e i loro esiti."
+      },
+      "votings": {
+        "label": "Votazioni",
+        "desc": "Voti per appello nominale: chi ha votato come e quando."
+      },
+      "meetings": {
+        "label": "Sedute",
+        "desc": "Sessioni e sedute: ordini del giorno, votazioni e interventi."
+      },
+      "speeches": {
+        "label": "Interventi",
+        "desc": "Trascrizioni integrali di quanto è stato detto, interamente consultabili."
+      },
+      "texts": {
+        "label": "Testi",
+        "desc": "Blocchi di testo pubblicati e materiale per la stampa."
+      },
+      "documents": {
+        "label": "Documenti",
+        "desc": "File e allegati collegati agli oggetti."
+      },
+      "interests": {
+        "label": "Interessi",
+        "desc": "Relazioni d'interesse e legami di lobby dei membri."
+      },
+      "organizations": {
+        "label": "Organizzazioni",
+        "desc": "Le organizzazioni dietro tali relazioni d'interesse."
+      }
+    },
+    "source": {
+      "heading": "Informazioni sui dati",
+      "body": "Tutti i dati provengono da OpenParlData.ch. parlhub importa questi dati grezzi e li rielabora solo in minima parte. Le entità e le relazioni mostrate qui rispecchiano la fonte.",
+      "links_label": "Approfondimenti",
+      "openparldata_label": "OpenParlData.ch",
+      "openparldata_href": "https://openparldata.ch",
+      "schemas_label": "Schemi dei dati",
+      "schemas_href": "https://gitlab.com/opendata.ch/openparldatach/data-infrastructure/-/tree/develop/fastapi/app/schemas/endpoints?ref_type=heads",
+      "raw_label": "Esportazioni di dati grezzi",
+      "raw_href": "https://files.openparldata.ch/exports/"
+    }
+  },
+  "metas": {
+    "data_map.title": "Mappa dei dati",
+    "data_map.desc": "Una mappa d'insieme dei dati di parlhub: persone, gruppi, organi, affari, votazioni, sedute, discorsi, documenti e legami di lobbying, e come si collegano. Ogni nodo porta al relativo catalogo."
+  }
+}

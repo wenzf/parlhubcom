@@ -1,0 +1,30 @@
+{
+    "start": {
+        "title": "Cumenza qua",
+        "lede": "Vias directas a las paginas las pli tschertgadas: las chombras federalas, ils parlaments chantunals ed in access a bleras vischnancas.",
+        "search_label": "Tschertgar en la pagina",
+        "search_placeholder": "Tschertgar ina chombra, in chantun u ina vischnanca…",
+        "no_matches": "Nagut correspunda a «{{q}}».",
+        "federal_heading": "Federal",
+        "federal_sub": "parlaments naziunals",
+        "chambers_label": "Chombras",
+        "cantonal_heading": "Parlaments chantunals",
+        "cantonal_sub": "tuts 26",
+        "communal_heading": "Parlaments communals",
+        "communal_sub": "tschertga",
+        "communal_intro": "Qua cumparan mo vischnancas cun in parlament elegì (radund 460 da var 2100). Tschertgai survart per cumenzar.",
+        "results_count": "{{n}} resultats",
+        "results_capped": "Mussà {{n}} da {{total}}. Rafinai Vossa tschertga.",
+        "link_overview": "Survista",
+        "link_members": "Commembers",
+        "link_votings": "Votaziuns",
+        "link_lobby": "Lobby",
+        "link_alignment": "Concordanza",
+        "link_loyalty": "Fidaivladad",
+        "link_affairs": "Fatschentas"
+    },
+  "metas": {
+    "start.title": "Cumenza qua",
+    "start.desc": "Colliaziuns sveltas en ils parlaments da la Svizra e dal Liechtenstein: las chombras federalas e lur paginas, mintga parlament chantunal ed ina tschertga per parlaments communals."
+  }
+}

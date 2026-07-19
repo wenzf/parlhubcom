@@ -1,0 +1,86 @@
+{
+  "_meta": {
+    "namespace": "loc_imprint",
+    "source_files": [
+      "public/locales/<lang>/loc_imprint.json for lang in de, en, fr, it, es, pt, rm"
+    ],
+    "loaded_by": "app/routes/pages/project/imprint/imprint.tsx",
+    "description": "Legal notice / Impressum at /project/imprint. States the responsible person, contact, and one-line pointers to the code license (Apache-2.0) and data license (OpenParlData.ch, CC BY 4.0). The operator name, email, website, repo URL and license URLs are NOT in these files — they are non-translatable constants in imprint.tsx. Only the surrounding labels + the SEO metas block are localized here.",
+    "format": "Each entry: context (where the string appears, its role and length/grammar constraints) + the current de/en/fr/it/es texts as translation reference. Use the context when translating into a new language; a null text means the key is missing in that language file.",
+    "generated": "2026-07-17, code-verified against app/ sources; regenerate when public/locales texts or imprint.tsx change."
+  },
+  "keys": {
+    "imprint.title": {
+      "context": "Page title (h1) of the Imprint page at /project/imprint; also used as the sidebar section title via PAGE_CONFIG.NS_IMPRINT.sidebar. Short. Use the country's conventional name for a website legal notice (Impressum / Mentions légales / Note legali / Aviso legal).",
+      "en": "Imprint",
+      "de": "Impressum",
+      "fr": "Mentions légales",
+      "it": "Note legali",
+      "es": "Aviso legal"
+    },
+    "imprint.nature": {
+      "context": "Lead paragraph under the h1: states that parlhub is a private, non-profit, independent project. Mirrors the FAQ 'official' answer; keep it one sentence.",
+      "en": "parlhub is a private, non-profit project. It is not affiliated with any parliament, authority or party.",
+      "de": "parlhub ist ein privates, gemeinnütziges Projekt. Es steht in keiner Verbindung zu einem Parlament, einer Behörde oder einer Partei.",
+      "fr": "parlhub est un projet privé à but non lucratif. Il n'est affilié à aucun parlement, autorité ou parti.",
+      "it": "parlhub è un progetto privato senza scopo di lucro. Non è affiliato ad alcun parlamento, autorità o partito.",
+      "es": "parlhub es un proyecto privado y sin ánimo de lucro. No está afiliado a ningún parlamento, autoridad ni partido."
+    },
+    "imprint.operator_label": {
+      "context": "Definition-list term (dt) labelling the responsible person. The name itself (Wenzel Frick) is a constant in imprint.tsx, not translated. Short noun phrase, e.g. 'Responsible for content'.",
+      "en": "Responsible for content",
+      "de": "Verantwortlich für den Inhalt",
+      "fr": "Responsable du contenu",
+      "it": "Responsabile dei contenuti",
+      "es": "Responsable del contenido"
+    },
+    "imprint.contact_label": {
+      "context": "Definition-list term (dt) labelling the contact row (email + website). Short.",
+      "en": "Contact",
+      "de": "Kontakt",
+      "fr": "Contact",
+      "it": "Contatto",
+      "es": "Contacto"
+    },
+    "imprint.code_label": {
+      "context": "Definition-list term (dt) labelling the source-code row (shows 'Apache-2.0' + repo link). Short.",
+      "en": "Source code",
+      "de": "Quellcode",
+      "fr": "Code source",
+      "it": "Codice sorgente",
+      "es": "Código fuente"
+    },
+    "imprint.data_label": {
+      "context": "Definition-list term (dt) labelling the data row (shows 'OpenParlData.ch' + 'CC BY 4.0' links). Short.",
+      "en": "Data",
+      "de": "Daten",
+      "fr": "Données",
+      "it": "Dati",
+      "es": "Datos"
+    },
+    "imprint.disclaimer": {
+      "context": "Closing one-line liability disclaimer: content provided as is, without warranty; data shown as published by the source. Keep it terse.",
+      "en": "Provided as is, without warranty. Data is shown as published by the source.",
+      "de": "Bereitgestellt ohne Gewähr. Die Daten werden so angezeigt, wie sie von der Quelle veröffentlicht wurden.",
+      "fr": "Fourni tel quel, sans garantie. Les données sont affichées telles que publiées par la source.",
+      "it": "Fornito così com'è, senza garanzie. I dati sono mostrati come pubblicati dalla fonte.",
+      "es": "Se ofrece tal cual, sin garantía. Los datos se muestran tal como los publica la fuente."
+    },
+    "metas.imprint.title": {
+      "context": "SEO <title> for /project/imprint (metas block). Usually identical to imprint.title.",
+      "en": "Imprint",
+      "de": "Impressum",
+      "fr": "Mentions légales",
+      "it": "Note legali",
+      "es": "Aviso legal"
+    },
+    "metas.imprint.desc": {
+      "context": "SEO meta description for /project/imprint (metas block). One sentence, ~150 chars: who runs the site, how to reach them, and the code + data licenses.",
+      "en": "Legal notice for parlhub: who runs the site, how to get in touch, and the code and data licenses.",
+      "de": "Impressum von parlhub: wer die Website betreibt, wie man Kontakt aufnimmt, sowie die Lizenzen für Code und Daten.",
+      "fr": "Mentions légales de parlhub : qui gère le site, comment le contacter, et les licences du code et des données.",
+      "it": "Note legali di parlhub: chi gestisce il sito, come mettersi in contatto e le licenze del codice e dei dati.",
+      "es": "Aviso legal de parlhub: quién gestiona el sitio, cómo ponerse en contacto y las licencias del código y los datos."
+    }
+  }
+}

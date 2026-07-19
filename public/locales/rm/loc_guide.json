@@ -1,0 +1,109 @@
+{
+  "guide": {
+    "title": "Guida da las datas",
+    "lead": "Indesch geners da datas dals parlaments da la Svizra e dal Liechtenstein. Mintgin cun sia atgna pagina da tschertga e in pèr exempels.",
+    "map_link": "Vesair co las datas èn colliadas",
+    "groups": {
+      "actors": { "heading": "Acturs", "sub": "Las persunas e las organisaziuns dal parlament" },
+      "proceedings": { "heading": "Activitads", "sub": "L'activitad da legiferar" },
+      "records": { "heading": "Actas", "sub": "Quai ch'è vegnì ditg, scrit ed archivà" },
+      "lobbying": { "heading": "Lobbying", "sub": "Tgi ch'è collià cun tgi" }
+    },
+    "types": {
+      "people": {
+        "eyebrow": "Persunas",
+        "title": "Tgi vota sco tgi, e tgi discurra da tge?",
+        "links": {
+          "vocabulary": "Ils pleds da {{name}}, sco carta",
+          "alignment": "Tgi vota sco {{name}}?",
+          "search": "Tschertgar 26'000 commembers"
+        }
+      },
+      "bodies": {
+        "eyebrow": "Parlaments",
+        "title": "Tge partida vota sco in bloc, e tgi sa separescha?",
+        "links": {
+          "loyalty": "Fidaivladad da partida en l'Assamblea federala",
+          "lobby": "La rait da lobby federala",
+          "people": "Tut ils commembers da l'Assamblea federala",
+          "search": "Da las chombras federalas fin a var 460 vischnancas"
+        }
+      },
+      "groups": {
+        "eyebrow": "Cumissiuns & gruppas",
+        "title": "Tgi promova tge fatschentas?",
+        "links": {
+          "search": "Tschertgar fracziuns, partidas e cumissiuns"
+        }
+      },
+      "affairs": {
+        "eyebrow": "Fatschentas",
+        "title": "Tge è daventà da quella moziun?",
+        "links": {
+          "example": "Ina lunga cumbatta, votaziun per votaziun: {{name}}",
+          "search": "Filtrar 320'000 fatschentas"
+        }
+      },
+      "votings": {
+        "eyebrow": "Votaziuns",
+        "title": "Tgi ha ditg gea, tgi na?",
+        "links": {
+          "example": "La davosa votaziun finala, num per num",
+          "search": "Tschertgar 75'000 votaziuns"
+        }
+      },
+      "meetings": {
+        "eyebrow": "Sesidas",
+        "title": "Tge ha decidì ina singula sesida?",
+        "links": {
+          "search": "Mintga sessiun, di per di"
+        }
+      },
+      "speeches": {
+        "eyebrow": "Discurs",
+        "title": "Tgi ha discurrì dal luf?",
+        "links": {
+          "wolf": "Mintga discurs che numna il luf",
+          "search": "Tschertgar 2,5 milliuns intervenziuns, pled per pled"
+        },
+        "queries": { "wolf": "Wolf" }
+      },
+      "texts": {
+        "eyebrow": "Texts",
+        "title": "Da tge tracta ina proposta, en trais frasas?",
+        "links": {
+          "bitcoin": "Mintga text che numna Bitcoin",
+          "search": "Tschertgar las resumaziuns uffizialas"
+        },
+        "queries": { "bitcoin": "Bitcoin" }
+      },
+      "docs": {
+        "eyebrow": "Documents",
+        "title": "Tge sa zuppa en ils protocols?",
+        "links": {
+          "search": "Tschertga da text cumplet sur 880'000 documents"
+        }
+      },
+      "interests": {
+        "eyebrow": "Interess",
+        "title": "Tgi è en tge cussegls d'administraziun?",
+        "links": {
+          "example": "Mintga mandat da {{name}}",
+          "search": "Tschertgar 29'000 endataziuns dal register"
+        }
+      },
+      "organizations": {
+        "eyebrow": "Organisaziuns",
+        "title": "Tge organisaziun cuntanscha il pli lunsch?",
+        "links": {
+          "example": "Ina uniun, plirs parlaments: {{name}}",
+          "search": "Tschertgar organisaziuns tenor num"
+        }
+      }
+    }
+  },
+  "metas": {
+    "data_guide.title": "Guida da las datas",
+    "data_guide.desc": "Indesch geners da datas dals parlaments da la Svizra e dal Liechtenstein: persunas, parlaments, fatschentas, votaziuns, discurs, documents e colliaziuns da lobby. Mintgin cun sia atgna pagina da tschertga ed exempels concrets."
+  }
+}

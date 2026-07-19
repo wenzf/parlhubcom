@@ -1,0 +1,60 @@
+{
+  "methodology": {
+    "title": "Methodik",
+    "lead": "parlhub listet nicht nur Datensätze auf: es berechnet Abstimmungsübereinstimmung, Fraktionstreue, Lobby-Netzwerke, Wortkarten und mehr auf Basis der offenen Daten. Diese Seite legt genau dar, wie jede Kennzahl entsteht, und verlinkt jede von ihnen zum Quellcode, der sie erzeugt.",
+    "labels": {
+      "formula": "Wie es berechnet wird",
+      "sources": "Quellcode",
+      "used_on": "Wo es erscheint"
+    },
+    "repo_link": "Den gesamten Quellcode auf GitHub durchsuchen",
+    "groups": {
+      "parliaments": { "heading": "Parlamente", "sub": "Kennzahlen über eine ganze Kammer" },
+      "people": { "heading": "Personen", "sub": "Kennzahlen für ein einzelnes Mitglied" },
+      "votings": { "heading": "Abstimmungen", "sub": "Wie eine einzelne Abstimmung gezeichnet wird" },
+      "site": { "heading": "Die Website selbst", "sub": "Betriebskennzahlen" }
+    },
+    "methods": {
+      "alignment": {
+        "title": "Abstimmungsübereinstimmung",
+        "body": "Für jedes Mitgliederpaar, das in denselben Abstimmungen votiert hat, ist die Übereinstimmung der Anteil der gemeinsamen Abstimmungen, in denen beide gleich stimmten (Ja, Nein, Enthaltung oder abwesend), wobei abwesend zu abwesend passt. Ein Mitglied braucht mindestens 20 gewertete Abstimmungen, ein Paar mindestens 20 gemeinsame. Die Partei-Heatmap mittelt diese paarweisen Übereinstimmungen über jedes ungeordnete Parteipaar (mit einer 95-%-Konfidenz-Halbbreite von 1,96·σ/√n). Der Streuplot bringt die Übereinstimmungsmatrix per klassischer multidimensionaler Skalierung in zwei Dimensionen: Distanzen d = 1 − Übereinstimmung werden doppelt zentriert zu B, nach B + σI verschoben (Gershgorin-Schranke), damit die Matrix positiv semidefinit ist, und die beiden positivsten Eigenvektoren liefern die Koordinaten. Das Layout ist deterministisch initialisiert und wackelt daher zwischen Neuladen nie."
+      },
+      "loyalty": {
+        "title": "Fraktionstreue & Geschlossenheit",
+        "body": "Für jede Abstimmung ist die Linie einer Fraktion die Position (Ja, Nein oder Enthaltung), die eine strikte Mehrheit ihrer Stimmenden einnahm; Gleichstände und Fraktionen mit weniger als 4 Stimmenden in dieser Abstimmung werden nicht gewertet. Ein Mitglied weicht ab, sobald sein Votum von der Fraktionslinie abweicht; seine Abweichungsrate ist Abweichungen ÷ gewertete Abstimmungen (Mitglieder mit weniger als 10 gewerteten Abstimmungen fallen weg). Verwendet wird die Fraktion zum Abstimmungszeitpunkt, ersatzweise die aktuelle Partei des Mitglieds, wo kein Schnappschuss vorliegt (z. B. Liechtenstein). Die Geschlossenheit einer Fraktion ist der mittlere Agreement-Index (Hix–Noury–Roland) über ihre Abstimmungen: 1, wenn eine Fraktion geschlossen stimmt, 0 bei gleichmässiger Dreiteilung."
+      },
+      "lobby": {
+        "title": "Lobby-Netzwerk",
+        "body": "Mitglieder und die Organisationen, die sie im Interessenregister angeben, bilden einen bipartiten Graphen; behalten werden nur Organisationen mit mindestens 2 verbundenen Mitgliedern, sodass das Bild geteilte Verbindungen statt isolierter Mandate zeigt. Jede angegebene Verbindung wird als bezahlt, unbezahlt oder unbekannt klassifiziert (zuerst über den harmonisierten Code, dann über einen deutschen / französischen / italienischen Text-Fallback), und bezahlt geht vor unbezahlt vor unbekannt, wenn ein Mitglied mehrere Verbindungen zu einer Organisation hat. Das Netzwerk wird mit einer deterministischen Fruchterman-Reingold-Kraftsimulation angeordnet: ideale Kantenlänge k = √(Fläche/n), Abstossung k²/Distanz, Anziehung Distanz²/k, über 300 abkühlende Iterationen. Es wird kein Zufall verwendet, der Graph bleibt daher über Neuladen stabil."
+      },
+      "discussion": {
+        "title": "Debatten-Skalierung (Wordfish)",
+        "body": "Reden aller aktiven Mitglieder über ein gemeinsames Zeitfenster werden pro Sprache tokenisiert und um Stoppwörter bereinigt, dann auf ein Wortzähl-Dokument je Mitglied reduziert. Wordfish (Slapin & Proksch 2008) passt ein Poisson-Modell E[y] = exp(α + ψ + β·θ) durch abwechselnde Poisson-Regressionen an und verortet jede Rednerin und jeden Redner allein anhand der Wortwahl auf einer einzigen latenten Skala θ: α ist die Redseligkeit, ψ die Häufigkeit eines Wortes und β, wie scharf ein Wort trennt. Die Anpassung ist gehärtet (begrenzt, mit Schritthalbierung, Ridge-regularisiert) und deterministisch initialisiert. η² (der Anteil der θ-Varianz, den die Partei erklärt) steht daneben, und die Achse nutzt eine robuste 2.–98.-Perzentil-Spanne, damit einige wenige wortarme Redner mit hoher Varianz den Massstab nicht bestimmen."
+      },
+      "vocabulary": {
+        "title": "Wortschatz (Worthäufigkeit)",
+        "body": "Jedes Redetranskript eines Mitglieds wird von HTML befreit, kleingeschrieben und an Nicht-Buchstaben in Tokens von mehr als einem Zeichen zerlegt (Akzente bleiben, Ziffern und Satzzeichen fallen weg). Jedes Token wird gegen die Stoppwortliste der jeweiligen Sprache der Rede gefiltert, sodass die deutschen und französischen Reden eines zweisprachigen Mitglieds mit der richtigen Liste bereinigt werden. Ergebnis sind die häufigsten Wörter des Mitglieds (die Top 120 mit einer Häufigkeit von mindestens 2, über ein optionales Zeitfenster), gezeichnet als squarified Treemap, dimensioniert nach Häufigkeit."
+      },
+      "coVoting": {
+        "title": "Abstimmungsnachbarn",
+        "body": "Dies ist die paarweise Hälfte der Abstimmungsübereinstimmung, aus Sicht eines Mitglieds: über die Abstimmungen, in denen beide votierten, ist die Übereinstimmung mit jedem anderen Mitglied Treffer ÷ gemeinsame Abstimmungen (abwesend passt zu abwesend). Paare mit weniger als 10 gemeinsamen Abstimmungen werden als Rauschen ausgeblendet, und die Liste lässt sich auf einen Zeitraum eingrenzen. Anders als beim Parlaments-Streuplot wird keine Dimensionsreduktion angewendet. Es ist eine gereihte Nachbarliste."
+      },
+      "interests": {
+        "title": "Interessen-Klassifikation",
+        "body": "Jeder Eintrag im Interessenregister wird als bezahlt, unbezahlt oder unbekannt eingeordnet: Zuerst zählt der harmonisierte Zahlungscode (unbezahlt und ehrenamtlich gelten beide als unbezahlt), sonst liest ein deutscher / französischer / italienischer Stichwort-Fallback den Freitext. Einträge werden nach normalisiertem Organisationsnamen gruppiert, um die Mandate eines Mitglieds je Organisation zusammenzufassen. Dieselbe Regel speist die Aufteilung bezahlt / unbezahlt im Lobby-Netzwerk."
+      },
+      "hemicycle": {
+        "title": "Abstimmungs-Halbkreis",
+        "body": "Der Sitzbogen wird im Browser berechnet: Ringe werden hinzugefügt, bis sie alle Stimmenden fassen, die Sitze werden per Restausgleich (largest remainder), gewichtet nach Ringradius, auf die Ringe verteilt, und jeder Sitz wird auf seinem Bogen platziert und von links nach rechts sortiert. Koordinaten werden auf zwei Nachkommastellen gerundet, damit Server und Client identisch rendern und die Hydration nie abweicht. Parteien werden nach absteigender Mitgliederzahl aus einer festen Palette eingefärbt, und der Bogen wird nur gezeichnet, wenn mindestens 80 % der Stimmenden einen bekannten Sitz haben."
+      },
+      "traffic": {
+        "title": "Zugriffsstatistik",
+        "body": "Zugriffsprotokolle werden zu unveränderlichen Tages-Faktenzeilen zusammengefasst (eine je Periode, Route, Sprache, Besucherklasse und Gerät) mit additiven Zählern (Anfragen, summierte und maximale Latenz) und einem Latenz-Histogramm mit acht Klassen; Tage älter als 90 werden auf Monatskörnung verdichtet. Das Dashboard aggregiert diese clientseitig neu: Zähler und Maxima lassen sich direkt zusammenführen, der Mittelwert wird als summierte Latenz ÷ Anfragen abgeleitet und das 95. Perzentil aus dem Histogramm genähert (die Obergrenze der Klasse, die die 95. Anfrage enthält), weil sich echte Mittelwerte und Perzentile nicht aus gespeicherten Summen neu zusammenführen lassen. User-Agents werden einmalig beim Verdichten in Besucherklasse und Gerät eingeordnet, damit die Regeln revidierbar bleiben."
+      }
+    }
+  },
+  "metas": {
+    "methodology.title": "Methodik",
+    "methodology.desc": "Wie parlhub seine Kennzahlen berechnet (Abstimmungsübereinstimmung, Fraktionstreue, Lobby-Netzwerke, Wortschatzkarten und Wordfish-Skalierung), mit der genauen Formel für jede und einem Link zum Quellcode."
+  }
+}

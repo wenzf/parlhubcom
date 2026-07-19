@@ -1,0 +1,38 @@
+{
+  "traffic_stats": {
+    "title": "Estadísticas de tráfico",
+    "lead": "Qué partes de parlhub se solicitan, en qué idioma y por quién. Agregadas una vez al día a partir del registro de peticiones del propio servidor — sin cookies, sin rastreo, sin direcciones IP. Se cuentan peticiones, no personas.",
+    "no_data": "Aún no hay cifras. Las primeras estadísticas aparecerán en cuanto se haya ejecutado la agregación diaria.",
+    "group_by": "Agrupar por",
+    "group_by_aria": "Agrupar las peticiones por",
+    "audience": "Público",
+    "audience_aria": "Filtrar las peticiones por público",
+    "aud_human": "Humanos",
+    "aud_bot": "Bots",
+    "aud_both": "Ambos",
+    "view": "Vista",
+    "view_aria": "Cambiar entre la vista diaria y la mensual",
+    "view_daily": "Diaria",
+    "view_monthly": "Mensual",
+    "dim_route": "Ruta",
+    "dim_lang": "Idioma",
+    "dim_visitor": "Tipo de visitante",
+    "dim_device": "Dispositivo",
+    "include_internal": "Incluir comprobaciones de estado",
+    "stat_requests": "Peticiones",
+    "stat_average": "Media",
+    "stat_p95": "p95",
+    "stat_slowest": "La más lenta",
+    "col_share": "Proporción",
+    "other": "otras",
+    "route_other_note": "«(other)» reúne todas las peticiones a rutas que no forman parte del sitio — normalmente escáneres automáticos, peticiones de bots malformadas o maliciosas, o URL mal escritas. Se agrupan en una sola fila para que una avalancha de rutas aleatorias no pueda inflar las estadísticas.",
+    "chart_alt": "Gráfico de barras apiladas de peticiones por periodo según {dim}: {periods} periodos, {count} peticiones en total. La tabla siguiente contiene los mismos datos.",
+    "chart_alt_excl": "Gráfico de barras apiladas de peticiones por periodo según {dim}: {periods} periodos, {count} peticiones en total, sin las comprobaciones de estado internas. La tabla siguiente contiene los mismos datos.",
+    "table_caption": "Peticiones por {dim} — los mismos datos que el gráfico anterior.",
+    "footnote": "El p95 se deriva de los tramos de latencia, por lo que es preciso hasta el límite del tramo. Las medias están ponderadas por número de peticiones."
+  },
+  "metas": {
+    "traffic_stats.title": "Estadísticas de tráfico",
+    "traffic_stats.desc": "Qué partes de parlhub se solicitan, en qué idioma y por quién — agregadas una vez al día a partir del registro de peticiones del propio servidor. Sin cookies, sin rastreo, sin direcciones IP."
+  }
+}

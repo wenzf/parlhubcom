@@ -1,0 +1,110 @@
+{
+  "faq": {
+    "title": "FAQ",
+    "lead": "Common questions about parlhub, the data and how to use it.",
+    "items": [
+      {
+        "id": "data-source",
+        "q": "Where does the data come from?",
+        "body": [
+          "From OpenParlData.ch. They collect the data from the official parliament websites, clean it up and publish it as open data. parlhub reads their exports. Without OpenParlData there would be no parlhub."
+        ],
+        "links": [
+          { "label": "OpenParlData.ch", "href": "https://openparldata.ch" }
+        ]
+      },
+      {
+        "id": "coverage",
+        "q": "Which parliaments are covered?",
+        "body": [
+          "The parliaments of Switzerland and Liechtenstein, as far as OpenParlData covers them. Coverage grows over time."
+        ]
+      },
+      {
+        "id": "freshness",
+        "q": "How current is the data?",
+        "body": [
+          "parlhub syncs from OpenParlData regularly. OpenParlData in turn reads the official websites. So a change on an official site can take some days to show up here."
+        ]
+      },
+      {
+        "id": "missing-data",
+        "q": "Why is some data missing?",
+        "body": [
+          "Most likely it is not imported yet. OpenParlData is a young project, and not every parliament publishes everything. If something is on the official website but missing here for a long time, tell me."
+        ]
+      },
+      {
+        "id": "wrong-data",
+        "q": "I'm a member of parliament and my data is wrong. What can I do?",
+        "body": [
+          "parlhub shows the data as published. It comes from your parliament's official website, collected by OpenParlData. If it is wrong there, contact your parliament's webmaster. Once it is fixed at the source, the fix flows here.",
+          "If it is right on the official site but wrong on parlhub, write me and I'll look into it."
+        ],
+        "links": [
+          { "label": "hello@wefrick.com", "href": "mailto:hello@wefrick.com" }
+        ]
+      },
+      {
+        "id": "download",
+        "q": "How can I download data?",
+        "body": [
+          "Every list has an export button. The same downloads also work as plain URLs, so you can script them:"
+        ],
+        "code": [
+          "/<section>/export/<dataset>/<format>          all records of a section",
+          "/<section>/<id>/export/<dataset>/<format>     records of one entity"
+        ],
+        "body_after": [
+          "For example: /votings/export/votings/csv. Formats are json, csv and xlsx. Downloads are paged, 500 rows each: ?page=2 for the next page. ?langs=de,fr sets the language priority of the content. Filters from the list URL work here too."
+        ]
+      },
+      {
+        "id": "license",
+        "q": "How may I use the data?",
+        "body": [
+          "The data is licensed CC BY 4.0. Use it, share it and build on it, including commercially. Just name the source. Please credit OpenParlData.ch for the data; for the computed numbers (alignment, loyalty and so on), credit parlhub."
+        ],
+        "links": [
+          { "label": "CC BY 4.0", "href": "https://creativecommons.org/licenses/by/4.0/" }
+        ]
+      },
+      {
+        "id": "metrics",
+        "q": "How are alignment and loyalty computed?",
+        "body": [
+          "From the voting records: alignment compares how often two people vote the same way in shared votes; loyalty compares a person's votes with the majority of their own group. Fewer shared votes means less reliable percentages, so keep that in mind when comparing."
+        ]
+      },
+      {
+        "id": "official",
+        "q": "Is parlhub official?",
+        "body": [
+          "No. parlhub is an independent, non-profit project by one person. It is not affiliated with any parliament, authority or party. For official information, use the parliament websites."
+        ]
+      },
+      {
+        "id": "tracking",
+        "q": "Do you track me?",
+        "body": [
+          "No. There are no ads, no analytics and no trackers. One functional cookie stores your settings (language, theme). That's it."
+        ]
+      },
+      {
+        "id": "contribute",
+        "q": "Can I support or contribute to the project?",
+        "body": [
+          "Yes, gladly. There is no donate page. If you want to help with the running costs, just write me. Developers and political-science researchers who want to contribute are very welcome too. The code is open source, on GitHub."
+        ],
+        "links": [
+          { "label": "hello@wefrick.com", "href": "mailto:hello@wefrick.com" },
+          { "label": "Source on GitHub", "href": "https://github.com" }
+        ]
+      }
+    ]
+  },
+  "metas": {
+    "faq.title": "Frequently asked questions",
+    "faq.desc": "Answers to common questions about parlhub: where the data comes from, how to download it, how you may use it (CC BY 4.0) and how to contribute."
+  }
+}

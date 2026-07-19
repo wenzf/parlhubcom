@@ -1,0 +1,28 @@
+{
+  "home": {
+    "tagline": "Ein Portal für die Parlamente der Schweiz und Liechtensteins.",
+    "search_label": "Suche",
+    "search_placeholder": "Suchen…",
+    "search_button": "Suchen",
+    "search_scope_label": "Suchen in",
+    "sections": {
+      "people": "Personen",
+      "votings": "Abstimmungen",
+      "affairs": "Geschäfte",
+      "speeches": "Reden",
+      "bodies": "Parlamente",
+      "groups": "Gremien",
+      "meetings": "Sitzungen",
+      "texts": "Texte",
+      "documents": "Dokumente",
+      "interests": "Interessen",
+      "organizations": "Organisationen"
+    },
+    "stats_updated": "Daten aktualisiert",
+    "start_link": "Quicklinks zu Bund, Kantonen und Gemeindeparlamenten"
+  },
+  "metas": {
+    "home.title": "Schweizer und Liechtensteiner Parlamentsdaten",
+    "home.desc": "Die Parlamente der Schweiz und Liechtensteins durchsuchen: Ratsmitglieder, Abstimmungen, Reden, Lobby-Verbindungen und mehr. Nicht kommerziell, Open Source."
+  }
+}

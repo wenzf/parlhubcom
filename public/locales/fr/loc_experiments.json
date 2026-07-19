@@ -1,0 +1,51 @@
+{
+  "experiments": {
+    "title": "Wordfish : les parlements par leurs discours",
+    "lede": "Une expérience : elle place les membres d'un parlement sur un axe unique, à partir des seuls mots qu'ils emploient dans leurs discours. Pas de votes, pas d'étiquettes de parti, pas de codage manuel, uniquement des fréquences de mots. Voici comment cela fonctionne, comment le lire, et les parlements pour lesquels assez de texte de discours existe.",
+    "sections": [
+      {
+        "heading": "Ce que cela fait",
+        "paragraphs": [
+          "Pour un parlement donné, on prend tous les membres actifs et l'ensemble de leurs discours dans une même fenêtre récente. C'est la même période pour tous, afin que le résultat reflète le choix des mots et non l'ancienneté. Chaque membre devient un « document » : un ensemble des mots employés et de leur fréquence.",
+          "Un modèle statistique appelé Wordfish trouve alors l'axe d'usage des mots qui sépare le mieux les membres. Il découvre quels mots éloignent les gens et place chacun en conséquence. L'axe n'est pas défini à l'avance. Il émerge des discours eux-mêmes."
+        ]
+      },
+      {
+        "heading": "Comment c'est calculé",
+        "paragraphs": [
+          "Chaque discours est découpé en mots et mis en minuscules, en conservant les accents. Les mots-outils très fréquents (« le », « et », « der », « the »…) sont retirés à l'aide d'une liste de mots vides adaptée à la langue de chaque discours : un discours français est filtré contre des mots vides français, un discours allemand contre des allemands. Les mots rares que seuls quelques membres emploient sont aussi écartés, car ils apportent du bruit, pas du signal.",
+          "Wordfish modélise chaque comptage de mot comme un tirage de Poisson dépendant de la position du membre, de la fréquence habituelle du mot et de son pouvoir de discrimination. Il ajuste ces valeurs par tours successifs jusqu'à stabilisation, puis standardise les positions pour que la dispersion soit comparable. Le calcul s'exécute à la demande pendant le chargement. Pour une grande chambre sur un an, cela prend quelques secondes, d'où le chargement du graphique derrière un indicateur."
+        ]
+      },
+      {
+        "heading": "Comment lire le graphique",
+        "paragraphs": [
+          "Chaque point est un membre, placé selon ses mots : ceux qui parlent de façon semblable sont proches, ceux qui parlent très différemment sont éloignés. La direction de l'axe est arbitraire. Wordfish trouve la séparation, pas quel côté est « gauche » ou « droite ». Pour savoir ce que signifie chaque extrémité, lisez les mots affichés aux deux pôles.",
+          "La dispersion est standardisée : les distances sont donc une convention, pas une mesure réelle. Chaque membre a aussi une incertitude (la barre d'erreur) : ceux qui ont peu parlé sont placés avec une faible confiance et affichés en anneaux creux, à ne pas surinterpréter. Et le style de discours reflète autant la fonction que les convictions : présidences de commission, membres de l'exécutif et orateurs fréquents peuvent se retrouver à un pôle en raison de leur rôle, pas seulement de leurs idées."
+        ]
+      },
+      {
+        "heading": "Pourquoi la plupart des parlements sont vides",
+        "paragraphs": [
+          "Le positionnement a besoin du texte réel des discours, et les données ouvertes ne le contiennent que pour quelques parlements. La plupart des institutions n'ont aucun discours ; certaines ont des entrées de discours sans transcription ; et quelques-unes ont des transcriptions qui s'arrêtent il y a des années. Seuls les parlements listés ci-dessous disposent actuellement d'assez de texte récent pour placer au moins dix membres."
+        ]
+      }
+    ],
+    "cases_heading": "Parlements à explorer",
+    "cases_lede": "Chacun dispose d'assez de texte de discours dans la fenêtre récente pour tracer un graphique. « Membres placés » indique combien de membres le positionnement peut situer ; « Texte des discours » est l'étendue totale du texte de discours disponible pour ce parlement.",
+    "col_parliament": "Parlement",
+    "col_members": "Membres placés",
+    "col_period": "Texte des discours",
+    "cases_empty": "Aucun parlement ne dispose actuellement d'assez de texte récent pour le positionnement.",
+    "references_heading": "Références et pour aller plus loin",
+    "references": [
+      { "text": "Slapin & Proksch (2008) : « A Scaling Model for Estimating Time-Series Party Positions from Texts », American Journal of Political Science. L'article qui a introduit Wordfish.", "url": "https://doi.org/10.1111/j.1540-5907.2008.00338.x" },
+      { "text": "Tutoriel Wordfish (quanteda) : une description pratique et une implémentation de référence du modèle.", "url": "https://tutorials.quanteda.io/machine-learning/wordfish/" },
+      { "text": "Grimmer & Stewart (2013) : « Text as Data », Political Analysis. Une synthèse situant Wordfish parmi les méthodes de positionnement de textes.", "url": "https://doi.org/10.1093/pan/mps028" }
+    ]
+  },
+  "metas": {
+    "wordfish.title": "Wordfish : les parlements par leurs discours",
+    "wordfish.desc": "Comment parlhub place les membres d'un parlement sur un axe à partir de leur seul choix de mots : méthode, mode de lecture et les parlements pour lesquels assez de discours sont disponibles."
+  }
+}

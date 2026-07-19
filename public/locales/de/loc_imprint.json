@@ -1,0 +1,15 @@
+{
+  "imprint": {
+    "title": "Impressum",
+    "nature": "parlhub ist ein privates, gemeinnütziges Projekt. Es steht in keiner Verbindung zu einem Parlament, einer Behörde oder einer Partei.",
+    "operator_label": "Verantwortlich für den Inhalt",
+    "contact_label": "Kontakt",
+    "code_label": "Quellcode",
+    "data_label": "Daten",
+    "disclaimer": "Bereitgestellt ohne Gewähr. Die Daten werden so angezeigt, wie sie von der Quelle veröffentlicht wurden."
+  },
+  "metas": {
+    "imprint.title": "Impressum",
+    "imprint.desc": "Impressum von parlhub: wer die Website betreibt, wie man Kontakt aufnimmt, sowie die Lizenzen für Code und Daten."
+  }
+}
