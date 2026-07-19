@@ -32,6 +32,7 @@ import fs_p from "node:fs/promises";
 import { DuckDBInstance } from "@duckdb/node-api";
 import { datasets } from "./datasets";
 import { importValidatedNdjson } from "./import";
+import { deriveSpeechSearch, speechSearchDeriveNeeded } from "./derive";
 import {
     BASE_URL,
     fetchRemoteIndex,
@@ -132,6 +133,16 @@ async function main(): Promise<void> {
             await db.run("CHECKPOINT;");
             console.log(`  ${imported} rows imported, ${skipped} skipped.`);
             summaries.push({ entity: dataset.table, status: "imported", imported, skipped });
+        }
+
+        // Derived columns (speeches search) — a re-import DROPs its table, so
+        // this must run after the entity loop whenever a source entity changed
+        // (or the columns are missing entirely, e.g. a pre-derive DB).
+        if (await speechSearchDeriveNeeded(db)) {
+            console.log("\nDeriving speeches search columns...");
+            await deriveSpeechSearch(db);
+        } else {
+            console.log("\nSpeeches search columns up to date — derive skipped.");
         }
 
         console.log("\nCheckpointing...");

@@ -32,3 +32,23 @@ Remote specifics:
   local-file fallback in `run-remote.ts` imports it).
 - Rows failing JSON/schema are counted and logged to
   `ingest/openparldata/remote-import-log.txt`.
+
+## Derived columns (post-import)
+
+Some columns are **computed after import** from data already in the DB — never
+fetched from the bucket. Registry + mechanics: [`ingest/derive.ts`](../ingest/derive.ts);
+both runners call it at the end of a run.
+
+- `speeches` search columns — `search_text_de/fr/it` (tag-stripped transcript,
+  NULL-parity with `text_content_*` so `loc()` picks the same variant),
+  `search_meta` (speaker fullname + affair titles, denormalized), `has_text_*`
+  (presence flags for the lang facet). Read by `speeches_list.sql`, so the
+  /speeches catalogue search needs no per-request tag-strip and no
+  persons/affairs joins.
+- A **re-import DROPs its table** — the derive step re-runs whenever a source
+  entity (speeches / persons / affairs) was imported or the columns are missing.
+  Freshness rides in `import_meta` as the pseudo-entity `_derived_speech_search`.
+- **Derive-only mode** — `npx tsx ingest/run-derive.ts` (env `OPD_DB_OUT`)
+  recomputes the columns on an existing DB without importing anything; the
+  UpdateDb task runs this instead of the import when `DB_MIGRATE_ONLY=1` is set
+  (one-off schema migrations of the production DB without a data refresh).

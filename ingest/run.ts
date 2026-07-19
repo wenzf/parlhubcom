@@ -16,6 +16,7 @@
 import { DuckDBInstance } from "@duckdb/node-api";
 import { importValidatedNdjson } from "./import";
 import { datasets } from "./datasets";
+import { deriveSpeechSearch, speechSearchDeriveNeeded } from "./derive";
 
 const DB_PATH = "data.duckdb";
 
@@ -39,6 +40,14 @@ async function main(): Promise<void> {
     try {
         for (const dataset of datasets) {
             await importValidatedNdjson(db, dataset);
+        }
+
+        // Derived columns (speeches search). Local builds carry no import_meta
+        // ledger, so freshness is unprovable and this re-derives every run —
+        // fine at local data sizes.
+        if (await speechSearchDeriveNeeded(db)) {
+            console.log("\nDeriving speeches search columns...");
+            await deriveSpeechSearch(db);
         }
 
         // Fold the WAL into the main file so a subsequent READ-ONLY open succeeds.

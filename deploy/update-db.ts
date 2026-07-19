@@ -61,9 +61,13 @@ const run = async () => {
         console.log("update-db: no db/latest pointer — building from scratch");
     }
 
-    // 2. incremental import (long-running; streams shards, flat RAM)
-    console.log("update-db: running import:remote …");
-    const imp = spawnSync("npx", ["tsx", "ingest/run-remote.ts"], {
+    // 2. incremental import (long-running; streams shards, flat RAM) — or, with
+    // DB_MIGRATE_ONLY=1, only the derive step (ingest/run-derive.ts): recompute
+    // derived columns on the downloaded DB without contacting the source bucket.
+    const migrateOnly = process.env.DB_MIGRATE_ONLY === "1";
+    const script = migrateOnly ? "ingest/run-derive.ts" : "ingest/run-remote.ts";
+    console.log(`update-db: running ${script} …`);
+    const imp = spawnSync("npx", ["tsx", script], {
         stdio: "inherit",
         env: {
             ...process.env,
@@ -71,7 +75,7 @@ const run = async () => {
             OPD_TMP_DIR: path.join(WORK_DIR, ".remote_tmp"),
         },
     });
-    if (imp.status !== 0) throw new Error(`import:remote exited with ${imp.status}`);
+    if (imp.status !== 0) throw new Error(`${script} exited with ${imp.status}`);
 
     // 3. verify: clean checkpoint (no WAL) + file opens read-only + sanity query
     if (existsSync(`${DB_OUT}.wal`)) throw new Error("WAL sidecar present — import did not checkpoint cleanly");
