@@ -256,6 +256,8 @@ export function BodyLoyalty({ members, cohesion = [], chambers = [], chamberId =
         },
         [navigate, searchParams],
     );
+    // Devtools/autofill want every form field to carry an id or name.
+    const dateId = React.useId();
     const [sort, setSort] = React.useState<{ key: SortKey; dir: "asc" | "desc" }>({
         key: "dissent_rate",
         dir: "desc",
@@ -374,6 +376,8 @@ export function BodyLoyalty({ members, cohesion = [], chambers = [], chamberId =
                     <ControlRow label={t("loyalty_from")} bleed>
                         <input
                             type="date"
+                            id={`${dateId}-from`}
+                            name="from"
                             value={from ?? ""}
                             max={to ?? undefined}
                             onChange={(e) => setParams({ from: e.target.value || null })}
@@ -384,6 +388,8 @@ export function BodyLoyalty({ members, cohesion = [], chambers = [], chamberId =
                     <ControlRow label={t("loyalty_to")} bleed>
                         <input
                             type="date"
+                            id={`${dateId}-to`}
+                            name="to"
                             value={to ?? ""}
                             min={from ?? undefined}
                             onChange={(e) => setParams({ to: e.target.value || null })}

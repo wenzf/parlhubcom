@@ -260,6 +260,7 @@ export default function ChartExportDialogImpl({
                                 <label className="grid gap-1">
                                     <span className="text-xs text-muted-foreground">{t("chart_title")}</span>
                                     <input
+                                        name="chart-title"
                                         value={title}
                                         onChange={(e) => setTitle(e.target.value)}
                                         className="h-11 rounded-md border border-input bg-background px-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
@@ -269,6 +270,7 @@ export default function ChartExportDialogImpl({
                                 <label className="grid gap-1">
                                     <span className="text-xs text-muted-foreground">{t("chart_subtitle")}</span>
                                     <input
+                                        name="chart-subtitle"
                                         value={subtitle}
                                         onChange={(e) => setSubtitle(e.target.value)}
                                         className="h-11 rounded-md border border-input bg-background px-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
@@ -295,12 +297,14 @@ export default function ChartExportDialogImpl({
                                             <li key={s.key} className="flex items-center gap-2">
                                                 <input
                                                     type="color"
+                                                    name={`chart-color-${s.key}`}
                                                     value={colors[s.key] ?? s.color}
                                                     onChange={(e) => setColors((c) => ({ ...c, [s.key]: e.target.value }))}
                                                     className="size-11 shrink-0 cursor-pointer rounded border border-input bg-background outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                                                     aria-label={`${t("chart_color_for")} ${s.label}`}
                                                 />
                                                 <input
+                                                    name={`chart-label-${s.key}`}
                                                     value={labels[s.key] ?? s.label}
                                                     onChange={(e) => setLabels((l) => ({ ...l, [s.key]: e.target.value }))}
                                                     className="h-11 min-w-0 flex-1 rounded-md border border-input bg-background px-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"

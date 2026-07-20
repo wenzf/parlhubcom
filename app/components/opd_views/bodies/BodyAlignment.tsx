@@ -420,6 +420,9 @@ export default function BodyAlignment({
         [navigate, searchParams],
     );
 
+    // Devtools/autofill want every form field to carry an id or name.
+    const dateId = React.useId();
+
     const { colorOf, legend } = React.useMemo(
         () => buildColorMap(members.map((m) => ({ party_key: m.party_key, party: m.party }))),
         [members],
@@ -521,6 +524,8 @@ export default function BodyAlignment({
                     <ControlRow label={t("alignment_from")} bleed>
                         <input
                             type="date"
+                            id={`${dateId}-from`}
+                            name="from"
                             value={from ?? ""}
                             max={to ?? undefined}
                             onChange={(e) => setParams({ from: e.target.value || null })}
@@ -531,6 +536,8 @@ export default function BodyAlignment({
                     <ControlRow label={t("alignment_to")} bleed>
                         <input
                             type="date"
+                            id={`${dateId}-to`}
+                            name="to"
                             value={to ?? ""}
                             min={from ?? undefined}
                             onChange={(e) => setParams({ to: e.target.value || null })}

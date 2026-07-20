@@ -691,6 +691,9 @@ export default function BodyLobby({
         [navigate, searchParams],
     );
 
+    // Devtools/autofill want every form field to carry an id or name.
+    const dateId = React.useId();
+
     const { colorOf, legend } = React.useMemo(
         () => buildColorMap(people.map((p) => ({ party_key: p.party_key, party: p.party }))),
         [people],
@@ -758,11 +761,11 @@ export default function BodyLobby({
                                 </ControlRow>
                             ) : null}
                             <ControlRow label={t("alignment_from")} bleed>
-                                <input type="date" value={from ?? ""} max={to ?? undefined}
+                                <input type="date" id={`${dateId}-from`} name="from" value={from ?? ""} max={to ?? undefined}
                                     onChange={(e) => setParams({ from: e.target.value || null })} className={ghostDateField} aria-label={t("alignment_from")} />
                             </ControlRow>
                             <ControlRow label={t("alignment_to")} bleed>
-                                <input type="date" value={to ?? ""} min={from ?? undefined}
+                                <input type="date" id={`${dateId}-to`} name="to" value={to ?? ""} min={from ?? undefined}
                                     onChange={(e) => setParams({ to: e.target.value || null })} className={ghostDateField} aria-label={t("alignment_to")} />
                             </ControlRow>
                         </ControlGroup>

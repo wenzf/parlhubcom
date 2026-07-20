@@ -261,7 +261,7 @@ function FacetCombobox({
             />
             <PopoverContent className="w-[18rem] p-0" align="start">
                 <Command>
-                    <CommandInput placeholder={searchPlaceholder} />
+                    <CommandInput name="facet-option-filter" placeholder={searchPlaceholder} />
                     <CommandList>
                         <CommandEmpty>{emptyText}</CommandEmpty>
                         <CommandGroup>
@@ -304,6 +304,10 @@ export function DimensionControls({
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
     const searchId = React.useId();
+    // Base for the date-range field ids — devtools/autofill want every form field
+    // to carry an id or name; the param name alone could collide across multiple
+    // DimensionControls instances on one page.
+    const dateId = React.useId();
 
     // Mobile: collapse everything but the keyword field behind a toggle; on sm+
     // the advanced group is `contents` (always laid out inline) and the toggle hides.
@@ -583,6 +587,8 @@ export function DimensionControls({
                                 <Labeled label={t(f.fromLabelKey)}>
                                     <input
                                         type="date"
+                                        id={`${dateId}-${f.fromParam}`}
+                                        name={f.fromParam}
                                         value={current.dateFrom ?? ""}
                                         max={current.dateTo ?? undefined}
                                         onChange={(e) => setDate("dateFrom", e.target.value)}
@@ -593,6 +599,8 @@ export function DimensionControls({
                                 <Labeled label={t(f.toLabelKey)}>
                                     <input
                                         type="date"
+                                        id={`${dateId}-${f.toParam}`}
+                                        name={f.toParam}
                                         value={current.dateTo ?? ""}
                                         min={current.dateFrom ?? undefined}
                                         onChange={(e) => setDate("dateTo", e.target.value)}
