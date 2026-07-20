@@ -966,7 +966,10 @@ export const PAGE_CONFIG = {
             section_subtitle: {
                 data_origin: "NS_SPEECHES_OVERVIEW",
                 data_key_type: "dotprop",
-                data_key: "data.speech.type_external"
+                data_key: "data.speech.type_external",
+                // Speeches often have no type → same fallback as the breadcrumb.
+                data_key_fallback: "locs.pages.person.labels.speech_type_fallback",
+                data_key_fallback_origin: "NS_DATA_DASHBOARD_LAYOUT"
             },
             ...SIDEBAR_SECTION_LABEL_LOC_OBJECT_FRAGMENT
         }
