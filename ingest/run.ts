@@ -33,7 +33,7 @@ async function main(): Promise<void> {
     await db.run(`
     SET memory_limit = '3GB';
     SET temp_directory = 'ingest/openparldata/.duckdb_tmp';
-    SET max_temp_directory_size = '15GB';
+    SET max_temp_directory_size = '50GB';
     SET preserve_insertion_order = false;
   `);
 
