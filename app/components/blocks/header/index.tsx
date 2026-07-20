@@ -59,18 +59,20 @@ const NAV_EXPLORE_GROUPS: typeof NAV_SECTION_GROUPS = [
 ]
 
 // Static site pages grouped under the "Project" dropdown. More items land here
-// later; each row shows a label + short description (loc `nav.*`).
+// later; each row shows a label + short description (loc `nav.*`). Only the
+// index row carries a mark (the brand logo) — child rows are text-only, the
+// tree rule already signals hierarchy.
 const PROJECT_ITEMS = [
-    { ns: "NS_PROJECT_INDEX", icon: "info", label: "project", desc: "project_desc", logo: true },
-    { ns: "NS_PROJECT_DATA_GUIDE", icon: "search", label: "data_guide", desc: "data_guide_desc", logo: false },
-    { ns: "NS_PROJECT_DATA_MAP", icon: "database", label: "data_map", desc: "data_map_desc", logo: false },
-    { ns: "NS_PROJECT_METHODOLOGY", icon: "braces", label: "methodology", desc: "methodology_desc", logo: false },
-    { ns: "NS_ABOUT", icon: "info", label: "about", desc: "about_desc", logo: false },
-    { ns: "NS_FAQ", icon: "message-square-quote", label: "faq", desc: "faq_desc", logo: false },
-    { ns: "NS_SUSTAINABILITY", icon: "globe", label: "sustainability", desc: "sustainability_desc", logo: false },
-    { ns: "NS_ACCESSIBILITY", icon: "heart-handshake", label: "accessibility", desc: "accessibility_desc", logo: false },
-    { ns: "NS_TRAFFIC_STATS", icon: "scatter-chart", label: "traffic_stats", desc: "traffic_stats_desc", logo: false },
-    { ns: "NS_IMPRINT", icon: "id-card", label: "imprint", desc: "imprint_desc", logo: false },
+    { ns: "NS_PROJECT_INDEX", label: "project", desc: "project_desc", logo: true },
+    { ns: "NS_PROJECT_DATA_GUIDE", label: "data_guide", desc: "data_guide_desc", logo: false },
+    { ns: "NS_PROJECT_DATA_MAP", label: "data_map", desc: "data_map_desc", logo: false },
+    { ns: "NS_PROJECT_METHODOLOGY", label: "methodology", desc: "methodology_desc", logo: false },
+    { ns: "NS_ABOUT", label: "about", desc: "about_desc", logo: false },
+    { ns: "NS_FAQ", label: "faq", desc: "faq_desc", logo: false },
+    { ns: "NS_SUSTAINABILITY", label: "sustainability", desc: "sustainability_desc", logo: false },
+    { ns: "NS_ACCESSIBILITY", label: "accessibility", desc: "accessibility_desc", logo: false },
+    { ns: "NS_TRAFFIC_STATS", label: "traffic_stats", desc: "traffic_stats_desc", logo: false },
+    { ns: "NS_IMPRINT", label: "imprint", desc: "imprint_desc", logo: false },
 ] as const
 
 export default function Header() {
@@ -318,12 +320,7 @@ export default function Header() {
                                                 >
                                                     {it.logo ? (
                                                         <LogoMark className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
-                                                    ) : (
-                                                        <Icon
-                                                            name={it.icon}
-                                                            className="mt-0.5 size-4 shrink-0 text-muted-foreground"
-                                                        />
-                                                    )}
+                                                    ) : null}
                                                     <span className="flex flex-col gap-0.5">
                                                         <span>{tNav(it.label)}</span>
                                                         <span className="text-xs text-muted-foreground">
