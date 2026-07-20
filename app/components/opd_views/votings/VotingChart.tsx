@@ -1121,6 +1121,7 @@ export function VotingChart({
                                     <button type="button" className={ARR} disabled={gi === 0} onClick={() => setGroupOrder((o) => move(o, gi, -1))} aria-label="Move group up">↑</button>
                                     <button type="button" className={ARR} disabled={gi === partyGroupsForUi.length - 1} onClick={() => setGroupOrder((o) => move(o, gi, 1))} aria-label="Move group down">↓</button>
                                     <input
+                                        name={`group-label-${blk.group}`}
                                         value={groupLabels[blk.group] ?? blk.group}
                                         onChange={(e) => setGroupLabels((l) => ({ ...l, [blk.group]: e.target.value }))}
                                         className="h-11 min-w-0 flex-1 rounded-md border border-input bg-background px-2 text-xs font-medium outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"

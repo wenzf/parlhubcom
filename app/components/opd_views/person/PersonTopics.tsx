@@ -141,6 +141,8 @@ function tileColor(t: number): { fill: string; text: string } {
 export function PersonTopics({ result, loc, locale: _locale }: PersonTopicsProps) {
     const t = makeT(loc);
     const [params, setParams] = useSearchParams();
+    // Devtools/autofill want every form field to carry an id or name.
+    const dateId = React.useId();
 
     // ---- period control: presets + custom, all via ?from/?to ----
     const setRange = (from: string | null, to: string | null) => {
@@ -222,6 +224,8 @@ export function PersonTopics({ result, loc, locale: _locale }: PersonTopicsProps
                     <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
                         <input
                             type="date"
+                            id={`${dateId}-from`}
+                            name="from"
                             value={result.window.from ?? ""}
                             onChange={(e) => setRange(e.target.value || null, result.window.to)}
                             className="h-11 rounded border border-input bg-transparent px-1.5 outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
@@ -230,6 +234,8 @@ export function PersonTopics({ result, loc, locale: _locale }: PersonTopicsProps
                         <span>–</span>
                         <input
                             type="date"
+                            id={`${dateId}-to`}
+                            name="to"
                             value={result.window.to ?? ""}
                             onChange={(e) => setRange(result.window.from, e.target.value || null)}
                             className="h-11 rounded border border-input bg-transparent px-1.5 outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
