@@ -70,6 +70,15 @@ export const SITE_LANGS = [
  *  sits alongside its sibling hrefs — keep the two in sync. */
 export const REPO_URL = "https://github.com/wenzf/parlhubcom"
 
+/** The site's own zone — every calendar date the UI prints is a Swiss date.
+ *  Pass it as `timeZone` to any `Intl.DateTimeFormat` that renders during SSR:
+ *  unpinned, the format follows the *system* zone, so a UTC server and a
+ *  visitor's browser west of UTC can land on different calendar days and the
+ *  text node differs at hydration (React #418). Day-precision data values are a
+ *  separate case — those are pinned to `"UTC"` (lib/domain/person.ts) because
+ *  they are dates, not instants. */
+export const SITE_TIME_ZONE = "Europe/Zurich"
+
 // --- FRAGMENTS
 
 // Every data section's sidebar reads its item labels from the same

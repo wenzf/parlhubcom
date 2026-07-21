@@ -16,6 +16,7 @@ import { Form, NavLink, useParams } from "react-router";
 import type { Route } from "./+types/home";
 
 import { langByParam, localizedPath } from "~/lib/lang";
+import { SITE_TIME_ZONE } from "~/configs/site.config";
 import { getStaticData } from "~/server/static/get_static_data.server";
 import { getHomeStats, type HomeStats } from "~/server/home_stats.server";
 import { homeMeta } from "~/lib/seo/metas";
@@ -88,10 +89,16 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     useEffect(() => setMounted(true), []);
 
     const fmt = (n: number) => n.toLocaleString(`${lang_code}-CH`);
+    // `stats.updated` is an *instant* (import_meta.synced_at), so the calendar
+    // day it falls on depends on the zone. Pinned to Europe/Zurich: unpinned it
+    // followed the system zone, and a UTC server plus a browser west of UTC
+    // rendered different days -> hydration text mismatch (React #418), which is
+    // exactly what PageSpeed's US-hosted Chrome reported.
     const updated = stats.updated
-        ? new Intl.DateTimeFormat(`${lang_code}-CH`, { dateStyle: "medium" }).format(
-            new Date(stats.updated),
-        )
+        ? new Intl.DateTimeFormat(`${lang_code}-CH`, {
+            dateStyle: "medium",
+            timeZone: SITE_TIME_ZONE,
+        }).format(new Date(stats.updated))
         : null;
 
     return (

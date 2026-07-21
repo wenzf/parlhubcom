@@ -18,7 +18,7 @@
 import type { Route } from "./+types/accessibility";
 import { langByParam } from "~/lib/lang";
 import { getStaticData } from "~/server/static/get_static_data.server";
-import { PAGE_CONFIG } from "~/configs/site.config";
+import { PAGE_CONFIG, SITE_TIME_ZONE } from "~/configs/site.config";
 import { accessibilityMeta } from "~/lib/seo/metas";
 import { LinkValue } from "~/components/opd_views/opd_micros";
 
@@ -72,8 +72,14 @@ export default function AccessibilityPage({ loaderData }: Route.ComponentProps) 
   const c = locs.accessibility;
 
   // Locale-formatted date; the <time> keeps the ISO value machine-readable.
+  // The zone is pinned to Europe/Zurich (the site's own zone): without it the
+  // UTC-midnight instant renders as the *previous* day in browsers west of UTC,
+  // while the UTC server renders the ISO day -> hydration text mismatch (#418).
   const fmt = (iso: string) =>
-    new Intl.DateTimeFormat(lang_code, { dateStyle: "long" }).format(new Date(`${iso}T00:00:00Z`));
+    new Intl.DateTimeFormat(lang_code, {
+      dateStyle: "long",
+      timeZone: SITE_TIME_ZONE,
+    }).format(new Date(`${iso}T00:00:00Z`));
 
   return (
     <article className="mx-auto flex w-full max-w-prose flex-col gap-10 p-4 pt-2">
