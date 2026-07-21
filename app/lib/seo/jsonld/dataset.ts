@@ -6,10 +6,10 @@
 // never drift from what the menu actually offers.
 //
 // Each bulk feed (votings, affairs, …) becomes one Dataset with a DataDownload
-// per format, `publisher` → the site Organization node (by @id), `isBasedOn` →
-// OpenParlData.ch (the upstream source), CC BY 4.0. This markup is what makes
-// the exports discoverable in Google Dataset Search; `name` + `description` are
-// the mandatory fields there.
+// per format, `publisher` → the site Organization node (by @id), `creator` +
+// `isBasedOn` → OpenParlData.ch (the upstream source that collects the records),
+// CC BY 4.0. This markup is what makes the exports discoverable in Google Dataset
+// Search; `name` + `description` are the mandatory fields there.
 //
 // Emission = head JSON-LD, built in the leaf `meta()` (Session 5): each entity's
 // `metas/*.ts` builds a `DatasetsBuilder` via `makeDatasets` and hands it to the
@@ -34,6 +34,21 @@ import { ORG_ID } from "./site";
 
 const LICENSE_URL = "https://creativecommons.org/licenses/by/4.0/";
 const SOURCE_URL = "https://openparldata.ch/";
+const SOURCE_NAME = "OpenParlData";
+/** `@id` for the upstream data source as an Organization — an external node (its
+ *  own domain, not a parlhub URL), so consumers can merge the `creator` of every
+ *  Dataset into one entity. Kept distinct from `ORG_ID` (parlhub = publisher). */
+const SOURCE_ID = `${SOURCE_URL}#organization`;
+
+/** The upstream collector of the parliamentary data — Dataset `creator`. parlhub
+ *  publishes and derives; OpenParlData.ch creates the underlying records, which
+ *  is exactly the attribution CC BY 4.0 requires (see the imprint / llms.txt). */
+const SOURCE_ORG = {
+    "@type": "Organization",
+    "@id": SOURCE_ID,
+    name: SOURCE_NAME,
+    url: SOURCE_URL,
+} as const;
 
 /** The bulk formats offered by the export resource routes, with their MIME
  *  types (mirrors data_export.ts' MIME map — kept literal to stay server-safe). */
@@ -89,6 +104,7 @@ export function datasetNodes(opts: DatasetNodesOpts): object[] {
         url,
         inLanguage: lang,
         ...(aboutId ? { about: { "@id": aboutId } } : {}),
+        creator: SOURCE_ORG,
         publisher: { "@id": ORG_ID },
         isBasedOn: SOURCE_URL,
         license: LICENSE_URL,

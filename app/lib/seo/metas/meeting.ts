@@ -91,10 +91,14 @@ export const meetingDimensionMeta = makeDimensionMeta<MeetingDimension, MeetingB
 
 export const meetingsIndexMeta = makeIndexMeta<{
     meetings?: { total_count?: number; items?: MeetingClient[] };
+    bodies?: { items?: Array<{ id?: number | null }> };
 }>({
     copyPrefix: "meeting.index",
     countKey: "meetings",
     catalogueDataset: { segment: URL_PATH_SEGMENTS.MEETINGS, datasetKey: "meetings" },
+    // `bodies` rides along so each list item's organizer resolves a name/address
+    // the same way the detail page does (meetings_list.sql returns the lookup).
     node: (data, lang, path) =>
-        itemListJsonLd(data?.meetings?.items, (m) => meetingNode({ meeting: m }, lang, path)),
+        itemListJsonLd(data?.meetings?.items, (m) =>
+            meetingNode({ meeting: m, ...(data?.bodies ? { bodies: data.bodies } : {}) }, lang, path)),
 });
