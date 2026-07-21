@@ -322,7 +322,7 @@ function VoteRow({
 
                 {/* context: parent affair · group · meeting — internal links */}
                 {hasContext ? (
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
+                    <div className="flex flex-wrap items-start gap-x-3 gap-y-1 text-xs text-muted-foreground">
                         {affair ? (
                             <MetaItem icon="file-text">
                                 <span>

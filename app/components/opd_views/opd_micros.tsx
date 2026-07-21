@@ -553,8 +553,13 @@ export function MetaItem({
     children: React.ReactNode;
 }) {
     return (
-        <span className="inline-flex items-center gap-1.5">
-            <Icon name={icon} className="size-3.5 shrink-0 text-muted-foreground" />
+        // items-start so a wrapping label keeps the icon on the first line;
+        // the small offset re-centers it optically within that line box.
+        <span className="inline-flex items-start gap-1.5">
+            <Icon
+                name={icon}
+                className="mt-[0.125rem] size-3.5 shrink-0 text-muted-foreground"
+            />
             {children}
         </span>
     );
