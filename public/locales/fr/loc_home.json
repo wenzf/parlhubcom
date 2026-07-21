@@ -5,6 +5,52 @@
     "search_placeholder": "Rechercher…",
     "search_button": "Rechercher",
     "search_scope_label": "Rechercher dans",
+    "search_scope_hints": {
+      "people": {
+        "placeholder": "p. ex. Müller, Bern, 3000",
+        "hint": "Recherche le nom, la localité et le code postal."
+      },
+      "votings": {
+        "placeholder": "p. ex. CO2-Gesetz",
+        "hint": "Recherche le titre du vote et le titre de l'objet lié."
+      },
+      "affairs": {
+        "placeholder": "p. ex. Klima, 21.403",
+        "hint": "Recherche le titre et le numéro de l'objet."
+      },
+      "speeches": {
+        "placeholder": "p. ex. Krankenkasse",
+        "hint": "Recherche le texte des interventions."
+      },
+      "bodies": {
+        "placeholder": "p. ex. Liechtenstein, Zürich, Winterthur",
+        "hint": "Recherche le nom d'un pays, d'un canton, d'une ville ou d'une commune."
+      },
+      "groups": {
+        "placeholder": "p. ex. Nationalrat, Finanzkommission, SP",
+        "hint": "Recherche le nom, l'abréviation et la description des organes et groupes parlementaires."
+      },
+      "meetings": {
+        "placeholder": "p. ex. Frühjahrssession, Bern",
+        "hint": "Recherche le nom, le lieu et la description."
+      },
+      "texts": {
+        "placeholder": "p. ex. Energiegesetz",
+        "hint": "Recherche le type de texte et son contenu."
+      },
+      "documents": {
+        "placeholder": "p. ex. Bericht",
+        "hint": "Recherche le nom et la catégorie du document."
+      },
+      "interests": {
+        "placeholder": "p. ex. Pro Natura, Vorstand",
+        "hint": "Recherche le nom de l'organisation, la fonction et le groupe parlementaire."
+      },
+      "organizations": {
+        "placeholder": "p. ex. Economiesuisse",
+        "hint": "Recherche le nom de l'organisation."
+      }
+    },
     "sections": {
       "people": "Personnes",
       "votings": "Votes",

@@ -40,6 +40,138 @@
             "de": "Suchen in",
             "fr": "Rechercher dans"
         },
+        "home.search_scope_hints.people.placeholder": {
+            "context": "Homepage search: placeholder inside the search input while the 'people' scope is selected — concrete EXAMPLE queries, prefixed with the localized 'e.g.'. Shown for the People catalogue (name, place, postcode). Keep short (it must not truncate on mobile); the example terms are deliberately NOT translated — they must be real German/French/Italian query strings that actually hit the data; translate only the leading 'e.g.'.",
+            "en": "e.g. Müller, Bern, 3000",
+            "de": "z. B. Müller, Bern, 3000",
+            "fr": "p. ex. Müller, Bern, 3000"
+        },
+        "home.search_scope_hints.people.hint": {
+            "context": "Homepage search: the small grey line under the search input while the 'people' scope is selected, naming which fields the query matches in the People catalogue (name, place, postcode). One short sentence, mirrors the info-tooltip wording of the same catalogue.",
+            "en": "Searches name, place and postcode.",
+            "de": "Durchsucht Name, Ort und PLZ.",
+            "fr": "Recherche le nom, la localité et le code postal."
+        },
+        "home.search_scope_hints.votings.placeholder": {
+            "context": "Homepage search: placeholder inside the search input while the 'votings' scope is selected — concrete EXAMPLE queries, prefixed with the localized 'e.g.'. Shown for the Votings catalogue (voting title + title of the affiliated affair). Keep short (it must not truncate on mobile); the example terms are deliberately NOT translated — they must be real German/French/Italian query strings that actually hit the data; translate only the leading 'e.g.'.",
+            "en": "e.g. CO2-Gesetz",
+            "de": "z. B. CO2-Gesetz",
+            "fr": "p. ex. CO2-Gesetz"
+        },
+        "home.search_scope_hints.votings.hint": {
+            "context": "Homepage search: the small grey line under the search input while the 'votings' scope is selected, naming which fields the query matches in the Votings catalogue (voting title + title of the affiliated affair). One short sentence, mirrors the info-tooltip wording of the same catalogue.",
+            "en": "Searches the voting title and the title of the affiliated affair.",
+            "de": "Durchsucht den Abstimmungstitel und den Titel des zugehörigen Geschäfts.",
+            "fr": "Recherche le titre du vote et le titre de l'objet lié."
+        },
+        "home.search_scope_hints.affairs.placeholder": {
+            "context": "Homepage search: placeholder inside the search input while the 'affairs' scope is selected — concrete EXAMPLE queries, prefixed with the localized 'e.g.'. Shown for the Affairs catalogue (affair title + affair number). Keep short (it must not truncate on mobile); the example terms are deliberately NOT translated — they must be real German/French/Italian query strings that actually hit the data; translate only the leading 'e.g.'.",
+            "en": "e.g. Klima, 21.403",
+            "de": "z. B. Klima, 21.403",
+            "fr": "p. ex. Klima, 21.403"
+        },
+        "home.search_scope_hints.affairs.hint": {
+            "context": "Homepage search: the small grey line under the search input while the 'affairs' scope is selected, naming which fields the query matches in the Affairs catalogue (affair title + affair number). One short sentence, mirrors the info-tooltip wording of the same catalogue.",
+            "en": "Searches the affair title and the affair number.",
+            "de": "Durchsucht Geschäftstitel und Geschäftsnummer.",
+            "fr": "Recherche le titre et le numéro de l'objet."
+        },
+        "home.search_scope_hints.speeches.placeholder": {
+            "context": "Homepage search: placeholder inside the search input while the 'speeches' scope is selected — concrete EXAMPLE queries, prefixed with the localized 'e.g.'. Shown for the Speeches catalogue (full text of speeches). Keep short (it must not truncate on mobile); the example terms are deliberately NOT translated — they must be real German/French/Italian query strings that actually hit the data; translate only the leading 'e.g.'.",
+            "en": "e.g. Krankenkasse",
+            "de": "z. B. Krankenkasse",
+            "fr": "p. ex. Krankenkasse"
+        },
+        "home.search_scope_hints.speeches.hint": {
+            "context": "Homepage search: the small grey line under the search input while the 'speeches' scope is selected, naming which fields the query matches in the Speeches catalogue (full text of speeches). One short sentence, mirrors the info-tooltip wording of the same catalogue.",
+            "en": "Searches the wording of the speeches.",
+            "de": "Durchsucht den Wortlaut der Reden.",
+            "fr": "Recherche le texte des interventions."
+        },
+        "home.search_scope_hints.bodies.placeholder": {
+            "context": "Homepage search: placeholder inside the search input while the 'bodies' scope is selected — concrete EXAMPLE queries, prefixed with the localized 'e.g.'. Shown for the Parliaments catalogue (country, canton, city, town names). Keep short (it must not truncate on mobile); the example terms are deliberately NOT translated — they must be real German/French/Italian query strings that actually hit the data; translate only the leading 'e.g.'.",
+            "en": "e.g. Liechtenstein, Zürich, Winterthur",
+            "de": "z. B. Liechtenstein, Zürich, Winterthur",
+            "fr": "p. ex. Liechtenstein, Zürich, Winterthur"
+        },
+        "home.search_scope_hints.bodies.hint": {
+            "context": "Homepage search: the small grey line under the search input while the 'bodies' scope is selected, naming which fields the query matches in the Parliaments catalogue (country, canton, city, town names). One short sentence, mirrors the info-tooltip wording of the same catalogue.",
+            "en": "Searches the name of a country, canton, city or town.",
+            "de": "Durchsucht den Namen von Land, Kanton, Stadt oder Gemeinde.",
+            "fr": "Recherche le nom d'un pays, d'un canton, d'une ville ou d'une commune."
+        },
+        "home.search_scope_hints.groups.placeholder": {
+            "context": "Homepage search: placeholder inside the search input while the 'groups' scope is selected — concrete EXAMPLE queries, prefixed with the localized 'e.g.'. Shown for the Committees & groups catalogue (name, abbreviation, description). Keep short (it must not truncate on mobile); the example terms are deliberately NOT translated — they must be real German/French/Italian query strings that actually hit the data; translate only the leading 'e.g.'.",
+            "en": "e.g. Nationalrat, Finanzkommission, SP",
+            "de": "z. B. Nationalrat, Finanzkommission, SP",
+            "fr": "p. ex. Nationalrat, Finanzkommission, SP"
+        },
+        "home.search_scope_hints.groups.hint": {
+            "context": "Homepage search: the small grey line under the search input while the 'groups' scope is selected, naming which fields the query matches in the Committees & groups catalogue (name, abbreviation, description). One short sentence, mirrors the info-tooltip wording of the same catalogue.",
+            "en": "Searches name, abbreviation and description of committees and parliamentary groups.",
+            "de": "Durchsucht Name, Abkürzung und Beschreibung von Gremien und Fraktionen.",
+            "fr": "Recherche le nom, l'abréviation et la description des organes et groupes parlementaires."
+        },
+        "home.search_scope_hints.meetings.placeholder": {
+            "context": "Homepage search: placeholder inside the search input while the 'meetings' scope is selected — concrete EXAMPLE queries, prefixed with the localized 'e.g.'. Shown for the Meetings catalogue (name, location, description). Keep short (it must not truncate on mobile); the example terms are deliberately NOT translated — they must be real German/French/Italian query strings that actually hit the data; translate only the leading 'e.g.'.",
+            "en": "e.g. Frühjahrssession, Bern",
+            "de": "z. B. Frühjahrssession, Bern",
+            "fr": "p. ex. Frühjahrssession, Bern"
+        },
+        "home.search_scope_hints.meetings.hint": {
+            "context": "Homepage search: the small grey line under the search input while the 'meetings' scope is selected, naming which fields the query matches in the Meetings catalogue (name, location, description). One short sentence, mirrors the info-tooltip wording of the same catalogue.",
+            "en": "Searches name, location and description.",
+            "de": "Durchsucht Name, Ort und Beschreibung.",
+            "fr": "Recherche le nom, le lieu et la description."
+        },
+        "home.search_scope_hints.texts.placeholder": {
+            "context": "Homepage search: placeholder inside the search input while the 'texts' scope is selected — concrete EXAMPLE queries, prefixed with the localized 'e.g.'. Shown for the Texts catalogue (text type + wording). Keep short (it must not truncate on mobile); the example terms are deliberately NOT translated — they must be real German/French/Italian query strings that actually hit the data; translate only the leading 'e.g.'.",
+            "en": "e.g. Energiegesetz",
+            "de": "z. B. Energiegesetz",
+            "fr": "p. ex. Energiegesetz"
+        },
+        "home.search_scope_hints.texts.hint": {
+            "context": "Homepage search: the small grey line under the search input while the 'texts' scope is selected, naming which fields the query matches in the Texts catalogue (text type + wording). One short sentence, mirrors the info-tooltip wording of the same catalogue.",
+            "en": "Searches the text type and the wording.",
+            "de": "Durchsucht Textart und Wortlaut.",
+            "fr": "Recherche le type de texte et son contenu."
+        },
+        "home.search_scope_hints.documents.placeholder": {
+            "context": "Homepage search: placeholder inside the search input while the 'documents' scope is selected — concrete EXAMPLE queries, prefixed with the localized 'e.g.'. Shown for the Documents catalogue (document name + category). Keep short (it must not truncate on mobile); the example terms are deliberately NOT translated — they must be real German/French/Italian query strings that actually hit the data; translate only the leading 'e.g.'.",
+            "en": "e.g. Bericht",
+            "de": "z. B. Bericht",
+            "fr": "p. ex. Bericht"
+        },
+        "home.search_scope_hints.documents.hint": {
+            "context": "Homepage search: the small grey line under the search input while the 'documents' scope is selected, naming which fields the query matches in the Documents catalogue (document name + category). One short sentence, mirrors the info-tooltip wording of the same catalogue.",
+            "en": "Searches the document name and category.",
+            "de": "Durchsucht Name und Kategorie des Dokuments.",
+            "fr": "Recherche le nom et la catégorie du document."
+        },
+        "home.search_scope_hints.interests.placeholder": {
+            "context": "Homepage search: placeholder inside the search input while the 'interests' scope is selected — concrete EXAMPLE queries, prefixed with the localized 'e.g.'. Shown for the Interests catalogue (organization name, function, parliamentary group). Keep short (it must not truncate on mobile); the example terms are deliberately NOT translated — they must be real German/French/Italian query strings that actually hit the data; translate only the leading 'e.g.'.",
+            "en": "e.g. Pro Natura, Vorstand",
+            "de": "z. B. Pro Natura, Vorstand",
+            "fr": "p. ex. Pro Natura, Vorstand"
+        },
+        "home.search_scope_hints.interests.hint": {
+            "context": "Homepage search: the small grey line under the search input while the 'interests' scope is selected, naming which fields the query matches in the Interests catalogue (organization name, function, parliamentary group). One short sentence, mirrors the info-tooltip wording of the same catalogue.",
+            "en": "Searches organization name, function and parliamentary group.",
+            "de": "Durchsucht Organisationsname, Funktion und Fraktion.",
+            "fr": "Recherche le nom de l'organisation, la fonction et le groupe parlementaire."
+        },
+        "home.search_scope_hints.organizations.placeholder": {
+            "context": "Homepage search: placeholder inside the search input while the 'organizations' scope is selected — concrete EXAMPLE queries, prefixed with the localized 'e.g.'. Shown for the Organizations catalogue (organization name). Keep short (it must not truncate on mobile); the example terms are deliberately NOT translated — they must be real German/French/Italian query strings that actually hit the data; translate only the leading 'e.g.'.",
+            "en": "e.g. Economiesuisse",
+            "de": "z. B. Economiesuisse",
+            "fr": "p. ex. Economiesuisse"
+        },
+        "home.search_scope_hints.organizations.hint": {
+            "context": "Homepage search: the small grey line under the search input while the 'organizations' scope is selected, naming which fields the query matches in the Organizations catalogue (organization name). One short sentence, mirrors the info-tooltip wording of the same catalogue.",
+            "en": "Searches the organization name.",
+            "de": "Durchsucht den Organisationsnamen.",
+            "fr": "Recherche le nom de l'organisation."
+        },
         "home.sections.people": {
             "context": "Homepage: label of a search-scope chip and of the linked count in the live dataset strip ('12'345 People'). Short plural noun for members of parliament (MPs).",
             "en": "People",

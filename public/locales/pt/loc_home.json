@@ -5,6 +5,52 @@
     "search_placeholder": "Pesquisar…",
     "search_button": "Pesquisar",
     "search_scope_label": "Pesquisar em",
+    "search_scope_hints": {
+      "people": {
+        "placeholder": "ex.: Müller, Bern, 3000",
+        "hint": "Pesquisa nome, localidade e código postal."
+      },
+      "votings": {
+        "placeholder": "ex.: CO2-Gesetz",
+        "hint": "Pesquisa o título da votação e o título do assunto associado."
+      },
+      "affairs": {
+        "placeholder": "ex.: Klima, 21.403",
+        "hint": "Pesquisa o título e o número do assunto."
+      },
+      "speeches": {
+        "placeholder": "ex.: Krankenkasse",
+        "hint": "Pesquisa o texto dos discursos."
+      },
+      "bodies": {
+        "placeholder": "ex.: Liechtenstein, Zürich, Winterthur",
+        "hint": "Pesquisa o nome de um país, cantão, cidade ou município."
+      },
+      "groups": {
+        "placeholder": "ex.: Nationalrat, Finanzkommission, SP",
+        "hint": "Pesquisa nome, sigla e descrição de comissões e grupos parlamentares."
+      },
+      "meetings": {
+        "placeholder": "ex.: Frühjahrssession, Bern",
+        "hint": "Pesquisa nome, local e descrição."
+      },
+      "texts": {
+        "placeholder": "ex.: Energiegesetz",
+        "hint": "Pesquisa o tipo de texto e o seu conteúdo."
+      },
+      "documents": {
+        "placeholder": "ex.: Bericht",
+        "hint": "Pesquisa o nome e a categoria do documento."
+      },
+      "interests": {
+        "placeholder": "ex.: Pro Natura, Vorstand",
+        "hint": "Pesquisa o nome da organização, a função e o grupo parlamentar."
+      },
+      "organizations": {
+        "placeholder": "ex.: Economiesuisse",
+        "hint": "Pesquisa o nome da organização."
+      }
+    },
     "sections": {
       "people": "Pessoas",
       "votings": "Votações",

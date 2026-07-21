@@ -62,12 +62,17 @@ const SCOPES: { label: string; ns: PageNamespaces }[] = [
     { label: "organizations", ns: "NS_ORGANIZATIONS_INDEX" },
 ];
 
+/** Per-scope search copy: example placeholder + the hint line under the input. */
+export type ScopeHint = { placeholder?: string; hint?: string };
+
 type HomeContent = {
     tagline: string;
     search_label: string;
     search_placeholder: string;
     search_button: string;
     search_scope_label: string;
+    /** Keyed by SCOPES[].label; a missing entry falls back to search_placeholder. */
+    search_scope_hints?: Record<string, ScopeHint>;
     sections: Record<string, string>;
     stats_updated: string;
     start_link: string;
@@ -82,6 +87,13 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     const { lang } = useParams();
     const { lang_code } = langByParam(lang);
     const [scope, setScope] = useState<PageNamespaces>("NS_PEOPLE_INDEX");
+
+    // The search box describes the *selected* catalogue: example query in the
+    // placeholder, one line naming the fields it matches underneath (same
+    // information the catalogues' info tooltips carry). Both fall back to the
+    // generic placeholder / no hint when a scope has no copy.
+    const scopeLabel = SCOPES.find((s) => s.ns === scope)?.label;
+    const scopeHint = scopeLabel ? c.search_scope_hints?.[scopeLabel] : undefined;
 
     // WebMCP tools call hooks unconditionally, so they must only mount on the
     // client after hydration (mirrors DimensionMcpTools' gating).
@@ -117,6 +129,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 <HomeSearchMcpTool
                     scopes={SCOPES}
                     sections={c.sections}
+                    hints={c.search_scope_hints}
                     lang={lang}
                     currentScope={scope}
                 />
@@ -139,54 +152,68 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                         // See types/webmcp.d.ts.
                         toolname="home_search"
                         tooldescription="Search parlhub's Swiss and Liechtenstein parliamentary data; submitting navigates to the selected section's catalogue with the query applied."
-                        // Mobile: input on its own line, scope select + button underneath.
-                        // Desktop (md+): input + button on one row, scope chips below.
-                        className="flex w-full max-w-xl flex-col gap-2 md:flex-row md:items-center"
+                        className="flex w-full max-w-xl flex-col gap-2"
                     >
-                        <label htmlFor="home-search" className="sr-only">
-                            {c.search_label}
-                        </label>
-                        <input
-                            id="home-search"
-                            type="search"
-                            name="q"
-                            placeholder={c.search_placeholder}
-                            className="h-11 w-full min-w-0 rounded-md border border-input bg-background px-3 text-sm text-foreground placeholder:text-muted-foreground outline-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring"
-                        />
-                        <div className="flex items-center gap-2">
-                            {/* Scope picker on mobile only — chips take over at md+. */}
-                            <Select
-                                value={scope}
-                                onValueChange={(v) => setScope(v as PageNamespaces)}
-                            >
-                                <SelectTrigger
-                                    id="home-scope"
-                                    aria-label={c.search_scope_label}
-                                    className={buttonVariants({
-                                        variant: "outline",
-                                        className: "min-w-0 flex-1 md:hidden",
-                                    })}
+                        {/* Mobile: input on its own line, scope select + button underneath.
+                            Desktop (md+): input + button on one row, scope chips below. */}
+                        <div className="flex w-full flex-col gap-2 md:flex-row md:items-center">
+                            <label htmlFor="home-search" className="sr-only">
+                                {c.search_label}
+                            </label>
+                            <input
+                                id="home-search"
+                                type="search"
+                                name="q"
+                                placeholder={scopeHint?.placeholder ?? c.search_placeholder}
+                                aria-describedby="home-search-hint"
+                                className="h-11 w-full min-w-0 rounded-md border border-input bg-background px-3 text-sm text-foreground placeholder:text-muted-foreground outline-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring"
+                            />
+                            <div className="flex items-center gap-2">
+                                {/* Scope picker on mobile only — chips take over at md+. */}
+                                <Select
+                                    value={scope}
+                                    onValueChange={(v) => setScope(v as PageNamespaces)}
                                 >
-                                    <SelectValue>
-                                        {(value) => {
-                                            const s = SCOPES.find((x) => x.ns === value);
-                                            return s ? c.sections[s.label] ?? s.label : null;
-                                        }}
-                                    </SelectValue>
-                                </SelectTrigger>
-                                <SelectContent>
-                                    {SCOPES.map((s) => (
-                                        <SelectItem key={s.ns} value={s.ns}>
-                                            {c.sections[s.label] ?? s.label}
-                                        </SelectItem>
-                                    ))}
-                                </SelectContent>
-                            </Select>
-                            <Button type="submit" variant="outline">
-                                <Icon name="search" />
-                                {c.search_button}
-                            </Button>
+                                    <SelectTrigger
+                                        id="home-scope"
+                                        aria-label={c.search_scope_label}
+                                        className={buttonVariants({
+                                            variant: "outline",
+                                            className: "min-w-0 flex-1 md:hidden",
+                                        })}
+                                    >
+                                        <SelectValue>
+                                            {(value) => {
+                                                const s = SCOPES.find((x) => x.ns === value);
+                                                return s ? c.sections[s.label] ?? s.label : null;
+                                            }}
+                                        </SelectValue>
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                        {SCOPES.map((s) => (
+                                            <SelectItem key={s.ns} value={s.ns}>
+                                                {c.sections[s.label] ?? s.label}
+                                            </SelectItem>
+                                        ))}
+                                    </SelectContent>
+                                </Select>
+                                <Button type="submit" variant="outline">
+                                    <Icon name="search" />
+                                    {c.search_button}
+                                </Button>
+                            </div>
                         </div>
+
+                        {/* What the selected catalogue's search matches. Reserved
+                            height so switching scope never shifts the layout;
+                            polite live region so the change is announced. */}
+                        <p
+                            id="home-search-hint"
+                            aria-live="polite"
+                            className="min-h-4 text-left text-xs text-muted-foreground md:text-center"
+                        >
+                            {scopeHint?.hint}
+                        </p>
                     </Form>
 
                     <div

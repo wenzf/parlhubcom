@@ -1858,6 +1858,42 @@
             "de": "Durchsucht Namen, Ort und PLZ.",
             "fr": "Recherche les noms, la localité et le code postal."
         },
+        "pages.person.labels.controls_search_hint_groups": {
+            "context": "Tooltip next to the search field on committee/group lists explaining which fields the keyword matches. Full sentence, factual.",
+            "en": "Searches name, abbreviation and description.",
+            "de": "Durchsucht Name, Abkürzung und Beschreibung.",
+            "fr": "Recherche le nom, l'abréviation et la description."
+        },
+        "pages.person.labels.controls_search_placeholder_groups": {
+            "context": "Placeholder inside the search field on committee/group lists. Imperative, ends with an ellipsis.",
+            "en": "Search committees & groups…",
+            "de": "Gremien durchsuchen…",
+            "fr": "Rechercher des organes…"
+        },
+        "pages.person.labels.controls_search_hint_organizations": {
+            "context": "Tooltip next to the search field on organization lists (companies/associations linked to MPs via interest ties). Full sentence, factual.",
+            "en": "Searches the organization name.",
+            "de": "Durchsucht den Organisationsnamen.",
+            "fr": "Recherche le nom de l'organisation."
+        },
+        "pages.person.labels.controls_search_hint_agendas": {
+            "context": "Tooltip next to the search field on a meeting's agenda-item list (de 'Traktanden'). Names the matched fields; full sentence, factual.",
+            "en": "Searches title, description, number and category.",
+            "de": "Durchsucht Titel, Beschreibung, Nummer und Kategorie.",
+            "fr": "Recherche le titre, la description, le numéro et la catégorie."
+        },
+        "pages.person.labels.controls_search_placeholder_agendas": {
+            "context": "Placeholder inside the search field on a meeting's agenda-item list (de 'Traktanden'). Imperative, ends with an ellipsis.",
+            "en": "Search agenda items…",
+            "de": "Traktanden durchsuchen…",
+            "fr": "Rechercher des points de l'ordre du jour…"
+        },
+        "pages.person.labels.controls_search_hint_alignment": {
+            "context": "Tooltip next to the search field on the voting-alignment list, where each row is another parliament member compared with the current one. Full sentence, factual.",
+            "en": "Searches the name of the compared member.",
+            "de": "Durchsucht den Namen des verglichenen Mitglieds.",
+            "fr": "Recherche le nom du membre comparé."
+        },
         "pages.person.labels.controls_search_hint_memberships": {
             "context": "Tooltip next to the search field on membership lists listing the matched fields (group/body name, function, membership type). Full sentence.",
             "en": "Searches group/body name, function and membership type.",

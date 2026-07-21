@@ -5,6 +5,52 @@
     "search_placeholder": "Suchen…",
     "search_button": "Suchen",
     "search_scope_label": "Suchen in",
+    "search_scope_hints": {
+      "people": {
+        "placeholder": "z. B. Müller, Bern, 3000",
+        "hint": "Durchsucht Name, Ort und PLZ."
+      },
+      "votings": {
+        "placeholder": "z. B. CO2-Gesetz",
+        "hint": "Durchsucht den Abstimmungstitel und den Titel des zugehörigen Geschäfts."
+      },
+      "affairs": {
+        "placeholder": "z. B. Klima, 21.403",
+        "hint": "Durchsucht Geschäftstitel und Geschäftsnummer."
+      },
+      "speeches": {
+        "placeholder": "z. B. Krankenkasse",
+        "hint": "Durchsucht den Wortlaut der Reden."
+      },
+      "bodies": {
+        "placeholder": "z. B. Liechtenstein, Zürich, Winterthur",
+        "hint": "Durchsucht den Namen von Land, Kanton, Stadt oder Gemeinde."
+      },
+      "groups": {
+        "placeholder": "z. B. Nationalrat, Finanzkommission, SP",
+        "hint": "Durchsucht Name, Abkürzung und Beschreibung von Gremien und Fraktionen."
+      },
+      "meetings": {
+        "placeholder": "z. B. Frühjahrssession, Bern",
+        "hint": "Durchsucht Name, Ort und Beschreibung."
+      },
+      "texts": {
+        "placeholder": "z. B. Energiegesetz",
+        "hint": "Durchsucht Textart und Wortlaut."
+      },
+      "documents": {
+        "placeholder": "z. B. Bericht",
+        "hint": "Durchsucht Name und Kategorie des Dokuments."
+      },
+      "interests": {
+        "placeholder": "z. B. Pro Natura, Vorstand",
+        "hint": "Durchsucht Organisationsname, Funktion und Fraktion."
+      },
+      "organizations": {
+        "placeholder": "z. B. Economiesuisse",
+        "hint": "Durchsucht den Organisationsnamen."
+      }
+    },
     "sections": {
       "people": "Personen",
       "votings": "Abstimmungen",

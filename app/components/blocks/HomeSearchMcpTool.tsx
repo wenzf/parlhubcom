@@ -32,6 +32,12 @@ export interface HomeSearchMcpToolProps {
     scopes: { label: string; ns: PageNamespaces }[];
     /** Localized section names, for the agent-facing description (label → name). */
     sections: Record<string, string>;
+    /**
+     * Per-scope search copy shown to humans under the input (label → hint).
+     * Folded into the tool description so an agent knows which fields each
+     * scope's `q` actually matches — same information, same source.
+     */
+    hints?: Record<string, { placeholder?: string; hint?: string }> | undefined;
     /** Active `:lang?` route param, so the target path is language-correct. */
     lang: string | undefined;
     /** Scope the form currently shows — the default when the agent omits one. */
@@ -41,6 +47,7 @@ export interface HomeSearchMcpToolProps {
 export function HomeSearchMcpTool({
     scopes,
     sections,
+    hints,
     lang,
     currentScope,
 }: HomeSearchMcpToolProps) {
@@ -72,9 +79,15 @@ export function HomeSearchMcpTool({
             `is no global search backend, so no rows are returned here). After the navigation the ` +
             `catalogue registers its own <dimension>_filter and <dimension>_query_state tools: ` +
             `re-read the tool list and use those to refine, sort, page or export the results. ` +
-            `Scopes: ${scopes.map((s) => `${s.label} (${sections[s.label] ?? s.label})`).join(", ")}.`,
+            `Scopes (each with what its query matches): ${scopes
+                .map((s) => {
+                    const name = sections[s.label] ?? s.label;
+                    const what = hints?.[s.label]?.hint;
+                    return what ? `${s.label} (${name}) — ${what}` : `${s.label} (${name})`;
+                })
+                .join(" ")}`,
         // eslint-disable-next-line react-hooks/exhaustive-deps
-        [labelSig, sections],
+        [labelSig, sections, hints],
     );
 
     const handler = React.useCallback(async (input: Record<string, unknown>) => {

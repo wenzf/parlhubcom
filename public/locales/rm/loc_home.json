@@ -5,6 +5,52 @@
     "search_placeholder": "Tschertgar…",
     "search_button": "Tschertgar",
     "search_scope_label": "Tschertgar en",
+    "search_scope_hints": {
+      "people": {
+        "placeholder": "p.ex. Müller, Bern, 3000",
+        "hint": "Tschertga num, lieu e numer postal."
+      },
+      "votings": {
+        "placeholder": "p.ex. CO2-Gesetz",
+        "hint": "Tschertga il titel da la votaziun e il titel da la fatschenta appartegnenta."
+      },
+      "affairs": {
+        "placeholder": "p.ex. Klima, 21.403",
+        "hint": "Tschertga il titel e il numer da la fatschenta."
+      },
+      "speeches": {
+        "placeholder": "p.ex. Krankenkasse",
+        "hint": "Tschertga il text dals discurs."
+      },
+      "bodies": {
+        "placeholder": "p.ex. Liechtenstein, Zürich, Winterthur",
+        "hint": "Tschertga il num d'in pajais, chantun, citad u vischnanca."
+      },
+      "groups": {
+        "placeholder": "p.ex. Nationalrat, Finanzkommission, SP",
+        "hint": "Tschertga num, abreviaziun e descripziun da cumissiuns e fracziuns."
+      },
+      "meetings": {
+        "placeholder": "p.ex. Frühjahrssession, Bern",
+        "hint": "Tschertga num, lieu e descripziun."
+      },
+      "texts": {
+        "placeholder": "p.ex. Energiegesetz",
+        "hint": "Tschertga il gener dal text e ses cuntegn."
+      },
+      "documents": {
+        "placeholder": "p.ex. Bericht",
+        "hint": "Tschertga il num e la categoria dal document."
+      },
+      "interests": {
+        "placeholder": "p.ex. Pro Natura, Vorstand",
+        "hint": "Tschertga il num da l'organisaziun, la funcziun e la fracziun."
+      },
+      "organizations": {
+        "placeholder": "p.ex. Economiesuisse",
+        "hint": "Tschertga il num da l'organisaziun."
+      }
+    },
     "sections": {
       "people": "Persunas",
       "votings": "Votaziuns",
