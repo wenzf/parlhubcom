@@ -8,7 +8,7 @@ Two related asset trees:
 - `/localization/<namespace>.meta.json` — **translation source material**, NOT loaded by the app.
   For every key it records `context` (where the string renders, its UI role, placeholders, length
   and grammar constraints, Swiss/Liechtenstein parliamentary domain notes) plus the current de/en/fr
-  texts as reference. See [/localization/README.md](../localization/README.md) for the full format.
+  texts as reference (a few namespaces also carry it/es). See [/localization/README.md](../localization/README.md) for the full format.
 
 ## Adding a new language
 
@@ -16,7 +16,8 @@ Two related asset trees:
    translations) to a translator or LLM.
 2. Have it emit `{ key: translated_text }` only; unflatten the dotted paths back into the nested
    shape and save as `public/locales/<new-lang>/<namespace>.json`.
-3. Wire the language into the app: `SITE_LANGS`, `app/configs/content_langs.config.ts`, and the
+3. Wire the language into the app: the `lang_code` union in [`types/site.ts`](../types/site.ts)
+   (omitting it fails `tsc`), `SITE_LANGS`, `app/configs/content_langs.config.ts`, and the
    `LANGS` array in [`.agents/verify-loc-metas.ts`](../.agents/verify-loc-metas.ts) (so the new
    language's `"metas"` blocks are checked too). SEO meta-tag copy is **not** inline in
    `app/lib/seo/metas/` any more — it lives in the `"metas"` block of the locale namespaces

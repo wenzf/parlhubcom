@@ -206,7 +206,9 @@ The polyfill (`@mcp-b/global`) is mounted **once** at the client root
   `data_dashboard_layout` → `public/locales/<lang>/loc_data_dashboard.json` `"metas"`;
   the bespoke one-off pages carry theirs in their own namespace (home→`loc_home`,
   about→`loc_about`, faq→`loc_faq`, data_map→`loc_data_map`, start→`loc_start`,
-  data_guide→`loc_guide`, wordfish→`loc_experiments`) — except project/experiments,
+  data_guide→`loc_guide`, wordfish→`loc_experiments`, plus methodology, imprint,
+  accessibility, sustainability and traffic_stats in their like-named namespaces —
+  the full list is `NAMESPACES` in `.agents/verify-loc-metas.ts`) — except project/experiments,
   which have no own loader, so their copy rides in `loc_main` (lang layout).
 - Copy is stored as **tokenized templates** (JSON holds flat strings only; grammar
   stays in TS). [`loc.ts`](../app/lib/seo/metas/loc.ts): `metaLoc(matches)` reads

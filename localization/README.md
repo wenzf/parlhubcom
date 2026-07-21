@@ -23,6 +23,8 @@ language (by a human or an LLM) without guessing context.
   files.
 - `en`/`de`/`fr` are copied verbatim from `public/locales/` at generation time — they are a
   *reference*, the locale files stay the source of truth. `null` = key missing in that language.
+  Some namespaces (the short project pages: about, accessibility, imprint, sustainability,
+  traffic_stats) additionally carry `it`/`es`; three reference languages is the minimum, not a cap.
 - `context` starting with "Not found in code" marks keys with no usage site found (possibly
   unused, or reached via dynamic key composition — the entry says which).
 

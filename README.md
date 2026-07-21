@@ -12,7 +12,7 @@ Aside of displaying data in tables, also some analytics are done: voting **align
 person's speeches) and co-voting neighbours. So you can ask "who votes like whom?", not
 just "how did X vote?".
 
-Five interface languages (en/de/fr/it/es), server-rendered, WCAG 2.2 AAA.
+Seven interface languages (en/de/fr/it/es/pt/rm), server-rendered, WCAG 2.2 AAA.
 
 ## Tech stack
 
@@ -98,6 +98,8 @@ npm run typecheck     # react-router typegen + tsc
 npm run build         # production build → build/
 npm run start         # serve the production build on port 5555
 npm run verify:metas  # assert the SEO "metas" loc keys match META_KEYS in every language
+npm run verify:safehref  # assert links go through the safe-href helpers
+npm run test:a11y     # pa11y-ci accessibility run
 npm run deploy        # sst deploy --stage production
 ```
 
@@ -129,14 +131,16 @@ npm run deploy        # sst deploy --stage production
 │       ├── seo/                # metas/ (title/description/OG/hreflang), jsonld/, breadcrumbs, sitemap
 │       ├── security/           # sanitize + headers/ (CSP, header scrubbing)
 │       ├── dimensions/         # filter/facet descriptors shared by the data views
-│       └── domain/ export/     # smaller shared helpers
-│           urls/ std/ webmcp/
-├── public/locales/             # UI translations (en/de/fr/it/es), loaded from the filesystem
+│       └── analytics/ domain/  # smaller shared helpers
+│           export/ urls/
+│           std/ webmcp/
+├── public/locales/             # UI translations (en/de/fr/it/es/pt/rm), from the filesystem
 ├── localization/               # translator-facing mirror of public/locales (*.meta.json)
 ├── types/                      # OpenParlData row types (client + db) and site types
 ├── ingest/                     # DB build pipeline (decoupled from the app)
 ├── deploy/                     # container entrypoint, DB update task + its Dockerfile, upload-db.sh
-└── docs/                       # contributor docs: conventions, domain, style guide, edge cases, AWS
+└── docs/                       # contributor docs: conventions, domain, style guide, edge cases,
+                                #   localization, data import, security, AWS, traffic stats
 ```
 
 The `docs/` folder is the deep documentation for this codebase. Start with
@@ -145,9 +149,9 @@ The `docs/` folder is the deep documentation for this codebase. Start with
 ### Localization
 
 The active UI language comes from the `:lang?` URL param (`en` is the default and carries no
-prefix; `de`/`fr`/`it`/`es` do). UI strings live in `public/locales/<lang>/*.json` and are read
-from the filesystem in loaders. Separately, **content language** is an ordered fallback list
-the SQL uses to pick which language a data field shows in (a record may exist in de but not
+prefix; `de`/`fr`/`it`/`es`/`pt`/`rm` do). UI strings live in `public/locales/<lang>/*.json` and
+are read from the filesystem in loaders. Separately, **content language** is an ordered fallback
+list the SQL uses to pick which language a data field shows in (a record may exist in de but not
 fr). Its selectable set is `de/fr/it/rm/en`, so it is not the same list as the UI languages.
 Details in [`docs/conventions.md`](docs/conventions.md) and [`docs/localize.md`](docs/localize.md).
 
