@@ -170,8 +170,11 @@ requests). Rationale: bots account for the overwhelming share of traffic (see
 [/project/traffic-stats](https://parlhub.com/project/traffic-stats)), and the site runs on
 a single DuckDB-backed container — an unpaced crawler burst on the heavy analytics pages
 degrades response times for everyone. The delay is advisory: Bing and most polite crawlers
-honor it, Google ignores it (Google's rate is set in Search Console), and abusive bots
-ignore robots.txt altogether.
+honor it, Google ignores it, and abusive bots ignore robots.txt altogether. Google retired
+the Search Console crawl-rate limiter in January 2024, so there is no dial left for it —
+Googlebot only backs off on sustained `503`/`429` responses. Measured: Googlebot +
+GoogleOther are ~60% of requests and unchanged by the delay, while ClaudeBot pages itself
+to one request every 3.1 s.
 
 ## Deployment
 
@@ -222,6 +225,62 @@ npx sst deploy --stage production   # or: npm run deploy
 
 You'll need your own AWS profile/region (edit the `providers.aws` block in
 `sst.config.ts`) and your own domain in the `loadBalancer` config.
+
+### Availability: why the site 502s a couple of times a day
+
+The service runs **one** task (`scaling: { min: 1, max: 1 }`) on **Fargate Spot**
+(`capacity: "spot"`). Spot is ~70% cheaper in exchange for AWS reclaiming the machine
+whenever it wants the capacity back — ECS reports the stopped task as
+`stopCode: SpotInterruption`. Because there is no second task, the ALB is left with zero
+healthy targets, and the replacement can't serve until
+[`deploy/entrypoint.sh`](deploy/entrypoint.sh) has copied the ~31 GB DB from S3:
+
+```
+08:47:54  task reclaimed, deregistered from the ALB      ← 502/503 starts
+08:47:55  replacement task started
+08:48:13  S3 → local disk copy begins
+08:51:43  copy done (3.5 min), server listening
+08:52:33  healthy target registered                      ← 502/503 ends
+```
+
+**~4–5 minutes per event, and the DB copy is nearly all of it.** Observed rate on
+parlhub.com is **1–2 interruptions per day** (bursty: some days zero, some days four),
+i.e. ~10 min/day, ≈99.3% uptime, and 0.02–0.2% of requests served as 5xx. The same window
+opens on any unplanned task death (crash, failed deploy, AZ event) — Spot is just the
+common cause.
+
+**Deployments are not affected.** ECS starts the new task, waits for the ALB health check,
+and only then drains the old one, so the two overlap by ~10 minutes. That overlap is also
+how you tell the two apart in CloudWatch: a deployment's log streams overlap, an
+interruption's don't.
+
+```bash
+# confirm the cause (ECS keeps stopped-task detail for ~1 h)
+aws ecs describe-tasks --cluster <cluster> --tasks <task-id> \
+  --query 'tasks[].{code:stopCode,reason:stoppedReason}'
+aws ecs describe-services --cluster <cluster> --services Web --query 'services[0].events'
+```
+
+#### Options
+
+| Option | What it does | Cost delta |
+|---|---|---|
+| **Status quo** — 1 Spot task | 1–2 outages/day, ~4–5 min each | — |
+| **`scaling: { min: 2, max: 2 }`** | A second task keeps serving through an interruption. Removes the outage | **+~$45/mo** (compute + a second 100 GB disk) |
+| **`capacity: "fargate"`** (on-demand) | No more reclaims, but one task is still a single point of failure | **+~$115/mo** |
+| **CloudFront in front** | Can't prevent the outage; serves a branded `503` + `Retry-After` instead of the bare ALB error, and caches static assets (crawlers are the bulk of traffic) | **~$0–10/mo** — the 1 TB / 10M-request free tier covers most months |
+| **Shrink the boot window** | Shortens the outage only. Limited headroom: 31 GB in 3.5 min ≈ 1.2 Gbit/s, already near the task's network ceiling | $0 |
+
+The ALB has no custom-error-page feature, so a friendly maintenance page requires
+CloudFront (with a second, S3 origin for the page — the ALB is what's unavailable). Full
+cost table: [`docs/aws-deployment.md`](docs/aws-deployment.md).
+
+**SEO impact is small but not zero.** Search engines treat 5xx as temporary and retry;
+minutes-long blips don't cost rankings. The real exposure is crawl-rate back-off on a site
+whose value is having hundreds of thousands of URLs indexed, and the errors arrive in
+bursts where *every* request fails. Note that `Crawl-delay` doesn't shield you here:
+Google is ~60% of requests and ignores the directive (see *Crawling & bots* above). Watch
+Search Console → Settings → Crawl stats → host status rather than raw request volume.
 
 ## Contributing
 
