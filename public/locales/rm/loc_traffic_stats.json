@@ -19,6 +19,7 @@
     "dim_visitor": "Tip da visitader",
     "dim_device": "Apparat",
     "include_internal": "Includer health checks",
+    "include_other": "Includer dumondas ordaifer il sit",
     "stat_requests": "Dumondas",
     "stat_average": "Media",
     "stat_p95": "p95",

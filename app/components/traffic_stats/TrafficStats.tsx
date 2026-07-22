@@ -26,6 +26,7 @@ import {
     DIMS,
     GRAINS,
     avgMs,
+    dropOther,
     grainCube,
     groupBy,
     p95Ms,
@@ -63,6 +64,7 @@ export type TrafficStatsLoc = {
     dim_visitor: string;
     dim_device: string;
     include_internal: string;
+    include_other: string;
     stat_requests: string;
     stat_average: string;
     stat_p95: string;
@@ -102,7 +104,7 @@ const MAX_SERIES = 6;
 // looking at (group / audience / health-checks). Only values that differ from the
 // default are written, so the bare /project/traffic-stats URL stays param-free and
 // canonical — the meta() canonical uses the pathname only, never the search.
-const PARAM = { group: "group", audience: "audience", view: "view", health: "health", sort: "sort" } as const;
+const PARAM = { group: "group", audience: "audience", view: "view", health: "health", other: "other", sort: "sort" } as const;
 const DIM_DEFAULT: Dim = "visitor";
 const AUD_DEFAULT: Audience = "human";
 const AUDIENCES: Audience[] = ["human", "bot", "both"];
@@ -165,6 +167,10 @@ export function TrafficStats({ cube, loc, lang }: { cube: Cube; loc: TrafficStat
     // every chart and tell the reader nothing. Off by default, but visible on
     // request rather than silently dropped from the data.
     const showInternal = searchParams.get(PARAM.health) === "1";
+    // The "(other)" route bucket is off-site scanner / junk-path noise (deploy/
+    // analytics.ts). Off by default like the health checks — inflates every total
+    // without describing real usage — but kept in the data and shown on request.
+    const showOther = searchParams.get(PARAM.other) === "1";
     const rawGrain = searchParams.get(PARAM.view);
     const grain: Grain = GRAINS.includes(rawGrain as Grain) ? (rawGrain as Grain) : GRAIN_DEFAULT;
 
@@ -233,8 +239,8 @@ export function TrafficStats({ cube, loc, lang }: { cube: Cube; loc: TrafficStat
     // view that slice is the summary's full-grain window (~90 days); monthly
     // covers the whole archive including the running month.
     const cubeView = React.useMemo(
-        () => grainCube(scopeCube(cube, audience, showInternal), grain),
-        [cube, audience, showInternal, grain],
+        () => grainCube(dropOther(scopeCube(cube, audience, showInternal), showOther), grain),
+        [cube, audience, showInternal, showOther, grain],
     );
 
     const groups = React.useMemo(() => groupBy(cubeView, dim, filters), [cubeView, dim, filters]);
@@ -370,15 +376,27 @@ export function TrafficStats({ cube, loc, lang }: { cube: Cube; loc: TrafficStat
                             </fieldset>
                         </div>
 
-                        <div className="flex items-center gap-3">
-                            <Switch
-                                id="show-internal"
-                                checked={showInternal}
-                                onCheckedChange={(c) => setParam(PARAM.health, "1", !c)}
-                            />
-                            <label htmlFor="show-internal" className="text-sm">
-                                {t("include_internal")}
-                            </label>
+                        <div className="flex flex-col gap-3">
+                            <div className="flex items-center gap-3">
+                                <Switch
+                                    id="show-other"
+                                    checked={showOther}
+                                    onCheckedChange={(c) => setParam(PARAM.other, "1", !c)}
+                                />
+                                <label htmlFor="show-other" className="text-sm">
+                                    {t("include_other")}
+                                </label>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <Switch
+                                    id="show-internal"
+                                    checked={showInternal}
+                                    onCheckedChange={(c) => setParam(PARAM.health, "1", !c)}
+                                />
+                                <label htmlFor="show-internal" className="text-sm">
+                                    {t("include_internal")}
+                                </label>
+                            </div>
                         </div>
                     </div>
 

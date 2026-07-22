@@ -162,6 +162,14 @@
       "it": "Includi i controlli di integrità",
       "es": "Incluir comprobaciones de estado"
     },
+    "traffic_stats.include_other": {
+      "context": "Label of the switch that adds the synthetic \"(other)\" route bucket — off-site scanner and malformed/mistyped-URL traffic (deploy/analytics.ts) — back into the figures. Off by default because it is noise that never touches a real page and inflates every total. Short; sits above the health-checks switch. See route_other_note for what \"(other)\" is.",
+      "en": "Include off-site requests",
+      "de": "Off-Site-Anfragen einbeziehen",
+      "fr": "Inclure les requêtes hors site",
+      "it": "Includi le richieste esterne al sito",
+      "es": "Incluir peticiones ajenas al sitio"
+    },
     "traffic_stats.stat_requests": {
       "context": "Stat tile label + table column header: number of requests. Short; sits above a large number and above a right-aligned numeric column.",
       "en": "Requests",

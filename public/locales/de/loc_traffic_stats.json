@@ -19,6 +19,7 @@
     "dim_visitor": "Besuchertyp",
     "dim_device": "Gerät",
     "include_internal": "Health-Checks einbeziehen",
+    "include_other": "Off-Site-Anfragen einbeziehen",
     "stat_requests": "Anfragen",
     "stat_average": "Durchschnitt",
     "stat_p95": "p95",

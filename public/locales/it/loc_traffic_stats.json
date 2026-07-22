@@ -19,6 +19,7 @@
     "dim_visitor": "Tipo di visitatore",
     "dim_device": "Dispositivo",
     "include_internal": "Includi i controlli di integrità",
+    "include_other": "Includi le richieste esterne al sito",
     "stat_requests": "Richieste",
     "stat_average": "Media",
     "stat_p95": "p95",

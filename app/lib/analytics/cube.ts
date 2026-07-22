@@ -141,6 +141,24 @@ export function scopeCube(cube: Cube, audience: Audience, includeInternal: boole
     };
 }
 
+/** The synthetic route bucket deploy/analytics.ts folds off-site / junk paths into
+ *  (scanners, malformed or mistyped URLs). Its raw label in `cube.routes`. */
+export const OTHER_ROUTE = "(other)";
+
+/**
+ * A cube with the "(other)" route bucket dropped. That bucket is off-site noise —
+ * scanner and malformed-URL traffic that never touches a real page — so it inflates
+ * every total without describing usage. Excluded by default, kept on request: the
+ * same in/out scoping the health checks get. Pure row filter, measures untouched, so
+ * downstream aggregates stay correct at the narrowed slice.
+ */
+export function dropOther(cube: Cube, includeOther: boolean): Cube {
+    if (includeOther) return cube;
+    const otherIdx = cube.routes.indexOf(OTHER_ROUTE);
+    if (otherIdx < 0) return cube;
+    return { ...cube, rows: cube.rows.filter((r) => r[I_ROUTE] !== otherIdx) };
+}
+
 /** Time grain of the page's time axis — the daily/monthly view toggle. */
 export type Grain = "daily" | "monthly";
 export const GRAINS: Grain[] = ["daily", "monthly"];

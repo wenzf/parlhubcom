@@ -19,6 +19,7 @@
     "dim_visitor": "Type de visiteur",
     "dim_device": "Appareil",
     "include_internal": "Inclure les contrôles de santé",
+    "include_other": "Inclure les requêtes hors site",
     "stat_requests": "Requêtes",
     "stat_average": "Moyenne",
     "stat_p95": "p95",

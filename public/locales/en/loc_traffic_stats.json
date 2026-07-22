@@ -19,6 +19,7 @@
     "dim_visitor": "Visitor type",
     "dim_device": "Device",
     "include_internal": "Include health checks",
+    "include_other": "Include off-site requests",
     "stat_requests": "Requests",
     "stat_average": "Average",
     "stat_p95": "p95",
