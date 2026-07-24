@@ -166,7 +166,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                                 name="q"
                                 placeholder={scopeHint?.placeholder ?? c.search_placeholder}
                                 aria-describedby="home-search-hint"
-                                className="h-11 w-full min-w-0 rounded-md border border-input bg-background px-3 text-sm text-foreground placeholder:text-muted-foreground outline-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring"
+                                className="h-11 w-full min-w-0 rounded-md border border-input bg-background px-3 text-base text-foreground placeholder:text-muted-foreground outline-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring"
                             />
                             <div className="flex items-center gap-2">
                                 {/* Scope picker on mobile only — chips take over at md+. */}

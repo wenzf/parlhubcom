@@ -95,7 +95,7 @@ export interface DimensionControlsProps {
 // Matches the Input/Select primitive base (flat bg-transparent, no shadow) so
 // filter-bar controls read as the same family as the rest of the site.
 const FIELD =
-    "h-11 rounded-md border border-input bg-transparent px-3 text-sm dark:bg-transparent " +
+    "h-11 rounded-md border border-input bg-transparent px-3 dark:bg-transparent " +
     "outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background";
 
 // Radix <Select> forbids an empty-string item value, so "All" gets a sentinel
@@ -252,7 +252,7 @@ function FacetCombobox({
                         role="combobox"
                         aria-expanded={open}
                         aria-label={ariaLabel}
-                        className={`${FIELD} flex min-w-[10rem] max-w-[16rem] items-center justify-between gap-2 font-normal hover:bg-muted`}
+                        className={`${FIELD} flex min-w-[10rem] max-w-[16rem] items-center justify-between gap-2 text-sm font-normal hover:bg-muted`}
                     >
                         <span className="truncate">{triggerLabel}</span>
                         <span aria-hidden className="shrink-0 opacity-60">▾</span>
@@ -435,7 +435,7 @@ export function DimensionControls({
                                 type="search"
                                 defaultValue={current.q ?? ""}
                                 placeholder={searchPlaceholder}
-                                className={`${FIELD} w-full`}
+                                className={`${FIELD} w-full text-base`}
                                 aria-label={t("controls_search")}
                             />
                         </div>
@@ -592,7 +592,7 @@ export function DimensionControls({
                                         value={current.dateFrom ?? ""}
                                         max={current.dateTo ?? undefined}
                                         onChange={(e) => setDate("dateFrom", e.target.value)}
-                                        className={FIELD}
+                                        className={`${FIELD} text-base`}
                                         aria-label={t(f.fromLabelKey)}
                                     />
                                 </Labeled>
@@ -604,7 +604,7 @@ export function DimensionControls({
                                         value={current.dateTo ?? ""}
                                         min={current.dateFrom ?? undefined}
                                         onChange={(e) => setDate("dateTo", e.target.value)}
-                                        className={FIELD}
+                                        className={`${FIELD} text-base`}
                                         aria-label={t(f.toLabelKey)}
                                     />
                                 </Labeled>
